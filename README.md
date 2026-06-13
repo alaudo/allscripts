@@ -31,6 +31,9 @@ no build step — open it in a browser and you're done.
 3. **Spell in script** — a word in Latin/Cyrillic/IPA; you spell it in the
    target script using an on-screen keyboard (or your hardware keyboard).
    The input-system pill in the header lets you swap prompt systems mid-session.
+4. **Phrases** — 20 useful everyday phrases (greetings, directions, numbers,
+   politeness) per language. Tap a card to flip between the native script
+   (with romanisation) and the translation in your chosen UI language.
 
 ### Forgiving (fuzzy) matching
 
@@ -50,9 +53,23 @@ is accepted.
 ## Home page
 
 Each script tile shows letters learned and words practised at a glance
-(🔤 *learned*/*total* · 📖 *learned*/*total*). Selecting a script reveals an
+(📝 *learned*/*total* · 💬 *learned*/*total*). Selecting a script reveals an
 **About** card with a short history of the script and the flags of countries
 where it's used.
+
+## UI language
+
+The interface is available in English and Russian — switch under
+**Settings → Appearance → Interface language**. Phrase translations follow
+the active UI language automatically. Adding a new locale is a matter of
+dropping another dictionary into `js/i18n.js`.
+
+## Mobile
+
+The layout is built for touch: 44px tap targets, on-screen keyboards sized
+for thumbs, native numeric keypads for SRS interval inputs, and a horizontally
+scrollable progress table on narrow screens. Inputs are sized so iOS won't
+auto-zoom when focused.
 
 ## Theme
 

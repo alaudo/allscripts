@@ -10,24 +10,24 @@
 </head>
 <body>
   <header class="topbar">
-    <a href="#/home" class="brand">Allscripts</a>
+    <a href="#/home" class="brand" data-i18n="app.brand">Allscripts</a>
     <nav class="topbar-nav">
-      <a href="#/home" data-nav="home">Home</a>
-      <a href="#/settings" data-nav="settings">Settings</a>
+      <a href="#/home" data-nav="home" data-i18n="nav.home">Home</a>
+      <a href="#/settings" data-nav="settings" data-i18n="nav.settings">Settings</a>
       <button id="theme-toggle" class="theme-toggle clickable" aria-label="Toggle theme" title="Theme"></button>
     </nav>
   </header>
 
   <main id="view" class="view">
-    <div class="view-loading">Loading…</div>
+    <div class="view-loading" data-i18n="app.loading">Loading…</div>
   </main>
 
   <footer class="footer">
-    <small>Open-source. Data lives in <code>data/*.json</code>. Add scripts by editing JSON.</small>
+    <small data-i18n="app.footer">Open-source. Data lives in <code>data/*.json</code>. Add scripts by editing JSON.</small>
   </footer>
 
   <noscript>
-    <p style="padding:1rem">This game needs JavaScript enabled.</p>
+    <p style="padding:1rem" data-i18n="app.noscript">This game needs JavaScript enabled.</p>
   </noscript>
 
   <script type="module" src="js/app.js"></script>

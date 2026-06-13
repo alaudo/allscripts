@@ -1,41 +1,50 @@
 import { getSettings, updateSettings, resetScript, resetAll, summary } from '../storage.js';
 import { getManifest } from '../data.js';
 import { applyTheme } from '../theme.js';
-import { el, escapeHtml, transcriptionLabel } from './dom.js';
+import { setLang, applyChromeStrings, t, transcriptionLabel, LANGUAGES } from '../i18n.js';
+import { el, escapeHtml } from './dom.js';
 
-const TRANSCRIPTION_OPTIONS = [
-  { value: 'ipa',     label: 'IPA' },
-  { value: 'english', label: 'English re-spelling' },
-  { value: 'russian', label: 'Russian re-spelling (Cyrillic)' }
-];
+function transcriptionOptions() {
+  return [
+    { value: 'ipa',     label: t('transcription.ipa') },
+    { value: 'english', label: t('transcription.english') },
+    { value: 'russian', label: t('transcription.russian_full') }
+  ];
+}
 
-const INPUT_OPTIONS = [
-  { value: 'latin',    label: 'Latin (English keyboard)' },
-  { value: 'cyrillic', label: 'Cyrillic (Russian keyboard)' },
-  { value: 'ipa',      label: 'IPA (with on-screen keyboard)' }
-];
+function inputOptions() {
+  return [
+    { value: 'latin',    label: t('input.latin.full') },
+    { value: 'cyrillic', label: t('input.cyrillic.full') },
+    { value: 'ipa',      label: t('input.ipa.full') }
+  ];
+}
 
-const THEME_OPTIONS = [
-  { value: 'auto',  label: 'Match system' },
-  { value: 'light', label: 'Light' },
-  { value: 'dark',  label: 'Dark' }
-];
+function themeOptions() {
+  return [
+    { value: 'auto',  label: t('settings.theme.auto') },
+    { value: 'light', label: t('settings.theme.light') },
+    { value: 'dark',  label: t('settings.theme.dark') }
+  ];
+}
 
-const TIMER_OPTIONS = [
-  { value: 0,  label: 'Off' },
-  { value: 5,  label: '5 seconds' },
-  { value: 10, label: '10 seconds' },
-  { value: 15, label: '15 seconds' },
-  { value: 20, label: '20 seconds' },
-  { value: 30, label: '30 seconds' },
-  { value: 60, label: '1 minute' }
-];
+function timerOptions() {
+  return [
+    { value: 0,  label: t('settings.timer.off') },
+    { value: 5,  label: t('settings.timer.5s') },
+    { value: 10, label: t('settings.timer.10s') },
+    { value: 15, label: t('settings.timer.15s') },
+    { value: 20, label: t('settings.timer.20s') },
+    { value: 30, label: t('settings.timer.30s') },
+    { value: 60, label: t('settings.timer.60s') }
+  ];
+}
 
 const SRS_FIELDS = [
-  { key: 'again', label: 'Again',  hint: 'shown after this interval when you press Again' },
-  { key: 'hard',  label: 'Hard',   hint: 'shown again after this many minutes for cards rated Hard' },
-  { key: 'good',  label: 'Good',   hint: 'standard interval after a correct, normal response' },
-  { key: 'easy',  label: 'Easy',   hint: 'long interval for confident, easy cards' }
+  { key: 'again', labelKey: 'flashcards.again', hintKey: 'settings.srs.again.hint' },
+  { key: 'hard',  labelKey: 'flashcards.hard',  hintKey: 'settings.srs.hard.hint' },
+  { key: 'good',  labelKey: 'flashcards.good',  hintKey: 'settings.srs.good.hint' },
+  { key: 'easy',  labelKey: 'flashcards.easy',  hintKey: 'settings.srs.easy.hint' }
 ];
 
 export async function renderSettings(_, mount) {
@@ -46,61 +55,67 @@ export async function renderSettings(_, mount) {
   const root = el(`
     <section class="settings">
       <div class="card">
-        <h2>Appearance</h2>
+        <h2>${escapeHtml(t('settings.appearance'))}</h2>
 
         <label class="field">
-          <span class="field-label">Theme</span>
+          <span class="field-label">${escapeHtml(t('settings.language'))}</span>
+          <select id="uiLanguage"></select>
+          <small class="muted">${escapeHtml(t('settings.language.hint'))}</small>
+        </label>
+
+        <label class="field">
+          <span class="field-label">${escapeHtml(t('settings.theme'))}</span>
           <select id="theme"></select>
-          <small class="muted">"Match system" follows your OS light/dark preference.</small>
+          <small class="muted">${escapeHtml(t('settings.theme.hint'))}</small>
         </label>
       </div>
 
       <div class="card">
-        <h2>Transcription &amp; input</h2>
+        <h2>${escapeHtml(t('settings.transcription_input'))}</h2>
 
         <label class="field">
-          <span class="field-label">Transcription system</span>
+          <span class="field-label">${escapeHtml(t('settings.transcription'))}</span>
           <select id="transcription"></select>
-          <small class="muted">Currently: ${escapeHtml(transcriptionLabel(settings.transcription))}</small>
+          <small class="muted">${escapeHtml(t('settings.transcription.current', { label: transcriptionLabel(settings.transcription) }))}</small>
         </label>
 
         <label class="field">
-          <span class="field-label">Read &amp; transcribe — input system</span>
+          <span class="field-label">${escapeHtml(t('settings.input'))}</span>
           <select id="inputSystem"></select>
-          <small class="muted">Which keyboard / phonetic system you'll use when typing the transliteration.</small>
+          <small class="muted">${escapeHtml(t('settings.input.hint'))}</small>
         </label>
 
         <label class="field checkbox-field">
           <input type="checkbox" id="vocalised" ${settings.vocalised ? 'checked' : ''} />
-          <span class="field-label">Show full vocalisation</span>
-          <small class="muted">For scripts with optional diacritics (Arabic harakat, Hebrew niqqud), display the fully-pointed form in word exercises.</small>
+          <span class="field-label">${escapeHtml(t('settings.vocalised'))}</span>
+          <small class="muted">${escapeHtml(t('settings.vocalised.hint'))}</small>
         </label>
 
         <label class="field checkbox-field">
           <input type="checkbox" id="fuzzy" ${settings.fuzzy ? 'checked' : ''} />
-          <span class="field-label">Forgiving (fuzzy) matching</span>
-          <small class="muted">Accept answers with small spelling slips — e.g. "t" instead of "th", one missing letter — in read &amp; spell modes.</small>
+          <span class="field-label">${escapeHtml(t('settings.fuzzy'))}</span>
+          <small class="muted">${escapeHtml(t('settings.fuzzy.hint'))}</small>
         </label>
       </div>
 
       <div class="card">
-        <h2>Flashcards</h2>
+        <h2>${escapeHtml(t('settings.flashcards'))}</h2>
 
         <label class="field">
-          <span class="field-label">Auto-advance timer</span>
+          <span class="field-label">${escapeHtml(t('settings.timer'))}</span>
           <select id="flashcardTimer"></select>
-          <small class="muted">Auto-flips the card, then advances if you don't rate it in time. Off by default.</small>
+          <small class="muted">${escapeHtml(t('settings.timer.hint'))}</small>
         </label>
 
         <fieldset class="field srs-field">
-          <legend class="field-label">Spaced repetition intervals (minutes)</legend>
-          <small class="muted">When you rate a card, it disappears from the deck and reappears after this many minutes.</small>
+          <legend class="field-label">${escapeHtml(t('settings.srs.title'))}</legend>
+          <small class="muted">${escapeHtml(t('settings.srs.hint'))}</small>
           <div class="srs-grid">
             ${SRS_FIELDS.map(f => `
               <label class="srs-cell">
-                <span>${escapeHtml(f.label)}</span>
-                <input type="number" min="0" step="1" data-srs="${f.key}" value="${settings.srsIntervals[f.key] ?? 0}" />
-                <small class="muted">${escapeHtml(f.hint)}</small>
+                <span>${escapeHtml(t(f.labelKey))}</span>
+                <input type="number" min="0" step="1" inputmode="numeric" data-srs="${f.key}" value="${settings.srsIntervals[f.key] ?? 0}" />
+                <small class="muted">${escapeHtml(t(f.hintKey))}</small>
               </label>
             `).join('')}
           </div>
@@ -108,19 +123,42 @@ export async function renderSettings(_, mount) {
       </div>
 
       <div class="card">
-        <h2>Progress</h2>
-        <table class="progress-table">
-          <thead><tr><th>Script</th><th>Letters known</th><th>Words correct</th><th></th></tr></thead>
-          <tbody></tbody>
-        </table>
-        <button class="btn-danger" id="reset-all">Reset all progress</button>
+        <h2>${escapeHtml(t('settings.progress'))}</h2>
+        <div class="table-scroll">
+          <table class="progress-table">
+            <thead><tr>
+              <th>${escapeHtml(t('settings.progress.script'))}</th>
+              <th>${escapeHtml(t('settings.progress.letters_known'))}</th>
+              <th>${escapeHtml(t('settings.progress.words_correct'))}</th>
+              <th></th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <button class="btn-danger" id="reset-all">${escapeHtml(t('settings.progress.reset_all'))}</button>
       </div>
     </section>
   `);
 
+  // UI Language
+  const langSel = root.querySelector('#uiLanguage');
+  for (const o of LANGUAGES) {
+    const opt = document.createElement('option');
+    opt.value = o.code; opt.textContent = o.name;
+    if (o.code === settings.uiLanguage) opt.selected = true;
+    langSel.appendChild(opt);
+  }
+  langSel.addEventListener('change', () => {
+    updateSettings({ uiLanguage: langSel.value });
+    setLang(langSel.value);
+    applyChromeStrings();
+    applyTheme(getSettings().theme); // refresh theme tooltip in new language
+    renderSettings(_, mount);
+  });
+
   // Theme
   const themeSel = root.querySelector('#theme');
-  for (const o of THEME_OPTIONS) {
+  for (const o of themeOptions()) {
     const opt = document.createElement('option');
     opt.value = o.value; opt.textContent = o.label;
     if (o.value === settings.theme) opt.selected = true;
@@ -133,7 +171,7 @@ export async function renderSettings(_, mount) {
 
   // Transcription
   const transcriptionSel = root.querySelector('#transcription');
-  for (const o of TRANSCRIPTION_OPTIONS) {
+  for (const o of transcriptionOptions()) {
     const opt = document.createElement('option');
     opt.value = o.value; opt.textContent = o.label;
     if (o.value === settings.transcription) opt.selected = true;
@@ -146,7 +184,7 @@ export async function renderSettings(_, mount) {
 
   // Input system
   const inputSel = root.querySelector('#inputSystem');
-  for (const o of INPUT_OPTIONS) {
+  for (const o of inputOptions()) {
     const opt = document.createElement('option');
     opt.value = o.value; opt.textContent = o.label;
     if (o.value === settings.inputSystem) opt.selected = true;
@@ -156,21 +194,13 @@ export async function renderSettings(_, mount) {
     updateSettings({ inputSystem: inputSel.value });
   });
 
-  // Vocalised
-  const vocalisedEl = root.querySelector('#vocalised');
-  vocalisedEl.addEventListener('change', () => {
-    updateSettings({ vocalised: vocalisedEl.checked });
-  });
-
-  // Fuzzy
-  const fuzzyEl = root.querySelector('#fuzzy');
-  fuzzyEl.addEventListener('change', () => {
-    updateSettings({ fuzzy: fuzzyEl.checked });
-  });
+  // Vocalised / fuzzy
+  root.querySelector('#vocalised').addEventListener('change', e => updateSettings({ vocalised: e.target.checked }));
+  root.querySelector('#fuzzy').addEventListener('change', e => updateSettings({ fuzzy: e.target.checked }));
 
   // Flashcard timer
   const timerSel = root.querySelector('#flashcardTimer');
-  for (const o of TIMER_OPTIONS) {
+  for (const o of timerOptions()) {
     const opt = document.createElement('option');
     opt.value = String(o.value); opt.textContent = o.label;
     if (o.value === settings.flashcardTimerSec) opt.selected = true;
@@ -189,6 +219,7 @@ export async function renderSettings(_, mount) {
     });
   }
 
+  // Progress table
   const tbody = root.querySelector('tbody');
   for (const s of manifest.scripts) {
     const st = summary(s.id);
@@ -196,12 +227,12 @@ export async function renderSettings(_, mount) {
       <tr>
         <td><strong>${escapeHtml(s.name)}</strong> <span class="muted small" dir="${s.direction}">${escapeHtml(s.nativeName)}</span></td>
         <td>${st.lettersKnown}</td>
-        <td>${st.wordsCorrect} <span class="muted small">(${st.wordsWrong} wrong)</span></td>
-        <td><button class="btn-link" data-reset="${escapeHtml(s.id)}">Reset</button></td>
+        <td>${st.wordsCorrect} <span class="muted small">${escapeHtml(t('settings.progress.wrong_suffix', { n: st.wordsWrong }))}</span></td>
+        <td><button class="btn-link" data-reset="${escapeHtml(s.id)}">${escapeHtml(t('settings.progress.reset'))}</button></td>
       </tr>
     `);
     tr.querySelector('[data-reset]').addEventListener('click', () => {
-      if (confirm(`Reset progress for ${s.name}?`)) {
+      if (confirm(t('settings.progress.reset_script_confirm', { name: s.name }))) {
         resetScript(s.id);
         renderSettings(_, mount);
       }
@@ -210,8 +241,10 @@ export async function renderSettings(_, mount) {
   }
 
   root.querySelector('#reset-all').addEventListener('click', () => {
-    if (confirm('Reset ALL settings and progress?')) {
+    if (confirm(t('settings.progress.reset_all_confirm'))) {
       resetAll();
+      setLang(getSettings().uiLanguage);
+      applyChromeStrings();
       applyTheme(getSettings().theme);
       location.hash = '#/home';
     }

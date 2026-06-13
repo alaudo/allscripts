@@ -1,12 +1,11 @@
+// Theme controller. The actual CSS lives in styles.css under
+// :root[data-theme="..."] — we just toggle the attribute and keep the topbar
+// icon/tooltip in sync.
+
 import { getSettings, updateSettings } from './storage.js';
+import { t } from './i18n.js';
 
 const THEME_ORDER = ['auto', 'light', 'dark'];
-
-const THEME_META = {
-  auto:  { icon: '🌓', label: 'Theme: match system (click to switch to Light)' },
-  light: { icon: '☀️', label: 'Theme: light (click to switch to Dark)' },
-  dark:  { icon: '🌙', label: 'Theme: dark (click to switch to Auto)' }
-};
 
 export function applyTheme(theme) {
   const html = document.documentElement;
@@ -26,10 +25,11 @@ export function nextTheme(current) {
 function updateThemeToggle(theme) {
   const btn = document.getElementById('theme-toggle');
   if (!btn) return;
-  const meta = THEME_META[theme] || THEME_META.auto;
-  btn.textContent = meta.icon;
-  btn.title = meta.label;
-  btn.setAttribute('aria-label', meta.label);
+  const key = THEME_ORDER.includes(theme) ? theme : 'auto';
+  btn.textContent = t(`theme.${key}.icon`);
+  const tip = t(`theme.${key}.tooltip`);
+  btn.title = tip;
+  btn.setAttribute('aria-label', t('theme.aria'));
 }
 
 export function initTheme() {
@@ -45,4 +45,5 @@ export function initTheme() {
     });
   }
 }
+
 

@@ -67,7 +67,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 20px;
+  gap: 8px;
+  padding: 10px 16px;
   background: var(--card-bg);
   border-bottom: 1px solid var(--card-border);
   position: sticky; top: 0; z-index: 10;
@@ -186,14 +187,15 @@ body {
 .mode-card h3 { margin: 0 0 6px; }
 .mode-card p { margin: 0; color: var(--muted); font-size: 0.9rem; }
 
-/* Mode header */
+/* Mode header — wraps on small screens so the right-aligned pill doesn't push the title off. */
 .mode-header {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 4px;
+  flex-wrap: wrap;
 }
-.mode-header h2 { margin: 0; font-size: 1.15rem; flex: 1; }
+.mode-header h2 { margin: 0; font-size: 1.15rem; flex: 1; min-width: 0; }
 .mode-header .back {
   color: var(--muted);
   text-decoration: none;
@@ -533,4 +535,78 @@ body {
 
 @media (max-width: 600px) {
   .rate-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* v4 additions */
+
+/* Phrases mode */
+.phrases .flashcard.phrase-card {
+  max-width: 520px;
+  min-height: 260px;
+}
+.phrase-card .face {
+  padding: 28px 20px;
+  gap: 12px;
+}
+.phrase-native {
+  font-size: 2rem;
+  line-height: 1.25;
+  font-weight: 600;
+  word-break: break-word;
+}
+.phrase-translation {
+  font-size: 1.6rem;
+  line-height: 1.3;
+  font-weight: 600;
+  word-break: break-word;
+}
+.phrase-card .back-native {
+  font-size: 1.3rem;
+  opacity: 0.85;
+  font-weight: 500;
+}
+.phrase-latin { letter-spacing: 0.02em; }
+.phrase-hint { margin-top: 8px; }
+
+/* Horizontally-scrollable progress table on narrow screens. */
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.progress-table { min-width: 480px; }
+
+/* SRS interval grid: 2 columns on mobile so labels are readable. */
+@media (max-width: 600px) {
+  .srs-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .phrase-native { font-size: 1.6rem; }
+  .phrase-translation { font-size: 1.3rem; }
+  .topbar { padding: 8px 12px; }
+  .topbar-nav { gap: 12px; }
+  .brand { font-size: 1rem; }
+  .theme-toggle { width: 38px; height: 38px; }
+  /* Ensure interactive controls hit the WCAG 44x44 tap target. */
+  .btn, .btn-secondary, .btn-danger { min-height: 44px; padding: 10px 14px; }
+  .btn-link { min-height: 40px; padding: 8px 12px; }
+  .keyboard-key { min-height: 44px; min-width: 40px; padding: 10px 8px; font-size: 1rem; }
+  .keyboard-key.keyboard-util { min-width: 64px; font-size: 0.85rem; padding: 8px 10px; }
+  .rate { min-height: 56px; }
+  .input-system-toggle, .transcription-toggle { min-height: 32px; }
+  .mode-header h2 { font-size: 1.05rem; flex: 1 1 100%; order: -1; }
+  .mode-header .back { flex: 0 0 auto; }
+  .mode-header .input-system-toggle,
+  .mode-header .transcription-toggle { margin-left: auto; }
+  .answer-form { gap: 6px; }
+  .answer-form input[type="text"] { min-width: 0; font-size: 1rem; padding: 12px 10px; }
+  .field-label { font-size: 0.95rem; }
+  /* Stop iOS from auto-zooming on inputs (font-size >= 16px required). */
+  .answer-form input[type="text"],
+  .field select,
+  .srs-cell input[type="number"] { font-size: 16px; }
+}
+
+/* Tiny screens (≤360px): collapse stat icons & shrink picker tiles. */
+@media (max-width: 360px) {
+  .script-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+  .script-native { font-size: 1.4rem; }
+  .script-stats { font-size: 0.75rem; }
 }

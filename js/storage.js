@@ -11,6 +11,7 @@ const DEFAULTS = {
     inputSystem: 'latin',     // 'latin' | 'cyrillic' | 'ipa'
     vocalised: false,         // show full vocalisation for Arabic/Hebrew
     theme: 'auto',            // 'auto' | 'light' | 'dark'
+    uiLanguage: 'en',         // 'en' | 'ru'
     fuzzy: false,             // allow small typos in mode 2 / mode 3 transliteration matching
     flashcardTimerSec: 0,     // 0 = off; otherwise seconds per card before auto-advance
     srsIntervals: {           // minutes added to "now" when a card is rated

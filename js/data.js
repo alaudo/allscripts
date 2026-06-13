@@ -4,7 +4,8 @@
 const cache = {
   manifest: null,
   scripts: new Map(),
-  international: null
+  international: null,
+  phrases: null
 };
 
 async function fetchJSON(path) {
@@ -47,6 +48,14 @@ export async function getInternational() {
     cache.international = await fetchJSON('data/words-international.json');
   }
   return cache.international;
+}
+
+export async function getPhrases(scriptId) {
+  if (!cache.phrases) {
+    cache.phrases = await fetchJSON('data/phrases.json');
+  }
+  const entry = cache.phrases.scripts?.[scriptId];
+  return entry?.phrases || [];
 }
 
 // Returns the union of a script's curated words and the international entries

@@ -1,13 +1,16 @@
 import { getScript } from '../data.js';
 import { getSettings, updateSettings, recordLetter, getLetterProgress } from '../storage.js';
-import { el, escapeHtml, shuffle, fieldFor, transcriptionLabel, nextTranscription, formatMinutes } from '../ui/dom.js';
+import { el, escapeHtml, shuffle, fieldFor, nextTranscription, formatMinutes } from '../ui/dom.js';
+import { t, transcriptionLabel } from '../i18n.js';
 
-const RATINGS = [
-  { key: 'again', label: 'Again',  cls: 'rate rate-again', known: false },
-  { key: 'hard',  label: 'Hard',   cls: 'rate rate-hard',  known: false },
-  { key: 'good',  label: 'Good',   cls: 'rate rate-good',  known: true  },
-  { key: 'easy',  label: 'Easy',   cls: 'rate rate-easy',  known: true  }
-];
+function ratings() {
+  return [
+    { key: 'again', label: t('flashcards.again'), cls: 'rate rate-again', known: false },
+    { key: 'hard',  label: t('flashcards.hard'),  cls: 'rate rate-hard',  known: false },
+    { key: 'good',  label: t('flashcards.good'),  cls: 'rate rate-good',  known: true  },
+    { key: 'easy',  label: t('flashcards.easy'),  cls: 'rate rate-easy',  known: true  }
+  ];
+}
 
 export async function renderFlashcards(_, mount) {
   let settings = getSettings();
@@ -19,13 +22,14 @@ export async function renderFlashcards(_, mount) {
   let timerHandle = null;
   let timerStart = 0;
   let timerRaf = null;
+  const RATINGS = ratings();
 
   const root = el(`
     <section class="flashcards">
       <header class="mode-header">
-        <a href="#/home" class="back">← Home</a>
-        <h2>${escapeHtml(script.meta.name)} flashcards</h2>
-        <button class="transcription-toggle clickable" id="transcription-toggle" title="Click to cycle transcription system (IPA → English → Russian)"></button>
+        <a href="#/home" class="back">${escapeHtml(t('nav.back_home'))}</a>
+        <h2>${escapeHtml(t('flashcards.header', { name: script.meta.name }))}</h2>
+        <button class="transcription-toggle clickable" id="transcription-toggle" title="${escapeHtml(t('transcription.cycle_tooltip'))}"></button>
       </header>
 
       <div class="timer-bar" id="timer-bar" hidden><div class="timer-fill" id="timer-fill"></div></div>
@@ -40,13 +44,13 @@ export async function renderFlashcards(_, mount) {
       <div class="card-actions rate-row" id="rate-row"></div>
 
       <div class="card-nav">
-        <button class="btn-link" id="prev">← Previous</button>
+        <button class="btn-link" id="prev">${escapeHtml(t('flashcards.previous'))}</button>
         <span class="muted small" id="counter"></span>
-        <button class="btn-link" id="next">Next →</button>
+        <button class="btn-link" id="next">${escapeHtml(t('flashcards.next'))}</button>
       </div>
 
       <div class="card-shuffle">
-        <button class="btn-link" id="shuffle">Reshuffle / rebuild deck</button>
+        <button class="btn-link" id="shuffle">${escapeHtml(t('flashcards.reshuffle'))}</button>
         <span class="muted small" id="deck-info"></span>
       </div>
     </section>
@@ -62,14 +66,11 @@ export async function renderFlashcards(_, mount) {
   const timerBar = root.querySelector('#timer-bar');
   const timerFill = root.querySelector('#timer-fill');
 
-  // Build rating buttons once.
   for (const r of RATINGS) {
     const min = settings.srsIntervals[r.key] ?? 0;
-    const btn = el(`<button class="${r.cls}" data-rate="${r.key}" title="Next review: ${escapeHtml(formatMinutes(min))}">${escapeHtml(r.label)}<span class="rate-int muted small">${escapeHtml(formatMinutes(min))}</span></button>`);
-    btn.addEventListener('click', e => {
-      e.stopPropagation();
-      rateCurrent(r.key);
-    });
+    const tip = t('flashcards.next_review', { interval: formatMinutes(min) });
+    const btn = el(`<button class="${r.cls}" data-rate="${r.key}" title="${escapeHtml(tip)}">${escapeHtml(r.label)}<span class="rate-int muted small">${escapeHtml(formatMinutes(min))}</span></button>`);
+    btn.addEventListener('click', e => { e.stopPropagation(); rateCurrent(r.key); });
     rateRow.appendChild(btn);
   }
 
@@ -80,9 +81,8 @@ export async function renderFlashcards(_, mount) {
   function render() {
     stopTimer();
     if (!deck.length) {
-      // Should not happen — buildDeck always falls back to all letters — but guard anyway.
       frontEl.innerHTML = '<div class="glyph">🎉</div>';
-      backEl.innerHTML = '<div class="transcription">All caught up!</div>';
+      backEl.innerHTML = `<div class="transcription">${escapeHtml(t('flashcards.all_caught_up'))}</div>`;
       counterEl.textContent = '0 / 0';
       return;
     }
@@ -105,18 +105,15 @@ export async function renderFlashcards(_, mount) {
     counterEl.textContent = `${idx + 1} / ${deck.length}`;
     const dueNow = countDueNow(script);
     deckInfoEl.textContent = dueNow > 0
-      ? `${dueNow} due now`
-      : `no cards due — practicing full deck`;
+      ? t('flashcards.due_now', { n: dueNow })
+      : t('flashcards.no_due');
     renderTranscriptionLabel();
     startTimerIfEnabled();
   }
 
   function startTimerIfEnabled() {
     const secs = settings.flashcardTimerSec;
-    if (!secs || secs <= 0) {
-      timerBar.hidden = true;
-      return;
-    }
+    if (!secs || secs <= 0) { timerBar.hidden = true; return; }
     timerBar.hidden = false;
     timerFill.style.width = '100%';
     timerStart = performance.now();
@@ -130,12 +127,10 @@ export async function renderFlashcards(_, mount) {
     timerRaf = requestAnimationFrame(tick);
     timerHandle = setTimeout(() => {
       if (!flipped) {
-        // Auto-flip to reveal the answer.
         flipped = true;
         recordLetter(script.meta.id, deck[idx].glyph, {});
         render();
       } else {
-        // Already flipped — treat as "Again" and move on.
         rateCurrent('again');
       }
     }, total);
@@ -174,10 +169,7 @@ export async function renderFlashcards(_, mount) {
     flipped = false;
     render();
   });
-  root.querySelector('#next').addEventListener('click', e => {
-    e.stopPropagation();
-    advance();
-  });
+  root.querySelector('#next').addEventListener('click', e => { e.stopPropagation(); advance(); });
   root.querySelector('#shuffle').addEventListener('click', e => {
     e.stopPropagation();
     deck = buildDeck(script);
@@ -190,7 +182,6 @@ export async function renderFlashcards(_, mount) {
     if (!deck.length) return;
     idx = (idx + 1) % deck.length;
     flipped = false;
-    // After advancing, refresh deck if our cycle has drifted out of due-order.
     if (idx === 0) deck = buildDeck(script);
     render();
   }
@@ -198,14 +189,10 @@ export async function renderFlashcards(_, mount) {
   render();
   mount.appendChild(root);
 
-  // Stop timer if the user navigates away.
   const stop = () => stopTimer();
   window.addEventListener('hashchange', stop, { once: true });
 }
 
-// Build the practice deck honouring SRS due times. Cards whose `due` is in the
-// past (or never set) come first, sorted by overdueness. If nothing is due,
-// fall back to the full deck so the player can always practice.
 function buildDeck(script) {
   const now = Date.now();
   const all = script.letters;
@@ -213,13 +200,9 @@ function buildDeck(script) {
     const prog = getLetterProgress(script.meta.id, letter.glyph);
     return { letter, due: prog.due || 0 };
   });
-  const due = annotated
-    .filter(a => a.due <= now)
-    .sort((a, b) => a.due - b.due)
-    .map(a => a.letter);
+  const due = annotated.filter(a => a.due <= now).sort((a, b) => a.due - b.due).map(a => a.letter);
   if (due.length === 0) return shuffle(all);
   if (due.length < all.length) {
-    // Mix some not-yet-due cards in at the end so the deck doesn't feel empty.
     const notDue = annotated.filter(a => a.due > now).sort((a, b) => a.due - b.due).map(a => a.letter);
     return [...shuffle(due), ...notDue];
   }
