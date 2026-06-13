@@ -4,10 +4,12 @@ import { el, escapeHtml } from './dom.js';
 import { t, transcriptionLabel, inputSystemLabel } from '../i18n.js';
 
 const MODES = [
-  { id: 'flashcards', titleKey: 'mode.flashcards.title', blurbKey: 'mode.flashcards.blurb' },
-  { id: 'read',       titleKey: 'mode.read.title',       blurbKey: 'mode.read.blurb' },
-  { id: 'spell',      titleKey: 'mode.spell.title',      blurbKey: 'mode.spell.blurb' },
-  { id: 'phrases',    titleKey: 'mode.phrases.title',    blurbKey: 'mode.phrases.blurb' }
+  { id: 'flashcards',      titleKey: 'mode.flashcards.title',      blurbKey: 'mode.flashcards.blurb' },
+  { id: 'read',            titleKey: 'mode.read.title',            blurbKey: 'mode.read.blurb' },
+  { id: 'spell',           titleKey: 'mode.spell.title',           blurbKey: 'mode.spell.blurb' },
+  { id: 'phrases',         titleKey: 'mode.phrases.title',         blurbKey: 'mode.phrases.blurb' },
+  { id: 'preview-letters', titleKey: 'mode.preview-letters.title', blurbKey: 'mode.preview-letters.blurb' },
+  { id: 'preview-words',   titleKey: 'mode.preview-words.title',   blurbKey: 'mode.preview-words.blurb' }
 ];
 
 export async function renderHome(_, mount) {

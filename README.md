@@ -1,4 +1,4 @@
-# Allscripts
+# allScripts
 
 A small static web game for learning non-Latin writing systems. No backend,
 no build step — open it in a browser and you're done.
@@ -34,6 +34,15 @@ no build step — open it in a browser and you're done.
 4. **Phrases** — 20 useful everyday phrases (greetings, directions, numbers,
    politeness) per language. Tap a card to flip between the native script
    (with romanisation) and the translation in your chosen UI language.
+5. **Preview alphabet** — every letter at a glance, native form on top and
+   transcription (smaller, muted) directly below. Filter chips toggle
+   **Consonants / Vowels / Marks** (only the categories that actually exist
+   in the script are shown).
+6. **Preview words** — the whole word pool laid out as a grid: native form on
+   top, transcription smaller and muted underneath, meaning beneath that.
+   Filter by source — **Specific** (curated for this script) vs
+   **International** (loanwords like *taxi*, *metro*) — and by word length
+   via a dual-handled range slider.
 
 ### Forgiving (fuzzy) matching
 

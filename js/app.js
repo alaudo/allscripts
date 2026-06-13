@@ -7,6 +7,8 @@ import { renderFlashcards } from './modes/flashcards.js';
 import { renderRead } from './modes/read.js';
 import { renderSpell } from './modes/spell.js';
 import { renderPhrases } from './modes/phrases.js';
+import { renderPreviewLetters } from './modes/preview-letters.js';
+import { renderPreviewWords } from './modes/preview-words.js';
 
 applyChromeStrings();
 initTheme();
@@ -17,6 +19,8 @@ registerRoute('flashcards', renderFlashcards);
 registerRoute('read', renderRead);
 registerRoute('spell', renderSpell);
 registerRoute('phrases', renderPhrases);
+registerRoute('preview-letters', renderPreviewLetters);
+registerRoute('preview-words', renderPreviewWords);
 
 setFallback(async (_, mount) => {
   mount.innerHTML =
