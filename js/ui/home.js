@@ -37,7 +37,7 @@ export async function renderHome(_, mount) {
          <span class="script-stats" title="letters learned · words practised">
            <span class="stat" title="letters learned">🔤 ${stats.lettersKnown}/${totalsFor.totalLetters}</span>
            <span class="stat-sep">·</span>
-           <span class="stat" title="words practised">📖 ${stats.wordsLearned}/${totalsFor.totalWords}</span>
+           <span class="stat" title="words practised">💬 ${stats.wordsLearned}/${totalsFor.totalWords}</span>
          </span>
        </button>`
     );

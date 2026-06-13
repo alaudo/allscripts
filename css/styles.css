@@ -78,13 +78,35 @@ body {
   color: inherit;
   font-size: 1.1rem;
 }
-.topbar-nav { display: flex; gap: 16px; }
+.topbar-nav { display: flex; gap: 16px; align-items: center; }
 .topbar-nav a {
   color: var(--muted);
   text-decoration: none;
   font-weight: 500;
 }
 .topbar-nav a.active { color: var(--accent); }
+
+.theme-toggle {
+  font: inherit;
+  background: transparent;
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  line-height: 1;
+  color: inherit;
+  padding: 0;
+  transition: border-color 0.08s, background 0.08s, transform 0.08s;
+}
+.theme-toggle:hover {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, var(--card-bg));
+  transform: rotate(-12deg);
+}
 
 .view {
   flex: 1;
