@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "scripts": [
+    { "id": "greek",      "name": "Greek",      "nativeName": "Ελληνικά",  "language": "el", "direction": "ltr", "file": "scripts/greek.json" },
+    { "id": "cyrillic",   "name": "Cyrillic",   "nativeName": "Кириллица", "language": "ru", "direction": "ltr", "file": "scripts/cyrillic.json" },
+    { "id": "armenian",   "name": "Armenian",   "nativeName": "Հայերեն",   "language": "hy", "direction": "ltr", "file": "scripts/armenian.json" },
+    { "id": "georgian",   "name": "Georgian",   "nativeName": "ქართული",   "language": "ka", "direction": "ltr", "file": "scripts/georgian.json" },
+    { "id": "hiragana",   "name": "Hiragana",   "nativeName": "ひらがな",   "language": "ja", "direction": "ltr", "file": "scripts/hiragana.json" },
+    { "id": "devanagari", "name": "Devanagari", "nativeName": "देवनागरी",    "language": "hi", "direction": "ltr", "file": "scripts/devanagari.json" },
+    { "id": "arabic",     "name": "Arabic",     "nativeName": "العربية",    "language": "ar", "direction": "rtl", "file": "scripts/arabic.json" }
+  ]
+}
