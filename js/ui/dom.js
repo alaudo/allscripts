@@ -52,11 +52,26 @@ export function fieldFor(transcription) {
 }
 
 export function inputFieldFor(inputSystem) {
-  return inputSystem === 'cyrillic' ? 'cyrillic' : 'latin';
+  return inputSystem === 'cyrillic' ? 'cyrillic'
+       : inputSystem === 'ipa' ? 'ipa'
+       : 'latin';
 }
 
 export function transcriptionLabel(transcription) {
   return transcription === 'english' ? 'English re-spelling'
        : transcription === 'russian' ? 'Russian re-spelling'
        : 'IPA';
+}
+
+export function inputSystemLabel(inputSystem) {
+  return inputSystem === 'cyrillic' ? 'Cyrillic'
+       : inputSystem === 'ipa' ? 'IPA'
+       : 'Latin';
+}
+
+// Cycle through transcription systems in a stable order.
+export const TRANSCRIPTIONS = ['ipa', 'english', 'russian'];
+export function nextTranscription(current) {
+  const i = TRANSCRIPTIONS.indexOf(current);
+  return TRANSCRIPTIONS[(i + 1) % TRANSCRIPTIONS.length];
 }

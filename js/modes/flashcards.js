@@ -1,11 +1,10 @@
 import { getScript } from '../data.js';
-import { getSettings, recordLetter } from '../storage.js';
-import { el, escapeHtml, shuffle, fieldFor, transcriptionLabel } from '../ui/dom.js';
+import { getSettings, updateSettings, recordLetter } from '../storage.js';
+import { el, escapeHtml, shuffle, fieldFor, transcriptionLabel, nextTranscription } from '../ui/dom.js';
 
 export async function renderFlashcards(_, mount) {
-  const settings = getSettings();
+  let settings = getSettings();
   const script = await getScript(settings.activeScript);
-  const field = fieldFor(settings.transcription);
 
   let deck = shuffle(script.letters);
   let idx = 0;
@@ -16,7 +15,7 @@ export async function renderFlashcards(_, mount) {
       <header class="mode-header">
         <a href="#/home" class="back">← Home</a>
         <h2>${escapeHtml(script.meta.name)} flashcards</h2>
-        <span class="muted small">${escapeHtml(transcriptionLabel(settings.transcription))}</span>
+        <button class="transcription-toggle" id="transcription-toggle" title="Click to cycle transcription system"></button>
       </header>
 
       <div class="card-stack">
@@ -47,9 +46,15 @@ export async function renderFlashcards(_, mount) {
   const frontEl = root.querySelector('.face.front');
   const backEl = root.querySelector('.face.back');
   const counterEl = root.querySelector('#counter');
+  const transToggle = root.querySelector('#transcription-toggle');
+
+  function renderTranscriptionLabel() {
+    transToggle.innerHTML = `${escapeHtml(transcriptionLabel(settings.transcription))} <span class="muted small">(click to change)</span>`;
+  }
 
   function render() {
     const letter = deck[idx];
+    const field = fieldFor(settings.transcription);
     cardEl.classList.toggle('flipped', flipped);
     frontEl.innerHTML = `<div class="glyph">${escapeHtml(letter.glyph)}</div>`;
     const transcription = letter[field] ?? letter.ipa;
@@ -65,7 +70,14 @@ export async function renderFlashcards(_, mount) {
         </div>` : ''}
     `;
     counterEl.textContent = `${idx + 1} / ${deck.length}`;
+    renderTranscriptionLabel();
   }
+
+  transToggle.addEventListener('click', e => {
+    e.stopPropagation();
+    settings = updateSettings({ transcription: nextTranscription(settings.transcription) });
+    render();
+  });
 
   cardEl.addEventListener('click', () => {
     flipped = !flipped;

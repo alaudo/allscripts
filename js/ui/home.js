@@ -1,11 +1,11 @@
-import { getManifest } from '../data.js';
+import { getManifest, getScript, getWordPool } from '../data.js';
 import { getSettings, summary } from '../storage.js';
-import { el, escapeHtml, transcriptionLabel } from './dom.js';
+import { el, escapeHtml, transcriptionLabel, inputSystemLabel } from './dom.js';
 
 const MODES = [
   { id: 'flashcards', title: 'Flashcards',      blurb: 'Letter on the front, transcription and an example word on the back.' },
-  { id: 'read',       title: 'Read & transcribe', blurb: 'A word in the script — type its Latin or Cyrillic transcription.' },
-  { id: 'spell',      title: 'Spell in script',   blurb: 'A word in Latin/Cyrillic — type it in the target script.' }
+  { id: 'read',       title: 'Read & transcribe', blurb: 'A word in the script — type its Latin, Cyrillic or IPA transcription.' },
+  { id: 'spell',      title: 'Spell in script',   blurb: 'A word in Latin/Cyrillic/IPA — type it in the target script.' }
 ];
 
 export async function renderHome(_, mount) {
@@ -18,14 +18,23 @@ export async function renderHome(_, mount) {
   // Active-script picker
   const picker = el('<div class="card"><h2>Pick a script</h2><div class="script-grid"></div></div>');
   const grid = picker.querySelector('.script-grid');
+
+  // Pre-load all scripts + pools in parallel so each tile knows its totals.
+  const totals = await Promise.all(manifest.scripts.map(async s => {
+    const [script, pool] = await Promise.all([getScript(s.id), getWordPool(s.id)]);
+    return { id: s.id, totalLetters: script.letters.length, totalWords: pool.length };
+  }));
+  const totalsById = Object.fromEntries(totals.map(t => [t.id, t]));
+
   for (const s of manifest.scripts) {
     const stats = summary(s.id);
+    const totalsFor = totalsById[s.id];
     const active = s.id === settings.activeScript;
     const card = el(
       `<button class="script-card ${active ? 'active' : ''}" data-script="${escapeHtml(s.id)}">
          <span class="script-native" dir="${s.direction}">${escapeHtml(s.nativeName)}</span>
          <span class="script-name">${escapeHtml(s.name)}</span>
-         <span class="script-stats">${stats.lettersKnown} letters · ${stats.wordsCorrect}/${stats.wordsCorrect + stats.wordsWrong} words</span>
+         <span class="script-stats">${stats.lettersKnown}/${totalsFor.totalLetters} letters · ${stats.wordsLearned}/${totalsFor.totalWords} words</span>
        </button>`
     );
     card.addEventListener('click', async () => {
@@ -42,7 +51,7 @@ export async function renderHome(_, mount) {
   const modeCard = el(
     `<div class="card">
        <h2>Practise <span class="muted">${escapeHtml(current.name)}</span></h2>
-       <p class="muted small">Transcription: ${escapeHtml(transcriptionLabel(settings.transcription))} · Word input: ${escapeHtml(settings.inputSystem)} · <a href="#/settings">change</a></p>
+       <p class="muted small">Transcription: ${escapeHtml(transcriptionLabel(settings.transcription))} · Word input: ${escapeHtml(inputSystemLabel(settings.inputSystem))}${settings.vocalised ? ' · vocalised' : ''} · <a href="#/settings">change</a></p>
        <div class="mode-grid"></div>
      </div>`
   );

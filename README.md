@@ -3,7 +3,7 @@
 A small static web game for learning non-Latin writing systems. No backend,
 no build step — open it in a browser and you're done.
 
-**Supported scripts (v1):**
+**Supported scripts (v2):**
 
 - Greek (Ελληνικά)
 - Cyrillic (Кириллица — Russian)
@@ -12,21 +12,30 @@ no build step — open it in a browser and you're done.
 - Georgian (ქართული)
 - Hiragana (ひらがな — Japanese)
 - Arabic (العربية)
+- Hebrew (עברית)
+- Hangul (한글 — Korean)
+- Thai (ไทย)
 
 ## Modes
 
-1. **Flashcards** — letter on the front, transcription on the back plus a
-   common example word in the target language. Tap to flip; mark "again" or
-   "I knew it" to track progress.
-2. **Read & transcribe** — a word is shown in the target script; you type its
-   transliteration (Latin **or** Cyrillic, your choice in Settings). The pool
-   draws from per-script curated words **and** a shared list of international
-   concepts (taxi, coffee, hotel, telephone…).
-3. **Spell in script** — a word is shown in Latin/Cyrillic; you spell it in
-   the target script using an on-screen keyboard (or your hardware keyboard).
+1. **Flashcards** — letter on the front, transcription and an example word on
+   the back. Click the transcription system label in the header to cycle
+   between IPA / English re-spelling / Russian re-spelling on the fly.
+2. **Read & transcribe** — a word in the target script; you type its
+   transliteration (Latin, Cyrillic, or **IPA** — choose in Settings). IPA
+   mode shows an on-screen IPA keyboard with vowels, consonants and
+   suprasegmentals.
+3. **Spell in script** — a word in Latin/Cyrillic/IPA; you spell it in the
+   target script using an on-screen keyboard (or your hardware keyboard).
 
-Transcription system (IPA / English re-spelling / Russian re-spelling) is
-configurable in Settings.
+For scripts with optional diacritics (**Arabic harakat**, **Hebrew niqqud**)
+turn on **"Show full vocalisation"** in Settings. Then the prompts in
+modes 2 & 3 show the fully-pointed form and the spell check requires the
+vocalised answer. Off, the bare consonantal form is shown and either form
+is accepted.
+
+The home page tile for each script shows `learned/total` letters and
+`learned/total` words, so you can see your coverage at a glance.
 
 ## Running locally
 

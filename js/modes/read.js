@@ -1,12 +1,15 @@
 import { getScript, getWordPool } from '../data.js';
 import { getSettings, recordWord } from '../storage.js';
-import { el, escapeHtml, pickRandom, looseEqual, inputFieldFor } from '../ui/dom.js';
+import { el, escapeHtml, pickRandom, looseEqual, inputFieldFor, inputSystemLabel } from '../ui/dom.js';
+import { renderKeyboard } from '../ui/keyboard.js';
+import { IPA_ROWS } from '../ui/ipa-keyboard.js';
 
 export async function renderRead(_, mount) {
   const settings = getSettings();
   const script = await getScript(settings.activeScript);
   const pool = await getWordPool(script.meta.id);
   const field = inputFieldFor(settings.inputSystem);
+  const useIpaKeyboard = settings.inputSystem === 'ipa';
 
   let current = pickRandom(pool);
   let revealed = false;
@@ -16,17 +19,24 @@ export async function renderRead(_, mount) {
       <header class="mode-header">
         <a href="#/home" class="back">← Home</a>
         <h2>Read &amp; transcribe — ${escapeHtml(script.meta.name)}</h2>
-        <span class="muted small">Input: ${escapeHtml(settings.inputSystem)}</span>
+        <span class="muted small">Input: ${escapeHtml(inputSystemLabel(settings.inputSystem))}${settings.vocalised ? ' · vocalised' : ''}</span>
       </header>
 
       <div class="card prompt-card">
         <div class="prompt" dir="${script.meta.direction}" id="prompt"></div>
         <form id="form" class="answer-form">
-          <input type="text" id="answer" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type the ${escapeHtml(settings.inputSystem)} transcription..." />
+          <input type="text" id="answer" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type the ${escapeHtml(inputSystemLabel(settings.inputSystem))} transcription..." />
           <button type="submit" class="btn">Check</button>
         </form>
         <div class="result" id="result" aria-live="polite"></div>
       </div>
+
+      ${useIpaKeyboard ? `
+      <div class="card">
+        <h3 class="kb-title">IPA keyboard</h3>
+        <div id="keyboard"></div>
+        <p class="muted small">Click symbols to insert them. Most cells are single characters; combining diacritics attach to the previous character.</p>
+      </div>` : ''}
 
       <div class="next-row">
         <button class="btn-secondary" id="skip">Skip / Next →</button>
@@ -40,9 +50,18 @@ export async function renderRead(_, mount) {
   const form = root.querySelector('#form');
   const skipBtn = root.querySelector('#skip');
 
+  if (useIpaKeyboard) {
+    const kbEl = root.querySelector('#keyboard');
+    renderKeyboard(kbEl, IPA_ROWS, {
+      onInput: ch => insertAtCursor(inputEl, ch),
+      onBackspace: () => backspaceAtCursor(inputEl),
+      onSubmit: () => form.requestSubmit()
+    });
+  }
+
   function showWord() {
     revealed = false;
-    promptEl.textContent = current.native;
+    promptEl.textContent = settings.vocalised && current.nativeVoweled ? current.nativeVoweled : current.native;
     inputEl.value = '';
     inputEl.disabled = false;
     resultEl.innerHTML = '';
@@ -55,8 +74,10 @@ export async function renderRead(_, mount) {
     recordWord(script.meta.id, current.native, { correct });
 
     const expected = current[field];
-    const ipa = current.ipa ? `<div class="ipa">/${escapeHtml(current.ipa)}/</div>` : '';
+    const ipa = current.ipa && field !== 'ipa' ? `<div class="ipa">/${escapeHtml(current.ipa)}/</div>` : '';
     const note = current.note ? `<div class="note">📝 ${escapeHtml(current.note)}</div>` : '';
+    const voweledHint = !settings.vocalised && current.nativeVoweled
+      ? `<div class="muted small">vocalised: <span dir="${script.meta.direction}">${escapeHtml(current.nativeVoweled)}</span></div>` : '';
 
     resultEl.innerHTML = `
       <div class="verdict ${correct ? 'good' : 'bad'}">${correct ? '✓ Correct' : '✗ Not quite'}</div>
@@ -66,6 +87,7 @@ export async function renderRead(_, mount) {
       </div>
       <div class="meaning">${escapeHtml(current.meaning || '')}</div>
       ${ipa}
+      ${voweledHint}
       ${note}
     `;
   }
@@ -75,7 +97,11 @@ export async function renderRead(_, mount) {
     if (revealed) { next(); return; }
     const guess = inputEl.value;
     const expected = current[field];
-    reveal(looseEqual(guess, expected));
+    // For IPA, accept either exact match or loose-equal (strips stress / length marks).
+    const ok = field === 'ipa'
+      ? (guess.trim() === (expected || '').trim() || looseEqual(stripIpaMarks(guess), stripIpaMarks(expected)))
+      : looseEqual(guess, expected);
+    reveal(ok);
   });
 
   skipBtn.addEventListener('click', () => {
@@ -96,4 +122,30 @@ export async function renderRead(_, mount) {
 
   showWord();
   mount.appendChild(root);
+}
+
+function insertAtCursor(inputEl, ch) {
+  const start = inputEl.selectionStart ?? inputEl.value.length;
+  const end = inputEl.selectionEnd ?? inputEl.value.length;
+  inputEl.value = inputEl.value.slice(0, start) + ch + inputEl.value.slice(end);
+  const pos = start + ch.length;
+  inputEl.setSelectionRange(pos, pos);
+  inputEl.focus();
+}
+
+function backspaceAtCursor(inputEl) {
+  const start = inputEl.selectionStart ?? inputEl.value.length;
+  const end = inputEl.selectionEnd ?? inputEl.value.length;
+  if (start === end && start > 0) {
+    inputEl.value = inputEl.value.slice(0, start - 1) + inputEl.value.slice(end);
+    inputEl.setSelectionRange(start - 1, start - 1);
+  } else {
+    inputEl.value = inputEl.value.slice(0, start) + inputEl.value.slice(end);
+    inputEl.setSelectionRange(start, start);
+  }
+  inputEl.focus();
+}
+
+function stripIpaMarks(s) {
+  return String(s || '').replace(/[ˈˌː]/g, '').trim();
 }

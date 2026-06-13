@@ -8,7 +8,8 @@ const DEFAULTS = {
   settings: {
     activeScript: 'greek',
     transcription: 'ipa',     // 'ipa' | 'english' | 'russian'
-    inputSystem: 'latin'      // 'latin' | 'cyrillic'  -- used in mode 2
+    inputSystem: 'latin',     // 'latin' | 'cyrillic' | 'ipa'  (used in modes 2 & 3)
+    vocalised: false          // show full vocalisation for scripts with optional diacritics (Arabic, Hebrew)
   },
   progress: {}                // { [scriptId]: { letters: {...}, words: {...} } }
 };
@@ -97,5 +98,8 @@ export function summary(scriptId) {
   const lettersSeen = Object.keys(p.letters).length;
   const wordsCorrect = Object.values(p.words).reduce((n, w) => n + (w.correct || 0), 0);
   const wordsWrong = Object.values(p.words).reduce((n, w) => n + (w.wrong || 0), 0);
-  return { lettersKnown, lettersSeen, wordsCorrect, wordsWrong };
+  // A word is considered "learned" once the learner has answered it correctly
+  // at least once and has more correct answers than wrong ones.
+  const wordsLearned = Object.values(p.words).filter(w => (w.correct || 0) > 0 && (w.correct || 0) >= (w.wrong || 0)).length;
+  return { lettersKnown, lettersSeen, wordsCorrect, wordsWrong, wordsLearned };
 }

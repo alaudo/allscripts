@@ -1,13 +1,13 @@
 import { getScript, getWordPool } from '../data.js';
 import { getSettings, recordWord } from '../storage.js';
-import { el, escapeHtml, pickRandom, looseEqual, inputFieldFor, transcriptionLabel } from '../ui/dom.js';
+import { el, escapeHtml, pickRandom, looseEqual, inputFieldFor, inputSystemLabel } from '../ui/dom.js';
 import { renderKeyboard } from '../ui/keyboard.js';
 
 export async function renderSpell(_, mount) {
   const settings = getSettings();
   const script = await getScript(settings.activeScript);
   const pool = await getWordPool(script.meta.id);
-  // The prompt to the user is given in their preferred input system; they must
+  // The prompt is shown in the user's preferred input system; they must
   // produce the native form.
   const promptField = inputFieldFor(settings.inputSystem);
 
@@ -19,7 +19,7 @@ export async function renderSpell(_, mount) {
       <header class="mode-header">
         <a href="#/home" class="back">← Home</a>
         <h2>Spell in ${escapeHtml(script.meta.name)}</h2>
-        <span class="muted small">Prompt in: ${escapeHtml(settings.inputSystem)}</span>
+        <span class="muted small">Prompt in: ${escapeHtml(inputSystemLabel(settings.inputSystem))}${settings.vocalised ? ' · vocalised target' : ''}</span>
       </header>
 
       <div class="card prompt-card">
@@ -96,12 +96,15 @@ export async function renderSpell(_, mount) {
     inputEl.disabled = true;
     recordWord(script.meta.id, current.native, { correct });
     const note = current.note ? `<div class="note">📝 ${escapeHtml(current.note)}</div>` : '';
+    const voweledHint = current.nativeVoweled
+      ? `<div class="muted small">vocalised: <span dir="${script.meta.direction}">${escapeHtml(current.nativeVoweled)}</span></div>` : '';
     resultEl.innerHTML = `
       <div class="verdict ${correct ? 'good' : 'bad'}">${correct ? '✓ Correct' : '✗ Not quite'}</div>
       <div class="answer-row">
         <span class="muted">Answer:</span>
         <strong class="answer-text" dir="${script.meta.direction}">${escapeHtml(current.native)}</strong>
       </div>
+      ${voweledHint}
       ${current.ipa ? `<div class="ipa">/${escapeHtml(current.ipa)}/</div>` : ''}
       ${note}
     `;
@@ -111,7 +114,17 @@ export async function renderSpell(_, mount) {
     e.preventDefault();
     if (revealed) { next(); return; }
     const guess = inputEl.value.trim();
-    reveal(guess === current.native.trim() || looseEqual(guess, current.native));
+    const baseTarget = (current.native || '').trim();
+    const voweledTarget = (current.nativeVoweled || '').trim();
+    // Accept either the bare form or the fully-vocalised form. In vocalised
+    // mode we require the voweled form when one exists.
+    let ok;
+    if (settings.vocalised && voweledTarget) {
+      ok = guess === voweledTarget;
+    } else {
+      ok = guess === baseTarget || (voweledTarget && guess === voweledTarget) || looseEqual(guess, baseTarget);
+    }
+    reveal(ok);
   });
 
   skipBtn.addEventListener('click', () => {
@@ -130,8 +143,7 @@ export async function renderSpell(_, mount) {
     showWord();
   }
 
-  // Hint label so user knows what kind of transcription they're being shown
-  const hint = el(`<p class="muted small prompt-hint">${escapeHtml(transcriptionLabel(promptField === 'cyrillic' ? 'russian' : 'english'))}</p>`);
+  const hint = el(`<p class="muted small prompt-hint">${escapeHtml(inputSystemLabel(settings.inputSystem))}</p>`);
   promptEl.after(hint);
 
   showWord();

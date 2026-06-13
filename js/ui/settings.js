@@ -10,7 +10,8 @@ const TRANSCRIPTION_OPTIONS = [
 
 const INPUT_OPTIONS = [
   { value: 'latin',    label: 'Latin (English keyboard)' },
-  { value: 'cyrillic', label: 'Cyrillic (Russian keyboard)' }
+  { value: 'cyrillic', label: 'Cyrillic (Russian keyboard)' },
+  { value: 'ipa',      label: 'IPA (with on-screen keyboard)' }
 ];
 
 export async function renderSettings(_, mount) {
@@ -32,7 +33,13 @@ export async function renderSettings(_, mount) {
         <label class="field">
           <span class="field-label">Read &amp; transcribe — input system</span>
           <select id="inputSystem"></select>
-          <small class="muted">Which keyboard layout you'll use when typing the transliteration.</small>
+          <small class="muted">Which keyboard / phonetic system you'll use when typing the transliteration.</small>
+        </label>
+
+        <label class="field checkbox-field">
+          <input type="checkbox" id="vocalised" ${settings.vocalised ? 'checked' : ''} />
+          <span class="field-label">Show full vocalisation</span>
+          <small class="muted">For scripts with optional diacritics (Arabic harakat, Hebrew niqqud), display the fully-pointed form in word exercises.</small>
         </label>
       </div>
 
@@ -68,6 +75,11 @@ export async function renderSettings(_, mount) {
   }
   inputSel.addEventListener('change', () => {
     updateSettings({ inputSystem: inputSel.value });
+  });
+
+  const vocalisedEl = root.querySelector('#vocalised');
+  vocalisedEl.addEventListener('change', () => {
+    updateSettings({ vocalised: vocalisedEl.checked });
   });
 
   const tbody = root.querySelector('tbody');

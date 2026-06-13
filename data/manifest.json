@@ -7,6 +7,9 @@
     { "id": "georgian",   "name": "Georgian",   "nativeName": "ქართული",   "language": "ka", "direction": "ltr", "file": "scripts/georgian.json" },
     { "id": "hiragana",   "name": "Hiragana",   "nativeName": "ひらがな",   "language": "ja", "direction": "ltr", "file": "scripts/hiragana.json" },
     { "id": "devanagari", "name": "Devanagari", "nativeName": "देवनागरी",    "language": "hi", "direction": "ltr", "file": "scripts/devanagari.json" },
-    { "id": "arabic",     "name": "Arabic",     "nativeName": "العربية",    "language": "ar", "direction": "rtl", "file": "scripts/arabic.json" }
+    { "id": "arabic",     "name": "Arabic",     "nativeName": "العربية",    "language": "ar", "direction": "rtl", "file": "scripts/arabic.json" },
+    { "id": "hebrew",     "name": "Hebrew",     "nativeName": "עברית",     "language": "he", "direction": "rtl", "file": "scripts/hebrew.json" },
+    { "id": "hangul",     "name": "Hangul",     "nativeName": "한글",       "language": "ko", "direction": "ltr", "file": "scripts/hangul.json" },
+    { "id": "thai",       "name": "Thai",       "nativeName": "ไทย",       "language": "th", "direction": "ltr", "file": "scripts/thai.json" }
   ]
 }
