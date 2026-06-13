@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "scripts": [
+    {
+      "id": "greek",
+      "name": "Greek",
+      "nativeName": "Ελληνικά",
+      "language": "el",
+      "direction": "ltr",
+      "file": "scripts/greek.json",
+      "info": "The Greek alphabet has been in continuous use since the 9th century BC, descended from the Phoenician script. It was the first true alphabet — the first script to assign letters to vowels as well as consonants — and its letterforms are the ancestors of Latin and Cyrillic.",
+      "countries": [
+        { "flag": "🇬🇷", "name": "Greece" },
+        { "flag": "🇨🇾", "name": "Cyprus" }
+      ]
+    },
+    {
+      "id": "cyrillic",
+      "name": "Cyrillic",
+      "nativeName": "Кириллица",
+      "language": "ru",
+      "direction": "ltr",
+      "file": "scripts/cyrillic.json",
+      "info": "Cyrillic was developed in the 9th–10th centuries in the First Bulgarian Empire by disciples of Saints Cyril and Methodius, adapting Greek uncial letters to write Slavic languages. Today it is used by over 250 million people across Slavic, Turkic, Mongolic and Iranian languages.",
+      "countries": [
+        { "flag": "🇷🇺", "name": "Russia" },
+        { "flag": "🇺🇦", "name": "Ukraine" },
+        { "flag": "🇧🇾", "name": "Belarus" },
+        { "flag": "🇧🇬", "name": "Bulgaria" },
+        { "flag": "🇷🇸", "name": "Serbia" },
+        { "flag": "🇲🇰", "name": "North Macedonia" },
+        { "flag": "🇰🇿", "name": "Kazakhstan" },
+        { "flag": "🇰🇬", "name": "Kyrgyzstan" },
+        { "flag": "🇲🇳", "name": "Mongolia" }
+      ]
+    },
+    {
+      "id": "armenian",
+      "name": "Armenian",
+      "nativeName": "Հայերեն",
+      "language": "hy",
+      "direction": "ltr",
+      "file": "scripts/armenian.json",
+      "info": "The Armenian alphabet was created around 405 AD by the linguist and theologian Mesrop Mashtots, with the explicit purpose of translating the Bible into Armenian. It has 39 letters in its modern form and is one of very few scripts whose inventor is known.",
+      "countries": [
+        { "flag": "🇦🇲", "name": "Armenia" }
+      ]
+    },
+    {
+      "id": "georgian",
+      "name": "Georgian",
+      "nativeName": "ქართული",
+      "language": "ka",
+      "direction": "ltr",
+      "file": "scripts/georgian.json",
+      "info": "Georgian (Mkhedruli) is one of three related Georgian scripts; together they form a unique alphabetic family recognized by UNESCO as Intangible Cultural Heritage. The earliest inscriptions date to the 5th century AD. Mkhedruli has 33 letters and lacks both uppercase and silent letters.",
+      "countries": [
+        { "flag": "🇬🇪", "name": "Georgia" }
+      ]
+    },
+    {
+      "id": "hiragana",
+      "name": "Hiragana",
+      "nativeName": "ひらがな",
+      "language": "ja",
+      "direction": "ltr",
+      "file": "scripts/hiragana.json",
+      "info": "Hiragana is a Japanese syllabary that evolved from cursive forms of Chinese characters (man'yōgana) during the Heian period (8th–12th c.). It was once dismissively called 'women's writing' but is now used for native words, grammatical particles and verb endings alongside kanji and katakana.",
+      "countries": [
+        { "flag": "🇯🇵", "name": "Japan" }
+      ]
+    },
+    {
+      "id": "devanagari",
+      "name": "Devanagari",
+      "nativeName": "देवनागरी",
+      "language": "hi",
+      "direction": "ltr",
+      "file": "scripts/devanagari.json",
+      "info": "Devanagari is an abugida descended from the ancient Brahmi script (3rd c. BC). Its distinctive horizontal headstroke (shirorekha) ties letters into words. It is used to write Hindi, Marathi, Sanskrit, Nepali and several other Indo-Aryan languages — roughly 600 million speakers in total.",
+      "countries": [
+        { "flag": "🇮🇳", "name": "India" },
+        { "flag": "🇳🇵", "name": "Nepal" }
+      ]
+    },
+    {
+      "id": "arabic",
+      "name": "Arabic",
+      "nativeName": "العربية",
+      "language": "ar",
+      "direction": "rtl",
+      "file": "scripts/arabic.json",
+      "info": "The Arabic script developed from Nabataean Aramaic around the 4th century AD and spread with Islam from the 7th century onward. Written right-to-left, it is cursive: nearly every letter has four contextual forms. Short vowels are usually unwritten but may be marked with diacritics (harakat).",
+      "countries": [
+        { "flag": "🇸🇦", "name": "Saudi Arabia" },
+        { "flag": "🇪🇬", "name": "Egypt" },
+        { "flag": "🇲🇦", "name": "Morocco" },
+        { "flag": "🇩🇿", "name": "Algeria" },
+        { "flag": "🇮🇶", "name": "Iraq" },
+        { "flag": "🇸🇾", "name": "Syria" },
+        { "flag": "🇯🇴", "name": "Jordan" },
+        { "flag": "🇱🇧", "name": "Lebanon" },
+        { "flag": "🇦🇪", "name": "UAE" },
+        { "flag": "🇮🇷", "name": "Iran (Persian)" },
+        { "flag": "🇵🇰", "name": "Pakistan (Urdu)" }
+      ]
+    },
+    {
+      "id": "hebrew",
+      "name": "Hebrew",
+      "nativeName": "עברית",
+      "language": "he",
+      "direction": "rtl",
+      "file": "scripts/hebrew.json",
+      "info": "The Hebrew alphabet (the 'square script', ketav ashuri) descends from the Imperial Aramaic script around the 5th century BC. It has 22 consonants and is written right-to-left. Vowels are normally implicit, but can be indicated with niqqud — small dots and dashes above or below letters.",
+      "countries": [
+        { "flag": "🇮🇱", "name": "Israel" }
+      ]
+    },
+    {
+      "id": "hangul",
+      "name": "Hangul",
+      "nativeName": "한글",
+      "language": "ko",
+      "direction": "ltr",
+      "file": "scripts/hangul.json",
+      "info": "Hangul was promulgated in 1443 by King Sejong the Great of Joseon, who wanted a writing system the common people could actually learn. Its consonant shapes are diagrammatic — they depict the position of the tongue and lips — and letters cluster into syllable-blocks rather than being written in a line.",
+      "countries": [
+        { "flag": "🇰🇷", "name": "South Korea" },
+        { "flag": "🇰🇵", "name": "North Korea" }
+      ]
+    },
+    {
+      "id": "thai",
+      "name": "Thai",
+      "nativeName": "ไทย",
+      "language": "th",
+      "direction": "ltr",
+      "file": "scripts/thai.json",
+      "info": "The Thai script was created in 1283 by King Ramkhamhaeng, adapted from the Old Khmer script (itself descended from Brahmi). It is an abugida with 44 consonants, 15 vowel symbols (which can combine), and 4 tone marks. It is written left-to-right with no spaces between words.",
+      "countries": [
+        { "flag": "🇹🇭", "name": "Thailand" }
+      ]
+    }
+  ]
+}

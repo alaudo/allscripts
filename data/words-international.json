@@ -1,0 +1,382 @@
+{
+  "version": 1,
+  "_comment": "Each entry is an international concept with renderings per script. A script id may be omitted if the concept isn't naturally expressed in that script as a loanword. Add more by appending entries to 'entries'.",
+  "entries": [
+    {
+      "concept": "taxi",
+      "meaning": "taxi",
+      "note": "A truly international loanword — pronounced almost identically across these languages.",
+      "forms": {
+        "greek":      { "native": "ταξί",   "ipa": "taˈksi",   "latin": "taxi",     "cyrillic": "такси" },
+        "cyrillic":   { "native": "такси",  "ipa": "tɐˈksi",   "latin": "taksi",    "cyrillic": "такси" },
+        "armenian":   { "native": "տաքսի",  "ipa": "tʰɑkʰˈsi", "latin": "tak'si",   "cyrillic": "такси" },
+        "georgian":   { "native": "ტაქსი",  "ipa": "ˈtʰɑksi",  "latin": "taksi",    "cyrillic": "такси" },
+        "hiragana":   { "native": "たくしー","ipa": "takɯɕiː",  "latin": "takushī",  "cyrillic": "такуси:" },
+        "devanagari": { "native": "टैक्सी", "ipa": "ʈɛksiː",   "latin": "ṭaiksī",   "cyrillic": "тэкси" },
+        "arabic":     { "native": "تاكسي",  "ipa": "taːksiː",  "latin": "tāksī",    "cyrillic": "такси" }
+      }
+    },
+    {
+      "concept": "metro",
+      "meaning": "metro / subway",
+      "forms": {
+        "greek":      { "native": "μετρό",  "ipa": "meˈtro",   "latin": "metro",    "cyrillic": "мэтро" },
+        "cyrillic":   { "native": "метро",  "ipa": "mʲɪˈtro",  "latin": "metro",    "cyrillic": "метро" },
+        "armenian":   { "native": "մետրո",  "ipa": "mɛtˈɾɔ",   "latin": "metro",    "cyrillic": "мэтро" },
+        "georgian":   { "native": "მეტრო",  "ipa": "ˈmɛtʼɾɔ",  "latin": "metro",    "cyrillic": "мэтро" },
+        "hiragana":   { "native": "めとろ",  "ipa": "metoɾo",   "latin": "metoro",   "cyrillic": "мэторо" },
+        "devanagari": { "native": "मेट्रो", "ipa": "meːʈɾoː",  "latin": "meṭro",    "cyrillic": "мэтро" },
+        "arabic":     { "native": "مترو",   "ipa": "mitruː",   "latin": "mitrū",    "cyrillic": "митру" }
+      }
+    },
+    {
+      "concept": "coffee",
+      "meaning": "coffee",
+      "note": "Goes back to Arabic 'qahwa' — many of these forms are descendants.",
+      "forms": {
+        "greek":      { "native": "καφές",  "ipa": "kaˈfes",   "latin": "kafes",    "cyrillic": "кафэс" },
+        "cyrillic":   { "native": "кофе",   "ipa": "ˈkofʲɪ",   "latin": "kofe",     "cyrillic": "кофе" },
+        "armenian":   { "native": "սուրճ",  "ipa": "suɾtʃ",    "latin": "surch",    "cyrillic": "сурч" },
+        "georgian":   { "native": "ყავა",   "ipa": "ˈqʼɑvɑ",   "latin": "q'ava",    "cyrillic": "кава" },
+        "hiragana":   { "native": "こーひー","ipa": "koːçiː",   "latin": "kōhī",     "cyrillic": "ко:хи:" },
+        "devanagari": { "native": "कॉफ़ी",  "ipa": "kɔfiː",    "latin": "kāfī",     "cyrillic": "кафи" },
+        "arabic":     { "native": "قهوة",   "ipa": "qahwa",    "latin": "qahwa",    "cyrillic": "кахва" }
+      }
+    },
+    {
+      "concept": "tea",
+      "meaning": "tea",
+      "forms": {
+        "greek":      { "native": "τσάι",   "ipa": "ˈtsai",    "latin": "tsai",     "cyrillic": "цаи" },
+        "cyrillic":   { "native": "чай",    "ipa": "tɕaj",     "latin": "chay",     "cyrillic": "чай" },
+        "armenian":   { "native": "թեյ",    "ipa": "tʰɛj",     "latin": "t'ey",     "cyrillic": "тэй" },
+        "georgian":   { "native": "ჩაი",    "ipa": "ˈtʃʰɑi",   "latin": "chai",     "cyrillic": "чаи" },
+        "hiragana":   { "native": "おちゃ", "ipa": "otɕa",     "latin": "ocha",     "cyrillic": "отя" },
+        "devanagari": { "native": "चाय",    "ipa": "tʃaːj",    "latin": "cāy",      "cyrillic": "чай" },
+        "arabic":     { "native": "شاي",    "ipa": "ʃaːj",     "latin": "shāy",     "cyrillic": "шай" }
+      }
+    },
+    {
+      "concept": "telephone",
+      "meaning": "telephone",
+      "forms": {
+        "greek":      { "native": "τηλέφωνο","ipa": "tiˈlefono","latin": "tilefono", "cyrillic": "тилэфоно" },
+        "cyrillic":   { "native": "телефон","ipa": "tʲɪlʲɪˈfon","latin":"telefon",   "cyrillic": "телефон" },
+        "armenian":   { "native": "հեռախոս","ipa": "hɛrɑˈxɔs", "latin": "heṙakhos", "cyrillic": "hэрраhос" },
+        "georgian":   { "native": "ტელეფონი","ipa":"tʼɛlɛˈpʰɔni","latin":"telefoni","cyrillic": "тэлэфони" },
+        "hiragana":   { "native": "でんわ",  "ipa": "deɴwa",    "latin": "denwa",    "cyrillic": "дэнва" },
+        "devanagari": { "native": "टेलीफोन","ipa": "ʈeːliːpʰoːn","latin":"ṭelīphon","cyrillic": "тэлифон" },
+        "arabic":     { "native": "هاتف",   "ipa": "haːtif",   "latin": "hātif",    "cyrillic": "хатиф" }
+      }
+    },
+    {
+      "concept": "radio",
+      "meaning": "radio",
+      "forms": {
+        "greek":      { "native": "ραδιόφωνο","ipa":"raˈðiofono","latin":"radiofono","cyrillic": "радиофоно" },
+        "cyrillic":   { "native": "радио",  "ipa": "ˈradʲɪo",  "latin": "radio",    "cyrillic": "радио" },
+        "armenian":   { "native": "ռադիո",  "ipa": "rɑˈdiɔ",   "latin": "ṙadio",    "cyrillic": "ррадио" },
+        "georgian":   { "native": "რადიო",  "ipa": "ˈɾɑdiɔ",   "latin": "radio",    "cyrillic": "радио" },
+        "hiragana":   { "native": "らじお",  "ipa": "ɾadʑio",   "latin": "rajio",    "cyrillic": "радзио" },
+        "devanagari": { "native": "रेडियो", "ipa": "ɾeːɖɪjoː", "latin": "reḍiyo",   "cyrillic": "рэдио" },
+        "arabic":     { "native": "راديو",  "ipa": "raːdjuː",  "latin": "rādyū",    "cyrillic": "радью" }
+      }
+    },
+    {
+      "concept": "music",
+      "meaning": "music",
+      "forms": {
+        "greek":      { "native": "μουσική","ipa": "musiˈki",  "latin": "mousiki",  "cyrillic": "мусики" },
+        "cyrillic":   { "native": "музыка", "ipa": "ˈmuzɨkə",  "latin": "muzyka",   "cyrillic": "музыка" },
+        "armenian":   { "native": "երաժշտություն","ipa":"jɛɾɑʒʃtutʰˈjun","latin":"yerazhshtut'yun","cyrillic":"еражштутьюн" },
+        "georgian":   { "native": "მუსიკა", "ipa": "ˈmusikʼɑ", "latin": "musika",   "cyrillic": "мусика" },
+        "hiragana":   { "native": "おんがく","ipa": "oŋɡakɯ",  "latin": "ongaku",   "cyrillic": "онгаку" },
+        "devanagari": { "native": "संगीत",  "ipa": "səŋɡiːt̪", "latin": "saṅgīt",   "cyrillic": "сангит" },
+        "arabic":     { "native": "موسيقى", "ipa": "muːsiːqaː","latin": "mūsīqā",   "cyrillic": "мусика" }
+      }
+    },
+    {
+      "concept": "theater",
+      "meaning": "theater",
+      "note": "Greek 'théatron' is the source of most European forms.",
+      "forms": {
+        "greek":      { "native": "θέατρο", "ipa": "ˈθeatro",  "latin": "theatro",  "cyrillic": "тэатро" },
+        "cyrillic":   { "native": "театр",  "ipa": "tʲɪˈatr",  "latin": "teatr",    "cyrillic": "театр" },
+        "armenian":   { "native": "թատրոն", "ipa": "tʰɑtˈɾɔn", "latin": "t'atron",  "cyrillic": "татрон" },
+        "georgian":   { "native": "თეატრი", "ipa": "tʰɛˈɑtʼɾi","latin": "teatri",   "cyrillic": "тэатри" },
+        "devanagari": { "native": "थिएटर",  "ipa": "t̪ʰɪeːʈəɾ","latin": "thieṭar",  "cyrillic": "тхиэтар" },
+        "arabic":     { "native": "مسرح",   "ipa": "masraħ",   "latin": "masraḥ",   "cyrillic": "масрах" }
+      }
+    },
+    {
+      "concept": "cinema",
+      "meaning": "cinema / movies",
+      "forms": {
+        "greek":      { "native": "σινεμά", "ipa": "sineˈma",  "latin": "sinema",   "cyrillic": "синэма" },
+        "cyrillic":   { "native": "кино",   "ipa": "kʲɪˈno",   "latin": "kino",     "cyrillic": "кино" },
+        "armenian":   { "native": "կինո",   "ipa": "kiˈnɔ",    "latin": "kino",     "cyrillic": "кино" },
+        "georgian":   { "native": "კინო",   "ipa": "kʼiˈnɔ",   "latin": "k'ino",    "cyrillic": "кино" },
+        "hiragana":   { "native": "しねま",  "ipa": "ɕinema",   "latin": "shinema",  "cyrillic": "синэма" },
+        "devanagari": { "native": "सिनेमा", "ipa": "sɪneːmaː", "latin": "sinemā",   "cyrillic": "синэма" },
+        "arabic":     { "native": "سينما",  "ipa": "siːnamaː", "latin": "sīnamā",   "cyrillic": "синама" }
+      }
+    },
+    {
+      "concept": "museum",
+      "meaning": "museum",
+      "forms": {
+        "greek":      { "native": "μουσείο","ipa": "muˈsio",   "latin": "mousio",   "cyrillic": "мусио" },
+        "cyrillic":   { "native": "музей",  "ipa": "muˈzʲej",  "latin": "muzey",    "cyrillic": "музей" },
+        "armenian":   { "native": "թանգարան","ipa":"tʰɑŋɡɑˈɾɑn","latin":"t'angaran","cyrillic": "тангаран" },
+        "georgian":   { "native": "მუზეუმი","ipa": "muˈzɛumi", "latin": "muzeumi",  "cyrillic": "музэуми" },
+        "devanagari": { "native": "संग्रहालय","ipa":"səŋɡɾəhaːləj","latin":"saṅgrahālay","cyrillic":"санграхалай" },
+        "arabic":     { "native": "متحف",   "ipa": "matħaf",   "latin": "matḥaf",   "cyrillic": "матхаф" }
+      }
+    },
+    {
+      "concept": "university",
+      "meaning": "university",
+      "forms": {
+        "greek":      { "native": "πανεπιστήμιο","ipa":"panepiˈstimio","latin":"panepistimio","cyrillic":"панэпистимио" },
+        "cyrillic":   { "native": "университет","ipa":"unʲɪvʲɪrsʲɪˈtʲet","latin":"universitet","cyrillic":"университет" },
+        "armenian":   { "native": "համալսարան","ipa":"hɑmɑlsɑˈɾɑn","latin":"hamalsaran","cyrillic":"hамалсаран" },
+        "georgian":   { "native": "უნივერსიტეტი","ipa":"univɛɾsiˈtʼɛtʼi","latin":"universit'et'i","cyrillic":"унивэрситэти" },
+        "devanagari": { "native": "विश्वविद्यालय","ipa":"ʋɪʃʋəʋɪd̪jaːləj","latin":"viśvavidyālay","cyrillic":"вишвавидьялай" },
+        "arabic":     { "native": "جامعة", "ipa": "d͡ʒaːmiʕa","latin": "jāmiʿa",    "cyrillic": "джамиа" }
+      }
+    },
+    {
+      "concept": "mathematics",
+      "meaning": "mathematics",
+      "forms": {
+        "greek":      { "native": "μαθηματικά","ipa":"maθimaˈtika","latin":"mathimatika","cyrillic":"матиматика" },
+        "cyrillic":   { "native": "математика","ipa":"mətʲɪˈmatʲɪkə","latin":"matematika","cyrillic":"математика" },
+        "armenian":   { "native": "մաթեմատիկա","ipa":"mɑtʰɛmɑˈtikɑ","latin":"matematika","cyrillic":"матэматика" },
+        "georgian":   { "native": "მათემატიკა","ipa":"mɑtʰɛmɑˈtʼikʼɑ","latin":"matematika","cyrillic":"матэматика" },
+        "devanagari": { "native": "गणित", "ipa": "ɡəɳɪt̪",   "latin": "gaṇit",    "cyrillic": "ганит" },
+        "arabic":     { "native": "رياضيات","ipa":"ɾijaːdˤijaːt","latin":"riyāḍiyyāt","cyrillic":"риядият" }
+      }
+    },
+    {
+      "concept": "doctor",
+      "meaning": "doctor",
+      "forms": {
+        "greek":      { "native": "γιατρός","ipa": "ʝaˈtros",  "latin": "yiatros",  "cyrillic": "ятрос" },
+        "cyrillic":   { "native": "доктор", "ipa": "ˈdoktər",  "latin": "doktor",   "cyrillic": "доктор" },
+        "armenian":   { "native": "բժիշկ",  "ipa": "bəʒiʃk",   "latin": "bzhishk",  "cyrillic": "бжишк" },
+        "georgian":   { "native": "ექიმი",  "ipa": "ˈɛkʰimi",  "latin": "ekimi",    "cyrillic": "экими" },
+        "devanagari": { "native": "डॉक्टर","ipa": "ɖɔkʈəɾ",   "latin": "ḍākṭar",   "cyrillic": "доктар" },
+        "arabic":     { "native": "طبيب",   "ipa": "tˤabiːb",  "latin": "ṭabīb",    "cyrillic": "табиб" }
+      }
+    },
+    {
+      "concept": "hospital",
+      "meaning": "hospital",
+      "note": "Mostly native words, not a true international borrowing — pick whichever feels natural to learn.",
+      "forms": {
+        "greek":      { "native": "νοσοκομείο","ipa":"nosokoˈmio","latin":"nosokomio","cyrillic":"носокомио" },
+        "cyrillic":   { "native": "больница","ipa": "bɐlʲˈnʲitsə","latin":"bolnitsa","cyrillic": "больница" },
+        "armenian":   { "native": "հիվանդանոց","ipa":"hivɑndɑˈnɔts","latin":"hivandanots'","cyrillic":"hиванданоц" },
+        "georgian":   { "native": "საავადმყოფო","ipa":"sɑɑvɑdmqʼɔˈpʰɔ","latin":"saavadmq'opo","cyrillic":"сааваймкопо" },
+        "hiragana":   { "native": "びょういん","ipa": "bjoːiɴ",  "latin": "byōin",    "cyrillic": "бё:ин" },
+        "devanagari": { "native": "अस्पताल","ipa": "əspət̪aːl","latin": "aspatāl",  "cyrillic": "аспатал" },
+        "arabic":     { "native": "مستشفى", "ipa": "mustaʃfaː","latin": "mustashfā","cyrillic": "мусташфа" }
+      }
+    },
+    {
+      "concept": "bank",
+      "meaning": "bank (financial institution)",
+      "forms": {
+        "greek":      { "native": "τράπεζα","ipa": "ˈtrapeza", "latin": "trapeza",  "cyrillic": "трапэза" },
+        "cyrillic":   { "native": "банк",   "ipa": "bank",     "latin": "bank",     "cyrillic": "банк" },
+        "armenian":   { "native": "բանկ",   "ipa": "bɑŋk",     "latin": "bank",     "cyrillic": "банк" },
+        "georgian":   { "native": "ბანკი",  "ipa": "ˈbɑnkʼi",  "latin": "banki",    "cyrillic": "банки" },
+        "hiragana":   { "native": "ぎんこう","ipa": "ɡiŋkoː",  "latin": "ginkō",    "cyrillic": "гинко:" },
+        "devanagari": { "native": "बैंक",   "ipa": "bɛŋk",     "latin": "baiṅk",    "cyrillic": "бэнк" },
+        "arabic":     { "native": "بنك",    "ipa": "bank",     "latin": "bank",     "cyrillic": "банк" }
+      }
+    },
+    {
+      "concept": "computer",
+      "meaning": "computer",
+      "forms": {
+        "greek":      { "native": "υπολογιστής","ipa":"ipoloʝiˈstis","latin":"ypologistis","cyrillic":"иполоистис" },
+        "cyrillic":   { "native": "компьютер","ipa":"kɐmˈpʲjutər","latin":"kompyuter","cyrillic":"компьютер" },
+        "armenian":   { "native": "համակարգիչ","ipa":"hɑmɑkɑɾˈɡitʃ","latin":"hamakargich","cyrillic":"hамакаргич" },
+        "georgian":   { "native": "კომპიუტერი","ipa":"kʼɔmpʼiuˈtʼɛɾi","latin":"k'omp'iut'eri","cyrillic":"компьютэри" },
+        "hiragana":   { "native": "こんぴゅーた","ipa": "kompjɯːta","latin":"konpyūta","cyrillic":"конпью:та" },
+        "devanagari": { "native": "कंप्यूटर","ipa": "kəmpjuːʈəɾ","latin": "kampyūṭar","cyrillic": "кампьютар" },
+        "arabic":     { "native": "حاسوب",  "ipa": "ħaːsuːb",  "latin": "ḥāsūb",    "cyrillic": "хасуб" }
+      }
+    },
+    {
+      "concept": "internet",
+      "meaning": "internet",
+      "forms": {
+        "greek":      { "native": "ίντερνετ","ipa": "ˈinternet","latin": "internet", "cyrillic": "интэрнэт" },
+        "cyrillic":   { "native": "интернет","ipa": "ɪntɛrˈnɛt","latin": "internet", "cyrillic": "интернет" },
+        "armenian":   { "native": "ինտերնետ","ipa": "intɛɾˈnɛt","latin": "internet", "cyrillic": "интэрнэт" },
+        "georgian":   { "native": "ინტერნეტი","ipa":"intɛɾˈnɛtʼi","latin":"interneti","cyrillic":"интэрнэти" },
+        "hiragana":   { "native": "いんたーねっと","ipa":"intaːnetto","latin":"intānetto","cyrillic":"инта:нэтто" },
+        "devanagari": { "native": "इंटरनेट","ipa":"ɪɳʈəɾneːʈ", "latin": "inṭarneṭ", "cyrillic": "интарнэт" },
+        "arabic":     { "native": "إنترنت", "ipa": "ʔintirnit","latin": "intirnit",  "cyrillic": "интирнит" }
+      }
+    },
+    {
+      "concept": "kilometer",
+      "meaning": "kilometer",
+      "forms": {
+        "greek":      { "native": "χιλιόμετρο","ipa":"xiˈliometro","latin":"chiliometro","cyrillic":"хилиомэтро" },
+        "cyrillic":   { "native": "километр","ipa": "kʲɪlɐˈmʲetr","latin":"kilometr","cyrillic":"километр" },
+        "armenian":   { "native": "կիլոմետր","ipa": "kilɔˈmɛtɾ", "latin":"kilometr","cyrillic":"киломэтр" },
+        "georgian":   { "native": "კილომეტრი","ipa":"kʼilɔˈmɛtʼɾi","latin":"k'ilometri","cyrillic":"киломэтри" },
+        "hiragana":   { "native": "きろめーとる","ipa":"kiɾomeːtoɾɯ","latin":"kiromētoru","cyrillic":"кироме:тору" },
+        "devanagari": { "native": "किलोमीटर","ipa":"kɪloːmiːʈəɾ","latin":"kilomīṭar","cyrillic":"киломитар" },
+        "arabic":     { "native": "كيلومتر","ipa": "kiːluːmitr","latin":"kīlūmitr","cyrillic":"килумитр" }
+      }
+    },
+    {
+      "concept": "dollar",
+      "meaning": "dollar",
+      "forms": {
+        "greek":      { "native": "δολάριο","ipa": "ðoˈlario","latin": "dolario",  "cyrillic": "доларио" },
+        "cyrillic":   { "native": "доллар", "ipa": "ˈdolər",  "latin": "dollar",   "cyrillic": "доллар" },
+        "armenian":   { "native": "դոլար",  "ipa": "dɔˈlɑɾ",  "latin": "dolar",    "cyrillic": "долар" },
+        "georgian":   { "native": "დოლარი", "ipa": "ˈdɔlɑɾi", "latin": "dolari",   "cyrillic": "долари" },
+        "hiragana":   { "native": "どる",   "ipa": "doɾɯ",    "latin": "doru",     "cyrillic": "дору" },
+        "devanagari": { "native": "डॉलर",   "ipa": "ɖɔləɾ",   "latin": "ḍālar",    "cyrillic": "долар" },
+        "arabic":     { "native": "دولار",  "ipa": "duːlaːɾ", "latin": "dūlār",    "cyrillic": "дулар" }
+      }
+    },
+    {
+      "concept": "salad",
+      "meaning": "salad",
+      "forms": {
+        "greek":      { "native": "σαλάτα", "ipa": "saˈlata", "latin": "salata",   "cyrillic": "салата" },
+        "cyrillic":   { "native": "салат",  "ipa": "sɐˈlat",  "latin": "salat",    "cyrillic": "салат" },
+        "armenian":   { "native": "սալաթ",  "ipa": "sɑˈlɑtʰ", "latin": "salat'",   "cyrillic": "салат" },
+        "georgian":   { "native": "სალათი", "ipa": "sɑˈlɑtʰi","latin": "salati",   "cyrillic": "салати" },
+        "hiragana":   { "native": "さらだ",  "ipa": "saɾada",  "latin": "sarada",   "cyrillic": "сарада" },
+        "devanagari": { "native": "सलाद",  "ipa": "səlaːd̪",  "latin": "salād",    "cyrillic": "салад" },
+        "arabic":     { "native": "سلطة",   "ipa": "salatˤa", "latin": "salaṭa",   "cyrillic": "салата" }
+      }
+    },
+    {
+      "concept": "chocolate",
+      "meaning": "chocolate",
+      "forms": {
+        "greek":      { "native": "σοκολάτα","ipa":"sokoˈlata","latin":"sokolata", "cyrillic": "соколата" },
+        "cyrillic":   { "native": "шоколад","ipa": "ʂəkɐˈlat","latin": "shokolad", "cyrillic": "шоколад" },
+        "armenian":   { "native": "շոկոլադ","ipa": "ʃɔkɔˈlɑd","latin": "shokolad", "cyrillic": "шоколад" },
+        "georgian":   { "native": "შოკოლადი","ipa":"ʃɔkʼɔˈlɑdi","latin":"shok'oladi","cyrillic":"шоколади" },
+        "hiragana":   { "native": "ちょこれーと","ipa":"tɕokoɾeːto","latin":"chokorēto","cyrillic":"тёкорэ:то" },
+        "devanagari": { "native": "चॉकलेट","ipa": "tʃɔkəleːʈ","latin": "cākleṭ",   "cyrillic": "чаклэт" },
+        "arabic":     { "native": "شوكولاتة","ipa":"ʃuːkuːlaːta","latin":"shūkūlāta","cyrillic":"шуколата" }
+      }
+    },
+    {
+      "concept": "pizza",
+      "meaning": "pizza",
+      "forms": {
+        "greek":      { "native": "πίτσα",  "ipa": "ˈpitsa",  "latin": "pitsa",    "cyrillic": "пица" },
+        "cyrillic":   { "native": "пицца",  "ipa": "ˈpʲitsːə","latin": "pitstsa",  "cyrillic": "пицца" },
+        "armenian":   { "native": "պիցցա",  "ipa": "pitsˈtsɑ","latin": "pits'ts'a","cyrillic": "пицца" },
+        "georgian":   { "native": "პიცა",   "ipa": "ˈpʼitsɑ", "latin": "p'itsa",   "cyrillic": "пица" },
+        "hiragana":   { "native": "ぴざ",   "ipa": "piza",    "latin": "piza",     "cyrillic": "пидза" },
+        "devanagari": { "native": "पिज़्ज़ा","ipa": "pɪdzːaː","latin": "pizzā",    "cyrillic": "пицца" },
+        "arabic":     { "native": "بيتزا",  "ipa": "biːtzaː", "latin": "bītzā",    "cyrillic": "битца" }
+      }
+    },
+    {
+      "concept": "piano",
+      "meaning": "piano",
+      "forms": {
+        "greek":      { "native": "πιάνο",  "ipa": "ˈpiano",  "latin": "piano",    "cyrillic": "пиано" },
+        "cyrillic":   { "native": "пианино","ipa": "pʲɪɐˈnʲinə","latin":"pianino", "cyrillic": "пианино" },
+        "armenian":   { "native": "դաշնամուր","ipa":"dɑʃnɑˈmuɾ","latin":"dashnamur","cyrillic":"дашнамур" },
+        "georgian":   { "native": "ფორტეპიანო","ipa":"pʰɔɾtʼɛpʼiˈɑnɔ","latin":"forteppiano","cyrillic":"фортэпиано" },
+        "hiragana":   { "native": "ぴあの",  "ipa": "piano",   "latin": "piano",    "cyrillic": "пиано" },
+        "devanagari": { "native": "पियानो", "ipa": "pɪjaːnoː","latin": "piyāno",   "cyrillic": "пьяно" },
+        "arabic":     { "native": "بيانو",  "ipa": "bijaːnuː","latin": "biyānū",   "cyrillic": "бьяну" }
+      }
+    },
+    {
+      "concept": "hotel",
+      "meaning": "hotel",
+      "forms": {
+        "greek":      { "native": "ξενοδοχείο","ipa":"ksenoðoˈxio","latin":"xenodochio","cyrillic":"ксэнодохио" },
+        "cyrillic":   { "native": "отель",  "ipa": "ɐˈtelʲ",  "latin": "otel",     "cyrillic": "отель" },
+        "armenian":   { "native": "հյուրանոց","ipa":"hjuɾɑˈnɔts","latin":"hyuranots'","cyrillic":"hюраноц" },
+        "georgian":   { "native": "სასტუმრო","ipa":"sɑsˈtʼumɾɔ","latin":"sast'umro","cyrillic":"састумро" },
+        "hiragana":   { "native": "ほてる",  "ipa": "hoteɾɯ",  "latin": "hoteru",   "cyrillic": "хотэру" },
+        "devanagari": { "native": "होटल",   "ipa": "hoːʈəl",  "latin": "hoṭal",    "cyrillic": "хотал" },
+        "arabic":     { "native": "فندق",   "ipa": "funduq",  "latin": "funduq",   "cyrillic": "фундук" }
+      }
+    },
+    {
+      "concept": "restaurant",
+      "meaning": "restaurant",
+      "forms": {
+        "greek":      { "native": "εστιατόριο","ipa":"estiaˈtorio","latin":"estiatorio","cyrillic":"эстиаторио" },
+        "cyrillic":   { "native": "ресторан","ipa":"rʲɪstɐˈran","latin":"restoran","cyrillic":"ресторан" },
+        "armenian":   { "native": "ռեստորան","ipa":"rɛstɔˈɾɑn","latin":"ṙestoran","cyrillic":"ррэсторан" },
+        "georgian":   { "native": "რესტორანი","ipa":"ɾɛstɔˈɾɑni","latin":"restorani","cyrillic":"рэсторани" },
+        "hiragana":   { "native": "れすとらん","ipa":"ɾesɯtoɾaɴ","latin":"resutoran","cyrillic":"рэсуторан" },
+        "devanagari": { "native": "रेस्तरां","ipa":"ɾestəɾaːⁿ","latin":"restarāṁ","cyrillic":"рэстаран" },
+        "arabic":     { "native": "مطعم",   "ipa": "matˤʕam", "latin": "maṭʿam",   "cyrillic": "матам" }
+      }
+    },
+    {
+      "concept": "park",
+      "meaning": "park (public garden)",
+      "forms": {
+        "greek":      { "native": "πάρκο",  "ipa": "ˈparko",  "latin": "parko",    "cyrillic": "парко" },
+        "cyrillic":   { "native": "парк",   "ipa": "park",    "latin": "park",     "cyrillic": "парк" },
+        "armenian":   { "native": "զբոսայգի","ipa":"zbɔsɑjˈɡi","latin":"zbosaygi","cyrillic":"збосайги" },
+        "georgian":   { "native": "პარკი",  "ipa": "ˈpʼɑɾkʼi","latin": "p'ark'i",  "cyrillic": "парки" },
+        "hiragana":   { "native": "ぱーく",  "ipa": "paːkɯ",   "latin": "pāku",     "cyrillic": "па:ку" },
+        "devanagari": { "native": "पार्क",  "ipa": "paːɾk",   "latin": "pārk",     "cyrillic": "парк" },
+        "arabic":     { "native": "حديقة",  "ipa": "ħadiːqa", "latin": "ḥadīqa",   "cyrillic": "хадика" }
+      }
+    },
+    {
+      "concept": "police",
+      "meaning": "police",
+      "forms": {
+        "greek":      { "native": "αστυνομία","ipa":"astinoˈmia","latin":"astynomia","cyrillic":"астиномиа" },
+        "cyrillic":   { "native": "полиция","ipa":"pɐˈlʲitsɨjə","latin":"politsiya","cyrillic":"полиция" },
+        "armenian":   { "native": "ոստիկանություն","ipa":"vɔstikɑnutʰˈjun","latin":"vostikanut'yun","cyrillic":"востиканутьюн" },
+        "georgian":   { "native": "პოლიცია","ipa":"pʼɔliˈtsʼiɑ","latin":"p'olits'ia","cyrillic":"полиция" },
+        "hiragana":   { "native": "けいさつ","ipa": "keːsatsɯ", "latin": "keisatsu", "cyrillic": "кэисацу" },
+        "devanagari": { "native": "पुलिस",  "ipa": "pʊlɪs",   "latin": "pulis",    "cyrillic": "пулис" },
+        "arabic":     { "native": "شرطة",   "ipa": "ʃurtˤa",  "latin": "shurṭa",   "cyrillic": "шурта" }
+      }
+    },
+    {
+      "concept": "mama",
+      "meaning": "mom",
+      "note": "WARNING: in Georgian 'მამა' (mama) means FATHER, not mother — a classic false friend.",
+      "forms": {
+        "greek":      { "native": "μαμά",   "ipa": "maˈma",   "latin": "mama",     "cyrillic": "мама" },
+        "cyrillic":   { "native": "мама",   "ipa": "ˈmamə",   "latin": "mama",     "cyrillic": "мама" },
+        "armenian":   { "native": "մամա",   "ipa": "mɑˈmɑ",   "latin": "mama",     "cyrillic": "мама" },
+        "hiragana":   { "native": "まま",   "ipa": "mama",    "latin": "mama",     "cyrillic": "мама" },
+        "devanagari": { "native": "ममा",   "ipa": "məmaː",   "latin": "mamā",     "cyrillic": "мама" },
+        "arabic":     { "native": "ماما",   "ipa": "maːmaː",  "latin": "māmā",     "cyrillic": "мама" }
+      }
+    },
+    {
+      "concept": "papa",
+      "meaning": "dad",
+      "forms": {
+        "greek":      { "native": "μπαμπάς","ipa": "baˈbas",  "latin": "babas",    "cyrillic": "бабас" },
+        "cyrillic":   { "native": "папа",   "ipa": "ˈpapə",   "latin": "papa",     "cyrillic": "папа" },
+        "armenian":   { "native": "պապա",   "ipa": "pɑˈpɑ",   "latin": "papa",     "cyrillic": "папа" },
+        "georgian":   { "native": "მამა",   "ipa": "ˈmɑmɑ",   "latin": "mama",     "cyrillic": "мама" },
+        "hiragana":   { "native": "ぱぱ",   "ipa": "papa",    "latin": "papa",     "cyrillic": "папа" },
+        "devanagari": { "native": "पापा",  "ipa": "paːpaː",  "latin": "pāpā",     "cyrillic": "папа" },
+        "arabic":     { "native": "بابا",   "ipa": "baːbaː",  "latin": "bābā",     "cyrillic": "баба" }
+      }
+    }
+  ]
+}
