@@ -1,6 +1,6 @@
 import { getScript, getWordPool } from '../data.js';
-import { getSettings, recordWord } from '../storage.js';
-import { el, escapeHtml, pickRandom, looseEqual, inputFieldFor, inputSystemLabel } from '../ui/dom.js';
+import { getSettings, updateSettings, recordWord } from '../storage.js';
+import { el, escapeHtml, pickRandom, looseEqual, fuzzyEqual, inputFieldFor, inputSystemLabel, nextInputSystem } from '../ui/dom.js';
 import { renderKeyboard } from '../ui/keyboard.js';
 
 export async function renderSpell(_, mount) {
@@ -19,7 +19,7 @@ export async function renderSpell(_, mount) {
       <header class="mode-header">
         <a href="#/home" class="back">← Home</a>
         <h2>Spell in ${escapeHtml(script.meta.name)}</h2>
-        <span class="muted small">Prompt in: ${escapeHtml(inputSystemLabel(settings.inputSystem))}${settings.vocalised ? ' · vocalised target' : ''}</span>
+        <button class="input-system-toggle clickable" id="input-system-toggle" title="Click to change prompt system (Latin → Cyrillic → IPA)">${escapeHtml(inputSystemLabel(settings.inputSystem))}${settings.vocalised ? ' · vocalised target' : ''}${settings.fuzzy ? ' · fuzzy' : ''}</button>
       </header>
 
       <div class="card prompt-card">
@@ -51,6 +51,14 @@ export async function renderSpell(_, mount) {
   const form = root.querySelector('#form');
   const skipBtn = root.querySelector('#skip');
   const kbEl = root.querySelector('#keyboard');
+  const inputSystemToggle = root.querySelector('#input-system-toggle');
+
+  inputSystemToggle.addEventListener('click', e => {
+    e.stopPropagation();
+    updateSettings({ inputSystem: nextInputSystem(settings.inputSystem) });
+    mount.innerHTML = '';
+    renderSpell(_, mount);
+  });
 
   const rows = script.keyboardRows && script.keyboardRows.length
     ? script.keyboardRows
@@ -117,12 +125,16 @@ export async function renderSpell(_, mount) {
     const baseTarget = (current.native || '').trim();
     const voweledTarget = (current.nativeVoweled || '').trim();
     // Accept either the bare form or the fully-vocalised form. In vocalised
-    // mode we require the voweled form when one exists.
+    // mode we require the voweled form when one exists. Fuzzy mode tolerates
+    // small typos against the bare form (vocalised must be exact).
     let ok;
     if (settings.vocalised && voweledTarget) {
       ok = guess === voweledTarget;
     } else {
-      ok = guess === baseTarget || (voweledTarget && guess === voweledTarget) || looseEqual(guess, baseTarget);
+      ok = guess === baseTarget
+        || (voweledTarget && guess === voweledTarget)
+        || looseEqual(guess, baseTarget)
+        || (settings.fuzzy && fuzzyEqual(guess, baseTarget));
     }
     reveal(ok);
   });

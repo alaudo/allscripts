@@ -34,7 +34,11 @@ export async function renderHome(_, mount) {
       `<button class="script-card ${active ? 'active' : ''}" data-script="${escapeHtml(s.id)}">
          <span class="script-native" dir="${s.direction}">${escapeHtml(s.nativeName)}</span>
          <span class="script-name">${escapeHtml(s.name)}</span>
-         <span class="script-stats">${stats.lettersKnown}/${totalsFor.totalLetters} letters · ${stats.wordsLearned}/${totalsFor.totalWords} words</span>
+         <span class="script-stats" title="letters learned · words practised">
+           <span class="stat" title="letters learned">🔤 ${stats.lettersKnown}/${totalsFor.totalLetters}</span>
+           <span class="stat-sep">·</span>
+           <span class="stat" title="words practised">📖 ${stats.wordsLearned}/${totalsFor.totalWords}</span>
+         </span>
        </button>`
     );
     card.addEventListener('click', async () => {
@@ -46,12 +50,29 @@ export async function renderHome(_, mount) {
   }
   root.appendChild(picker);
 
-  // Mode picker
+  // Active script info card (history + flags)
   const current = manifest.scripts.find(s => s.id === settings.activeScript) || manifest.scripts[0];
+  if (current.info || (current.countries && current.countries.length)) {
+    const flags = (current.countries || [])
+      .map(c => `<span class="flag" title="${escapeHtml(c.name)}">${c.flag}</span>`)
+      .join('');
+    const aboutCard = el(
+      `<div class="card script-about">
+         <div class="about-header">
+           <h2>About <span class="muted">${escapeHtml(current.name)}</span></h2>
+           <div class="flags" aria-label="Where ${escapeHtml(current.name)} is used">${flags}</div>
+         </div>
+         ${current.info ? `<p class="about-text">${escapeHtml(current.info)}</p>` : ''}
+       </div>`
+    );
+    root.appendChild(aboutCard);
+  }
+
+  // Mode picker
   const modeCard = el(
     `<div class="card">
        <h2>Practise <span class="muted">${escapeHtml(current.name)}</span></h2>
-       <p class="muted small">Transcription: ${escapeHtml(transcriptionLabel(settings.transcription))} · Word input: ${escapeHtml(inputSystemLabel(settings.inputSystem))}${settings.vocalised ? ' · vocalised' : ''} · <a href="#/settings">change</a></p>
+       <p class="muted small">Transcription: ${escapeHtml(transcriptionLabel(settings.transcription))} · Word input: ${escapeHtml(inputSystemLabel(settings.inputSystem))}${settings.vocalised ? ' · vocalised' : ''}${settings.fuzzy ? ' · fuzzy match' : ''} · <a href="#/settings">change</a></p>
        <div class="mode-grid"></div>
      </div>`
   );

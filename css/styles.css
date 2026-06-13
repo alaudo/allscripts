@@ -14,8 +14,27 @@
   --gap: 16px;
 }
 
+:root[data-theme="dark"],
+:root[data-theme="auto"] {
+  /* fall back to light defaults; dark variant below kicks in via media query */
+}
+
+/* Explicit dark theme override */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0f1115;
+  --fg: #e5e5ea;
+  --muted: #9a9aa3;
+  --card-bg: #181a20;
+  --card-border: #262932;
+  --accent: #818cf8;
+  --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 4px 16px rgba(0,0,0,0.5);
+}
+
+/* Auto dark when OS prefers it */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root[data-theme="auto"] {
+    color-scheme: dark;
     --bg: #0f1115;
     --fg: #e5e5ea;
     --muted: #9a9aa3;
@@ -24,6 +43,11 @@
     --accent: #818cf8;
     --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 4px 16px rgba(0,0,0,0.5);
   }
+}
+
+/* Explicit light overrides auto/dark even on dark-OS users */
+:root[data-theme="light"] {
+  color-scheme: light;
 }
 
 * { box-sizing: border-box; }
@@ -363,4 +387,128 @@ body {
   .answer-text { font-size: 1.2rem; }
   .view { padding: 16px 12px; }
   .card { padding: 16px; }
+}
+
+/* v3 additions */
+
+/* Tile stats with icons */
+.script-stats {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  justify-content: center;
+}
+.script-stats .stat { white-space: nowrap; }
+.script-stats .stat-sep { opacity: 0.5; }
+
+/* About-script card */
+.script-about .about-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.script-about h2 { margin: 0; }
+.script-about .about-text { margin: 0; color: var(--fg); }
+.flags {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+.flag { cursor: help; }
+
+/* Clickable pill — used wherever a label can be cycled by click. */
+.clickable {
+  cursor: pointer;
+}
+.input-system-toggle {
+  font: inherit;
+  font-size: 0.85rem;
+  background: transparent;
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  padding: 4px 12px;
+  color: var(--muted);
+  transition: border-color 0.08s, color 0.08s;
+}
+.input-system-toggle:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Flashcard timer bar */
+.timer-bar {
+  width: 100%;
+  max-width: 420px;
+  height: 4px;
+  background: var(--card-border);
+  border-radius: 2px;
+  overflow: hidden;
+  margin: 0 auto -8px;
+}
+.timer-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  transition: width 0.1s linear;
+}
+
+/* SRS rating row */
+.rate-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  max-width: 520px;
+  margin: 0 auto;
+  width: 100%;
+}
+.rate {
+  font: inherit;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px 8px;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  transition: border-color 0.08s, background 0.08s, color 0.08s;
+}
+.rate:hover { border-color: var(--accent); }
+.rate .rate-int { font-size: 0.75rem; opacity: 0.85; }
+.rate-again:hover { border-color: var(--bad); color: var(--bad); }
+.rate-easy:hover  { border-color: var(--good); color: var(--good); }
+
+/* SRS interval grid in settings */
+.srs-field { border: 1px dashed var(--card-border); border-radius: 10px; padding: 12px; }
+.srs-field legend { padding: 0 6px; }
+.srs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+.srs-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  background: var(--bg);
+}
+.srs-cell input[type="number"] {
+  font: inherit;
+  padding: 6px 8px;
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  background: var(--card-bg);
+  color: inherit;
+}
+
+@media (max-width: 600px) {
+  .rate-row { grid-template-columns: repeat(2, 1fr); }
 }

@@ -1,11 +1,13 @@
 import { getScript, getWordPool } from '../data.js';
-import { getSettings, recordWord } from '../storage.js';
-import { el, escapeHtml, pickRandom, looseEqual, inputFieldFor, inputSystemLabel } from '../ui/dom.js';
+import { getSettings, updateSettings, recordWord } from '../storage.js';
+import { el, escapeHtml, pickRandom, looseEqual, fuzzyEqual, inputFieldFor, inputSystemLabel, nextInputSystem } from '../ui/dom.js';
 import { renderKeyboard } from '../ui/keyboard.js';
 import { IPA_ROWS } from '../ui/ipa-keyboard.js';
 
 export async function renderRead(_, mount) {
-  const settings = getSettings();
+  // Re-render the whole view when input system changes so the keyboard and
+  // expected-field reset cleanly.
+  let settings = getSettings();
   const script = await getScript(settings.activeScript);
   const pool = await getWordPool(script.meta.id);
   const field = inputFieldFor(settings.inputSystem);
@@ -19,7 +21,7 @@ export async function renderRead(_, mount) {
       <header class="mode-header">
         <a href="#/home" class="back">← Home</a>
         <h2>Read &amp; transcribe — ${escapeHtml(script.meta.name)}</h2>
-        <span class="muted small">Input: ${escapeHtml(inputSystemLabel(settings.inputSystem))}${settings.vocalised ? ' · vocalised' : ''}</span>
+        <button class="input-system-toggle clickable" id="input-system-toggle" title="Click to change input system (Latin → Cyrillic → IPA)">${escapeHtml(inputSystemLabel(settings.inputSystem))}${settings.vocalised ? ' · vocalised' : ''}${settings.fuzzy ? ' · fuzzy' : ''}</button>
       </header>
 
       <div class="card prompt-card">
@@ -49,6 +51,14 @@ export async function renderRead(_, mount) {
   const resultEl = root.querySelector('#result');
   const form = root.querySelector('#form');
   const skipBtn = root.querySelector('#skip');
+  const inputSystemToggle = root.querySelector('#input-system-toggle');
+
+  inputSystemToggle.addEventListener('click', e => {
+    e.stopPropagation();
+    updateSettings({ inputSystem: nextInputSystem(settings.inputSystem) });
+    mount.innerHTML = '';
+    renderRead(_, mount);
+  });
 
   if (useIpaKeyboard) {
     const kbEl = root.querySelector('#keyboard');
@@ -96,11 +106,19 @@ export async function renderRead(_, mount) {
     e.preventDefault();
     if (revealed) { next(); return; }
     const guess = inputEl.value;
-    const expected = current[field];
-    // For IPA, accept either exact match or loose-equal (strips stress / length marks).
-    const ok = field === 'ipa'
-      ? (guess.trim() === (expected || '').trim() || looseEqual(stripIpaMarks(guess), stripIpaMarks(expected)))
-      : looseEqual(guess, expected);
+    const expected = current[field] || '';
+    let ok;
+    if (field === 'ipa') {
+      // For IPA, accept either exact match or loose-equal (strips stress / length marks).
+      const a = stripIpaMarks(guess);
+      const b = stripIpaMarks(expected);
+      ok = guess.trim() === expected.trim()
+        || looseEqual(a, b)
+        || (settings.fuzzy && fuzzyEqual(a, b));
+    } else {
+      ok = looseEqual(guess, expected)
+        || (settings.fuzzy && fuzzyEqual(guess, expected));
+    }
     reveal(ok);
   });
 

@@ -8,8 +8,17 @@ const DEFAULTS = {
   settings: {
     activeScript: 'greek',
     transcription: 'ipa',     // 'ipa' | 'english' | 'russian'
-    inputSystem: 'latin',     // 'latin' | 'cyrillic' | 'ipa'  (used in modes 2 & 3)
-    vocalised: false          // show full vocalisation for scripts with optional diacritics (Arabic, Hebrew)
+    inputSystem: 'latin',     // 'latin' | 'cyrillic' | 'ipa'
+    vocalised: false,         // show full vocalisation for Arabic/Hebrew
+    theme: 'auto',            // 'auto' | 'light' | 'dark'
+    fuzzy: false,             // allow small typos in mode 2 / mode 3 transliteration matching
+    flashcardTimerSec: 0,     // 0 = off; otherwise seconds per card before auto-advance
+    srsIntervals: {           // minutes added to "now" when a card is rated
+      again: 1,               // 1 min
+      hard: 10,               // 10 min
+      good: 1440,             // 1 day
+      easy: 5760              // 4 days
+    }
   },
   progress: {}                // { [scriptId]: { letters: {...}, words: {...} } }
 };
@@ -22,7 +31,11 @@ function load() {
     return {
       ...DEFAULTS,
       ...parsed,
-      settings: { ...DEFAULTS.settings, ...(parsed.settings || {}) },
+      settings: {
+        ...DEFAULTS.settings,
+        ...(parsed.settings || {}),
+        srsIntervals: { ...DEFAULTS.settings.srsIntervals, ...((parsed.settings || {}).srsIntervals || {}) }
+      },
       progress: { ...(parsed.progress || {}) }
     };
   } catch {
@@ -65,13 +78,22 @@ function ensureScript(scriptId) {
   return state.progress[scriptId];
 }
 
-export function recordLetter(scriptId, glyph, { known } = {}) {
+export function recordLetter(scriptId, glyph, { known, dueAt, intervalMin } = {}) {
   const bucket = ensureScript(scriptId).letters;
-  const entry = bucket[glyph] || { seen: 0, known: false };
+  const entry = bucket[glyph] || { seen: 0, known: false, due: 0, intervalMin: 0, ratings: 0 };
   entry.seen += 1;
   if (typeof known === 'boolean') entry.known = known;
+  if (typeof dueAt === 'number') entry.due = dueAt;
+  if (typeof intervalMin === 'number') entry.intervalMin = intervalMin;
+  if (dueAt || intervalMin) entry.ratings = (entry.ratings || 0) + 1;
   bucket[glyph] = entry;
   persist();
+}
+
+export function getLetterProgress(scriptId, glyph) {
+  const p = state.progress[scriptId];
+  if (!p || !p.letters || !p.letters[glyph]) return { seen: 0, known: false, due: 0, intervalMin: 0, ratings: 0 };
+  return { ...p.letters[glyph] };
 }
 
 export function recordWord(scriptId, key, { correct }) {

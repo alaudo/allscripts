@@ -1,9 +1,12 @@
 import { startRouter, registerRoute, setFallback } from './router.js';
+import { initTheme } from './theme.js';
 import { renderHome } from './ui/home.js';
 import { renderSettings } from './ui/settings.js';
 import { renderFlashcards } from './modes/flashcards.js';
 import { renderRead } from './modes/read.js';
 import { renderSpell } from './modes/spell.js';
+
+initTheme();
 
 registerRoute('home', renderHome);
 registerRoute('settings', renderSettings);

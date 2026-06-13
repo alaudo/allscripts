@@ -3,7 +3,7 @@
 A small static web game for learning non-Latin writing systems. No backend,
 no build step — open it in a browser and you're done.
 
-**Supported scripts (v2):**
+**Supported scripts:**
 
 - Greek (Ελληνικά)
 - Cyrillic (Кириллица — Russian)
@@ -19,14 +19,27 @@ no build step — open it in a browser and you're done.
 ## Modes
 
 1. **Flashcards** — letter on the front, transcription and an example word on
-   the back. Click the transcription system label in the header to cycle
-   between IPA / English re-spelling / Russian re-spelling on the fly.
+   the back. Click the transcription pill in the header to cycle between
+   IPA / English / Russian on the fly. Cards use **spaced repetition**: rate
+   each card *Again* / *Hard* / *Good* / *Easy* and it disappears from the
+   deck for the configured interval. An optional **per-card timer** auto-flips
+   and advances if you stall.
 2. **Read & transcribe** — a word in the target script; you type its
-   transliteration (Latin, Cyrillic, or **IPA** — choose in Settings). IPA
-   mode shows an on-screen IPA keyboard with vowels, consonants and
-   suprasegmentals.
+   transliteration (Latin, Cyrillic, or **IPA** — click the input-system pill
+   in the header to swap, or change it in Settings). IPA mode shows an
+   on-screen IPA keyboard.
 3. **Spell in script** — a word in Latin/Cyrillic/IPA; you spell it in the
    target script using an on-screen keyboard (or your hardware keyboard).
+   The input-system pill in the header lets you swap prompt systems mid-session.
+
+### Forgiving (fuzzy) matching
+
+Turn **fuzzy match** on in Settings to accept answers with small spelling
+slips — e.g. typing `t` instead of `th`, swapping `c` for `k`, or missing a
+single character. Tolerance scales with word length so short words still need
+to be (almost) exact.
+
+### Vocalised scripts
 
 For scripts with optional diacritics (**Arabic harakat**, **Hebrew niqqud**)
 turn on **"Show full vocalisation"** in Settings. Then the prompts in
@@ -34,8 +47,17 @@ modes 2 & 3 show the fully-pointed form and the spell check requires the
 vocalised answer. Off, the bare consonantal form is shown and either form
 is accepted.
 
-The home page tile for each script shows `learned/total` letters and
-`learned/total` words, so you can see your coverage at a glance.
+## Home page
+
+Each script tile shows letters learned and words practised at a glance
+(🔤 *learned*/*total* · 📖 *learned*/*total*). Selecting a script reveals an
+**About** card with a short history of the script and the flags of countries
+where it's used.
+
+## Theme
+
+A theme picker in Settings switches between **Match system** (default),
+**Light**, and **Dark**.
 
 ## Running locally
 
