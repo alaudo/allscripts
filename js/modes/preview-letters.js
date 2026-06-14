@@ -18,14 +18,56 @@ function letterForms(glyph) {
     .filter(Boolean);
 }
 
+// Hangul syllables (U+AC00..U+D7A3) are precomposed blocks of jamo, but the
+// alphabet lists letters as Compatibility Jamo (U+3131..U+318F). To match a
+// letter like ㄱ against a word like 가족, decompose each syllable into its
+// constituent jamo first. Algorithm per Unicode 3.12 "Hangul Syllable
+// Decomposition", followed by Hangul-Jamo → Compatibility-Jamo remapping.
+const HANGUL_INITIAL_TO_COMPAT = [
+  0x3131, 0x3132, 0x3134, 0x3137, 0x3138, 0x3139, 0x3141, 0x3142, 0x3143,
+  0x3145, 0x3146, 0x3147, 0x3148, 0x3149, 0x314A, 0x314B, 0x314C, 0x314D, 0x314E
+];
+const HANGUL_MEDIAL_TO_COMPAT = [
+  0x314F, 0x3150, 0x3151, 0x3152, 0x3153, 0x3154, 0x3155, 0x3156, 0x3157,
+  0x3158, 0x3159, 0x315A, 0x315B, 0x315C, 0x315D, 0x315E, 0x315F, 0x3160,
+  0x3161, 0x3162, 0x3163
+];
+const HANGUL_FINAL_TO_COMPAT = [
+  0,      0x3131, 0x3132, 0x3133, 0x3134, 0x3135, 0x3136, 0x3137, 0x3139,
+  0x313A, 0x313B, 0x313C, 0x313D, 0x313E, 0x313F, 0x3140, 0x3141, 0x3142,
+  0x3144, 0x3145, 0x3146, 0x3147, 0x3148, 0x314A, 0x314B, 0x314C, 0x314D, 0x314E
+];
+
+function decomposeHangul(text) {
+  if (!text) return '';
+  let out = '';
+  for (const ch of text) {
+    const code = ch.codePointAt(0);
+    if (code >= 0xAC00 && code <= 0xD7A3) {
+      const idx = code - 0xAC00;
+      const initial = Math.floor(idx / (21 * 28));
+      const medial  = Math.floor((idx % (21 * 28)) / 28);
+      const final_  = idx % 28;
+      out += String.fromCodePoint(HANGUL_INITIAL_TO_COMPAT[initial]);
+      out += String.fromCodePoint(HANGUL_MEDIAL_TO_COMPAT[medial]);
+      if (final_) out += String.fromCodePoint(HANGUL_FINAL_TO_COMPAT[final_]);
+    } else {
+      out += ch;
+    }
+  }
+  return out;
+}
+
 function wordContainsLetter(nativeWord, glyph) {
   if (!nativeWord) return false;
   const forms = letterForms(glyph);
   if (!forms.length) return false;
-  const wordLower = nativeWord.toLocaleLowerCase();
+  const wordDecomposed = decomposeHangul(nativeWord);
+  const wordLower = wordDecomposed.toLocaleLowerCase();
   return forms.some(form => {
-    if (nativeWord.includes(form)) return true;
-    const fl = form.toLocaleLowerCase();
+    const f = decomposeHangul(form);
+    if (wordDecomposed.includes(f)) return true;
+    const fl = f.toLocaleLowerCase();
     return !!fl && wordLower.includes(fl);
   });
 }
