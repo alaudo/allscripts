@@ -15,6 +15,7 @@ const DEFAULTS = {
     fuzzy: false,             // allow small typos in mode 2 / mode 3 transliteration matching
     flashcardTimerSec: 0,     // 0 = off; seconds per LETTER card before auto-advance
     phrasesTimerSec: 0,       // same idea, applied to PHRASE flashcards
+    wordsTimerSec: 0,         // same idea, applied to WORD flashcards
     chooseDirection: 'recognize', // 'recognize' (native -> meaning) | 'recall' (meaning -> native)
     chooseOptionCount: 4,     // 4 | 6 | 8 — distractor count for the Choose drill
     srsIntervals: {           // minutes added to "now" when a LETTER card is rated
@@ -24,6 +25,12 @@ const DEFAULTS = {
       easy: 5760              // 4 days
     },
     phrasesSrsIntervals: {    // identical structure, applied to PHRASE flashcards
+      again: 1,
+      hard: 10,
+      good: 1440,
+      easy: 5760
+    },
+    wordsSrsIntervals: {      // identical structure, applied to WORD flashcards
       again: 1,
       hard: 10,
       good: 1440,
@@ -45,7 +52,8 @@ function load() {
         ...DEFAULTS.settings,
         ...(parsed.settings || {}),
         srsIntervals: { ...DEFAULTS.settings.srsIntervals, ...((parsed.settings || {}).srsIntervals || {}) },
-        phrasesSrsIntervals: { ...DEFAULTS.settings.phrasesSrsIntervals, ...((parsed.settings || {}).phrasesSrsIntervals || {}) }
+        phrasesSrsIntervals: { ...DEFAULTS.settings.phrasesSrsIntervals, ...((parsed.settings || {}).phrasesSrsIntervals || {}) },
+        wordsSrsIntervals: { ...DEFAULTS.settings.wordsSrsIntervals, ...((parsed.settings || {}).wordsSrsIntervals || {}) }
       },
       progress: { ...(parsed.progress || {}) }
     };
@@ -112,12 +120,32 @@ export function getLetterProgress(scriptId, glyph) {
   return { ...p.letters[glyph] };
 }
 
-export function recordWord(scriptId, key, { correct }) {
+// `correct` is the legacy boolean used by read/spell/choose-words to bump the
+// correct vs. wrong tally. The SRS fields (known / dueAt / intervalMin) are
+// optional and used by the word flashcards mode; they coexist on the same
+// entry so the "X / Y learned" summary keeps working.
+export function recordWord(scriptId, key, { correct, known, dueAt, intervalMin } = {}) {
   const bucket = ensureScript(scriptId).words;
-  const entry = bucket[key] || { correct: 0, wrong: 0 };
-  if (correct) entry.correct += 1; else entry.wrong += 1;
+  const entry = bucket[key] || { correct: 0, wrong: 0, seen: 0, known: false, due: 0, intervalMin: 0, ratings: 0 };
+  if (correct === true) entry.correct = (entry.correct || 0) + 1;
+  else if (correct === false) entry.wrong = (entry.wrong || 0) + 1;
+  if (typeof known === 'boolean') {
+    entry.known = known;
+    entry.seen = (entry.seen || 0) + 1;
+  }
+  if (typeof dueAt === 'number') entry.due = dueAt;
+  if (typeof intervalMin === 'number') entry.intervalMin = intervalMin;
+  if (dueAt || intervalMin) entry.ratings = (entry.ratings || 0) + 1;
   bucket[key] = entry;
   persist();
+}
+
+export function getWordProgress(scriptId, key) {
+  const p = state.progress[scriptId];
+  if (!p || !p.words || !p.words[key]) {
+    return { correct: 0, wrong: 0, seen: 0, known: false, due: 0, intervalMin: 0, ratings: 0 };
+  }
+  return { ...p.words[key] };
 }
 
 export function recordPhrase(scriptId, key, { known, dueAt, intervalMin } = {}) {
