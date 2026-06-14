@@ -275,6 +275,7 @@ body {
   display: flex;
   justify-content: center;
   min-height: 280px;
+  perspective: 1400px;
 }
 .flashcard {
   position: relative;
@@ -288,11 +289,13 @@ body {
   font: inherit;
   color: inherit;
   box-shadow: var(--shadow);
-  transition: transform 0.2s;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease;
   padding: 24px;
-  overflow: hidden;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
-.flashcard:hover { transform: translateY(-2px); }
+.flashcard:hover { box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18); }
+.flashcard.flipped { transform: rotateY(180deg); }
 .flashcard .face {
   position: absolute;
   inset: 0;
@@ -302,12 +305,14 @@ body {
   justify-content: center;
   padding: 24px;
   text-align: center;
-  transition: opacity 0.18s;
+  border-radius: var(--radius);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
-.flashcard .face.front { opacity: 1; }
-.flashcard .face.back { opacity: 0; }
-.flashcard.flipped .face.front { opacity: 0; }
-.flashcard.flipped .face.back { opacity: 1; }
+.flashcard .face.back { transform: rotateY(180deg); }
+@media (prefers-reduced-motion: reduce) {
+  .flashcard { transition: none; }
+}
 .glyph { font-size: 7rem; line-height: 1.1; }
 .transcription { font-size: 2rem; font-weight: 600; margin-bottom: 12px; }
 .note { color: var(--muted); margin-top: 12px; font-size: 0.9rem; }
