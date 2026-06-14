@@ -30,9 +30,9 @@
         "hiragana":   { "native": "めとろ",  "ipa": "metoɾo",   "latin": "metoro",   "cyrillic": "мэторо" },
         "devanagari": { "native": "मेट्रो", "ipa": "meːʈɾoː",  "latin": "meṭro",    "cyrillic": "мэтро" },
         "arabic":     { "native": "مترو",   "ipa": "mitruː",   "latin": "mitrū",    "cyrillic": "митру" },
-        "hebrew":     { "native": "רכבת תחתית", "ipa": "raˈkevet taxˈtit", "latin": "rakevet takhtit", "cyrillic": "ракэвэт тахтит" },
-        "hangul":     { "native": "지하철", "ipa": "tɕihatɕʰʌɭ", "latin": "jihacheol", "cyrillic": "чихачхоль" },
-        "thai":       { "native": "รถไฟใต้ดิน", "ipa": "rót.fai.tâːi.din", "latin": "rotfaitaidin", "cyrillic": "ротфайтайдин" }
+        "hebrew":     { "native": "מטרו", "ipa": "ˈmetro", "latin": "metro", "cyrillic": "метро" },
+        "hangul":     { "native": "메트로", "ipa": "metʰɯɾo", "latin": "meteuro", "cyrillic": "метхыро" },
+        "thai":       { "native": "เมโทร", "ipa": "meː.tʰoː", "latin": "metho", "cyrillic": "метхо" }
       }
     },
     {
@@ -42,7 +42,7 @@
       "forms": {
         "greek":      { "native": "καφές",  "ipa": "kaˈfes",   "latin": "kafes",    "cyrillic": "кафэс" },
         "cyrillic":   { "native": "кофе",   "ipa": "ˈkofʲɪ",   "latin": "kofe",     "cyrillic": "кофе" },
-        "armenian":   { "native": "սուրճ",  "ipa": "suɾtʃ",    "latin": "surch",    "cyrillic": "сурч" },
+        "armenian":   { "native": "կոֆե",   "ipa": "kɔˈfɛ",    "latin": "kofe",     "cyrillic": "кофэ" },
         "georgian":   { "native": "ყავა",   "ipa": "ˈqʼɑvɑ",   "latin": "q'ava",    "cyrillic": "кава" },
         "hiragana":   { "native": "こーひー","ipa": "koːçiː",   "latin": "kōhī",     "cyrillic": "ко:хи:" },
         "devanagari": { "native": "कॉफ़ी",  "ipa": "kɔfiː",    "latin": "kāfī",     "cyrillic": "кафи" },
@@ -74,14 +74,14 @@
       "forms": {
         "greek":      { "native": "τηλέφωνο","ipa": "tiˈlefono","latin": "tilefono", "cyrillic": "тилэфоно" },
         "cyrillic":   { "native": "телефон","ipa": "tʲɪlʲɪˈfon","latin":"telefon",   "cyrillic": "телефон" },
-        "armenian":   { "native": "հեռախոս","ipa": "hɛrɑˈxɔs", "latin": "heṙakhos", "cyrillic": "hэрраhос" },
+        "armenian":   { "native": "թելեֆոն","ipa": "tʰɛlɛˈfɔn","latin": "t'elefon", "cyrillic": "тэлэфон" },
         "georgian":   { "native": "ტელეფონი","ipa":"tʼɛlɛˈpʰɔni","latin":"telefoni","cyrillic": "тэлэфони" },
-        "hiragana":   { "native": "でんわ",  "ipa": "deɴwa",    "latin": "denwa",    "cyrillic": "дэнва" },
+        "hiragana":   { "native": "てれふぉん","ipa": "teɾeɸoɴ", "latin": "terefon",  "cyrillic": "тэрэфон" },
         "devanagari": { "native": "टेलीफोन","ipa": "ʈeːliːpʰoːn","latin":"ṭelīphon","cyrillic": "тэлифон" },
-        "arabic":     { "native": "هاتف",   "ipa": "haːtif",   "latin": "hātif",    "cyrillic": "хатиф" },
+        "arabic":     { "native": "تلفون",  "ipa": "tilifuːn", "latin": "tilifūn",  "cyrillic": "тилифун" },
         "hebrew":     { "native": "טלפון", "ipa": "ˈtelefon", "latin": "telefon", "cyrillic": "телефон" },
-        "hangul":     { "native": "전화", "ipa": "tɕʌnɦwa", "latin": "jeonhwa", "cyrillic": "чонхва" },
-        "thai":       { "native": "โทรศัพท์", "ipa": "tʰoː.ra.sàp", "latin": "thorasap", "cyrillic": "тхорасап" }
+        "hangul":     { "native": "텔레폰", "ipa": "tʰellepʰon", "latin": "tellepon", "cyrillic": "тхелльепхон" },
+        "thai":       { "native": "เทเลโฟน", "ipa": "tʰeː.leː.foːn", "latin": "thelefon", "cyrillic": "тхэлэфон" }
       }
     },
     {
@@ -97,7 +97,7 @@
         "arabic":     { "native": "راديو",  "ipa": "raːdjuː",  "latin": "rādyū",    "cyrillic": "радью" },
         "hebrew":     { "native": "רדיו", "ipa": "ˈradjo", "latin": "radyo", "cyrillic": "радио" },
         "hangul":     { "native": "라디오", "ipa": "ɾadio", "latin": "radio", "cyrillic": "радио" },
-        "thai":       { "native": "วิทยุ", "ipa": "wít.tʰa.jú", "latin": "witthayu", "cyrillic": "виттхаю" }
+        "thai":       { "native": "เรดิโอ", "ipa": "reː.diː.ʔoː", "latin": "redio", "cyrillic": "рэдио" }
       }
     },
     {
@@ -108,12 +108,12 @@
         "cyrillic":   { "native": "музыка", "ipa": "ˈmuzɨkə",  "latin": "muzyka",   "cyrillic": "музыка" },
         "armenian":   { "native": "մուզիկա","ipa":"muziˈkɑ","latin":"muzika","cyrillic":"музика" },
         "georgian":   { "native": "მუსიკა", "ipa": "ˈmusikʼɑ", "latin": "musika",   "cyrillic": "мусика" },
-        "hiragana":   { "native": "おんがく","ipa": "oŋɡakɯ",  "latin": "ongaku",   "cyrillic": "онгаку" },
+        "hiragana":   { "native": "みゅーじっく","ipa": "mʲɯːdʑikkɯ", "latin": "myūjikku", "cyrillic": "мью:дзикку" },
         "devanagari": { "native": "म्यूज़िक","ipa": "mjuːzɪk", "latin": "myūzik",   "cyrillic": "мьюзик" },
         "arabic":     { "native": "موسيقى", "ipa": "muːsiːqaː","latin": "mūsīqā",   "cyrillic": "мусика" },
         "hebrew":     { "native": "מוזיקה", "ipa": "ˈmuzika", "latin": "muzika", "cyrillic": "музика" },
-        "hangul":     { "native": "음악", "ipa": "ɯmak̚", "latin": "eumak", "cyrillic": "ымак" },
-        "thai":       { "native": "ดนตรี", "ipa": "don.triː", "latin": "dontri", "cyrillic": "донтри" }
+        "hangul":     { "native": "뮤직", "ipa": "mjudʑik̚", "latin": "myujik", "cyrillic": "мьюджик" },
+        "thai":       { "native": "มิวสิก", "ipa": "miw.sìk", "latin": "miusik", "cyrillic": "миусик" }
       }
     },
     {
@@ -125,12 +125,12 @@
         "cyrillic":   { "native": "театр",  "ipa": "tʲɪˈatr",  "latin": "teatr",    "cyrillic": "театр" },
         "armenian":   { "native": "թատրոն", "ipa": "tʰɑtˈɾɔn", "latin": "t'atron",  "cyrillic": "татрон" },
         "georgian":   { "native": "თეატრი", "ipa": "tʰɛˈɑtʼɾi","latin": "teatri",   "cyrillic": "тэатри" },
-        "hiragana":   { "native": "げきじょう", "ipa": "ɡekidʑoː", "latin": "gekijō", "cyrillic": "гэкидзё:" },
+        "hiragana":   { "native": "しあたー", "ipa": "ɕiataː", "latin": "shiatā", "cyrillic": "сиата:" },
         "devanagari": { "native": "थिएटर",  "ipa": "t̪ʰɪeːʈəɾ","latin": "thieṭar",  "cyrillic": "тхиэтар" },
-        "arabic":     { "native": "مسرح",   "ipa": "masraħ",   "latin": "masraḥ",   "cyrillic": "масрах" },
+        "arabic":     { "native": "تياترو",  "ipa": "tijaːtruː","latin": "tiyātrū",  "cyrillic": "тиятру" },
         "hebrew":     { "native": "תיאטרון", "ipa": "teatˈron", "latin": "teatron", "cyrillic": "театрон" },
-        "hangul":     { "native": "극장", "ipa": "kɯk̚.tɕaŋ", "latin": "geukjang", "cyrillic": "кыкчан" },
-        "thai":       { "native": "โรงละคร", "ipa": "roːŋ.lá.kʰɔːn", "latin": "ronglakhon", "cyrillic": "ронглакхон" }
+        "hangul":     { "native": "시어터", "ipa": "ɕiʌtʰʌ", "latin": "sieoteo", "cyrillic": "сиотхо" },
+        "thai":       { "native": "เธียเตอร์", "ipa": "tʰia.tɤː", "latin": "thiatoe", "cyrillic": "тхиятё" }
       }
     },
     {
@@ -144,9 +144,9 @@
         "hiragana":   { "native": "しねま",  "ipa": "ɕinema",   "latin": "shinema",  "cyrillic": "синэма" },
         "devanagari": { "native": "सिनेमा", "ipa": "sɪneːmaː", "latin": "sinemā",   "cyrillic": "синэма" },
         "arabic":     { "native": "سينما",  "ipa": "siːnamaː", "latin": "sīnamā",   "cyrillic": "синама" },
-        "hebrew":     { "native": "קולנוע", "ipa": "kolˈnoa", "latin": "kolnoa", "cyrillic": "кольноа" },
-        "hangul":     { "native": "영화", "ipa": "jʌŋɦwa", "latin": "yeonghwa", "cyrillic": "ёнхва" },
-        "thai":       { "native": "ภาพยนตร์", "ipa": "pʰâːp.pʰa.jon", "latin": "phapphayon", "cyrillic": "пхапхаён" }
+        "hebrew":     { "native": "סינמה", "ipa": "ˈsinema", "latin": "sinema", "cyrillic": "синэма" },
+        "hangul":     { "native": "시네마", "ipa": "ɕinema", "latin": "sinema", "cyrillic": "синэма" },
+        "thai":       { "native": "ซีเนม่า", "ipa": "siː.neː.mâː", "latin": "sinema", "cyrillic": "синэма" }
       }
     },
     {
@@ -155,14 +155,14 @@
       "forms": {
         "greek":      { "native": "μουσείο","ipa": "muˈsio",   "latin": "mousio",   "cyrillic": "мусио" },
         "cyrillic":   { "native": "музей",  "ipa": "muˈzʲej",  "latin": "muzey",    "cyrillic": "музей" },
-        "armenian":   { "native": "թանգարան","ipa":"tʰɑŋɡɑˈɾɑn","latin":"t'angaran","cyrillic": "тангаран" },
+        "armenian":   { "native": "մուզեյ", "ipa": "muˈzɛj", "latin": "muzey", "cyrillic": "музэй" },
         "georgian":   { "native": "მუზეუმი","ipa": "muˈzɛumi", "latin": "muzeumi",  "cyrillic": "музэуми" },
-        "hiragana":   { "native": "はくぶつかん", "ipa": "hakɯbɯtsɯkaɴ", "latin": "hakubutsukan", "cyrillic": "хакубуцукан" },
-        "devanagari": { "native": "संग्रहालय","ipa":"səŋɡɾəhaːləj","latin":"saṅgrahālay","cyrillic":"санграхалай" },
-        "arabic":     { "native": "متحف",   "ipa": "matħaf",   "latin": "matḥaf",   "cyrillic": "матхаф" },
+        "hiragana":   { "native": "みゅーじあむ", "ipa": "mʲɯːdʑiamɯ", "latin": "myūjiamu", "cyrillic": "мью:дзиаму" },
+        "devanagari": { "native": "म्यूज़ियम","ipa":"mjuːzɪjəm","latin":"myūziyam","cyrillic":"мьюзиям" },
+        "arabic":     { "native": "ميوزيوم",   "ipa": "mjuːziːjuːm",   "latin": "miyūzīyum",   "cyrillic": "мьюзиюм" },
         "hebrew":     { "native": "מוזיאון", "ipa": "muzeˈon", "latin": "muzeon", "cyrillic": "музэон" },
-        "hangul":     { "native": "박물관", "ipa": "paŋmulɡwan", "latin": "bangmulgwan", "cyrillic": "панмульгван" },
-        "thai":       { "native": "พิพิธภัณฑ์", "ipa": "pʰí.pʰít.tʰá.pʰan", "latin": "phiphitthaphan", "cyrillic": "пхипхитхапхан" }
+        "hangul":     { "native": "뮤지엄", "ipa": "mjudʑiʌm", "latin": "myujieom", "cyrillic": "мьюджиом" },
+        "thai":       { "native": "มิวเซียม", "ipa": "miw.sîam", "latin": "miusiam", "cyrillic": "миусиам" }
       }
     },
     {
@@ -173,12 +173,12 @@
         "cyrillic":   { "native": "университет","ipa":"unʲɪvʲɪrsʲɪˈtʲet","latin":"universitet","cyrillic":"университет" },
         "armenian":   { "native": "ունիվերսիտետ","ipa":"univɛɾsiˈtɛt","latin":"universitet","cyrillic":"унивэрситэт" },
         "georgian":   { "native": "უნივერსიტეტი","ipa":"univɛɾsiˈtʼɛtʼi","latin":"universit'et'i","cyrillic":"унивэрситэти" },
-        "hiragana":   { "native": "だいがく", "ipa": "daiɡakɯ", "latin": "daigaku", "cyrillic": "дайгаку" },
+        "hiragana":   { "native": "ゆにばーしてぃ", "ipa": "jɯnibaːɕiti", "latin": "yunibāshiti", "cyrillic": "юниба:сити" },
         "devanagari": { "native": "यूनिवर्सिटी","ipa":"juːnɪvərsɪʈiː","latin":"yūnivarsiṭī","cyrillic":"юнивэрсити" },
-        "arabic":     { "native": "جامعة", "ipa": "d͡ʒaːmiʕa","latin": "jāmiʿa",    "cyrillic": "джамиа" },
+        "arabic":     { "native": "يونيفرسيتي", "ipa": "juːniːfirsiːtiː","latin": "yūnīfirsītī", "cyrillic": "юнифирсити" },
         "hebrew":     { "native": "אוניברסיטה", "ipa": "univerˈsita", "latin": "universita", "cyrillic": "университа" },
-        "hangul":     { "native": "대학교", "ipa": "tɛɦak̚.k͈jo", "latin": "daehakgyo", "cyrillic": "тэхаккё" },
-        "thai":       { "native": "มหาวิทยาลัย", "ipa": "ma.hǎː.wít.tʰa.jaː.lai", "latin": "mahawitthayalai", "cyrillic": "махавиттхаялай" }
+        "hangul":     { "native": "유니버시티", "ipa": "junibʌɕitʰi", "latin": "yunibeositi", "cyrillic": "юнибосити" },
+        "thai":       { "native": "ยูนิเวอร์ซิตี้", "ipa": "juː.ni.wɤː.síː.tîː", "latin": "yuniwoesiti", "cyrillic": "юнивёсити" }
       }
     },
     {
@@ -189,28 +189,28 @@
         "cyrillic":   { "native": "математика","ipa":"mətʲɪˈmatʲɪkə","latin":"matematika","cyrillic":"математика" },
         "armenian":   { "native": "մաթեմատիկա","ipa":"mɑtʰɛmɑˈtikɑ","latin":"matematika","cyrillic":"матэматика" },
         "georgian":   { "native": "მათემატიკა","ipa":"mɑtʰɛmɑˈtʼikʼɑ","latin":"matematika","cyrillic":"матэматика" },
-        "hiragana":   { "native": "すうがく", "ipa": "sɯːɡakɯ", "latin": "sūgaku", "cyrillic": "су:гаку" },
-        "devanagari": { "native": "गणित", "ipa": "ɡəɳɪt̪",   "latin": "gaṇit",    "cyrillic": "ганит" },
-        "arabic":     { "native": "رياضيات","ipa":"ɾijaːdˤijaːt","latin":"riyāḍiyyāt","cyrillic":"риядият" },
+        "hiragana":   { "native": "まてまてぃか", "ipa": "matematika", "latin": "matematika", "cyrillic": "матэматика" },
+        "devanagari": { "native": "मातेमातिका", "ipa": "maːteːmaːtɪkaː",   "latin": "mātemātikā", "cyrillic": "матэматика" },
+        "arabic":     { "native": "ماثيماتيكا","ipa":"maːθiːmaːtiːkaː","latin":"māthīmātīkā","cyrillic":"матиматика" },
         "hebrew":     { "native": "מתמטיקה", "ipa": "matemaˈtika", "latin": "matematika", "cyrillic": "математика" },
-        "hangul":     { "native": "수학", "ipa": "suɦak̚", "latin": "suhak", "cyrillic": "сухак" },
-        "thai":       { "native": "คณิตศาสตร์", "ipa": "kʰá.nít.tà.sàːt", "latin": "khanitsat", "cyrillic": "кханитсат" }
+        "hangul":     { "native": "마테마티카", "ipa": "matʰematʰikʰa", "latin": "matemathika", "cyrillic": "матхэматхикха" },
+        "thai":       { "native": "มาเทมาติกา", "ipa": "maː.tʰeː.maː.tì.kaː", "latin": "mathematika", "cyrillic": "матхэматика" }
       }
     },
     {
       "concept": "doctor",
       "meaning": {"en": "doctor", "ru": "врач"},
       "forms": {
-        "greek":      { "native": "γιατρός","ipa": "ʝaˈtros",  "latin": "yiatros",  "cyrillic": "ятрос" },
+        "greek":      { "native": "ντόκτορ","ipa": "ˈdoktor",  "latin": "doktor",   "cyrillic": "доктор" },
         "cyrillic":   { "native": "доктор", "ipa": "ˈdoktər",  "latin": "doktor",   "cyrillic": "доктор" },
         "armenian":   { "native": "դոկտոր", "ipa": "dɔkˈtɔɾ",  "latin": "doktor",   "cyrillic": "доктор" },
         "georgian":   { "native": "დოქტორი","ipa": "ˈdɔkʰtɔɾi","latin": "doktori",  "cyrillic": "доктори" },
-        "hiragana":   { "native": "いしゃ", "ipa": "iɕa", "latin": "isha", "cyrillic": "иша" },
+        "hiragana":   { "native": "どくたー", "ipa": "dokɯtaː", "latin": "dokutā", "cyrillic": "докута:" },
         "devanagari": { "native": "डॉक्टर","ipa": "ɖɔkʈəɾ",   "latin": "ḍākṭar",   "cyrillic": "доктар" },
         "arabic":     { "native": "دكتور",  "ipa": "duktuːɾ",  "latin": "duktūr",   "cyrillic": "дуктур" },
-        "hebrew":     { "native": "רופא", "ipa": "roˈfe", "latin": "rofe", "cyrillic": "рофе" },
-        "hangul":     { "native": "의사", "ipa": "ɰisa", "latin": "uisa", "cyrillic": "ыйса" },
-        "thai":       { "native": "หมอ", "ipa": "mɔ̌ː", "latin": "mo", "cyrillic": "мо" }
+        "hebrew":     { "native": "דוקטור", "ipa": "ˈdoktor", "latin": "doktor", "cyrillic": "доктор" },
+        "hangul":     { "native": "닥터", "ipa": "tak̚tʰʌ", "latin": "dakteo", "cyrillic": "тактхо" },
+        "thai":       { "native": "ด็อกเตอร์", "ipa": "dɔ́k.tɤː", "latin": "dokter", "cyrillic": "доктё" }
       }
     },
     {
@@ -218,32 +218,32 @@
       "meaning": {"en": "hospital", "ru": "больница"},
       "note": {"en": "Mostly native words, not a true international borrowing — pick whichever feels natural to learn.", "ru": "В основном исконные слова, а не настоящее международное заимствование — выберите то, что удобнее запомнить."},
       "forms": {
-        "greek":      { "native": "νοσοκομείο","ipa":"nosokoˈmio","latin":"nosokomio","cyrillic":"носокомио" },
+        "greek":      { "native": "χόσπιταλ","ipa":"ˈxospital","latin":"chospital","cyrillic":"хоспитал" },
         "cyrillic":   { "native": "госпиталь","ipa":"ˈɡospʲɪtəlʲ","latin":"gospital'","cyrillic": "госпиталь" },
-        "armenian":   { "native": "հիվանդանոց","ipa":"hivɑndɑˈnɔts","latin":"hivandanots'","cyrillic":"hиванданоц" },
-        "georgian":   { "native": "საავადმყოფო","ipa":"sɑɑvɑdmqʼɔˈpʰɔ","latin":"saavadmq'opo","cyrillic":"сааваймкопо" },
-        "hiragana":   { "native": "びょういん","ipa": "bjoːiɴ",  "latin": "byōin",    "cyrillic": "бё:ин" },
+        "armenian":   { "native": "հոսպիտալ","ipa":"hɔspiˈtɑl","latin":"hospital","cyrillic":"hоспитал" },
+        "georgian":   { "native": "ჰოსპიტალი","ipa":"hɔspiˈtʼɑli","latin":"hospitali","cyrillic":"хоспитали" },
+        "hiragana":   { "native": "ほすぴたる","ipa": "hosɯpitaɾɯ",  "latin": "hosupitaru",    "cyrillic": "хосупитару" },
         "devanagari": { "native": "अस्पताल","ipa": "əspət̪aːl","latin": "aspatāl",  "cyrillic": "аспатал" },
-        "arabic":     { "native": "مستشفى", "ipa": "mustaʃfaː","latin": "mustashfā","cyrillic": "мусташфа" },
-        "hebrew":     { "native": "בית חולים", "ipa": "bet xoˈlim", "latin": "bet kholim", "cyrillic": "бет холим" },
-        "hangul":     { "native": "병원", "ipa": "pjʌŋwʌn", "latin": "byeongwon", "cyrillic": "пёнвон" },
-        "thai":       { "native": "โรงพยาบาล", "ipa": "roːŋ.pʰa.jaː.baːn", "latin": "rongphayaban", "cyrillic": "ронпхаябан" }
+        "arabic":     { "native": "هوسبيتال", "ipa": "huːsbiːtaːl","latin": "hūsbītāl","cyrillic": "хусбитал" },
+        "hebrew":     { "native": "הוספיטל", "ipa": "ˈhospital", "latin": "hospital", "cyrillic": "хоспитал" },
+        "hangul":     { "native": "호스피탈", "ipa": "hosɯpʰitʰal", "latin": "hoseupital", "cyrillic": "хосыпхитхаль" },
+        "thai":       { "native": "ฮอสพิทัล", "ipa": "hɔ́s.pʰí.tʰan", "latin": "hospithan", "cyrillic": "хоспхитхан" }
       }
     },
     {
       "concept": "bank",
       "meaning": {"en": "bank (financial institution)", "ru": "банк (финансовое учреждение)"},
       "forms": {
-        "greek":      { "native": "τράπεζα","ipa": "ˈtrapeza", "latin": "trapeza",  "cyrillic": "трапэза" },
+        "greek":      { "native": "μπάνκα","ipa": "ˈbaŋka", "latin": "banka",  "cyrillic": "банка" },
         "cyrillic":   { "native": "банк",   "ipa": "bank",     "latin": "bank",     "cyrillic": "банк" },
         "armenian":   { "native": "բանկ",   "ipa": "bɑŋk",     "latin": "bank",     "cyrillic": "банк" },
         "georgian":   { "native": "ბანკი",  "ipa": "ˈbɑnkʼi",  "latin": "banki",    "cyrillic": "банки" },
-        "hiragana":   { "native": "ぎんこう","ipa": "ɡiŋkoː",  "latin": "ginkō",    "cyrillic": "гинко:" },
+        "hiragana":   { "native": "ばんく","ipa": "baŋkɯ",  "latin": "banku",    "cyrillic": "банку" },
         "devanagari": { "native": "बैंक",   "ipa": "bɛŋk",     "latin": "baiṅk",    "cyrillic": "бэнк" },
         "arabic":     { "native": "بنك",    "ipa": "bank",     "latin": "bank",     "cyrillic": "банк" },
         "hebrew":     { "native": "בנק", "ipa": "bank", "latin": "bank", "cyrillic": "банк" },
-        "hangul":     { "native": "은행", "ipa": "ɯnɦɛŋ", "latin": "eunhaeng", "cyrillic": "ынхэн" },
-        "thai":       { "native": "ธนาคาร", "ipa": "tʰa.naː.kʰaːn", "latin": "thanakhan", "cyrillic": "тханакхан" }
+        "hangul":     { "native": "뱅크", "ipa": "pɛŋkʰɯ", "latin": "baengkeu", "cyrillic": "пэнкхы" },
+        "thai":       { "native": "แบงก์", "ipa": "bɛŋ", "latin": "baeng", "cyrillic": "бэн" }
       }
     },
     {
@@ -257,7 +257,7 @@
         "hiragana":   { "native": "こんぴゅーた","ipa": "kompjɯːta","latin":"konpyūta","cyrillic":"конпью:та" },
         "devanagari": { "native": "कंप्यूटर","ipa": "kəmpjuːʈəɾ","latin": "kampyūṭar","cyrillic": "кампьютар" },
         "arabic":     { "native": "كمبيوتر","ipa": "kumbjuːtir","latin": "kumbyūtir","cyrillic": "кумбьютир" },
-        "hebrew":     { "native": "מחשב", "ipa": "maxˈʃev", "latin": "makhshev", "cyrillic": "махшев" },
+        "hebrew":     { "native": "קומפיוטר", "ipa": "kompˈjuter", "latin": "kompyuter", "cyrillic": "компьютер" },
         "hangul":     { "native": "컴퓨터", "ipa": "kʰʌmpʰjutʰʌ", "latin": "keompyuteo", "cyrillic": "компхьютхо" },
         "thai":       { "native": "คอมพิวเตอร์", "ipa": "kʰɔm.pʰíw.tɤː", "latin": "khomphiutoe", "cyrillic": "компхиутё" }
       }
@@ -369,7 +369,7 @@
         "hiragana":   { "native": "ぴあの",  "ipa": "piano",   "latin": "piano",    "cyrillic": "пиано" },
         "devanagari": { "native": "पियानो", "ipa": "pɪjaːnoː","latin": "piyāno",   "cyrillic": "пьяно" },
         "arabic":     { "native": "بيانو",  "ipa": "bijaːnuː","latin": "biyānū",   "cyrillic": "бьяну" },
-        "hebrew":     { "native": "פסנתר", "ipa": "psanˈter", "latin": "psanter", "cyrillic": "псантер" },
+        "hebrew":     { "native": "פיאנו", "ipa": "ˈpjano", "latin": "pyano", "cyrillic": "пьяно" },
         "hangul":     { "native": "피아노", "ipa": "pʰiano", "latin": "piano", "cyrillic": "пхиано" },
         "thai":       { "native": "เปียโน", "ipa": "pia.noː", "latin": "piano", "cyrillic": "пиано" }
       }
@@ -384,26 +384,26 @@
         "georgian":   { "native": "ჰოტელი","ipa": "ˈhɔtɛli","latin": "hoteli",   "cyrillic": "хотэли" },
         "hiragana":   { "native": "ほてる",  "ipa": "hoteɾɯ",  "latin": "hoteru",   "cyrillic": "хотэру" },
         "devanagari": { "native": "होटल",   "ipa": "hoːʈəl",  "latin": "hoṭal",    "cyrillic": "хотал" },
-        "arabic":     { "native": "فندق",   "ipa": "funduq",  "latin": "funduq",   "cyrillic": "фундук" },
-        "hebrew":     { "native": "מלון", "ipa": "maˈlon", "latin": "malon", "cyrillic": "малон" },
+        "arabic":     { "native": "هوتيل",   "ipa": "hoːtiːl",  "latin": "hōtīl",   "cyrillic": "хотиль" },
+        "hebrew":     { "native": "הוטל", "ipa": "hoˈtel", "latin": "hotel", "cyrillic": "хотель" },
         "hangul":     { "native": "호텔", "ipa": "hotʰel", "latin": "hotel", "cyrillic": "хотхель" },
-        "thai":       { "native": "โรงแรม", "ipa": "roːŋ.rɛːm", "latin": "rongraem", "cyrillic": "ронрэм" }
+        "thai":       { "native": "โฮเทล", "ipa": "hoː.tʰeːn", "latin": "hothel", "cyrillic": "хотхэл" }
       }
     },
     {
       "concept": "restaurant",
       "meaning": {"en": "restaurant", "ru": "ресторан"},
       "forms": {
-        "greek":      { "native": "εστιατόριο","ipa":"estiaˈtorio","latin":"estiatorio","cyrillic":"эстиаторио" },
+        "greek":      { "native": "ρεστοράν","ipa":"restoˈran","latin":"restoran","cyrillic":"рэсторан" },
         "cyrillic":   { "native": "ресторан","ipa":"rʲɪstɐˈran","latin":"restoran","cyrillic":"ресторан" },
         "armenian":   { "native": "ռեստորան","ipa":"rɛstɔˈɾɑn","latin":"ṙestoran","cyrillic":"ррэсторан" },
         "georgian":   { "native": "რესტორანი","ipa":"ɾɛstɔˈɾɑni","latin":"restorani","cyrillic":"рэсторани" },
         "hiragana":   { "native": "れすとらん","ipa":"ɾesɯtoɾaɴ","latin":"resutoran","cyrillic":"рэсуторан" },
         "devanagari": { "native": "रेस्तरां","ipa":"ɾestəɾaːⁿ","latin":"restarāṁ","cyrillic":"рэстаран" },
-        "arabic":     { "native": "مطعم",   "ipa": "matˤʕam", "latin": "maṭʿam",   "cyrillic": "матам" },
-        "hebrew":     { "native": "מסעדה", "ipa": "misʕaˈda", "latin": "misada", "cyrillic": "мисада" },
-        "hangul":     { "native": "식당", "ipa": "ɕik̚.t͈aŋ", "latin": "sikdang", "cyrillic": "сиктан" },
-        "thai":       { "native": "ร้านอาหาร", "ipa": "ráːn.ʔaː.hǎːn", "latin": "ranahan", "cyrillic": "ранахан" }
+        "arabic":     { "native": "ريستوران", "ipa": "riːstuːraːn", "latin": "rīstūrān", "cyrillic": "ристуран" },
+        "hebrew":     { "native": "רסטורנט", "ipa": "restoˈrant", "latin": "restorant", "cyrillic": "ресторант" },
+        "hangul":     { "native": "레스토랑", "ipa": "ɾesɯtʰoɾaŋ", "latin": "reseutorang", "cyrillic": "рэсытхоран" },
+        "thai":       { "native": "เรสเตอรองต์", "ipa": "rés.tɤː.rɔːŋ", "latin": "resterong", "cyrillic": "рэстёрон" }
       }
     },
     {
@@ -416,26 +416,26 @@
         "georgian":   { "native": "პარკი",  "ipa": "ˈpʼɑɾkʼi","latin": "p'ark'i",  "cyrillic": "парки" },
         "hiragana":   { "native": "ぱーく",  "ipa": "paːkɯ",   "latin": "pāku",     "cyrillic": "па:ку" },
         "devanagari": { "native": "पार्क",  "ipa": "paːɾk",   "latin": "pārk",     "cyrillic": "парк" },
-        "arabic":     { "native": "حديقة",  "ipa": "ħadiːqa", "latin": "ḥadīqa",   "cyrillic": "хадика" },
+        "arabic":     { "native": "بارك",  "ipa": "baːrk", "latin": "bārk",   "cyrillic": "барк" },
         "hebrew":     { "native": "פארק", "ipa": "park", "latin": "park", "cyrillic": "парк" },
-        "hangul":     { "native": "공원", "ipa": "koŋwʌn", "latin": "gongwon", "cyrillic": "конвон" },
-        "thai":       { "native": "สวนสาธารณะ", "ipa": "sǔan.sǎː.tʰaː.rá.ná", "latin": "suansatharana", "cyrillic": "суансатхарана" }
+        "hangul":     { "native": "파크", "ipa": "pʰakʰɯ", "latin": "pakeu", "cyrillic": "пхакхы" },
+        "thai":       { "native": "ปาร์ค", "ipa": "pâːk", "latin": "pak", "cyrillic": "пак" }
       }
     },
     {
       "concept": "police",
       "meaning": {"en": "police", "ru": "полиция"},
       "forms": {
-        "greek":      { "native": "αστυνομία","ipa":"astinoˈmia","latin":"astynomia","cyrillic":"астиномиа" },
+        "greek":      { "native": "πολίτσια","ipa":"poˈlitsia","latin":"politsia","cyrillic":"полициа" },
         "cyrillic":   { "native": "полиция","ipa":"pɐˈlʲitsɨjə","latin":"politsiya","cyrillic":"полиция" },
-        "armenian":   { "native": "ոստիկանություն","ipa":"vɔstikɑnutʰˈjun","latin":"vostikanut'yun","cyrillic":"востиканутьюн" },
+        "armenian":   { "native": "պոլիցիա","ipa":"pɔliˈtsiɑ","latin":"politsia","cyrillic":"полициа" },
         "georgian":   { "native": "პოლიცია","ipa":"pʼɔliˈtsʼiɑ","latin":"p'olits'ia","cyrillic":"полиция" },
-        "hiragana":   { "native": "けいさつ","ipa": "keːsatsɯ", "latin": "keisatsu", "cyrillic": "кэисацу" },
+        "hiragana":   { "native": "ぽりす","ipa": "poɾisɯ", "latin": "porisu", "cyrillic": "порису" },
         "devanagari": { "native": "पुलिस",  "ipa": "pʊlɪs",   "latin": "pulis",    "cyrillic": "пулис" },
-        "arabic":     { "native": "شرطة",   "ipa": "ʃurtˤa",  "latin": "shurṭa",   "cyrillic": "шурта" },
-        "hebrew":     { "native": "משטרה", "ipa": "miʃtaˈra", "latin": "mishtara", "cyrillic": "миштара" },
-        "hangul":     { "native": "경찰", "ipa": "kjʌŋtɕʰaɭ", "latin": "gyeongchal", "cyrillic": "кёнчхаль" },
-        "thai":       { "native": "ตำรวจ", "ipa": "tam.rùat", "latin": "tamruat", "cyrillic": "тамруат" }
+        "arabic":     { "native": "بوليس",   "ipa": "buːliːs",  "latin": "būlīs",   "cyrillic": "булис" },
+        "hebrew":     { "native": "פוליציה", "ipa": "poˈlitsja", "latin": "politsya", "cyrillic": "полиция" },
+        "hangul":     { "native": "폴리스", "ipa": "pʰolisɯ", "latin": "poliseu", "cyrillic": "пхолисы" },
+        "thai":       { "native": "โปลิศ", "ipa": "poː.lít", "latin": "polit", "cyrillic": "полит" }
       }
     },
     {
@@ -450,9 +450,9 @@
         "hiragana":   { "native": "まま",   "ipa": "mama",    "latin": "mama",     "cyrillic": "мама" },
         "devanagari": { "native": "ममा",   "ipa": "məmaː",   "latin": "mamā",     "cyrillic": "мама" },
         "arabic":     { "native": "ماما",   "ipa": "maːmaː",  "latin": "māmā",     "cyrillic": "мама" },
-        "hebrew":     { "native": "אמא", "ipa": "ˈima", "latin": "ima", "cyrillic": "има" },
-        "hangul":     { "native": "엄마", "ipa": "ʌmma", "latin": "eomma", "cyrillic": "омма" },
-        "thai":       { "native": "แม่", "ipa": "mɛ̂ː", "latin": "mae", "cyrillic": "мэ" }
+        "hebrew":     { "native": "מאמא", "ipa": "ˈmama", "latin": "mama", "cyrillic": "мама" },
+        "hangul":     { "native": "마마", "ipa": "mama", "latin": "mama", "cyrillic": "мама" },
+        "thai":       { "native": "มามา", "ipa": "maː.maː", "latin": "mama", "cyrillic": "мама" }
       }
     },
     {
@@ -466,9 +466,9 @@
         "hiragana":   { "native": "ぱぱ",   "ipa": "papa",    "latin": "papa",     "cyrillic": "папа" },
         "devanagari": { "native": "पापा",  "ipa": "paːpaː",  "latin": "pāpā",     "cyrillic": "папа" },
         "arabic":     { "native": "بابا",   "ipa": "baːbaː",  "latin": "bābā",     "cyrillic": "баба" },
-        "hebrew":     { "native": "אבא", "ipa": "ˈaba", "latin": "aba", "cyrillic": "аба" },
-        "hangul":     { "native": "아빠", "ipa": "ap͈a", "latin": "appa", "cyrillic": "аппа" },
-        "thai":       { "native": "พ่อ", "ipa": "pʰɔ̂ː", "latin": "pho", "cyrillic": "пхо" }
+        "hebrew":     { "native": "פאפא", "ipa": "ˈpapa", "latin": "papa", "cyrillic": "папа" },
+        "hangul":     { "native": "파파", "ipa": "pʰapʰa", "latin": "papa", "cyrillic": "пхапха" },
+        "thai":       { "native": "ปาปา", "ipa": "paː.paː", "latin": "papa", "cyrillic": "папа" }
       }
     }
   ]
