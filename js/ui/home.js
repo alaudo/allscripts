@@ -64,7 +64,8 @@ export async function renderHome(_, mount) {
   // Active script info card (history + flags)
   const current = manifest.scripts.find(s => s.id === settings.activeScript) || manifest.scripts[0];
   const infoText = localized(current.info);
-  if (infoText || (current.countries && current.countries.length)) {
+  const compositionText = localized(current.composition);
+  if (infoText || compositionText || (current.countries && current.countries.length)) {
     const flags = (current.countries || [])
       .map(c => {
         const cname = localized(c.name);
@@ -78,6 +79,8 @@ export async function renderHome(_, mount) {
            <div class="flags" aria-label="${escapeHtml(t('home.about_aria', { name: localized(current.name) }))}">${flags}</div>
          </div>
          ${infoText ? `<p class="about-text">${escapeHtml(infoText)}</p>` : ''}
+         ${compositionText ? `<h3 class="about-subheading">${escapeHtml(t('home.composition'))}</h3>
+         <p class="about-text">${escapeHtml(compositionText)}</p>` : ''}
        </div>`
     );
     root.appendChild(aboutCard);

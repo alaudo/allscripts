@@ -541,6 +541,15 @@ body {
 }
 .script-about h2 { margin: 0; }
 .script-about .about-text { margin: 0; color: var(--fg); }
+.script-about .about-text + .about-subheading { margin-top: 14px; }
+.script-about .about-subheading {
+  margin: 0 0 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
 .flags {
   display: flex;
   gap: 4px;
