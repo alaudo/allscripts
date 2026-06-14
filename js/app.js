@@ -11,6 +11,7 @@ import { renderPhrases } from './modes/phrases.js';
 import { renderPreviewLetters } from './modes/preview-letters.js';
 import { renderPreviewWords } from './modes/preview-words.js';
 import { renderPreviewPhrases } from './modes/preview-phrases.js';
+import { renderChooseLetters, renderChooseWords, renderChoosePhrases } from './modes/choose.js';
 
 applyChromeStrings();
 initTheme();
@@ -25,6 +26,9 @@ registerRoute('phrases', renderPhrases);
 registerRoute('preview-letters', renderPreviewLetters);
 registerRoute('preview-words', renderPreviewWords);
 registerRoute('preview-phrases', renderPreviewPhrases);
+registerRoute('choose-letters', renderChooseLetters);
+registerRoute('choose-words', renderChooseWords);
+registerRoute('choose-phrases', renderChoosePhrases);
 
 setFallback(async (_, mount) => {
   mount.innerHTML =

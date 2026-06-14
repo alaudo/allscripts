@@ -4,10 +4,13 @@ import { el, escapeHtml } from './dom.js';
 import { t, transcriptionLabel, inputSystemLabel, localized } from '../i18n.js';
 
 const PRACTICE_MODES = [
-  { id: 'flashcards', titleKey: 'mode.flashcards.title', blurbKey: 'mode.flashcards.blurb', icon: '🃏' },
-  { id: 'read',       titleKey: 'mode.read.title',       blurbKey: 'mode.read.blurb',       icon: '👁️' },
-  { id: 'spell',      titleKey: 'mode.spell.title',      blurbKey: 'mode.spell.blurb',      icon: '✍️' },
-  { id: 'phrases',    titleKey: 'mode.phrases.title',    blurbKey: 'mode.phrases.blurb',    icon: '💭' }
+  { id: 'flashcards',     titleKey: 'mode.flashcards.title',     blurbKey: 'mode.flashcards.blurb',     icon: '🃏' },
+  { id: 'read',           titleKey: 'mode.read.title',           blurbKey: 'mode.read.blurb',           icon: '👁️' },
+  { id: 'spell',          titleKey: 'mode.spell.title',          blurbKey: 'mode.spell.blurb',          icon: '✍️' },
+  { id: 'choose-letters', titleKey: 'mode.choose-letters.title', blurbKey: 'mode.choose-letters.blurb', icon: '🎯' },
+  { id: 'choose-words',   titleKey: 'mode.choose-words.title',   blurbKey: 'mode.choose-words.blurb',   icon: '🎯' },
+  { id: 'phrases',        titleKey: 'mode.phrases.title',        blurbKey: 'mode.phrases.blurb',        icon: '💭' },
+  { id: 'choose-phrases', titleKey: 'mode.choose-phrases.title', blurbKey: 'mode.choose-phrases.blurb', icon: '🎯' }
 ];
 
 const REVIEW_MODES = [

@@ -392,6 +392,74 @@ body {
 .ipa { color: var(--muted); font-style: italic; }
 .meaning { font-size: 0.95rem; }
 
+/* Multiple-choice drill */
+.choose-toggle {
+  font: inherit;
+  font-size: 0.85rem;
+  background: transparent;
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  padding: 4px 12px;
+  color: var(--muted);
+  cursor: pointer;
+  transition: border-color 0.08s, color 0.08s;
+}
+.choose-toggle:hover { border-color: var(--accent); color: var(--accent); }
+.choose-card .prompt {
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  padding: 12px 8px;
+  font-weight: 600;
+  word-break: break-word;
+}
+.choose-card .prompt.prompt--big { font-size: 3.4rem; line-height: 1.1; }
+.choose-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+}
+.choose-option {
+  font: inherit;
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: 10px;
+  padding: 14px 12px;
+  min-height: 56px;
+  cursor: pointer;
+  color: inherit;
+  transition: border-color 0.08s, background 0.08s, transform 0.06s;
+  text-align: center;
+}
+.choose-option:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 6%, var(--card-bg));
+}
+.choose-option:disabled { cursor: default; }
+.choose-option.correct {
+  border-color: var(--good);
+  background: color-mix(in srgb, var(--good) 12%, var(--card-bg));
+  color: var(--fg);
+}
+.choose-option.wrong {
+  border-color: var(--bad);
+  background: color-mix(in srgb, var(--bad) 12%, var(--card-bg));
+}
+.choose-option-text { font-size: 1rem; }
+.choose-option-text--native { font-size: 1.4rem; font-weight: 600; }
+.choose-extras {
+  font-size: 0.95rem;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+@media (max-width: 600px) {
+  .choose-options { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .choose-card .prompt.prompt--big { font-size: 2.6rem; }
+  .choose-option { padding: 10px 8px; min-height: 48px; }
+}
+
 /* Keyboard */
 .kb-title { margin-bottom: 12px; }
 .keyboard { display: flex; flex-direction: column; gap: 6px; }

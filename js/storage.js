@@ -15,6 +15,8 @@ const DEFAULTS = {
     fuzzy: false,             // allow small typos in mode 2 / mode 3 transliteration matching
     flashcardTimerSec: 0,     // 0 = off; seconds per LETTER card before auto-advance
     phrasesTimerSec: 0,       // same idea, applied to PHRASE flashcards
+    chooseDirection: 'recognize', // 'recognize' (native -> meaning) | 'recall' (meaning -> native)
+    chooseOptionCount: 4,     // 4 | 6 | 8 — distractor count for the Choose drill
     srsIntervals: {           // minutes added to "now" when a LETTER card is rated
       again: 1,               // 1 min
       hard: 10,               // 10 min
