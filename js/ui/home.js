@@ -1,15 +1,19 @@
 import { getManifest, getScript, getWordPool, getPhrases } from '../data.js';
 import { getSettings, summary } from '../storage.js';
 import { el, escapeHtml } from './dom.js';
-import { t, transcriptionLabel, inputSystemLabel } from '../i18n.js';
+import { t, transcriptionLabel, inputSystemLabel, localized } from '../i18n.js';
 
-const MODES = [
-  { id: 'flashcards',      titleKey: 'mode.flashcards.title',      blurbKey: 'mode.flashcards.blurb' },
-  { id: 'read',            titleKey: 'mode.read.title',            blurbKey: 'mode.read.blurb' },
-  { id: 'spell',           titleKey: 'mode.spell.title',           blurbKey: 'mode.spell.blurb' },
-  { id: 'phrases',         titleKey: 'mode.phrases.title',         blurbKey: 'mode.phrases.blurb' },
-  { id: 'preview-letters', titleKey: 'mode.preview-letters.title', blurbKey: 'mode.preview-letters.blurb' },
-  { id: 'preview-words',   titleKey: 'mode.preview-words.title',   blurbKey: 'mode.preview-words.blurb' }
+const PRACTICE_MODES = [
+  { id: 'flashcards', titleKey: 'mode.flashcards.title', blurbKey: 'mode.flashcards.blurb' },
+  { id: 'read',       titleKey: 'mode.read.title',       blurbKey: 'mode.read.blurb' },
+  { id: 'spell',      titleKey: 'mode.spell.title',      blurbKey: 'mode.spell.blurb' },
+  { id: 'phrases',    titleKey: 'mode.phrases.title',    blurbKey: 'mode.phrases.blurb' }
+];
+
+const REVIEW_MODES = [
+  { id: 'preview-letters', titleKey: 'mode.preview-letters.title', blurbKey: 'mode.preview-letters.blurb', icon: '🔤' },
+  { id: 'preview-words',   titleKey: 'mode.preview-words.title',   blurbKey: 'mode.preview-words.blurb',   icon: '💬' },
+  { id: 'preview-phrases', titleKey: 'mode.preview-phrases.title', blurbKey: 'mode.preview-phrases.blurb', icon: '🗒️' }
 ];
 
 export async function renderHome(_, mount) {
@@ -56,9 +60,13 @@ export async function renderHome(_, mount) {
 
   // Active script info card (history + flags)
   const current = manifest.scripts.find(s => s.id === settings.activeScript) || manifest.scripts[0];
-  if (current.info || (current.countries && current.countries.length)) {
+  const infoText = localized(current.info);
+  if (infoText || (current.countries && current.countries.length)) {
     const flags = (current.countries || [])
-      .map(c => `<span class="flag" title="${escapeHtml(c.name)}">${c.flag}</span>`)
+      .map(c => {
+        const cname = localized(c.name);
+        return `<span class="flag" title="${escapeHtml(cname)}">${c.flag}</span>`;
+      })
       .join('');
     const aboutCard = el(
       `<div class="card script-about">
@@ -66,13 +74,13 @@ export async function renderHome(_, mount) {
            <h2>${escapeHtml(t('home.about'))} <span class="muted">${escapeHtml(current.name)}</span></h2>
            <div class="flags" aria-label="${escapeHtml(t('home.about_aria', { name: current.name }))}">${flags}</div>
          </div>
-         ${current.info ? `<p class="about-text">${escapeHtml(current.info)}</p>` : ''}
+         ${infoText ? `<p class="about-text">${escapeHtml(infoText)}</p>` : ''}
        </div>`
     );
     root.appendChild(aboutCard);
   }
 
-  // Mode picker
+  // Mode picker (practise)
   const config = [
     `${escapeHtml(t('home.config.transcription'))}: ${escapeHtml(transcriptionLabel(settings.transcription))}`,
     `${escapeHtml(t('home.config.input'))}: ${escapeHtml(inputSystemLabel(settings.inputSystem))}`,
@@ -83,13 +91,13 @@ export async function renderHome(_, mount) {
 
   const modeCard = el(
     `<div class="card">
-       <h2>${escapeHtml(t('home.practise'))} <span class="muted">${escapeHtml(current.name)}</span></h2>
+       <h2>${escapeHtml(t('home.section.practise'))} <span class="muted">${escapeHtml(current.name)}</span></h2>
        <p class="muted small">${config}</p>
        <div class="mode-grid"></div>
      </div>`
   );
   const modeGrid = modeCard.querySelector('.mode-grid');
-  for (const m of MODES) {
+  for (const m of PRACTICE_MODES) {
     const a = el(
       `<a class="mode-card" href="#/${m.id}">
          <h3>${escapeHtml(t(m.titleKey))}</h3>
@@ -99,6 +107,29 @@ export async function renderHome(_, mount) {
     modeGrid.appendChild(a);
   }
   root.appendChild(modeCard);
+
+  // Review (no exercises)
+  const reviewCard = el(
+    `<div class="card review-card">
+       <h2>${escapeHtml(t('home.section.review'))} <span class="muted">${escapeHtml(current.name)}</span></h2>
+       <p class="muted small">${escapeHtml(t('home.section.review.hint'))}</p>
+       <div class="mode-grid review-grid"></div>
+     </div>`
+  );
+  const reviewGrid = reviewCard.querySelector('.mode-grid');
+  for (const m of REVIEW_MODES) {
+    const a = el(
+      `<a class="mode-card mode-card--review" href="#/${m.id}">
+         <span class="mode-card-icon" aria-hidden="true">${m.icon}</span>
+         <div class="mode-card-text">
+           <h3>${escapeHtml(t(m.titleKey))}</h3>
+           <p>${escapeHtml(t(m.blurbKey))}</p>
+         </div>
+       </a>`
+    );
+    reviewGrid.appendChild(a);
+  }
+  root.appendChild(reviewCard);
 
   mount.appendChild(root);
 }

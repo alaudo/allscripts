@@ -187,6 +187,43 @@ body {
 .mode-card h3 { margin: 0 0 6px; }
 .mode-card p { margin: 0; color: var(--muted); font-size: 0.9rem; }
 
+/* Review tiles — visually distinct from the exercise tiles above, to make it
+   clear these are reference views, not interactive practice. Subdued
+   background, dashed border, and a leading glyph instead of the same prominent
+   heading treatment as practice modes. */
+.review-card { background: color-mix(in srgb, var(--card-bg) 88%, var(--bg)); }
+.review-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.mode-card--review {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 14px;
+  background: transparent;
+  border-style: dashed;
+  border-color: var(--card-border);
+}
+.mode-card--review:hover {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+}
+.mode-card--review .mode-card-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+  opacity: 0.85;
+}
+.mode-card--review h3 {
+  margin: 0 0 4px;
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+.mode-card--review p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
 /* Mode header — wraps on small screens so the right-aligned pill doesn't push the title off. */
 .mode-header {
   display: flex;
@@ -762,10 +799,53 @@ body {
   border-style: dashed;
 }
 
+/* Preview phrases — stacked list (not a grid; phrase rows are long). */
+.preview-phrases-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+.phrase-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: baseline;
+  gap: 6px 16px;
+  padding: 12px 14px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+}
+.phrase-row-native {
+  font-size: 1.2rem;
+  font-weight: 600;
+  word-break: break-word;
+}
+.phrase-row-latin {
+  grid-column: 1;
+  margin-top: 2px;
+}
+.phrase-row-translation {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  color: var(--fg);
+  word-break: break-word;
+}
+
 @media (max-width: 600px) {
   .preview-grid { grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: 8px; }
   .preview-grid.words-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
   .preview-cell { min-height: 78px; padding: 10px 6px; }
   .preview-native { font-size: 1.6rem; }
   .word-cell .preview-native { font-size: 1.2rem; }
+  .phrase-row {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  .phrase-row-latin,
+  .phrase-row-translation {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .phrase-row-translation { margin-top: 4px; }
 }

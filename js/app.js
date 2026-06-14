@@ -9,6 +9,7 @@ import { renderSpell } from './modes/spell.js';
 import { renderPhrases } from './modes/phrases.js';
 import { renderPreviewLetters } from './modes/preview-letters.js';
 import { renderPreviewWords } from './modes/preview-words.js';
+import { renderPreviewPhrases } from './modes/preview-phrases.js';
 
 applyChromeStrings();
 initTheme();
@@ -21,6 +22,7 @@ registerRoute('spell', renderSpell);
 registerRoute('phrases', renderPhrases);
 registerRoute('preview-letters', renderPreviewLetters);
 registerRoute('preview-words', renderPreviewWords);
+registerRoute('preview-phrases', renderPreviewPhrases);
 
 setFallback(async (_, mount) => {
   mount.innerHTML =

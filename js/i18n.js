@@ -53,14 +53,21 @@ const DICTS = {
     'mode.spell.title': 'Spell in script',
     'mode.spell.blurb': 'A word in Latin/Cyrillic/IPA — type it in the target script.',
     'mode.phrases.title': 'Phrases',
-    'mode.phrases.blurb': '20 useful phrases for the language — tap to reveal the translation.',
+    'mode.phrases.blurb': '20 useful phrases — flashcards with spaced repetition, tap to reveal the translation.',
     'mode.preview-letters.title': 'Preview alphabet',
     'mode.preview-letters.blurb': 'Every letter at a glance, with transcription beneath. Filter by consonant, vowel or mark.',
     'mode.preview-words.title': 'Preview words',
     'mode.preview-words.blurb': 'Browse the full word pool. Filter by source (specific / international) and length.',
+    'mode.preview-phrases.title': 'Preview phrases',
+    'mode.preview-phrases.blurb': 'All useful phrases on one page with their translation — no flashcards, just a reference list.',
+
+    'home.section.practise': 'Practise',
+    'home.section.review': 'Review (no exercises)',
+    'home.section.review.hint': 'Browse the material — no answers expected, no progress tracked.',
 
     'preview.letters.header': 'Alphabet — {name}',
     'preview.words.header': 'Words — {name}',
+    'preview.phrases.header': 'Phrases — {name}',
     'preview.filter': 'Filter',
     'preview.cat.vowels': 'Vowels',
     'preview.cat.consonants': 'Consonants',
@@ -120,16 +127,19 @@ const DICTS = {
     'spell.kbd_hint': 'Click letters to insert them, or just type if you have a {name} keyboard installed.',
     'spell.meaning': 'meaning: {meaning}',
 
-    'phrases.header': '20 phrases — {name}',
+    'phrases.header': 'Phrases — {name}',
     'phrases.tap_to_reveal': 'Tap to reveal',
     'phrases.tap_to_flip_back': 'Tap to flip back',
     'phrases.show_translation': 'Show translation',
     'phrases.show_native': 'Show native',
     'phrases.counter': '{idx} / {total}',
-    'phrases.shuffle': 'Shuffle',
+    'phrases.shuffle': 'Reshuffle / rebuild deck',
     'phrases.next': 'Next →',
     'phrases.previous': '← Previous',
     'phrases.none': 'No phrases available for this script yet.',
+    'phrases.all_caught_up': 'All caught up!',
+    'phrases.due_now': '{n} due now',
+    'phrases.no_due': 'no phrases due — practicing full deck',
 
     'settings.appearance': 'Appearance',
     'settings.theme': 'Theme',
@@ -148,7 +158,9 @@ const DICTS = {
     'settings.vocalised.hint': 'For scripts with optional diacritics (Arabic harakat, Hebrew niqqud), display the fully-pointed form in word exercises.',
     'settings.fuzzy': 'Forgiving (fuzzy) matching',
     'settings.fuzzy.hint': 'Accept answers with small spelling slips — e.g. "t" instead of "th", one missing letter — in read & spell modes.',
-    'settings.flashcards': 'Flashcards',
+    'settings.flashcards': 'Flashcards — letters',
+    'settings.flashcards.phrases': 'Flashcards — phrases',
+    'settings.flashcards.phrases.hint': 'Phrases use their own timer and spaced-repetition intervals, independent of the letter deck.',
     'settings.timer': 'Auto-advance timer',
     'settings.timer.hint': "Auto-flips the card, then advances if you don't rate it in time. Off by default.",
     'settings.timer.off': 'Off',
@@ -219,14 +231,21 @@ const DICTS = {
     'mode.spell.title': 'Писать в письменности',
     'mode.spell.blurb': 'Слово на латинице/кириллице/IPA — наберите его в целевой письменности.',
     'mode.phrases.title': 'Фразы',
-    'mode.phrases.blurb': '20 полезных фраз языка — нажмите, чтобы увидеть перевод.',
+    'mode.phrases.blurb': '20 полезных фраз — карточки с интервальным повторением, нажмите, чтобы увидеть перевод.',
     'mode.preview-letters.title': 'Алфавит — обзор',
     'mode.preview-letters.blurb': 'Все буквы на одной странице, под каждой — её транскрипция. Фильтры: согласные, гласные, знаки.',
     'mode.preview-words.title': 'Слова — обзор',
     'mode.preview-words.blurb': 'Просмотр всего пула слов. Фильтр по источнику (специфические / международные) и длине.',
+    'mode.preview-phrases.title': 'Фразы — обзор',
+    'mode.preview-phrases.blurb': 'Все полезные фразы с переводами на одной странице — не упражнение, а справочный список.',
+
+    'home.section.practise': 'Тренировка',
+    'home.section.review': 'Обзор (без упражнений)',
+    'home.section.review.hint': 'Просмотр материала — ответов не требуется, прогресс не отслеживается.',
 
     'preview.letters.header': 'Алфавит — {name}',
     'preview.words.header': 'Слова — {name}',
+    'preview.phrases.header': 'Фразы — {name}',
     'preview.filter': 'Фильтр',
     'preview.cat.vowels': 'Гласные',
     'preview.cat.consonants': 'Согласные',
@@ -286,16 +305,19 @@ const DICTS = {
     'spell.kbd_hint': 'Нажимайте буквы, чтобы их вставить, или печатайте с физической клавиатуры, если у вас есть раскладка {name}.',
     'spell.meaning': 'значение: {meaning}',
 
-    'phrases.header': '20 фраз — {name}',
+    'phrases.header': 'Фразы — {name}',
     'phrases.tap_to_reveal': 'Нажмите, чтобы увидеть перевод',
     'phrases.tap_to_flip_back': 'Нажмите, чтобы перевернуть',
     'phrases.show_translation': 'Показать перевод',
     'phrases.show_native': 'Показать оригинал',
     'phrases.counter': '{idx} / {total}',
-    'phrases.shuffle': 'Перемешать',
+    'phrases.shuffle': 'Перетасовать колоду',
     'phrases.next': 'Дальше →',
     'phrases.previous': '← Назад',
     'phrases.none': 'Для этой письменности фразы ещё не добавлены.',
+    'phrases.all_caught_up': 'Всё повторено!',
+    'phrases.due_now': 'к повторению: {n}',
+    'phrases.no_due': 'к повторению пока нет — тренируем всю колоду',
 
     'settings.appearance': 'Внешний вид',
     'settings.theme': 'Тема',
@@ -314,7 +336,9 @@ const DICTS = {
     'settings.vocalised.hint': 'Для письменностей с необязательной диакритикой (арабские харакат, ивритский никкуд) показывать полностью огласованную форму в упражнениях.',
     'settings.fuzzy': 'Мягкая (нестрогая) проверка',
     'settings.fuzzy.hint': 'Принимать ответы с мелкими опечатками — например «t» вместо «th», одна пропущенная буква — в режимах чтения и письма.',
-    'settings.flashcards': 'Карточки',
+    'settings.flashcards': 'Карточки — буквы',
+    'settings.flashcards.phrases': 'Карточки — фразы',
+    'settings.flashcards.phrases.hint': 'У фраз — собственный таймер и интервалы повторения, независимые от колоды букв.',
     'settings.timer': 'Таймер автосмены',
     'settings.timer.hint': 'Сначала переворачивает карту, затем переходит к следующей, если вы не оцениваете её вовремя. По умолчанию выключен.',
     'settings.timer.off': 'Выкл.',
@@ -372,6 +396,17 @@ export function t(key, params) {
     }
   }
   return s;
+}
+
+// Pick the right value out of a localized field. Data fields may be either a
+// plain string (legacy / single-language entries) or an object keyed by UI
+// language code, e.g. { en: "Greece", ru: "Греция" }. We fall back to English
+// when the current language isn't present.
+export function localized(value, fallback = '') {
+  if (value == null) return fallback;
+  if (typeof value === 'string') return value;
+  const lang = currentLang();
+  return value[lang] ?? value.en ?? fallback;
 }
 
 // Convenience helpers — short labels used in several places.

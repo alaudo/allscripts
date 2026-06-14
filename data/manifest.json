@@ -8,10 +8,13 @@
       "language": "el",
       "direction": "ltr",
       "file": "scripts/greek.json",
-      "info": "The Greek alphabet has been in continuous use since the 9th century BC, descended from the Phoenician script. It was the first true alphabet — the first script to assign letters to vowels as well as consonants — and its letterforms are the ancestors of Latin and Cyrillic.",
+      "info": {
+        "en": "The Greek alphabet has been in continuous use since the 9th century BC, descended from the Phoenician script. It was the first true alphabet — the first script to assign letters to vowels as well as consonants — and its letterforms are the ancestors of Latin and Cyrillic.",
+        "ru": "Греческий алфавит непрерывно используется с IX века до н. э. и происходит от финикийского письма. Это первый настоящий алфавит — первая письменность, в которой отдельные буквы обозначали не только согласные, но и гласные; от него произошли латиница и кириллица."
+      },
       "countries": [
-        { "flag": "🇬🇷", "name": "Greece" },
-        { "flag": "🇨🇾", "name": "Cyprus" }
+        { "flag": "🇬🇷", "name": { "en": "Greece", "ru": "Греция" } },
+        { "flag": "🇨🇾", "name": { "en": "Cyprus", "ru": "Кипр" } }
       ]
     },
     {
@@ -21,17 +24,20 @@
       "language": "ru",
       "direction": "ltr",
       "file": "scripts/cyrillic.json",
-      "info": "Cyrillic was developed in the 9th–10th centuries in the First Bulgarian Empire by disciples of Saints Cyril and Methodius, adapting Greek uncial letters to write Slavic languages. Today it is used by over 250 million people across Slavic, Turkic, Mongolic and Iranian languages.",
+      "info": {
+        "en": "Cyrillic was developed in the 9th–10th centuries in the First Bulgarian Empire by disciples of Saints Cyril and Methodius, adapting Greek uncial letters to write Slavic languages. Today it is used by over 250 million people across Slavic, Turkic, Mongolic and Iranian languages.",
+        "ru": "Кириллица была создана в IX–X веках в Первом Болгарском царстве учениками святых Кирилла и Мефодия на основе греческого унциального письма для записи славянских языков. Сегодня ею пользуются более 250 миллионов человек на славянских, тюркских, монгольских и иранских языках."
+      },
       "countries": [
-        { "flag": "🇷🇺", "name": "Russia" },
-        { "flag": "🇺🇦", "name": "Ukraine" },
-        { "flag": "🇧🇾", "name": "Belarus" },
-        { "flag": "🇧🇬", "name": "Bulgaria" },
-        { "flag": "🇷🇸", "name": "Serbia" },
-        { "flag": "🇲🇰", "name": "North Macedonia" },
-        { "flag": "🇰🇿", "name": "Kazakhstan" },
-        { "flag": "🇰🇬", "name": "Kyrgyzstan" },
-        { "flag": "🇲🇳", "name": "Mongolia" }
+        { "flag": "🇷🇺", "name": { "en": "Russia", "ru": "Россия" } },
+        { "flag": "🇺🇦", "name": { "en": "Ukraine", "ru": "Украина" } },
+        { "flag": "🇧🇾", "name": { "en": "Belarus", "ru": "Беларусь" } },
+        { "flag": "🇧🇬", "name": { "en": "Bulgaria", "ru": "Болгария" } },
+        { "flag": "🇷🇸", "name": { "en": "Serbia", "ru": "Сербия" } },
+        { "flag": "🇲🇰", "name": { "en": "North Macedonia", "ru": "Северная Македония" } },
+        { "flag": "🇰🇿", "name": { "en": "Kazakhstan", "ru": "Казахстан" } },
+        { "flag": "🇰🇬", "name": { "en": "Kyrgyzstan", "ru": "Киргизия" } },
+        { "flag": "🇲🇳", "name": { "en": "Mongolia", "ru": "Монголия" } }
       ]
     },
     {
@@ -41,9 +47,12 @@
       "language": "hy",
       "direction": "ltr",
       "file": "scripts/armenian.json",
-      "info": "The Armenian alphabet was created around 405 AD by the linguist and theologian Mesrop Mashtots, with the explicit purpose of translating the Bible into Armenian. It has 39 letters in its modern form and is one of very few scripts whose inventor is known.",
+      "info": {
+        "en": "The Armenian alphabet was created around 405 AD by the linguist and theologian Mesrop Mashtots, with the explicit purpose of translating the Bible into Armenian. It has 39 letters in its modern form and is one of very few scripts whose inventor is known.",
+        "ru": "Армянский алфавит был создан около 405 года н. э. лингвистом и богословом Месропом Маштоцем специально для перевода Библии на армянский. В современном виде он содержит 39 букв и принадлежит к числу немногих письменностей, чей создатель известен."
+      },
       "countries": [
-        { "flag": "🇦🇲", "name": "Armenia" }
+        { "flag": "🇦🇲", "name": { "en": "Armenia", "ru": "Армения" } }
       ]
     },
     {
@@ -53,9 +62,12 @@
       "language": "ka",
       "direction": "ltr",
       "file": "scripts/georgian.json",
-      "info": "Georgian (Mkhedruli) is one of three related Georgian scripts; together they form a unique alphabetic family recognized by UNESCO as Intangible Cultural Heritage. The earliest inscriptions date to the 5th century AD. Mkhedruli has 33 letters and lacks both uppercase and silent letters.",
+      "info": {
+        "en": "Georgian (Mkhedruli) is one of three related Georgian scripts; together they form a unique alphabetic family recognized by UNESCO as Intangible Cultural Heritage. The earliest inscriptions date to the 5th century AD. Mkhedruli has 33 letters and lacks both uppercase and silent letters.",
+        "ru": "Грузинское письмо (мхедрули) — одна из трёх родственных грузинских письменностей; вместе они образуют уникальную алфавитную семью, внесённую ЮНЕСКО в список нематериального культурного наследия. Древнейшие надписи относятся к V веку н. э. В мхедрули 33 буквы, нет ни заглавных, ни немых букв."
+      },
       "countries": [
-        { "flag": "🇬🇪", "name": "Georgia" }
+        { "flag": "🇬🇪", "name": { "en": "Georgia", "ru": "Грузия" } }
       ]
     },
     {
@@ -65,9 +77,12 @@
       "language": "ja",
       "direction": "ltr",
       "file": "scripts/hiragana.json",
-      "info": "Hiragana is a Japanese syllabary that evolved from cursive forms of Chinese characters (man'yōgana) during the Heian period (8th–12th c.). It was once dismissively called 'women's writing' but is now used for native words, grammatical particles and verb endings alongside kanji and katakana.",
+      "info": {
+        "en": "Hiragana is a Japanese syllabary that evolved from cursive forms of Chinese characters (man'yōgana) during the Heian period (8th–12th c.). It was once dismissively called 'women's writing' but is now used for native words, grammatical particles and verb endings alongside kanji and katakana.",
+        "ru": "Хирагана — японская слоговая азбука, развившаяся из скорописных форм китайских иероглифов (манъёгана) в эпоху Хэйан (VIII–XII вв.). Когда-то её пренебрежительно называли «женским письмом», а сегодня она используется для исконно японских слов, грамматических частиц и окончаний глаголов наряду с кандзи и катаканой."
+      },
       "countries": [
-        { "flag": "🇯🇵", "name": "Japan" }
+        { "flag": "🇯🇵", "name": { "en": "Japan", "ru": "Япония" } }
       ]
     },
     {
@@ -77,10 +92,13 @@
       "language": "hi",
       "direction": "ltr",
       "file": "scripts/devanagari.json",
-      "info": "Devanagari is an abugida descended from the ancient Brahmi script (3rd c. BC). Its distinctive horizontal headstroke (shirorekha) ties letters into words. It is used to write Hindi, Marathi, Sanskrit, Nepali and several other Indo-Aryan languages — roughly 600 million speakers in total.",
+      "info": {
+        "en": "Devanagari is an abugida descended from the ancient Brahmi script (3rd c. BC). Its distinctive horizontal headstroke (shirorekha) ties letters into words. It is used to write Hindi, Marathi, Sanskrit, Nepali and several other Indo-Aryan languages — roughly 600 million speakers in total.",
+        "ru": "Деванагари — абугида, происходящая от древнего письма брахми (III в. до н. э.). Её характерная горизонтальная верхняя черта (широрекха) объединяет буквы в слова. Деванагари используют для записи хинди, маратхи, санскрита, непальского и ряда других индоарийских языков — суммарно около 600 миллионов носителей."
+      },
       "countries": [
-        { "flag": "🇮🇳", "name": "India" },
-        { "flag": "🇳🇵", "name": "Nepal" }
+        { "flag": "🇮🇳", "name": { "en": "India", "ru": "Индия" } },
+        { "flag": "🇳🇵", "name": { "en": "Nepal", "ru": "Непал" } }
       ]
     },
     {
@@ -90,19 +108,22 @@
       "language": "ar",
       "direction": "rtl",
       "file": "scripts/arabic.json",
-      "info": "The Arabic script developed from Nabataean Aramaic around the 4th century AD and spread with Islam from the 7th century onward. Written right-to-left, it is cursive: nearly every letter has four contextual forms. Short vowels are usually unwritten but may be marked with diacritics (harakat).",
+      "info": {
+        "en": "The Arabic script developed from Nabataean Aramaic around the 4th century AD and spread with Islam from the 7th century onward. Written right-to-left, it is cursive: nearly every letter has four contextual forms. Short vowels are usually unwritten but may be marked with diacritics (harakat).",
+        "ru": "Арабское письмо сформировалось из набатейско-арамейского около IV века н. э. и распространилось вместе с исламом начиная с VII века. Оно пишется справа налево и является курсивным: почти у каждой буквы четыре контекстных формы. Краткие гласные обычно не обозначаются, но могут указываться диакритическими знаками (харакат)."
+      },
       "countries": [
-        { "flag": "🇸🇦", "name": "Saudi Arabia" },
-        { "flag": "🇪🇬", "name": "Egypt" },
-        { "flag": "🇲🇦", "name": "Morocco" },
-        { "flag": "🇩🇿", "name": "Algeria" },
-        { "flag": "🇮🇶", "name": "Iraq" },
-        { "flag": "🇸🇾", "name": "Syria" },
-        { "flag": "🇯🇴", "name": "Jordan" },
-        { "flag": "🇱🇧", "name": "Lebanon" },
-        { "flag": "🇦🇪", "name": "UAE" },
-        { "flag": "🇮🇷", "name": "Iran (Persian)" },
-        { "flag": "🇵🇰", "name": "Pakistan (Urdu)" }
+        { "flag": "🇸🇦", "name": { "en": "Saudi Arabia", "ru": "Саудовская Аравия" } },
+        { "flag": "🇪🇬", "name": { "en": "Egypt", "ru": "Египет" } },
+        { "flag": "🇲🇦", "name": { "en": "Morocco", "ru": "Марокко" } },
+        { "flag": "🇩🇿", "name": { "en": "Algeria", "ru": "Алжир" } },
+        { "flag": "🇮🇶", "name": { "en": "Iraq", "ru": "Ирак" } },
+        { "flag": "🇸🇾", "name": { "en": "Syria", "ru": "Сирия" } },
+        { "flag": "🇯🇴", "name": { "en": "Jordan", "ru": "Иордания" } },
+        { "flag": "🇱🇧", "name": { "en": "Lebanon", "ru": "Ливан" } },
+        { "flag": "🇦🇪", "name": { "en": "UAE", "ru": "ОАЭ" } },
+        { "flag": "🇮🇷", "name": { "en": "Iran (Persian)", "ru": "Иран (персидский)" } },
+        { "flag": "🇵🇰", "name": { "en": "Pakistan (Urdu)", "ru": "Пакистан (урду)" } }
       ]
     },
     {
@@ -112,9 +133,12 @@
       "language": "he",
       "direction": "rtl",
       "file": "scripts/hebrew.json",
-      "info": "The Hebrew alphabet (the 'square script', ketav ashuri) descends from the Imperial Aramaic script around the 5th century BC. It has 22 consonants and is written right-to-left. Vowels are normally implicit, but can be indicated with niqqud — small dots and dashes above or below letters.",
+      "info": {
+        "en": "The Hebrew alphabet (the 'square script', ketav ashuri) descends from the Imperial Aramaic script around the 5th century BC. It has 22 consonants and is written right-to-left. Vowels are normally implicit, but can be indicated with niqqud — small dots and dashes above or below letters.",
+        "ru": "Еврейский алфавит («квадратное письмо», ктав ашури) восходит к имперскому арамейскому письму примерно V века до н. э. В нём 22 согласные, и он пишется справа налево. Гласные обычно не указываются, но могут обозначаться никкудом — маленькими точками и чёрточками над буквами или под ними."
+      },
       "countries": [
-        { "flag": "🇮🇱", "name": "Israel" }
+        { "flag": "🇮🇱", "name": { "en": "Israel", "ru": "Израиль" } }
       ]
     },
     {
@@ -124,10 +148,13 @@
       "language": "ko",
       "direction": "ltr",
       "file": "scripts/hangul.json",
-      "info": "Hangul was promulgated in 1443 by King Sejong the Great of Joseon, who wanted a writing system the common people could actually learn. Its consonant shapes are diagrammatic — they depict the position of the tongue and lips — and letters cluster into syllable-blocks rather than being written in a line.",
+      "info": {
+        "en": "Hangul was promulgated in 1443 by King Sejong the Great of Joseon, who wanted a writing system the common people could actually learn. Its consonant shapes are diagrammatic — they depict the position of the tongue and lips — and letters cluster into syllable-blocks rather than being written in a line.",
+        "ru": "Хангыль был обнародован в 1443 году королём Седжоном Великим из династии Чосон, желавшим письменности, которой смогли бы овладеть простые люди. Формы согласных схематичны — они изображают положение языка и губ, — а буквы объединяются в слоговые блоки, а не пишутся в строку."
+      },
       "countries": [
-        { "flag": "🇰🇷", "name": "South Korea" },
-        { "flag": "🇰🇵", "name": "North Korea" }
+        { "flag": "🇰🇷", "name": { "en": "South Korea", "ru": "Южная Корея" } },
+        { "flag": "🇰🇵", "name": { "en": "North Korea", "ru": "Северная Корея" } }
       ]
     },
     {
@@ -137,9 +164,12 @@
       "language": "th",
       "direction": "ltr",
       "file": "scripts/thai.json",
-      "info": "The Thai script was created in 1283 by King Ramkhamhaeng, adapted from the Old Khmer script (itself descended from Brahmi). It is an abugida with 44 consonants, 15 vowel symbols (which can combine), and 4 tone marks. It is written left-to-right with no spaces between words.",
+      "info": {
+        "en": "The Thai script was created in 1283 by King Ramkhamhaeng, adapted from the Old Khmer script (itself descended from Brahmi). It is an abugida with 44 consonants, 15 vowel symbols (which can combine), and 4 tone marks. It is written left-to-right with no spaces between words.",
+        "ru": "Тайская письменность была создана в 1283 году королём Рамкхамхэнгом на основе древнекхмерского письма (происходящего, в свою очередь, от брахми). Это абугида с 44 согласными, 15 знаками гласных (которые могут сочетаться) и 4 тоновыми знаками. Пишется слева направо, без пробелов между словами."
+      },
       "countries": [
-        { "flag": "🇹🇭", "name": "Thailand" }
+        { "flag": "🇹🇭", "name": { "en": "Thailand", "ru": "Таиланд" } }
       ]
     }
   ]
