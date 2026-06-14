@@ -2,13 +2,14 @@ import { getScript, getWordPool } from '../data.js';
 import { getSettings, updateSettings, recordWord } from '../storage.js';
 import { el, escapeHtml, pickRandom, looseEqual, fuzzyEqual, inputFieldFor, nextInputSystem } from '../ui/dom.js';
 import { renderKeyboard } from '../ui/keyboard.js';
-import { t, inputSystemLabel } from '../i18n.js';
+import { t, inputSystemLabel, localized } from '../i18n.js';
 
 export async function renderSpell(_, mount) {
   const settings = getSettings();
   const script = await getScript(settings.activeScript);
   const pool = await getWordPool(script.meta.id);
   const promptField = inputFieldFor(settings.inputSystem);
+  const scriptName = localized(script.meta.name);
 
   let current = pickRandom(pool);
   let revealed = false;
@@ -21,7 +22,7 @@ export async function renderSpell(_, mount) {
     <section class="spell">
       <header class="mode-header">
         <a href="#/home" class="back">${escapeHtml(t('nav.back_home'))}</a>
-        <h2>${escapeHtml(t('spell.header', { name: script.meta.name }))}</h2>
+        <h2>${escapeHtml(t('spell.header', { name: scriptName }))}</h2>
         <button class="input-system-toggle clickable" id="input-system-toggle" title="${escapeHtml(t('input.prompt_cycle_tooltip'))}">${escapeHtml(inputSystemLabel(settings.inputSystem))}${escapeHtml(headerExtras)}</button>
       </header>
 
@@ -29,16 +30,16 @@ export async function renderSpell(_, mount) {
         <div class="prompt small-prompt" id="prompt"></div>
         <div class="meaning-hint" id="meaning"></div>
         <form id="form" class="answer-form">
-          <input type="text" id="answer" autocomplete="off" autocapitalize="off" spellcheck="false" dir="${script.meta.direction}" placeholder="${escapeHtml(t('spell.placeholder', { name: script.meta.name }))}" />
+          <input type="text" id="answer" autocomplete="off" autocapitalize="off" spellcheck="false" dir="${script.meta.direction}" placeholder="${escapeHtml(t('spell.placeholder', { name: scriptName }))}" />
           <button type="submit" class="btn">${escapeHtml(t('read.check'))}</button>
         </form>
         <div class="result" id="result" aria-live="polite"></div>
       </div>
 
       <div class="card">
-        <h3 class="kb-title">${escapeHtml(t('spell.keyboard', { name: script.meta.name }))}</h3>
+        <h3 class="kb-title">${escapeHtml(t('spell.keyboard', { name: scriptName }))}</h3>
         <div id="keyboard"></div>
-        <p class="muted small">${escapeHtml(t('spell.kbd_hint', { name: script.meta.name }))}</p>
+        <p class="muted small">${escapeHtml(t('spell.kbd_hint', { name: scriptName }))}</p>
       </div>
 
       <div class="next-row">
@@ -95,7 +96,8 @@ export async function renderSpell(_, mount) {
     revealed = false;
     const transcription = current[promptField] ?? current.latin ?? current.ipa ?? '';
     promptEl.textContent = transcription;
-    meaningEl.textContent = current.meaning ? t('spell.meaning', { meaning: current.meaning }) : '';
+    const meaningText = localized(current.meaning);
+    meaningEl.textContent = meaningText ? t('spell.meaning', { meaning: meaningText }) : '';
     inputEl.value = '';
     inputEl.disabled = false;
     resultEl.innerHTML = '';
@@ -106,7 +108,8 @@ export async function renderSpell(_, mount) {
     revealed = true;
     inputEl.disabled = true;
     recordWord(script.meta.id, current.native, { correct });
-    const note = current.note ? `<div class="note">📝 ${escapeHtml(current.note)}</div>` : '';
+    const noteText = localized(current.note);
+    const note = noteText ? `<div class="note">📝 ${escapeHtml(noteText)}</div>` : '';
     const voweledHint = current.nativeVoweled
       ? `<div class="muted small">${escapeHtml(t('read.vocalised_label'))} <span dir="${script.meta.direction}">${escapeHtml(current.nativeVoweled)}</span></div>` : '';
     resultEl.innerHTML = `

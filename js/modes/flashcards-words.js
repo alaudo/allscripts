@@ -1,11 +1,12 @@
-// Phrases — flashcards-style SRS deck. Mirrors the letter flashcards mode but
-// uses phrase-specific settings (phrasesTimerSec, phrasesSrsIntervals) and a
-// separate per-phrase progress bucket so the two decks don't interfere.
+// Word flashcards — flashcards-style SRS deck. Mirrors the phrase flashcards
+// mode but uses word-specific settings (wordsTimerSec, wordsSrsIntervals) and
+// the dedicated SRS fields on per-word progress so it doesn't interfere with
+// the correct/wrong tally that read/spell/choose-words feed into.
 
-import { getScript, getPhrases } from '../data.js';
-import { getSettings, updateSettings, recordPhrase, getPhraseProgress } from '../storage.js';
+import { getScript, getWordPool } from '../data.js';
+import { getSettings, updateSettings, recordWord, getWordProgress } from '../storage.js';
 import { el, escapeHtml, shuffle, formatMinutes, fieldFor, nextTranscription } from '../ui/dom.js';
-import { t, currentLang, localized, transcriptionLabel } from '../i18n.js';
+import { t, localized, transcriptionLabel } from '../i18n.js';
 
 function ratings() {
   return [
@@ -16,31 +17,31 @@ function ratings() {
   ];
 }
 
-// Identify a phrase across reshuffles; the native form is canonical in
-// phrases.json and is what we record progress against.
-const keyOf = p => p.native;
+// Identify a word across reshuffles; the native form is canonical and is what
+// progress is keyed on, matching read/spell/choose-words.
+const keyOf = w => w.native;
 
-export async function renderPhrases(_, mount) {
+export async function renderFlashcardsWords(_, mount) {
   let settings = getSettings();
   const script = await getScript(settings.activeScript);
-  const allPhrases = await getPhrases(script.meta.id);
+  const allWords = await getWordPool(script.meta.id);
   const scriptName = localized(script.meta.name);
 
-  if (!allPhrases.length) {
+  if (!allWords.length) {
     mount.innerHTML = '';
     mount.appendChild(el(`
-      <section class="phrases">
+      <section class="flashcards-words flashcards">
         <header class="mode-header">
           <a href="#/home" class="back">${escapeHtml(t('nav.back_home'))}</a>
-          <h2>${escapeHtml(t('phrases.header', { name: scriptName }))}</h2>
+          <h2>${escapeHtml(t('flashcards_words.header', { name: scriptName }))}</h2>
         </header>
-        <div class="card"><p class="muted">${escapeHtml(t('phrases.none'))}</p></div>
+        <div class="card"><p class="muted">${escapeHtml(t('flashcards_words.none'))}</p></div>
       </section>
     `));
     return;
   }
 
-  let deck = buildDeck(script, allPhrases);
+  let deck = buildDeck(script, allWords);
   let idx = 0;
   let flipped = false;
   let timerHandle = null;
@@ -50,17 +51,17 @@ export async function renderPhrases(_, mount) {
   const RATINGS = ratings();
 
   const root = el(`
-    <section class="phrases flashcards">
+    <section class="flashcards-words flashcards">
       <header class="mode-header">
         <a href="#/home" class="back">${escapeHtml(t('nav.back_home'))}</a>
-        <h2>${escapeHtml(t('phrases.header', { name: scriptName }))}</h2>
+        <h2>${escapeHtml(t('flashcards_words.header', { name: scriptName }))}</h2>
         <button type="button" class="transcription-toggle clickable" id="trans-toggle" title="${escapeHtml(t('transcription.cycle_tooltip'))}">${escapeHtml(transcriptionLabel(transcription))}</button>
       </header>
 
       <div class="timer-bar" id="timer-bar" hidden><div class="timer-fill" id="timer-fill"></div></div>
 
       <div class="card-stack">
-        <button class="flashcard phrase-card" id="card" dir="${script.meta.direction}">
+        <button class="flashcard word-card" id="card" dir="${script.meta.direction}">
           <div class="face front"></div>
           <div class="face back"></div>
         </button>
@@ -69,13 +70,13 @@ export async function renderPhrases(_, mount) {
       <div class="card-actions rate-row" id="rate-row"></div>
 
       <div class="card-nav">
-        <button class="btn-link" id="prev">${escapeHtml(t('phrases.previous'))}</button>
+        <button class="btn-link" id="prev">${escapeHtml(t('flashcards.previous'))}</button>
         <span class="muted small" id="counter"></span>
-        <button class="btn-link" id="next">${escapeHtml(t('phrases.next'))}</button>
+        <button class="btn-link" id="next">${escapeHtml(t('flashcards.next'))}</button>
       </div>
 
       <div class="card-shuffle">
-        <button class="btn-link" id="shuffle">${escapeHtml(t('phrases.shuffle'))}</button>
+        <button class="btn-link" id="shuffle">${escapeHtml(t('flashcards.reshuffle'))}</button>
         <span class="muted small" id="deck-info"></span>
       </div>
     </section>
@@ -91,7 +92,7 @@ export async function renderPhrases(_, mount) {
   const timerFill = root.querySelector('#timer-fill');
 
   for (const r of RATINGS) {
-    const min = settings.phrasesSrsIntervals[r.key] ?? 0;
+    const min = settings.wordsSrsIntervals[r.key] ?? 0;
     const tip = t('flashcards.next_review', { interval: formatMinutes(min) });
     const btn = el(`<button class="${r.cls}" data-rate="${r.key}" title="${escapeHtml(tip)}">${escapeHtml(r.label)}<span class="rate-int muted small">${escapeHtml(formatMinutes(min))}</span></button>`);
     btn.addEventListener('click', e => { e.stopPropagation(); rateCurrent(r.key); });
@@ -113,37 +114,37 @@ export async function renderPhrases(_, mount) {
     stopTimer();
     if (!deck.length) {
       frontEl.innerHTML = '<div class="glyph">🎉</div>';
-      backEl.innerHTML = `<div class="phrase-translation">${escapeHtml(t('phrases.all_caught_up'))}</div>`;
+      backEl.innerHTML = `<div class="word-meaning">${escapeHtml(t('flashcards_words.all_caught_up'))}</div>`;
       counterEl.textContent = '0 / 0';
       return;
     }
-    const phrase = deck[idx];
+    const word = deck[idx];
     cardEl.classList.toggle('flipped', flipped);
-    const tr = (phrase.translations && (phrase.translations[currentLang()] || phrase.translations.en)) || '';
+    const meaning = localized(word.meaning);
     const tField = fieldFor(transcription);
-    const trans = phrase[tField] || phrase.latin || phrase.ipa || '';
-    const transLine = trans ? `<div class="phrase-latin muted small">${escapeHtml(trans)}</div>` : '';
+    const trans = word[tField] || word.latin || word.ipa || '';
+    const transLine = trans ? `<div class="word-transcription muted small">${escapeHtml(trans)}</div>` : '';
     frontEl.innerHTML = `
-      <div class="phrase-native" dir="${script.meta.direction}">${escapeHtml(phrase.native)}</div>
+      <div class="word-native" dir="${script.meta.direction}">${escapeHtml(word.native)}</div>
       ${transLine}
-      <div class="phrase-hint muted small">${escapeHtml(t('phrases.tap_to_reveal'))}</div>
+      <div class="word-hint muted small">${escapeHtml(t('flashcards_words.tap_to_reveal'))}</div>
     `;
     backEl.innerHTML = `
-      <div class="phrase-translation">${escapeHtml(tr)}</div>
-      <div class="phrase-native back-native" dir="${script.meta.direction}">${escapeHtml(phrase.native)}</div>
+      <div class="word-meaning">${escapeHtml(meaning)}</div>
+      <div class="word-native back-native" dir="${script.meta.direction}">${escapeHtml(word.native)}</div>
       ${transLine}
-      <div class="phrase-hint muted small">${escapeHtml(t('phrases.tap_to_flip_back'))}</div>
+      ${word.note ? `<div class="note muted small">${escapeHtml(localized(word.note))}</div>` : ''}
+      <div class="word-hint muted small">${escapeHtml(t('flashcards_words.tap_to_flip_back'))}</div>
     `;
     counterEl.textContent = `${idx + 1} / ${deck.length}`;
-    const dueNow = countDueNow(script, allPhrases);
+    const dueNow = countDueNow(script, allWords);
     deckInfoEl.textContent = dueNow > 0
-      ? t('phrases.due_now', { n: dueNow })
-      : t('phrases.no_due');
-    startTimerIfEnabled();
+      ? t('flashcards_words.due_now', { n: dueNow })
+      : t('flashcards_words.no_due');
   }
 
   function startTimerIfEnabled() {
-    const secs = settings.phrasesTimerSec;
+    const secs = settings.wordsTimerSec;
     if (!secs || secs <= 0) { timerBar.hidden = true; return; }
     timerBar.hidden = false;
     timerFill.style.width = '100%';
@@ -159,7 +160,7 @@ export async function renderPhrases(_, mount) {
     timerHandle = setTimeout(() => {
       if (!flipped) {
         flipped = true;
-        recordPhrase(script.meta.id, keyOf(deck[idx]), {});
+        recordWord(script.meta.id, keyOf(deck[idx]), {});
         render();
       } else {
         rateCurrent('again');
@@ -176,16 +177,17 @@ export async function renderPhrases(_, mount) {
   function rateCurrent(ratingKey) {
     const rating = RATINGS.find(r => r.key === ratingKey);
     if (!rating || !deck.length) return;
-    const intervalMin = settings.phrasesSrsIntervals[ratingKey] ?? 0;
+    const intervalMin = settings.wordsSrsIntervals[ratingKey] ?? 0;
     const dueAt = Date.now() + intervalMin * 60_000;
-    recordPhrase(script.meta.id, keyOf(deck[idx]), { known: rating.known, dueAt, intervalMin });
+    recordWord(script.meta.id, keyOf(deck[idx]), { known: rating.known, dueAt, intervalMin });
     advance();
   }
 
   cardEl.addEventListener('click', () => {
     flipped = !flipped;
-    if (flipped && deck.length) recordPhrase(script.meta.id, keyOf(deck[idx]), {});
+    if (flipped && deck.length) recordWord(script.meta.id, keyOf(deck[idx]), {});
     render();
+    if (flipped) startTimerIfEnabled();
   });
 
   root.querySelector('#prev').addEventListener('click', e => {
@@ -194,51 +196,55 @@ export async function renderPhrases(_, mount) {
     idx = (idx - 1 + deck.length) % deck.length;
     flipped = false;
     render();
+    startTimerIfEnabled();
   });
   root.querySelector('#next').addEventListener('click', e => { e.stopPropagation(); advance(); });
   root.querySelector('#shuffle').addEventListener('click', e => {
     e.stopPropagation();
-    deck = buildDeck(script, allPhrases);
+    deck = buildDeck(script, allWords);
     idx = 0;
     flipped = false;
     render();
+    startTimerIfEnabled();
   });
 
   function advance() {
     if (!deck.length) return;
     idx = (idx + 1) % deck.length;
     flipped = false;
-    if (idx === 0) deck = buildDeck(script, allPhrases);
+    if (idx === 0) deck = buildDeck(script, allWords);
     render();
+    startTimerIfEnabled();
   }
 
   render();
+  startTimerIfEnabled();
   mount.appendChild(root);
 
   const stop = () => stopTimer();
   window.addEventListener('hashchange', stop, { once: true });
 }
 
-function buildDeck(script, phrases) {
+function buildDeck(script, words) {
   const now = Date.now();
-  const annotated = phrases.map(phrase => {
-    const prog = getPhraseProgress(script.meta.id, keyOf(phrase));
-    return { phrase, due: prog.due || 0 };
+  const annotated = words.map(word => {
+    const prog = getWordProgress(script.meta.id, keyOf(word));
+    return { word, due: prog.due || 0 };
   });
-  const due = annotated.filter(a => a.due <= now).sort((a, b) => a.due - b.due).map(a => a.phrase);
-  if (due.length === 0) return shuffle(phrases);
-  if (due.length < phrases.length) {
-    const notDue = annotated.filter(a => a.due > now).sort((a, b) => a.due - b.due).map(a => a.phrase);
+  const due = annotated.filter(a => a.due <= now).sort((a, b) => a.due - b.due).map(a => a.word);
+  if (due.length === 0) return shuffle(words);
+  if (due.length < words.length) {
+    const notDue = annotated.filter(a => a.due > now).sort((a, b) => a.due - b.due).map(a => a.word);
     return [...shuffle(due), ...notDue];
   }
   return shuffle(due);
 }
 
-function countDueNow(script, phrases) {
+function countDueNow(script, words) {
   const now = Date.now();
   let n = 0;
-  for (const phrase of phrases) {
-    const prog = getPhraseProgress(script.meta.id, keyOf(phrase));
+  for (const word of words) {
+    const prog = getWordProgress(script.meta.id, keyOf(word));
     if ((prog.due || 0) <= now) n++;
   }
   return n;

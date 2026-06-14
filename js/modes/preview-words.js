@@ -6,7 +6,7 @@
 import { getManifest, getWordPool } from '../data.js';
 import { getSettings, updateSettings } from '../storage.js';
 import { el, escapeHtml, fieldFor, nextTranscription } from '../ui/dom.js';
-import { t, transcriptionLabel } from '../i18n.js';
+import { t, transcriptionLabel, localized } from '../i18n.js';
 
 function wordLength(w) {
   // Count user-visible characters; combining marks count as part of the base
@@ -38,7 +38,7 @@ export async function renderPreviewWords(_route, mount) {
   const header = el(
     `<header class="mode-header">
        <a href="#/home" class="back">${escapeHtml(t('nav.back_home'))}</a>
-       <h2>${escapeHtml(t('preview.words.header', { name: meta.name }))}</h2>
+       <h2>${escapeHtml(t('preview.words.header', { name: localized(meta.name) }))}</h2>
        <button type="button" class="transcription-toggle clickable" id="trans-toggle" title="${escapeHtml(t('transcription.cycle_tooltip'))}">${escapeHtml(transcriptionLabel(transcription))}</button>
      </header>`
   );
@@ -125,9 +125,11 @@ export async function renderPreviewWords(_route, mount) {
     for (const w of filtered) {
       const native = (useVoweled && w.nativeVoweled) || w.native;
       const trans = w[tField] || w.ipa || '';
-      const meaning = w.meaning ? `<span class="preview-meaning muted">${escapeHtml(w.meaning)}</span>` : '';
-      const note = w.note
-        ? `<span class="preview-note" title="${escapeHtml(w.note)}" aria-label="${escapeHtml(w.note)}">ℹ︎</span>`
+      const meaningText = localized(w.meaning);
+      const meaning = meaningText ? `<span class="preview-meaning muted">${escapeHtml(meaningText)}</span>` : '';
+      const noteText = localized(w.note);
+      const note = noteText
+        ? `<span class="preview-note" title="${escapeHtml(noteText)}" aria-label="${escapeHtml(noteText)}">ℹ︎</span>`
         : '';
       const cell = el(
         `<div class="preview-cell word-cell" data-src="${w.source}">

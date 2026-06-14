@@ -3,7 +3,7 @@ import { getSettings, updateSettings, recordWord } from '../storage.js';
 import { el, escapeHtml, pickRandom, looseEqual, fuzzyEqual, inputFieldFor, nextInputSystem } from '../ui/dom.js';
 import { renderKeyboard } from '../ui/keyboard.js';
 import { IPA_ROWS } from '../ui/ipa-keyboard.js';
-import { t, inputSystemLabel } from '../i18n.js';
+import { t, inputSystemLabel, localized } from '../i18n.js';
 
 export async function renderRead(_, mount) {
   const settings = getSettings();
@@ -23,7 +23,7 @@ export async function renderRead(_, mount) {
     <section class="read">
       <header class="mode-header">
         <a href="#/home" class="back">${escapeHtml(t('nav.back_home'))}</a>
-        <h2>${escapeHtml(t('read.header', { name: script.meta.name }))}</h2>
+        <h2>${escapeHtml(t('read.header', { name: localized(script.meta.name) }))}</h2>
         <button class="input-system-toggle clickable" id="input-system-toggle" title="${escapeHtml(t('input.cycle_tooltip'))}">${escapeHtml(inputSystemLabel(settings.inputSystem))}${escapeHtml(headerExtras)}</button>
       </header>
 
@@ -88,7 +88,8 @@ export async function renderRead(_, mount) {
 
     const expected = current[field];
     const ipa = current.ipa && field !== 'ipa' ? `<div class="ipa">/${escapeHtml(current.ipa)}/</div>` : '';
-    const note = current.note ? `<div class="note">📝 ${escapeHtml(current.note)}</div>` : '';
+    const noteText = localized(current.note);
+    const note = noteText ? `<div class="note">📝 ${escapeHtml(noteText)}</div>` : '';
     const voweledHint = !settings.vocalised && current.nativeVoweled
       ? `<div class="muted small">${escapeHtml(t('read.vocalised_label'))} <span dir="${script.meta.direction}">${escapeHtml(current.nativeVoweled)}</span></div>` : '';
 
@@ -98,7 +99,7 @@ export async function renderRead(_, mount) {
         <span class="muted">${escapeHtml(t('read.answer'))}</span>
         <strong class="answer-text">${escapeHtml(expected ?? '—')}</strong>
       </div>
-      <div class="meaning">${escapeHtml(current.meaning || '')}</div>
+      <div class="meaning">${escapeHtml(localized(current.meaning))}</div>
       ${ipa}
       ${voweledHint}
       ${note}

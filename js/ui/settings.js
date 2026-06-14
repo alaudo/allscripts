@@ -1,7 +1,7 @@
 import { getSettings, updateSettings, resetScript, resetAll, summary } from '../storage.js';
 import { getManifest } from '../data.js';
 import { applyTheme } from '../theme.js';
-import { setLang, applyChromeStrings, t, transcriptionLabel, LANGUAGES } from '../i18n.js';
+import { setLang, applyChromeStrings, t, transcriptionLabel, LANGUAGES, localized } from '../i18n.js';
 import { el, escapeHtml } from './dom.js';
 
 function transcriptionOptions() {
@@ -123,6 +123,56 @@ export async function renderSettings(_, mount) {
       </div>
 
       <div class="card">
+        <h2>${escapeHtml(t('settings.flashcards.words'))}</h2>
+        <small class="muted">${escapeHtml(t('settings.flashcards.words.hint'))}</small>
+
+        <label class="field">
+          <span class="field-label">${escapeHtml(t('settings.timer'))}</span>
+          <select id="wordsTimer"></select>
+          <small class="muted">${escapeHtml(t('settings.timer.hint'))}</small>
+        </label>
+
+        <fieldset class="field srs-field">
+          <legend class="field-label">${escapeHtml(t('settings.srs.title'))}</legend>
+          <small class="muted">${escapeHtml(t('settings.srs.hint'))}</small>
+          <div class="srs-grid">
+            ${SRS_FIELDS.map(f => `
+              <label class="srs-cell">
+                <span>${escapeHtml(t(f.labelKey))}</span>
+                <input type="number" min="0" step="1" inputmode="numeric" data-srs-words="${f.key}" value="${settings.wordsSrsIntervals[f.key] ?? 0}" />
+                <small class="muted">${escapeHtml(t(f.hintKey))}</small>
+              </label>
+            `).join('')}
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="card">
+        <h2>${escapeHtml(t('settings.flashcards.phrases'))}</h2>
+        <small class="muted">${escapeHtml(t('settings.flashcards.phrases.hint'))}</small>
+
+        <label class="field">
+          <span class="field-label">${escapeHtml(t('settings.timer'))}</span>
+          <select id="phrasesTimer"></select>
+          <small class="muted">${escapeHtml(t('settings.timer.hint'))}</small>
+        </label>
+
+        <fieldset class="field srs-field">
+          <legend class="field-label">${escapeHtml(t('settings.srs.title'))}</legend>
+          <small class="muted">${escapeHtml(t('settings.srs.hint'))}</small>
+          <div class="srs-grid">
+            ${SRS_FIELDS.map(f => `
+              <label class="srs-cell">
+                <span>${escapeHtml(t(f.labelKey))}</span>
+                <input type="number" min="0" step="1" inputmode="numeric" data-srs-phrases="${f.key}" value="${settings.phrasesSrsIntervals[f.key] ?? 0}" />
+                <small class="muted">${escapeHtml(t(f.hintKey))}</small>
+              </label>
+            `).join('')}
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="card">
         <h2>${escapeHtml(t('settings.progress'))}</h2>
         <div class="table-scroll">
           <table class="progress-table">
@@ -198,7 +248,7 @@ export async function renderSettings(_, mount) {
   root.querySelector('#vocalised').addEventListener('change', e => updateSettings({ vocalised: e.target.checked }));
   root.querySelector('#fuzzy').addEventListener('change', e => updateSettings({ fuzzy: e.target.checked }));
 
-  // Flashcard timer
+  // Flashcard timer (letters)
   const timerSel = root.querySelector('#flashcardTimer');
   for (const o of timerOptions()) {
     const opt = document.createElement('option');
@@ -210,12 +260,54 @@ export async function renderSettings(_, mount) {
     updateSettings({ flashcardTimerSec: Number(timerSel.value) });
   });
 
-  // SRS intervals
+  // Phrases timer
+  const phrasesTimerSel = root.querySelector('#phrasesTimer');
+  for (const o of timerOptions()) {
+    const opt = document.createElement('option');
+    opt.value = String(o.value); opt.textContent = o.label;
+    if (o.value === settings.phrasesTimerSec) opt.selected = true;
+    phrasesTimerSel.appendChild(opt);
+  }
+  phrasesTimerSel.addEventListener('change', () => {
+    updateSettings({ phrasesTimerSec: Number(phrasesTimerSel.value) });
+  });
+
+  // Words timer
+  const wordsTimerSel = root.querySelector('#wordsTimer');
+  for (const o of timerOptions()) {
+    const opt = document.createElement('option');
+    opt.value = String(o.value); opt.textContent = o.label;
+    if (o.value === settings.wordsTimerSec) opt.selected = true;
+    wordsTimerSel.appendChild(opt);
+  }
+  wordsTimerSel.addEventListener('change', () => {
+    updateSettings({ wordsTimerSec: Number(wordsTimerSel.value) });
+  });
+
+  // SRS intervals (letters)
   for (const input of root.querySelectorAll('input[data-srs]')) {
     input.addEventListener('change', () => {
       const key = input.getAttribute('data-srs');
       const val = Math.max(0, Math.round(Number(input.value) || 0));
       updateSettings({ srsIntervals: { ...getSettings().srsIntervals, [key]: val } });
+    });
+  }
+
+  // SRS intervals (phrases)
+  for (const input of root.querySelectorAll('input[data-srs-phrases]')) {
+    input.addEventListener('change', () => {
+      const key = input.getAttribute('data-srs-phrases');
+      const val = Math.max(0, Math.round(Number(input.value) || 0));
+      updateSettings({ phrasesSrsIntervals: { ...getSettings().phrasesSrsIntervals, [key]: val } });
+    });
+  }
+
+  // SRS intervals (words)
+  for (const input of root.querySelectorAll('input[data-srs-words]')) {
+    input.addEventListener('change', () => {
+      const key = input.getAttribute('data-srs-words');
+      const val = Math.max(0, Math.round(Number(input.value) || 0));
+      updateSettings({ wordsSrsIntervals: { ...getSettings().wordsSrsIntervals, [key]: val } });
     });
   }
 
@@ -225,14 +317,14 @@ export async function renderSettings(_, mount) {
     const st = summary(s.id);
     const tr = el(`
       <tr>
-        <td><strong>${escapeHtml(s.name)}</strong> <span class="muted small" dir="${s.direction}">${escapeHtml(s.nativeName)}</span></td>
+        <td><strong>${escapeHtml(localized(s.name))}</strong> <span class="muted small" dir="${s.direction}">${escapeHtml(s.nativeName)}</span></td>
         <td>${st.lettersKnown}</td>
         <td>${st.wordsCorrect} <span class="muted small">${escapeHtml(t('settings.progress.wrong_suffix', { n: st.wordsWrong }))}</span></td>
         <td><button class="btn-link" data-reset="${escapeHtml(s.id)}">${escapeHtml(t('settings.progress.reset'))}</button></td>
       </tr>
     `);
     tr.querySelector('[data-reset]').addEventListener('click', () => {
-      if (confirm(t('settings.progress.reset_script_confirm', { name: s.name }))) {
+      if (confirm(t('settings.progress.reset_script_confirm', { name: localized(s.name) }))) {
         resetScript(s.id);
         renderSettings(_, mount);
       }

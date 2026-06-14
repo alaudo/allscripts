@@ -1,26 +1,36 @@
-import { startRouter, registerRoute, setFallback } from './router.js';
-import { initTheme } from './theme.js';
-import { applyChromeStrings, t } from './i18n.js';
+import { startRouter, registerRoute, setFallback, redispatch } from './router.js';
+import { initTheme, applyTheme } from './theme.js';
+import { applyChromeStrings, t, setLang, currentLang, LANGUAGES } from './i18n.js';
+import { getSettings, updateSettings } from './storage.js';
 import { renderHome } from './ui/home.js';
 import { renderSettings } from './ui/settings.js';
 import { renderFlashcards } from './modes/flashcards.js';
+import { renderFlashcardsWords } from './modes/flashcards-words.js';
 import { renderRead } from './modes/read.js';
 import { renderSpell } from './modes/spell.js';
 import { renderPhrases } from './modes/phrases.js';
 import { renderPreviewLetters } from './modes/preview-letters.js';
 import { renderPreviewWords } from './modes/preview-words.js';
+import { renderPreviewPhrases } from './modes/preview-phrases.js';
+import { renderChooseLetters, renderChooseWords, renderChoosePhrases } from './modes/choose.js';
 
 applyChromeStrings();
 initTheme();
+initLangToggle();
 
 registerRoute('home', renderHome);
 registerRoute('settings', renderSettings);
 registerRoute('flashcards', renderFlashcards);
+registerRoute('flashcards-words', renderFlashcardsWords);
 registerRoute('read', renderRead);
 registerRoute('spell', renderSpell);
 registerRoute('phrases', renderPhrases);
 registerRoute('preview-letters', renderPreviewLetters);
 registerRoute('preview-words', renderPreviewWords);
+registerRoute('preview-phrases', renderPreviewPhrases);
+registerRoute('choose-letters', renderChooseLetters);
+registerRoute('choose-words', renderChooseWords);
+registerRoute('choose-phrases', renderChoosePhrases);
 
 setFallback(async (_, mount) => {
   mount.innerHTML =
@@ -41,6 +51,37 @@ startRouter(mount).catch(err => {
        <pre>python -m http.server 8000</pre>
      </section>`;
 });
+
+// Wire up the header language toggle: cycles through the available UI
+// languages, updates settings, re-applies chrome strings, refreshes any
+// label that depends on language (theme tooltip), and re-renders the
+// current route so its in-page strings update too.
+function initLangToggle() {
+  const btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+  refreshLangToggle();
+  btn.addEventListener('click', () => {
+    const order = LANGUAGES.map(l => l.code);
+    const cur = currentLang();
+    const next = order[(order.indexOf(cur) + 1) % order.length];
+    updateSettings({ uiLanguage: next });
+    setLang(next);
+    applyChromeStrings();
+    applyTheme(getSettings().theme);
+    refreshLangToggle();
+    redispatch();
+  });
+}
+
+function refreshLangToggle() {
+  const btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+  const code = currentLang();
+  const lang = LANGUAGES.find(l => l.code === code) || LANGUAGES[0];
+  btn.textContent = code.toUpperCase();
+  btn.title = t('lang.tooltip', { name: lang.name });
+  btn.setAttribute('aria-label', t('lang.aria'));
+}
 
 function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, c =>

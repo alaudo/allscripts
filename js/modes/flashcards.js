@@ -1,7 +1,7 @@
 import { getScript } from '../data.js';
 import { getSettings, updateSettings, recordLetter, getLetterProgress } from '../storage.js';
 import { el, escapeHtml, shuffle, fieldFor, nextTranscription, formatMinutes } from '../ui/dom.js';
-import { t, transcriptionLabel } from '../i18n.js';
+import { t, transcriptionLabel, localized } from '../i18n.js';
 
 function ratings() {
   return [
@@ -28,7 +28,7 @@ export async function renderFlashcards(_, mount) {
     <section class="flashcards">
       <header class="mode-header">
         <a href="#/home" class="back">${escapeHtml(t('nav.back_home'))}</a>
-        <h2>${escapeHtml(t('flashcards.header', { name: script.meta.name }))}</h2>
+        <h2>${escapeHtml(t('flashcards.header', { name: localized(script.meta.name) }))}</h2>
         <button class="transcription-toggle clickable" id="transcription-toggle" title="${escapeHtml(t('transcription.cycle_tooltip'))}"></button>
       </header>
 
@@ -94,12 +94,12 @@ export async function renderFlashcards(_, mount) {
     const ex = letter.example || {};
     backEl.innerHTML = `
       <div class="transcription">${escapeHtml(transcription)}</div>
-      ${letter.note ? `<div class="note">${escapeHtml(letter.note)}</div>` : ''}
+      ${letter.note ? `<div class="note">${escapeHtml(localized(letter.note))}</div>` : ''}
       ${ex.native ? `
         <div class="example">
           <span class="example-native" dir="${script.meta.direction}">${escapeHtml(ex.native)}</span>
           <span class="example-transcription">${escapeHtml(ex[field] ?? ex.ipa ?? '')}</span>
-          <span class="example-meaning">— ${escapeHtml(ex.meaning || '')}</span>
+          <span class="example-meaning">— ${escapeHtml(localized(ex.meaning))}</span>
         </div>` : ''}
     `;
     counterEl.textContent = `${idx + 1} / ${deck.length}`;
