@@ -49,7 +49,7 @@ export async function renderPreviewLetters(_route, mount) {
   const header = el(
     `<header class="mode-header">
        <a href="#/home" class="back">${escapeHtml(t('nav.back_home'))}</a>
-       <h2>${escapeHtml(t('preview.letters.header', { name: meta.name }))}</h2>
+       <h2>${escapeHtml(t('preview.letters.header', { name: localized(meta.name) }))}</h2>
        ${transcriptionBtnHtml}
      </header>`
   );

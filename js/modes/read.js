@@ -23,7 +23,7 @@ export async function renderRead(_, mount) {
     <section class="read">
       <header class="mode-header">
         <a href="#/home" class="back">${escapeHtml(t('nav.back_home'))}</a>
-        <h2>${escapeHtml(t('read.header', { name: script.meta.name }))}</h2>
+        <h2>${escapeHtml(t('read.header', { name: localized(script.meta.name) }))}</h2>
         <button class="input-system-toggle clickable" id="input-system-toggle" title="${escapeHtml(t('input.cycle_tooltip'))}">${escapeHtml(inputSystemLabel(settings.inputSystem))}${escapeHtml(headerExtras)}</button>
       </header>
 

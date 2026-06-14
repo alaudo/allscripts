@@ -28,7 +28,7 @@ export async function renderFlashcards(_, mount) {
     <section class="flashcards">
       <header class="mode-header">
         <a href="#/home" class="back">${escapeHtml(t('nav.back_home'))}</a>
-        <h2>${escapeHtml(t('flashcards.header', { name: script.meta.name }))}</h2>
+        <h2>${escapeHtml(t('flashcards.header', { name: localized(script.meta.name) }))}</h2>
         <button class="transcription-toggle clickable" id="transcription-toggle" title="${escapeHtml(t('transcription.cycle_tooltip'))}"></button>
       </header>
 

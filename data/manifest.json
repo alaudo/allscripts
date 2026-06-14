@@ -3,7 +3,7 @@
   "scripts": [
     {
       "id": "greek",
-      "name": "Greek",
+      "name": { "en": "Greek", "ru": "Греческий" },
       "nativeName": "Ελληνικά",
       "language": "el",
       "direction": "ltr",
@@ -19,7 +19,7 @@
     },
     {
       "id": "cyrillic",
-      "name": "Cyrillic",
+      "name": { "en": "Cyrillic", "ru": "Кириллица" },
       "nativeName": "Кириллица",
       "language": "ru",
       "direction": "ltr",
@@ -42,7 +42,7 @@
     },
     {
       "id": "armenian",
-      "name": "Armenian",
+      "name": { "en": "Armenian", "ru": "Армянский" },
       "nativeName": "Հայերեն",
       "language": "hy",
       "direction": "ltr",
@@ -57,7 +57,7 @@
     },
     {
       "id": "georgian",
-      "name": "Georgian",
+      "name": { "en": "Georgian", "ru": "Грузинский" },
       "nativeName": "ქართული",
       "language": "ka",
       "direction": "ltr",
@@ -72,7 +72,7 @@
     },
     {
       "id": "hiragana",
-      "name": "Hiragana",
+      "name": { "en": "Hiragana", "ru": "Хирагана" },
       "nativeName": "ひらがな",
       "language": "ja",
       "direction": "ltr",
@@ -87,7 +87,7 @@
     },
     {
       "id": "devanagari",
-      "name": "Devanagari",
+      "name": { "en": "Devanagari", "ru": "Деванагари" },
       "nativeName": "देवनागरी",
       "language": "hi",
       "direction": "ltr",
@@ -103,7 +103,7 @@
     },
     {
       "id": "arabic",
-      "name": "Arabic",
+      "name": { "en": "Arabic", "ru": "Арабский" },
       "nativeName": "العربية",
       "language": "ar",
       "direction": "rtl",
@@ -128,7 +128,7 @@
     },
     {
       "id": "hebrew",
-      "name": "Hebrew",
+      "name": { "en": "Hebrew", "ru": "Иврит" },
       "nativeName": "עברית",
       "language": "he",
       "direction": "rtl",
@@ -143,7 +143,7 @@
     },
     {
       "id": "hangul",
-      "name": "Hangul",
+      "name": { "en": "Hangul", "ru": "Хангыль" },
       "nativeName": "한글",
       "language": "ko",
       "direction": "ltr",
@@ -159,7 +159,7 @@
     },
     {
       "id": "thai",
-      "name": "Thai",
+      "name": { "en": "Thai", "ru": "Тайский" },
       "nativeName": "ไทย",
       "language": "th",
       "direction": "ltr",

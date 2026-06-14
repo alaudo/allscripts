@@ -41,7 +41,7 @@ export async function renderHome(_, mount) {
     const card = el(
       `<button class="script-card ${active ? 'active' : ''}" data-script="${escapeHtml(s.id)}">
          <span class="script-native" dir="${s.direction}">${escapeHtml(s.nativeName)}</span>
-         <span class="script-name">${escapeHtml(s.name)}</span>
+         <span class="script-name">${escapeHtml(localized(s.name))}</span>
          <span class="script-stats">
            <span class="stat" title="${escapeHtml(t('home.stat.letters'))}">🔤 ${stats.lettersKnown}/${totalsFor.totalLetters}</span>
            <span class="stat-sep">·</span>
@@ -71,8 +71,8 @@ export async function renderHome(_, mount) {
     const aboutCard = el(
       `<div class="card script-about">
          <div class="about-header">
-           <h2>${escapeHtml(t('home.about'))} <span class="muted">${escapeHtml(current.name)}</span></h2>
-           <div class="flags" aria-label="${escapeHtml(t('home.about_aria', { name: current.name }))}">${flags}</div>
+           <h2>${escapeHtml(t('home.about'))} <span class="muted">${escapeHtml(localized(current.name))}</span></h2>
+           <div class="flags" aria-label="${escapeHtml(t('home.about_aria', { name: localized(current.name) }))}">${flags}</div>
          </div>
          ${infoText ? `<p class="about-text">${escapeHtml(infoText)}</p>` : ''}
        </div>`
@@ -91,7 +91,7 @@ export async function renderHome(_, mount) {
 
   const modeCard = el(
     `<div class="card">
-       <h2>${escapeHtml(t('home.section.practise'))} <span class="muted">${escapeHtml(current.name)}</span></h2>
+       <h2>${escapeHtml(t('home.section.practise'))} <span class="muted">${escapeHtml(localized(current.name))}</span></h2>
        <p class="muted small">${config}</p>
        <div class="mode-grid"></div>
      </div>`
@@ -114,7 +114,7 @@ export async function renderHome(_, mount) {
   // Review (no exercises)
   const reviewCard = el(
     `<div class="card review-card">
-       <h2>${escapeHtml(t('home.section.review'))} <span class="muted">${escapeHtml(current.name)}</span></h2>
+       <h2>${escapeHtml(t('home.section.review'))} <span class="muted">${escapeHtml(localized(current.name))}</span></h2>
        <p class="muted small">${escapeHtml(t('home.section.review.hint'))}</p>
        <div class="mode-grid review-grid"></div>
      </div>`

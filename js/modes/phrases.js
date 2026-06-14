@@ -4,8 +4,8 @@
 
 import { getScript, getPhrases } from '../data.js';
 import { getSettings, updateSettings, recordPhrase, getPhraseProgress } from '../storage.js';
-import { el, escapeHtml, shuffle, formatMinutes } from '../ui/dom.js';
-import { t, currentLang } from '../i18n.js';
+import { el, escapeHtml, shuffle, formatMinutes, fieldFor, nextTranscription } from '../ui/dom.js';
+import { t, currentLang, localized, transcriptionLabel } from '../i18n.js';
 
 function ratings() {
   return [
@@ -24,6 +24,7 @@ export async function renderPhrases(_, mount) {
   let settings = getSettings();
   const script = await getScript(settings.activeScript);
   const allPhrases = await getPhrases(script.meta.id);
+  const scriptName = localized(script.meta.name);
 
   if (!allPhrases.length) {
     mount.innerHTML = '';
@@ -31,7 +32,7 @@ export async function renderPhrases(_, mount) {
       <section class="phrases">
         <header class="mode-header">
           <a href="#/home" class="back">${escapeHtml(t('nav.back_home'))}</a>
-          <h2>${escapeHtml(t('phrases.header', { name: script.meta.name }))}</h2>
+          <h2>${escapeHtml(t('phrases.header', { name: scriptName }))}</h2>
         </header>
         <div class="card"><p class="muted">${escapeHtml(t('phrases.none'))}</p></div>
       </section>
@@ -45,13 +46,15 @@ export async function renderPhrases(_, mount) {
   let timerHandle = null;
   let timerStart = 0;
   let timerRaf = null;
+  let transcription = settings.transcription;
   const RATINGS = ratings();
 
   const root = el(`
     <section class="phrases flashcards">
       <header class="mode-header">
         <a href="#/home" class="back">${escapeHtml(t('nav.back_home'))}</a>
-        <h2>${escapeHtml(t('phrases.header', { name: script.meta.name }))}</h2>
+        <h2>${escapeHtml(t('phrases.header', { name: scriptName }))}</h2>
+        <button type="button" class="transcription-toggle clickable" id="trans-toggle" title="${escapeHtml(t('transcription.cycle_tooltip'))}">${escapeHtml(transcriptionLabel(transcription))}</button>
       </header>
 
       <div class="timer-bar" id="timer-bar" hidden><div class="timer-fill" id="timer-fill"></div></div>
@@ -95,6 +98,17 @@ export async function renderPhrases(_, mount) {
     rateRow.appendChild(btn);
   }
 
+  const transToggle = root.querySelector('#trans-toggle');
+  if (transToggle) {
+    transToggle.addEventListener('click', e => {
+      e.stopPropagation();
+      transcription = nextTranscription(transcription);
+      updateSettings({ transcription });
+      transToggle.textContent = transcriptionLabel(transcription);
+      render();
+    });
+  }
+
   function render() {
     stopTimer();
     if (!deck.length) {
@@ -106,15 +120,18 @@ export async function renderPhrases(_, mount) {
     const phrase = deck[idx];
     cardEl.classList.toggle('flipped', flipped);
     const tr = (phrase.translations && (phrase.translations[currentLang()] || phrase.translations.en)) || '';
+    const tField = fieldFor(transcription);
+    const trans = phrase[tField] || phrase.latin || phrase.ipa || '';
+    const transLine = trans ? `<div class="phrase-latin muted small">${escapeHtml(trans)}</div>` : '';
     frontEl.innerHTML = `
       <div class="phrase-native" dir="${script.meta.direction}">${escapeHtml(phrase.native)}</div>
-      ${phrase.latin ? `<div class="phrase-latin muted small">${escapeHtml(phrase.latin)}</div>` : ''}
+      ${transLine}
       <div class="phrase-hint muted small">${escapeHtml(t('phrases.tap_to_reveal'))}</div>
     `;
     backEl.innerHTML = `
       <div class="phrase-translation">${escapeHtml(tr)}</div>
       <div class="phrase-native back-native" dir="${script.meta.direction}">${escapeHtml(phrase.native)}</div>
-      ${phrase.latin ? `<div class="phrase-latin muted small">${escapeHtml(phrase.latin)}</div>` : ''}
+      ${transLine}
       <div class="phrase-hint muted small">${escapeHtml(t('phrases.tap_to_flip_back'))}</div>
     `;
     counterEl.textContent = `${idx + 1} / ${deck.length}`;

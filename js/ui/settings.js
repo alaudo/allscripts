@@ -1,7 +1,7 @@
 import { getSettings, updateSettings, resetScript, resetAll, summary } from '../storage.js';
 import { getManifest } from '../data.js';
 import { applyTheme } from '../theme.js';
-import { setLang, applyChromeStrings, t, transcriptionLabel, LANGUAGES } from '../i18n.js';
+import { setLang, applyChromeStrings, t, transcriptionLabel, LANGUAGES, localized } from '../i18n.js';
 import { el, escapeHtml } from './dom.js';
 
 function transcriptionOptions() {
@@ -271,14 +271,14 @@ export async function renderSettings(_, mount) {
     const st = summary(s.id);
     const tr = el(`
       <tr>
-        <td><strong>${escapeHtml(s.name)}</strong> <span class="muted small" dir="${s.direction}">${escapeHtml(s.nativeName)}</span></td>
+        <td><strong>${escapeHtml(localized(s.name))}</strong> <span class="muted small" dir="${s.direction}">${escapeHtml(s.nativeName)}</span></td>
         <td>${st.lettersKnown}</td>
         <td>${st.wordsCorrect} <span class="muted small">${escapeHtml(t('settings.progress.wrong_suffix', { n: st.wordsWrong }))}</span></td>
         <td><button class="btn-link" data-reset="${escapeHtml(s.id)}">${escapeHtml(t('settings.progress.reset'))}</button></td>
       </tr>
     `);
     tr.querySelector('[data-reset]').addEventListener('click', () => {
-      if (confirm(t('settings.progress.reset_script_confirm', { name: s.name }))) {
+      if (confirm(t('settings.progress.reset_script_confirm', { name: localized(s.name) }))) {
         resetScript(s.id);
         renderSettings(_, mount);
       }

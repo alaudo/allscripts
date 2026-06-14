@@ -38,7 +38,7 @@ export async function renderPreviewWords(_route, mount) {
   const header = el(
     `<header class="mode-header">
        <a href="#/home" class="back">${escapeHtml(t('nav.back_home'))}</a>
-       <h2>${escapeHtml(t('preview.words.header', { name: meta.name }))}</h2>
+       <h2>${escapeHtml(t('preview.words.header', { name: localized(meta.name) }))}</h2>
        <button type="button" class="transcription-toggle clickable" id="trans-toggle" title="${escapeHtml(t('transcription.cycle_tooltip'))}">${escapeHtml(transcriptionLabel(transcription))}</button>
      </header>`
   );
