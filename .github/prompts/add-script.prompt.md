@@ -285,33 +285,155 @@ If your script is a clean abugida (Devanagari, Thai) or alphabet (Greek, Cyrilli
 
 ---
 
-## 9. Final validation
+## 9. Validation — work through the checklists in order
 
-Run all of these before opening the PR / asking for review:
+Treat each checklist as a hard gate. **Do not move to the next stage until every box in the current stage is checked.** If you're an LLM, write the box explicitly (`[x]` / `[ ]`) in your response as you go, so the human reviewer can audit.
+
+### 9.1 Pre-flight (before writing any JSON)
+
+- [ ] `id` is short, lowercase ASCII, no spaces / hyphens / diacritics, and doesn't collide with a route keyword (`home`, `settings`, `flashcards`, `flashcards-words`, `phrases`, `read`, `spell`, `choose-letters`, `choose-words`, `choose-phrases`, `preview-letters`, `preview-words`, `preview-phrases`).
+- [ ] `id` doesn't collide with any existing script: `node -e "console.log(require('./data/manifest.json').scripts.some(s=>s.id==='<id>')?'COLLISION':'ok')"` → `ok`.
+- [ ] You have the script's **English name**, **Russian name**, **native self-name**, **language code**, and **direction** (`ltr` / `rtl`).
+- [ ] You have a list of countries (flag emoji + EN + RU names) where the script is used.
+- [ ] You've drafted the `info` blurb (2–3 sentences) in both EN and RU.
+- [ ] You've drafted the `composition` description (4–6 sentences) in both EN and RU, and re-read it to confirm it does **not** reference any other script by name (no "also an abjad like Arabic", no "unlike Cyrillic above"). Comparisons to Latin or Cyrillic as a baseline are OK; "like X further down the page" is not.
+- [ ] You can name the script's writing-system **type** (alphabet / abjad / abugida / syllabary / featural / mixed) and have at least one sentence in `composition` that calls it out explicitly.
+
+### 9.2 After editing `data/manifest.json`
+
+Run these — every command must print what's expected:
 
 ```powershell
-# JSON parses
+# Parses
 node -e "JSON.parse(require('fs').readFileSync('data/manifest.json','utf8')); console.log('manifest OK')"
-node -e "JSON.parse(require('fs').readFileSync('data/scripts/<id>.json','utf8')); console.log('<id> OK')"
-node -e "JSON.parse(require('fs').readFileSync('data/phrases.json','utf8')); console.log('phrases OK')"
-node -e "JSON.parse(require('fs').readFileSync('data/words-international.json','utf8')); console.log('intl OK')"
 
-# Coverage checks
-node -e "const j=require('./data/manifest.json'); const s=j.scripts.find(x=>x.id==='<id>'); console.log({hasInfo: !!(s.info&&s.info.en&&s.info.ru), hasComp: !!(s.composition&&s.composition.en&&s.composition.ru), countries: s.countries?.length||0});"
-node -e "const j=require('./data/words-international.json'); const miss=j.entries.filter(e=>!e.forms['<id>']).map(e=>e.concept); console.log(miss.length?('MISSING: '+miss.join(', ')):'all 29 forms present');"
-node -e "const j=require('./data/phrases.json'); console.log('phrases:', j.scripts['<id>']?.phrases?.length, 'should be 20');"
+# Entry exists and has the right shape
+node -e "const j=require('./data/manifest.json'); const s=j.scripts.find(x=>x.id==='<id>'); if(!s){console.log('NOT FOUND');process.exit(1)} const r={id:s.id,name_en:!!s.name?.en,name_ru:!!s.name?.ru,nativeName:!!s.nativeName,language:!!s.language,direction:s.direction,file:s.file,info_en:!!s.info?.en,info_ru:!!s.info?.ru,comp_en:!!s.composition?.en,comp_ru:!!s.composition?.ru,countries:Array.isArray(s.countries)?s.countries.length:'MISSING'};console.log(r);if(Object.values(r).some(v=>v===false||v==='MISSING')){console.log('FAIL');process.exit(1)}console.log('OK')"
+
+# Every country has flag + localized name
+node -e "const j=require('./data/manifest.json'); const s=j.scripts.find(x=>x.id==='<id>'); const bad=s.countries.filter(c=>!c.flag||!c.name?.en||!c.name?.ru); console.log(bad.length?bad:'all countries OK')"
+
+# Direction is valid
+node -e "const j=require('./data/manifest.json'); const s=j.scripts.find(x=>x.id==='<id>'); console.log(['ltr','rtl'].includes(s.direction)?'direction OK':'BAD direction: '+s.direction)"
 ```
 
-Then **smoke-test in the browser** (serve with `python -m http.server 8000`):
+Checklist:
 
-- [ ] Script tile appears on the home grid with the correct name in both EN and RU (toggle the header lang switch).
-- [ ] "About" card shows both the history blurb and the "How the script works" section.
-- [ ] Letter flashcards walk through the alphabet; example word and meaning render.
-- [ ] Choose-the-letter / word / phrase drills work with 4, 6, 8 options.
-- [ ] Read & Transcribe and Spell modes accept reasonable input.
-- [ ] Preview Alphabet renders every glyph. Click one and confirm the word inlay lists words that contain that letter (if not, see §8).
-- [ ] Preview Words shows curated + international entries. Filter by "International" and verify all 29 concepts show your new forms.
-- [ ] Preview Phrases lists 20 phrases with their translations.
+- [ ] All four commands print `OK` / valid results, no `FAIL` / `MISSING` / `BAD`.
+- [ ] `info.en` and `info.ru` are between roughly **80 and 400 characters** each (sanity bounds).
+- [ ] `composition.en` and `composition.ru` are between roughly **400 and 1500 characters** each.
+- [ ] `composition` does not contain the names of other scripts in the manifest (Greek, Cyrillic, Devanagari, Armenian, Georgian, Hiragana, Arabic, Hebrew, Hangul, Thai). Check:
+  ```powershell
+  node -e "const j=require('./data/manifest.json'); const s=j.scripts.find(x=>x.id==='<id>'); const names=j.scripts.filter(x=>x.id!==s.id).flatMap(x=>[x.name.en,x.name.ru,x.nativeName]); for(const lang of ['en','ru']){for(const n of names){if(s.composition[lang].includes(n))console.log('LEAK in composition.'+lang+': '+n)}} console.log('done')"
+  ```
+  → only `done` printed, no `LEAK in …` lines.
+
+### 9.3 After creating `data/scripts/<id>.json`
+
+```powershell
+# Parses
+node -e "JSON.parse(require('fs').readFileSync('data/scripts/<id>.json','utf8')); console.log('script OK')"
+
+# Every letter has the four required fields + a complete example
+node -e "const j=require('./data/scripts/<id>.json'); const bad=j.letters.map((l,i)=>{const miss=['glyph','ipa','latin','cyrillic','example'].filter(k=>l[k]==null||l[k]===''); const ex=l.example||{}; const emiss=['native','ipa','latin','cyrillic','meaning'].filter(k=>ex[k]==null||ex[k]===''); const mloc=ex.meaning&&typeof ex.meaning==='object'&&ex.meaning.en&&ex.meaning.ru; return {i, glyph:l.glyph, miss, exMiss:emiss, meaningLocalized:!!mloc}}).filter(x=>x.miss.length||x.exMiss.length||!x.meaningLocalized); console.log(bad.length?bad:'all letters complete')"
+
+# Every note (if present) is {en, ru}
+node -e "const j=require('./data/scripts/<id>.json'); const bad=j.letters.filter(l=>l.note&&(typeof l.note!=='object'||!l.note.en||!l.note.ru)); console.log(bad.length?bad.map(l=>l.glyph):'all letter notes localized')"
+
+# Every word has the four transcription fields + localized meaning
+node -e "const j=require('./data/scripts/<id>.json'); const bad=j.words.map((w,i)=>{const miss=['native','ipa','latin','cyrillic','meaning'].filter(k=>w[k]==null||w[k]===''); const mloc=w.meaning&&typeof w.meaning==='object'&&w.meaning.en&&w.meaning.ru; return {i,native:w.native,miss,meaningLocalized:!!mloc}}).filter(x=>x.miss.length||!x.meaningLocalized); console.log(bad.length?bad:'all words complete')"
+
+# Word counts (sanity — not enforced, but flag if it's far off)
+node -e "const j=require('./data/scripts/<id>.json'); console.log({letters:j.letters.length,words:j.words.length})"
+```
+
+Checklist:
+
+- [ ] All five commands print clean results — no `bad` arrays, no `MISSING` flags.
+- [ ] `letters.length` matches what you'd expect for the script (e.g. Greek 24, Cyrillic 33, Hebrew 22, Arabic ~28, Devanagari ~46, Hangul ~24, Thai ~44+marks). Way off → something is missing or duplicated.
+- [ ] `words.length` is between **10 and 30**.
+- [ ] Spot-check 3 random letters by eye: native glyph displays correctly (not a `?` or tofu), example word actually starts with or features that letter, `ipa` matches the segment in the example.
+- [ ] For bicameral scripts: `glyph` shows **both cases** (e.g. `"Α α"`, `"Б б"`). For unicameral: just the one form.
+- [ ] For scripts with **positional / final forms** (Hebrew ך ם ן ף ץ, Arabic isolated/initial/medial/final, Greek ς): mention the positional form in `note`.
+
+### 9.4 After editing `data/phrases.json`
+
+```powershell
+# Parses
+node -e "JSON.parse(require('fs').readFileSync('data/phrases.json','utf8')); console.log('phrases OK')"
+
+# Exactly 20 phrases for the new script
+node -e "const j=require('./data/phrases.json'); const n=j.scripts['<id>']?.phrases?.length; console.log(n===20?'count OK':'WRONG count: '+n)"
+
+# Every phrase has all four transcription fields + en + ru
+node -e "const j=require('./data/phrases.json'); const ps=j.scripts['<id>'].phrases; const bad=ps.map((p,i)=>{const miss=['native','ipa','latin','cyrillic'].filter(k=>!p[k]); const tmiss=['en','ru'].filter(k=>!p.translations?.[k]); return {i,native:p.native,miss,tmiss}}).filter(x=>x.miss.length||x.tmiss.length); console.log(bad.length?bad:'all phrases complete')"
+
+# Phrase order matches the canonical English deck (so SRS state lines up across scripts)
+node -e "const j=require('./data/phrases.json'); const ref=j.scripts.greek.phrases.map(p=>p.translations.en); const mine=j.scripts['<id>'].phrases.map(p=>p.translations.en); const mismatch=ref.map((r,i)=>r===mine[i]?null:{i,expected:r,got:mine[i]}).filter(Boolean); console.log(mismatch.length?mismatch:'phrase order matches reference')"
+```
+
+Checklist:
+
+- [ ] All four commands print clean results.
+- [ ] No accidental "Hello (formal)" where the canonical deck uses "Hello (informal)" — order and tone must match every other script.
+
+### 9.5 After editing `data/words-international.json`
+
+```powershell
+# Parses
+node -e "JSON.parse(require('fs').readFileSync('data/words-international.json','utf8')); console.log('intl OK')"
+
+# Every one of the 29 entries now has forms.<id>
+node -e "const j=require('./data/words-international.json'); const miss=j.entries.filter(e=>!e.forms['<id>']).map(e=>e.concept); console.log(miss.length?('MISSING in '+miss.length+' entries: '+miss.join(', ')):'all 29 forms present')"
+
+# Each new form has all four sub-fields
+node -e "const j=require('./data/words-international.json'); const bad=j.entries.map(e=>{const f=e.forms['<id>']; if(!f) return null; const miss=['native','ipa','latin','cyrillic'].filter(k=>!f[k]); return miss.length?{concept:e.concept,miss}:null}).filter(Boolean); console.log(bad.length?bad:'all forms complete')"
+```
+
+Checklist:
+
+- [ ] Both coverage commands print clean results.
+- [ ] You've **explicitly reviewed each of the 29 concepts** and asked: *"Is there a recognisable international form (loanword, transliteration, neologism) in this language? If yes I'm using it; if no I have a documented reason."* Do not rubber-stamp this — it is the most-frequently-violated rule in this codebase.
+- [ ] You've cross-checked **at least 5 high-risk concepts** against the indigenous-word trap: `hospital`, `university`, `doctor`, `restaurant`, `police`. If the native word is the same as in `data/scripts/<id>.json` `words[]` and clearly indigenous, you've considered the loanword variant.
+- [ ] Where you intentionally kept an indigenous word (false-friend lesson, no loan exists), you've left a one-line note in the PR description explaining why.
+
+### 9.6 Browser smoke test (serve and click through)
+
+Start a static server from the repo root and open the result in a browser:
+
+```powershell
+python -m http.server 8000
+# then http://localhost:8000
+```
+
+Go through every checkbox — do **not** skip any:
+
+- [ ] **Home (EN)**: new script tile is on the grid, name displays in English, `📝 0/<letters>` and `💬 0/<words>` counters show with the right totals.
+- [ ] **Home (RU)**: toggle the header language switch. The tile's name now shows the Russian translation; the counters and tile labels are in Russian.
+- [ ] **Select the script → About card**: short `info` blurb is visible in the active UI language. Below it, the longer "How the script works" / "Как устроено письмо" section shows the full `composition` text in the active language.
+- [ ] **About card → countries**: flag emojis render, country names are in the active UI language.
+- [ ] **Practice tiles** appear in this order: 🃏 Letter flashcards → 🃏 Word flashcards → 🃏 Phrase flashcards → 🎯 Choose letter → 🎯 Choose word → 🎯 Choose phrase → ✍️ Read & transcribe → ⌨️ Spell in script. All eight tiles are clickable.
+- [ ] **Letter flashcards**: cycle through 3+ cards. Card flips with a 3D animation. Example word + meaning render in the active UI language. SRS *Again / Hard / Good / Easy* buttons work.
+- [ ] **Word flashcards**: cycle through 3+ cards in both the curated and international pools. Meanings render in the active UI language.
+- [ ] **Phrase flashcards**: 3+ cards cycle, translations are in the active UI language.
+- [ ] **Choose letter / word / phrase**: each drill runs, toggling between *recognize* and *recall* works, the 4 / 6 / 8 option switch works, correct answer highlights green.
+- [ ] **Read & transcribe**: 2+ prompts answer correctly; the input-system pill (IPA / Latin / Cyrillic) in the header swaps the expected answer system.
+- [ ] **Spell in script**: 2+ prompts answer correctly using the on-screen keyboard.
+- [ ] **Preview Alphabet**: every glyph renders (no `?` / tofu). Click a letter — the inlay shows the words containing that letter. **If no words show up** even though clearly some exist (Hangul-style composition issue), see §8.
+- [ ] **Preview Words** → "Specific" filter: all `words[]` entries from `scripts/<id>.json` show with localized meanings.
+- [ ] **Preview Words** → "International" filter: all 29 international forms appear with the localized concept meanings.
+- [ ] **Preview Phrases**: all 20 phrases listed, translations in the active UI language.
+- [ ] **Cultural notes**: where you added `note` fields, click the small **ⓘ** icon — note text shows in the active UI language (no English bleeding into Russian mode).
+- [ ] **RTL scripts only**: native glyphs render right-to-left in cards, previews, and inputs; Latin/Cyrillic transcription beneath them stays left-to-right.
+- [ ] **Vocalised scripts only** (Arabic, Hebrew, anything you flag): Settings → "Show full vocalisation" toggles between pointed and unpointed forms, both in prompts and in accepted answers.
+
+### 9.7 Definition of done
+
+The script is shippable only when **all** of 9.1–9.6 are checked **and**:
+
+- [ ] `git status` is clean except for the four expected files (`data/manifest.json`, `data/scripts/<id>.json`, `data/phrases.json`, `data/words-international.json`) plus, if §8 applies, `js/modes/preview-letters.js`.
+- [ ] Commit message names the script and lists what was added (letters / words / phrases / intl-forms counts).
+- [ ] PR description calls out any intentional deviations (e.g. an indigenous word kept for a false-friend reason, a concept with no loanword equivalent, a custom decomposition).
 
 ---
 
