@@ -99,7 +99,7 @@ export async function renderFlashcards(_, mount) {
         <div class="example">
           <span class="example-native" dir="${script.meta.direction}">${escapeHtml(ex.native)}</span>
           <span class="example-transcription">${escapeHtml(ex[field] ?? ex.ipa ?? '')}</span>
-          <span class="example-meaning">— ${escapeHtml(ex.meaning || '')}</span>
+          <span class="example-meaning">— ${escapeHtml(localized(ex.meaning))}</span>
         </div>` : ''}
     `;
     counterEl.textContent = `${idx + 1} / ${deck.length}`;

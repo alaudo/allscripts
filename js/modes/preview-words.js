@@ -125,7 +125,8 @@ export async function renderPreviewWords(_route, mount) {
     for (const w of filtered) {
       const native = (useVoweled && w.nativeVoweled) || w.native;
       const trans = w[tField] || w.ipa || '';
-      const meaning = w.meaning ? `<span class="preview-meaning muted">${escapeHtml(w.meaning)}</span>` : '';
+      const meaningText = localized(w.meaning);
+      const meaning = meaningText ? `<span class="preview-meaning muted">${escapeHtml(meaningText)}</span>` : '';
       const noteText = localized(w.note);
       const note = noteText
         ? `<span class="preview-note" title="${escapeHtml(noteText)}" aria-label="${escapeHtml(noteText)}">ℹ︎</span>`

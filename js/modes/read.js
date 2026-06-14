@@ -99,7 +99,7 @@ export async function renderRead(_, mount) {
         <span class="muted">${escapeHtml(t('read.answer'))}</span>
         <strong class="answer-text">${escapeHtml(expected ?? '—')}</strong>
       </div>
-      <div class="meaning">${escapeHtml(current.meaning || '')}</div>
+      <div class="meaning">${escapeHtml(localized(current.meaning))}</div>
       ${ipa}
       ${voweledHint}
       ${note}

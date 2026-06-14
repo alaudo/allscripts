@@ -85,6 +85,8 @@ const DICTS = {
     'preview.empty': 'Nothing matches the current filters.',
     'preview.show_meaning': 'Show meaning',
     'preview.hide_meaning': 'Hide meaning',
+    'preview.letter.words': 'Words containing {glyph} ({count})',
+    'preview.letter.no_words': 'No training words contain this letter yet.',
 
     'transcription.ipa': 'IPA',
     'transcription.english': 'English re-spelling',
@@ -266,6 +268,8 @@ const DICTS = {
     'preview.empty': 'Ничего не подходит под текущие фильтры.',
     'preview.show_meaning': 'Показать значения',
     'preview.hide_meaning': 'Скрыть значения',
+    'preview.letter.words': 'Слова с буквой {glyph} ({count})',
+    'preview.letter.no_words': 'В обучающих словах эта буква пока не встречается.',
 
     'transcription.ipa': 'IPA',
     'transcription.english': 'Английская транслитерация',

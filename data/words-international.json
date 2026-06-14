@@ -4,7 +4,7 @@
   "entries": [
     {
       "concept": "taxi",
-      "meaning": "taxi",
+      "meaning": {"en": "taxi", "ru": "такси"},
       "note": {"en": "A truly international loanword — pronounced almost identically across these languages.", "ru": "По-настоящему интернациональное слово — звучит почти одинаково во всех этих языках."},
       "forms": {
         "greek":      { "native": "ταξί",   "ipa": "taˈksi",   "latin": "taxi",     "cyrillic": "такси" },
@@ -18,7 +18,7 @@
     },
     {
       "concept": "metro",
-      "meaning": "metro / subway",
+      "meaning": {"en": "metro / subway", "ru": "метро"},
       "forms": {
         "greek":      { "native": "μετρό",  "ipa": "meˈtro",   "latin": "metro",    "cyrillic": "мэтро" },
         "cyrillic":   { "native": "метро",  "ipa": "mʲɪˈtro",  "latin": "metro",    "cyrillic": "метро" },
@@ -31,7 +31,7 @@
     },
     {
       "concept": "coffee",
-      "meaning": "coffee",
+      "meaning": {"en": "coffee", "ru": "кофе"},
       "note": {"en": "Goes back to Arabic 'qahwa' — many of these forms are descendants.", "ru": "Восходит к арабскому «qahwa» — многие из этих форм являются его потомками."},
       "forms": {
         "greek":      { "native": "καφές",  "ipa": "kaˈfes",   "latin": "kafes",    "cyrillic": "кафэс" },
@@ -45,7 +45,7 @@
     },
     {
       "concept": "tea",
-      "meaning": "tea",
+      "meaning": {"en": "tea", "ru": "чай"},
       "forms": {
         "greek":      { "native": "τσάι",   "ipa": "ˈtsai",    "latin": "tsai",     "cyrillic": "цаи" },
         "cyrillic":   { "native": "чай",    "ipa": "tɕaj",     "latin": "chay",     "cyrillic": "чай" },
@@ -58,7 +58,7 @@
     },
     {
       "concept": "telephone",
-      "meaning": "telephone",
+      "meaning": {"en": "telephone", "ru": "телефон"},
       "forms": {
         "greek":      { "native": "τηλέφωνο","ipa": "tiˈlefono","latin": "tilefono", "cyrillic": "тилэфоно" },
         "cyrillic":   { "native": "телефон","ipa": "tʲɪlʲɪˈfon","latin":"telefon",   "cyrillic": "телефон" },
@@ -71,7 +71,7 @@
     },
     {
       "concept": "radio",
-      "meaning": "radio",
+      "meaning": {"en": "radio", "ru": "радио"},
       "forms": {
         "greek":      { "native": "ραδιόφωνο","ipa":"raˈðiofono","latin":"radiofono","cyrillic": "радиофоно" },
         "cyrillic":   { "native": "радио",  "ipa": "ˈradʲɪo",  "latin": "radio",    "cyrillic": "радио" },
@@ -84,7 +84,7 @@
     },
     {
       "concept": "music",
-      "meaning": "music",
+      "meaning": {"en": "music", "ru": "музыка"},
       "forms": {
         "greek":      { "native": "μουσική","ipa": "musiˈki",  "latin": "mousiki",  "cyrillic": "мусики" },
         "cyrillic":   { "native": "музыка", "ipa": "ˈmuzɨkə",  "latin": "muzyka",   "cyrillic": "музыка" },
@@ -97,7 +97,7 @@
     },
     {
       "concept": "theater",
-      "meaning": "theater",
+      "meaning": {"en": "theater", "ru": "театр"},
       "note": {"en": "Greek 'théatron' is the source of most European forms.", "ru": "Источник большинства европейских форм — греческое «théatron»."},
       "forms": {
         "greek":      { "native": "θέατρο", "ipa": "ˈθeatro",  "latin": "theatro",  "cyrillic": "тэатро" },
@@ -110,7 +110,7 @@
     },
     {
       "concept": "cinema",
-      "meaning": "cinema / movies",
+      "meaning": {"en": "cinema / movies", "ru": "кино"},
       "forms": {
         "greek":      { "native": "σινεμά", "ipa": "sineˈma",  "latin": "sinema",   "cyrillic": "синэма" },
         "cyrillic":   { "native": "кино",   "ipa": "kʲɪˈno",   "latin": "kino",     "cyrillic": "кино" },
@@ -123,7 +123,7 @@
     },
     {
       "concept": "museum",
-      "meaning": "museum",
+      "meaning": {"en": "museum", "ru": "музей"},
       "forms": {
         "greek":      { "native": "μουσείο","ipa": "muˈsio",   "latin": "mousio",   "cyrillic": "мусио" },
         "cyrillic":   { "native": "музей",  "ipa": "muˈzʲej",  "latin": "muzey",    "cyrillic": "музей" },
@@ -135,7 +135,7 @@
     },
     {
       "concept": "university",
-      "meaning": "university",
+      "meaning": {"en": "university", "ru": "университет"},
       "forms": {
         "greek":      { "native": "γιουνιβέρσιτι","ipa":"ʝuniˈversiti","latin":"yiouniversiti","cyrillic":"юнивэрсити" },
         "cyrillic":   { "native": "университет","ipa":"unʲɪvʲɪrsʲɪˈtʲet","latin":"universitet","cyrillic":"университет" },
@@ -147,7 +147,7 @@
     },
     {
       "concept": "mathematics",
-      "meaning": "mathematics",
+      "meaning": {"en": "mathematics", "ru": "математика"},
       "forms": {
         "greek":      { "native": "μαθηματικά","ipa":"maθimaˈtika","latin":"mathimatika","cyrillic":"матиматика" },
         "cyrillic":   { "native": "математика","ipa":"mətʲɪˈmatʲɪkə","latin":"matematika","cyrillic":"математика" },
@@ -159,7 +159,7 @@
     },
     {
       "concept": "doctor",
-      "meaning": "doctor",
+      "meaning": {"en": "doctor", "ru": "врач"},
       "forms": {
         "greek":      { "native": "γιατρός","ipa": "ʝaˈtros",  "latin": "yiatros",  "cyrillic": "ятрос" },
         "cyrillic":   { "native": "доктор", "ipa": "ˈdoktər",  "latin": "doktor",   "cyrillic": "доктор" },
@@ -171,7 +171,7 @@
     },
     {
       "concept": "hospital",
-      "meaning": "hospital",
+      "meaning": {"en": "hospital", "ru": "больница"},
       "note": {"en": "Mostly native words, not a true international borrowing — pick whichever feels natural to learn.", "ru": "В основном исконные слова, а не настоящее международное заимствование — выберите то, что удобнее запомнить."},
       "forms": {
         "greek":      { "native": "νοσοκομείο","ipa":"nosokoˈmio","latin":"nosokomio","cyrillic":"носокомио" },
@@ -185,7 +185,7 @@
     },
     {
       "concept": "bank",
-      "meaning": "bank (financial institution)",
+      "meaning": {"en": "bank (financial institution)", "ru": "банк (финансовое учреждение)"},
       "forms": {
         "greek":      { "native": "τράπεζα","ipa": "ˈtrapeza", "latin": "trapeza",  "cyrillic": "трапэза" },
         "cyrillic":   { "native": "банк",   "ipa": "bank",     "latin": "bank",     "cyrillic": "банк" },
@@ -198,7 +198,7 @@
     },
     {
       "concept": "computer",
-      "meaning": "computer",
+      "meaning": {"en": "computer", "ru": "компьютер"},
       "forms": {
         "greek":      { "native": "κομπιούτερ","ipa":"koˈbjuter","latin":"kobiouter","cyrillic":"комбьютер" },
         "cyrillic":   { "native": "компьютер","ipa":"kɐmˈpʲjutər","latin":"kompyuter","cyrillic":"компьютер" },
@@ -211,7 +211,7 @@
     },
     {
       "concept": "internet",
-      "meaning": "internet",
+      "meaning": {"en": "internet", "ru": "интернет"},
       "forms": {
         "greek":      { "native": "ίντερνετ","ipa": "ˈinternet","latin": "internet", "cyrillic": "интэрнэт" },
         "cyrillic":   { "native": "интернет","ipa": "ɪntɛrˈnɛt","latin": "internet", "cyrillic": "интернет" },
@@ -224,7 +224,7 @@
     },
     {
       "concept": "kilometer",
-      "meaning": "kilometer",
+      "meaning": {"en": "kilometer", "ru": "километр"},
       "forms": {
         "greek":      { "native": "χιλιόμετρο","ipa":"xiˈliometro","latin":"chiliometro","cyrillic":"хилиомэтро" },
         "cyrillic":   { "native": "километр","ipa": "kʲɪlɐˈmʲetr","latin":"kilometr","cyrillic":"километр" },
@@ -237,7 +237,7 @@
     },
     {
       "concept": "dollar",
-      "meaning": "dollar",
+      "meaning": {"en": "dollar", "ru": "доллар"},
       "forms": {
         "greek":      { "native": "δολάριο","ipa": "ðoˈlario","latin": "dolario",  "cyrillic": "доларио" },
         "cyrillic":   { "native": "доллар", "ipa": "ˈdolər",  "latin": "dollar",   "cyrillic": "доллар" },
@@ -250,7 +250,7 @@
     },
     {
       "concept": "salad",
-      "meaning": "salad",
+      "meaning": {"en": "salad", "ru": "салат"},
       "forms": {
         "greek":      { "native": "σαλάτα", "ipa": "saˈlata", "latin": "salata",   "cyrillic": "салата" },
         "cyrillic":   { "native": "салат",  "ipa": "sɐˈlat",  "latin": "salat",    "cyrillic": "салат" },
@@ -263,7 +263,7 @@
     },
     {
       "concept": "chocolate",
-      "meaning": "chocolate",
+      "meaning": {"en": "chocolate", "ru": "шоколад"},
       "forms": {
         "greek":      { "native": "σοκολάτα","ipa":"sokoˈlata","latin":"sokolata", "cyrillic": "соколата" },
         "cyrillic":   { "native": "шоколад","ipa": "ʂəkɐˈlat","latin": "shokolad", "cyrillic": "шоколад" },
@@ -276,7 +276,7 @@
     },
     {
       "concept": "pizza",
-      "meaning": "pizza",
+      "meaning": {"en": "pizza", "ru": "пицца"},
       "forms": {
         "greek":      { "native": "πίτσα",  "ipa": "ˈpitsa",  "latin": "pitsa",    "cyrillic": "пица" },
         "cyrillic":   { "native": "пицца",  "ipa": "ˈpʲitsːə","latin": "pitstsa",  "cyrillic": "пицца" },
@@ -289,7 +289,7 @@
     },
     {
       "concept": "piano",
-      "meaning": "piano",
+      "meaning": {"en": "piano", "ru": "пианино"},
       "forms": {
         "greek":      { "native": "πιάνο",  "ipa": "ˈpiano",  "latin": "piano",    "cyrillic": "пиано" },
         "cyrillic":   { "native": "пианино","ipa": "pʲɪɐˈnʲinə","latin":"pianino", "cyrillic": "пианино" },
@@ -302,7 +302,7 @@
     },
     {
       "concept": "hotel",
-      "meaning": "hotel",
+      "meaning": {"en": "hotel", "ru": "отель"},
       "forms": {
         "greek":      { "native": "οτέλ", "ipa": "oˈtel",   "latin": "otel",     "cyrillic": "отэл" },
         "cyrillic":   { "native": "отель",  "ipa": "ɐˈtelʲ",  "latin": "otel",     "cyrillic": "отель" },
@@ -315,7 +315,7 @@
     },
     {
       "concept": "restaurant",
-      "meaning": "restaurant",
+      "meaning": {"en": "restaurant", "ru": "ресторан"},
       "forms": {
         "greek":      { "native": "εστιατόριο","ipa":"estiaˈtorio","latin":"estiatorio","cyrillic":"эстиаторио" },
         "cyrillic":   { "native": "ресторан","ipa":"rʲɪstɐˈran","latin":"restoran","cyrillic":"ресторан" },
@@ -328,7 +328,7 @@
     },
     {
       "concept": "park",
-      "meaning": "park (public garden)",
+      "meaning": {"en": "park (public garden)", "ru": "парк"},
       "forms": {
         "greek":      { "native": "πάρκο",  "ipa": "ˈparko",  "latin": "parko",    "cyrillic": "парко" },
         "cyrillic":   { "native": "парк",   "ipa": "park",    "latin": "park",     "cyrillic": "парк" },
@@ -341,7 +341,7 @@
     },
     {
       "concept": "police",
-      "meaning": "police",
+      "meaning": {"en": "police", "ru": "полиция"},
       "forms": {
         "greek":      { "native": "αστυνομία","ipa":"astinoˈmia","latin":"astynomia","cyrillic":"астиномиа" },
         "cyrillic":   { "native": "полиция","ipa":"pɐˈlʲitsɨjə","latin":"politsiya","cyrillic":"полиция" },
@@ -354,7 +354,7 @@
     },
     {
       "concept": "mama",
-      "meaning": "mom",
+      "meaning": {"en": "mom", "ru": "мама"},
       "note": {"en": "WARNING: in Georgian 'მამა' (mama) means FATHER, not mother — a classic false friend.", "ru": "ВНИМАНИЕ: в грузинском «მამა» (mama) означает ОТЦА, а не мать — классический ложный друг переводчика."},
       "forms": {
         "greek":      { "native": "μαμά",   "ipa": "maˈma",   "latin": "mama",     "cyrillic": "мама" },
@@ -367,7 +367,7 @@
     },
     {
       "concept": "papa",
-      "meaning": "dad",
+      "meaning": {"en": "dad", "ru": "папа"},
       "forms": {
         "greek":      { "native": "μπαμπάς","ipa": "baˈbas",  "latin": "babas",    "cyrillic": "бабас" },
         "cyrillic":   { "native": "папа",   "ipa": "ˈpapə",   "latin": "papa",     "cyrillic": "папа" },

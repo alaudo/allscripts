@@ -96,7 +96,8 @@ export async function renderSpell(_, mount) {
     revealed = false;
     const transcription = current[promptField] ?? current.latin ?? current.ipa ?? '';
     promptEl.textContent = transcription;
-    meaningEl.textContent = current.meaning ? t('spell.meaning', { meaning: current.meaning }) : '';
+    const meaningText = localized(current.meaning);
+    meaningEl.textContent = meaningText ? t('spell.meaning', { meaning: meaningText }) : '';
     inputEl.value = '';
     inputEl.disabled = false;
     resultEl.innerHTML = '';

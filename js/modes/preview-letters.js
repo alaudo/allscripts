@@ -2,10 +2,56 @@
 // transcription printed (smaller, muted) directly below the glyph. Filter
 // chips toggle which categories (vowels / consonants / marks) are visible.
 
-import { getScript, getManifest } from '../data.js';
+import { getScript, getManifest, getWordPool } from '../data.js';
 import { getSettings, updateSettings } from '../storage.js';
 import { el, escapeHtml, fieldFor, nextTranscription } from '../ui/dom.js';
 import { t, transcriptionLabel, localized } from '../i18n.js';
+
+// Split a letter's glyph cell (e.g. "Α α" or "क" or "◌्") into the bare
+// character forms we should match against word text. Whitespace separates
+// upper/lower forms in scripts that show both, and the dotted-circle
+// placeholder (U+25CC) is just a typographic stand-in for combining marks.
+function letterForms(glyph) {
+  return (glyph || '')
+    .split(/\s+/)
+    .map(form => form.replace(/\u25CC/g, ''))
+    .filter(Boolean);
+}
+
+function wordContainsLetter(nativeWord, glyph) {
+  if (!nativeWord) return false;
+  const forms = letterForms(glyph);
+  if (!forms.length) return false;
+  const wordLower = nativeWord.toLocaleLowerCase();
+  return forms.some(form => {
+    if (nativeWord.includes(form)) return true;
+    const fl = form.toLocaleLowerCase();
+    return !!fl && wordLower.includes(fl);
+  });
+}
+
+// Build the de-duplicated list of words that contain this letter, drawn from
+// the script's curated examples, curated word list, and any international
+// entries that ship a form for this script. Returns plain word objects with
+// at least { native, ipa, latin, cyrillic, meaning, source }.
+function findWordsForLetter(letter, script, pool) {
+  const seen = new Map();
+  const consider = (entry) => {
+    if (!entry?.native) return;
+    if (!wordContainsLetter(entry.native, letter.glyph)) return;
+    if (!seen.has(entry.native)) seen.set(entry.native, entry);
+  };
+  // Letter's own example always counts (carries `meaning`).
+  if (letter.example) consider({ ...letter.example, source: 'curated' });
+  // Other letters' examples — they share the letter if it appears in the word.
+  for (const other of script.letters) {
+    if (other === letter || !other.example) continue;
+    consider({ ...other.example, source: 'curated' });
+  }
+  // Curated + international word pool.
+  for (const w of pool) consider(w);
+  return [...seen.values()];
+}
 
 // Characters we consider as IPA vowels (a superset covering all the scripts
 // shipped in this app). Diacritics like ː / ˈ are stripped before testing.
@@ -29,8 +75,13 @@ function letterCategory(letter) {
 export async function renderPreviewLetters(_route, mount) {
   const settings = getSettings();
   const scriptId = settings.activeScript;
-  const [manifest, script] = await Promise.all([getManifest(), getScript(scriptId)]);
+  const [manifest, script, pool] = await Promise.all([
+    getManifest(),
+    getScript(scriptId),
+    getWordPool(scriptId)
+  ]);
   const meta = manifest.scripts.find(s => s.id === scriptId);
+  let selectedGlyph = null;
 
   // Count letters per category — only chips for non-empty categories appear.
   const cats = { vowel: 0, consonant: 0, mark: 0 };
@@ -93,25 +144,69 @@ export async function renderPreviewLetters(_route, mount) {
     const tField = fieldFor(transcription);
     grid.innerHTML = '';
     const filtered = script.letters.filter(l => active.has(letterCategory(l)));
+    // If the previously selected letter is no longer visible, clear selection.
+    if (selectedGlyph && !filtered.some(l => l.glyph === selectedGlyph)) {
+      selectedGlyph = null;
+    }
     for (const l of filtered) {
       const trans = l[tField] || l.ipa || '';
       const noteText = localized(l.note);
       const note = noteText
         ? `<span class="preview-note" title="${escapeHtml(noteText)}" aria-label="${escapeHtml(noteText)}">ℹ︎</span>`
         : '';
+      const isSelected = l.glyph === selectedGlyph;
       const cell = el(
-        `<div class="preview-cell" data-cat="${letterCategory(l)}">
+        `<button type="button" class="preview-cell clickable${isSelected ? ' selected' : ''}" data-cat="${letterCategory(l)}" aria-pressed="${isSelected}">
            <span class="preview-native" dir="${meta.direction}">${escapeHtml(l.glyph)}</span>
            <span class="preview-trans">${escapeHtml(trans)}</span>
            ${note}
-         </div>`
+         </button>`
       );
+      cell.addEventListener('click', () => {
+        selectedGlyph = isSelected ? null : l.glyph;
+        paint();
+      });
       grid.appendChild(cell);
+      if (isSelected) {
+        grid.appendChild(buildInlay(l, tField));
+      }
     }
     if (!filtered.length) {
       grid.appendChild(el(`<div class="muted small">${escapeHtml(t('preview.empty'))}</div>`));
     }
     meter.textContent = t('preview.count', { shown: filtered.length, total: script.letters.length });
+  }
+
+  function buildInlay(letter, tField) {
+    const words = findWordsForLetter(letter, script, pool);
+    const heading = t('preview.letter.words', { glyph: letter.glyph, count: words.length });
+    const inlay = el(
+      `<div class="letter-inlay" role="region" aria-label="${escapeHtml(heading)}">
+         <div class="letter-inlay-head">
+           <span class="letter-inlay-title">${escapeHtml(heading)}</span>
+         </div>
+       </div>`
+    );
+    if (!words.length) {
+      inlay.appendChild(el(
+        `<div class="muted small">${escapeHtml(t('preview.letter.no_words'))}</div>`
+      ));
+      return inlay;
+    }
+    const list = el(`<div class="detail-words"></div>`);
+    for (const w of words) {
+      const trans = w[tField] || w.ipa || w.latin || '';
+      const meaning = localized(w.meaning);
+      list.appendChild(el(
+        `<div class="detail-word" data-src="${w.source || 'curated'}">
+           <span class="detail-word-native" dir="${meta.direction}">${escapeHtml(w.native)}</span>
+           <span class="detail-word-trans">${escapeHtml(trans)}</span>
+           ${meaning ? `<span class="detail-word-meaning muted">${escapeHtml(meaning)}</span>` : ''}
+         </div>`
+      ));
+    }
+    inlay.appendChild(list);
+    return inlay;
   }
 
   header.querySelector('#trans-toggle').addEventListener('click', () => {
