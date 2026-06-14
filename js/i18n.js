@@ -34,6 +34,9 @@ const DICTS = {
     'theme.dark.tooltip': 'Theme: dark (click to switch to Auto)',
     'theme.aria': 'Toggle theme',
 
+    'lang.tooltip': 'Interface language: {name} (click to switch)',
+    'lang.aria': 'Switch interface language',
+
     'home.pick_script': 'Pick a script',
     'home.practise': 'Practise',
     'home.about': 'About',
@@ -62,7 +65,7 @@ const DICTS = {
     'mode.preview-phrases.blurb': 'All useful phrases on one page with their translation — no flashcards, just a reference list.',
 
     'home.section.practise': 'Practise',
-    'home.section.review': 'Review (no exercises)',
+    'home.section.review': 'Review',
     'home.section.review.hint': 'Browse the material — no answers expected, no progress tracked.',
 
     'preview.letters.header': 'Alphabet — {name}',
@@ -212,6 +215,9 @@ const DICTS = {
     'theme.dark.tooltip': 'Тема: тёмная (нажмите, чтобы выбрать Авто)',
     'theme.aria': 'Переключить тему',
 
+    'lang.tooltip': 'Язык интерфейса: {name} (нажмите, чтобы переключить)',
+    'lang.aria': 'Сменить язык интерфейса',
+
     'home.pick_script': 'Выберите письменность',
     'home.practise': 'Тренировка:',
     'home.about': 'О письменности',
@@ -240,7 +246,7 @@ const DICTS = {
     'mode.preview-phrases.blurb': 'Все полезные фразы с переводами на одной странице — не упражнение, а справочный список.',
 
     'home.section.practise': 'Тренировка',
-    'home.section.review': 'Обзор (без упражнений)',
+    'home.section.review': 'Обзор',
     'home.section.review.hint': 'Просмотр материала — ответов не требуется, прогресс не отслеживается.',
 
     'preview.letters.header': 'Алфавит — {name}',

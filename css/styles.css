@@ -87,26 +87,36 @@ body {
 }
 .topbar-nav a.active { color: var(--accent); }
 
-.theme-toggle {
+.theme-toggle, .lang-toggle {
   font: inherit;
   background: transparent;
   border: 1px solid var(--card-border);
   border-radius: 999px;
-  width: 36px;
   height: 36px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.05rem;
   line-height: 1;
   color: inherit;
   padding: 0;
   transition: border-color 0.08s, background 0.08s, transform 0.08s;
 }
+.theme-toggle { width: 36px; font-size: 1.05rem; }
+.lang-toggle {
+  min-width: 44px;
+  padding: 0 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
 .theme-toggle:hover {
   border-color: var(--accent);
   background: color-mix(in srgb, var(--accent) 10%, var(--card-bg));
   transform: rotate(-12deg);
+}
+.lang-toggle:hover {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, var(--card-bg));
 }
 
 .view {
@@ -175,8 +185,10 @@ body {
   margin-top: 8px;
 }
 .mode-card {
-  display: block;
-  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
   border: 1px solid var(--card-border);
   border-radius: var(--radius);
   text-decoration: none;
@@ -184,45 +196,33 @@ body {
   transition: transform 0.08s, border-color 0.08s;
 }
 .mode-card:hover { transform: translateY(-1px); border-color: var(--accent); }
-.mode-card h3 { margin: 0 0 6px; }
+.mode-card .mode-card-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.mode-card .mode-card-text { min-width: 0; }
+.mode-card h3 { margin: 0 0 4px; font-size: 1rem; }
 .mode-card p { margin: 0; color: var(--muted); font-size: 0.9rem; }
 
 /* Review tiles — visually distinct from the exercise tiles above, to make it
    clear these are reference views, not interactive practice. Subdued
-   background, dashed border, and a leading glyph instead of the same prominent
-   heading treatment as practice modes. */
+   background, dashed border, and a slightly smaller heading treatment. */
 .review-card { background: color-mix(in srgb, var(--card-bg) 88%, var(--bg)); }
 .review-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
 .mode-card--review {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 14px 14px;
+  padding: 12px 14px;
   background: transparent;
   border-style: dashed;
-  border-color: var(--card-border);
 }
 .mode-card--review:hover {
   border-color: var(--accent);
   background: color-mix(in srgb, var(--accent) 6%, transparent);
 }
-.mode-card--review .mode-card-icon {
-  font-size: 1.4rem;
-  line-height: 1;
-  flex-shrink: 0;
-  margin-top: 2px;
-  opacity: 0.85;
-}
-.mode-card--review h3 {
-  margin: 0 0 4px;
-  font-size: 0.98rem;
-  font-weight: 600;
-}
-.mode-card--review p {
-  margin: 0;
-  font-size: 0.85rem;
-  color: var(--muted);
-}
+.mode-card--review .mode-card-icon { opacity: 0.85; font-size: 1.4rem; }
+.mode-card--review h3 { font-size: 0.95rem; }
+.mode-card--review p { font-size: 0.85rem; }
 
 /* Mode header — wraps on small screens so the right-aligned pill doesn't push the title off. */
 .mode-header {
@@ -621,6 +621,7 @@ body {
   .topbar-nav { gap: 12px; }
   .brand { font-size: 1rem; }
   .theme-toggle { width: 38px; height: 38px; }
+  .lang-toggle { height: 38px; }
   /* Ensure interactive controls hit the WCAG 44x44 tap target. */
   .btn, .btn-secondary, .btn-danger { min-height: 44px; padding: 10px 14px; }
   .btn-link { min-height: 40px; padding: 8px 12px; }

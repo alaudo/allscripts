@@ -2,7 +2,7 @@ import { getScript, getWordPool } from '../data.js';
 import { getSettings, updateSettings, recordWord } from '../storage.js';
 import { el, escapeHtml, pickRandom, looseEqual, fuzzyEqual, inputFieldFor, nextInputSystem } from '../ui/dom.js';
 import { renderKeyboard } from '../ui/keyboard.js';
-import { t, inputSystemLabel } from '../i18n.js';
+import { t, inputSystemLabel, localized } from '../i18n.js';
 
 export async function renderSpell(_, mount) {
   const settings = getSettings();
@@ -106,7 +106,8 @@ export async function renderSpell(_, mount) {
     revealed = true;
     inputEl.disabled = true;
     recordWord(script.meta.id, current.native, { correct });
-    const note = current.note ? `<div class="note">📝 ${escapeHtml(current.note)}</div>` : '';
+    const noteText = localized(current.note);
+    const note = noteText ? `<div class="note">📝 ${escapeHtml(noteText)}</div>` : '';
     const voweledHint = current.nativeVoweled
       ? `<div class="muted small">${escapeHtml(t('read.vocalised_label'))} <span dir="${script.meta.direction}">${escapeHtml(current.nativeVoweled)}</span></div>` : '';
     resultEl.innerHTML = `

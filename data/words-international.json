@@ -5,7 +5,7 @@
     {
       "concept": "taxi",
       "meaning": "taxi",
-      "note": "A truly international loanword — pronounced almost identically across these languages.",
+      "note": {"en": "A truly international loanword — pronounced almost identically across these languages.", "ru": "По-настоящему интернациональное слово — звучит почти одинаково во всех этих языках."},
       "forms": {
         "greek":      { "native": "ταξί",   "ipa": "taˈksi",   "latin": "taxi",     "cyrillic": "такси" },
         "cyrillic":   { "native": "такси",  "ipa": "tɐˈksi",   "latin": "taksi",    "cyrillic": "такси" },
@@ -32,7 +32,7 @@
     {
       "concept": "coffee",
       "meaning": "coffee",
-      "note": "Goes back to Arabic 'qahwa' — many of these forms are descendants.",
+      "note": {"en": "Goes back to Arabic 'qahwa' — many of these forms are descendants.", "ru": "Восходит к арабскому «qahwa» — многие из этих форм являются его потомками."},
       "forms": {
         "greek":      { "native": "καφές",  "ipa": "kaˈfes",   "latin": "kafes",    "cyrillic": "кафэс" },
         "cyrillic":   { "native": "кофе",   "ipa": "ˈkofʲɪ",   "latin": "kofe",     "cyrillic": "кофе" },
@@ -88,17 +88,17 @@
       "forms": {
         "greek":      { "native": "μουσική","ipa": "musiˈki",  "latin": "mousiki",  "cyrillic": "мусики" },
         "cyrillic":   { "native": "музыка", "ipa": "ˈmuzɨkə",  "latin": "muzyka",   "cyrillic": "музыка" },
-        "armenian":   { "native": "երաժշտություն","ipa":"jɛɾɑʒʃtutʰˈjun","latin":"yerazhshtut'yun","cyrillic":"еражштутьюн" },
+        "armenian":   { "native": "մուզիկա","ipa":"muziˈkɑ","latin":"muzika","cyrillic":"музика" },
         "georgian":   { "native": "მუსიკა", "ipa": "ˈmusikʼɑ", "latin": "musika",   "cyrillic": "мусика" },
         "hiragana":   { "native": "おんがく","ipa": "oŋɡakɯ",  "latin": "ongaku",   "cyrillic": "онгаку" },
-        "devanagari": { "native": "संगीत",  "ipa": "səŋɡiːt̪", "latin": "saṅgīt",   "cyrillic": "сангит" },
+        "devanagari": { "native": "म्यूज़िक","ipa": "mjuːzɪk", "latin": "myūzik",   "cyrillic": "мьюзик" },
         "arabic":     { "native": "موسيقى", "ipa": "muːsiːqaː","latin": "mūsīqā",   "cyrillic": "мусика" }
       }
     },
     {
       "concept": "theater",
       "meaning": "theater",
-      "note": "Greek 'théatron' is the source of most European forms.",
+      "note": {"en": "Greek 'théatron' is the source of most European forms.", "ru": "Источник большинства европейских форм — греческое «théatron»."},
       "forms": {
         "greek":      { "native": "θέατρο", "ipa": "ˈθeatro",  "latin": "theatro",  "cyrillic": "тэатро" },
         "cyrillic":   { "native": "театр",  "ipa": "tʲɪˈatr",  "latin": "teatr",    "cyrillic": "театр" },
@@ -137,11 +137,11 @@
       "concept": "university",
       "meaning": "university",
       "forms": {
-        "greek":      { "native": "πανεπιστήμιο","ipa":"panepiˈstimio","latin":"panepistimio","cyrillic":"панэпистимио" },
+        "greek":      { "native": "γιουνιβέρσιτι","ipa":"ʝuniˈversiti","latin":"yiouniversiti","cyrillic":"юнивэрсити" },
         "cyrillic":   { "native": "университет","ipa":"unʲɪvʲɪrsʲɪˈtʲet","latin":"universitet","cyrillic":"университет" },
-        "armenian":   { "native": "համալսարան","ipa":"hɑmɑlsɑˈɾɑn","latin":"hamalsaran","cyrillic":"hамалсаран" },
+        "armenian":   { "native": "ունիվերսիտետ","ipa":"univɛɾsiˈtɛt","latin":"universitet","cyrillic":"унивэрситэт" },
         "georgian":   { "native": "უნივერსიტეტი","ipa":"univɛɾsiˈtʼɛtʼi","latin":"universit'et'i","cyrillic":"унивэрситэти" },
-        "devanagari": { "native": "विश्वविद्यालय","ipa":"ʋɪʃʋəʋɪd̪jaːləj","latin":"viśvavidyālay","cyrillic":"вишвавидьялай" },
+        "devanagari": { "native": "यूनिवर्सिटी","ipa":"juːnɪvərsɪʈiː","latin":"yūnivarsiṭī","cyrillic":"юнивэрсити" },
         "arabic":     { "native": "جامعة", "ipa": "d͡ʒaːmiʕa","latin": "jāmiʿa",    "cyrillic": "джамиа" }
       }
     },
@@ -163,19 +163,19 @@
       "forms": {
         "greek":      { "native": "γιατρός","ipa": "ʝaˈtros",  "latin": "yiatros",  "cyrillic": "ятрос" },
         "cyrillic":   { "native": "доктор", "ipa": "ˈdoktər",  "latin": "doktor",   "cyrillic": "доктор" },
-        "armenian":   { "native": "բժիշկ",  "ipa": "bəʒiʃk",   "latin": "bzhishk",  "cyrillic": "бжишк" },
-        "georgian":   { "native": "ექიმი",  "ipa": "ˈɛkʰimi",  "latin": "ekimi",    "cyrillic": "экими" },
+        "armenian":   { "native": "դոկտոր", "ipa": "dɔkˈtɔɾ",  "latin": "doktor",   "cyrillic": "доктор" },
+        "georgian":   { "native": "დოქტორი","ipa": "ˈdɔkʰtɔɾi","latin": "doktori",  "cyrillic": "доктори" },
         "devanagari": { "native": "डॉक्टर","ipa": "ɖɔkʈəɾ",   "latin": "ḍākṭar",   "cyrillic": "доктар" },
-        "arabic":     { "native": "طبيب",   "ipa": "tˤabiːb",  "latin": "ṭabīb",    "cyrillic": "табиб" }
+        "arabic":     { "native": "دكتور",  "ipa": "duktuːɾ",  "latin": "duktūr",   "cyrillic": "дуктур" }
       }
     },
     {
       "concept": "hospital",
       "meaning": "hospital",
-      "note": "Mostly native words, not a true international borrowing — pick whichever feels natural to learn.",
+      "note": {"en": "Mostly native words, not a true international borrowing — pick whichever feels natural to learn.", "ru": "В основном исконные слова, а не настоящее международное заимствование — выберите то, что удобнее запомнить."},
       "forms": {
         "greek":      { "native": "νοσοκομείο","ipa":"nosokoˈmio","latin":"nosokomio","cyrillic":"носокомио" },
-        "cyrillic":   { "native": "больница","ipa": "bɐlʲˈnʲitsə","latin":"bolnitsa","cyrillic": "больница" },
+        "cyrillic":   { "native": "госпиталь","ipa":"ˈɡospʲɪtəlʲ","latin":"gospital'","cyrillic": "госпиталь" },
         "armenian":   { "native": "հիվանդանոց","ipa":"hivɑndɑˈnɔts","latin":"hivandanots'","cyrillic":"hиванданоц" },
         "georgian":   { "native": "საავადმყოფო","ipa":"sɑɑvɑdmqʼɔˈpʰɔ","latin":"saavadmq'opo","cyrillic":"сааваймкопо" },
         "hiragana":   { "native": "びょういん","ipa": "bjoːiɴ",  "latin": "byōin",    "cyrillic": "бё:ин" },
@@ -200,13 +200,13 @@
       "concept": "computer",
       "meaning": "computer",
       "forms": {
-        "greek":      { "native": "υπολογιστής","ipa":"ipoloʝiˈstis","latin":"ypologistis","cyrillic":"иполоистис" },
+        "greek":      { "native": "κομπιούτερ","ipa":"koˈbjuter","latin":"kobiouter","cyrillic":"комбьютер" },
         "cyrillic":   { "native": "компьютер","ipa":"kɐmˈpʲjutər","latin":"kompyuter","cyrillic":"компьютер" },
-        "armenian":   { "native": "համակարգիչ","ipa":"hɑmɑkɑɾˈɡitʃ","latin":"hamakargich","cyrillic":"hамакаргич" },
+        "armenian":   { "native": "կոմպյուտեր","ipa":"kɔmpʰjuˈtɛɾ","latin":"kompyuter","cyrillic":"компьютэр" },
         "georgian":   { "native": "კომპიუტერი","ipa":"kʼɔmpʼiuˈtʼɛɾi","latin":"k'omp'iut'eri","cyrillic":"компьютэри" },
         "hiragana":   { "native": "こんぴゅーた","ipa": "kompjɯːta","latin":"konpyūta","cyrillic":"конпью:та" },
         "devanagari": { "native": "कंप्यूटर","ipa": "kəmpjuːʈəɾ","latin": "kampyūṭar","cyrillic": "кампьютар" },
-        "arabic":     { "native": "حاسوب",  "ipa": "ħaːsuːb",  "latin": "ḥāsūb",    "cyrillic": "хасуб" }
+        "arabic":     { "native": "كمبيوتر","ipa": "kumbjuːtir","latin": "kumbyūtir","cyrillic": "кумбьютир" }
       }
     },
     {
@@ -293,7 +293,7 @@
       "forms": {
         "greek":      { "native": "πιάνο",  "ipa": "ˈpiano",  "latin": "piano",    "cyrillic": "пиано" },
         "cyrillic":   { "native": "пианино","ipa": "pʲɪɐˈnʲinə","latin":"pianino", "cyrillic": "пианино" },
-        "armenian":   { "native": "դաշնամուր","ipa":"dɑʃnɑˈmuɾ","latin":"dashnamur","cyrillic":"дашнамур" },
+        "armenian":   { "native": "պիանինո","ipa": "piɑˈninɔ","latin": "pianino",  "cyrillic": "пианино" },
         "georgian":   { "native": "ფორტეპიანო","ipa":"pʰɔɾtʼɛpʼiˈɑnɔ","latin":"forteppiano","cyrillic":"фортэпиано" },
         "hiragana":   { "native": "ぴあの",  "ipa": "piano",   "latin": "piano",    "cyrillic": "пиано" },
         "devanagari": { "native": "पियानो", "ipa": "pɪjaːnoː","latin": "piyāno",   "cyrillic": "пьяно" },
@@ -304,10 +304,10 @@
       "concept": "hotel",
       "meaning": "hotel",
       "forms": {
-        "greek":      { "native": "ξενοδοχείο","ipa":"ksenoðoˈxio","latin":"xenodochio","cyrillic":"ксэнодохио" },
+        "greek":      { "native": "οτέλ", "ipa": "oˈtel",   "latin": "otel",     "cyrillic": "отэл" },
         "cyrillic":   { "native": "отель",  "ipa": "ɐˈtelʲ",  "latin": "otel",     "cyrillic": "отель" },
-        "armenian":   { "native": "հյուրանոց","ipa":"hjuɾɑˈnɔts","latin":"hyuranots'","cyrillic":"hюраноц" },
-        "georgian":   { "native": "სასტუმრო","ipa":"sɑsˈtʼumɾɔ","latin":"sast'umro","cyrillic":"састумро" },
+        "armenian":   { "native": "հոթել","ipa": "hɔˈtʰɛl", "latin": "hot'el",   "cyrillic": "хотэл" },
+        "georgian":   { "native": "ჰოტელი","ipa": "ˈhɔtɛli","latin": "hoteli",   "cyrillic": "хотэли" },
         "hiragana":   { "native": "ほてる",  "ipa": "hoteɾɯ",  "latin": "hoteru",   "cyrillic": "хотэру" },
         "devanagari": { "native": "होटल",   "ipa": "hoːʈəl",  "latin": "hoṭal",    "cyrillic": "хотал" },
         "arabic":     { "native": "فندق",   "ipa": "funduq",  "latin": "funduq",   "cyrillic": "фундук" }
@@ -332,7 +332,7 @@
       "forms": {
         "greek":      { "native": "πάρκο",  "ipa": "ˈparko",  "latin": "parko",    "cyrillic": "парко" },
         "cyrillic":   { "native": "парк",   "ipa": "park",    "latin": "park",     "cyrillic": "парк" },
-        "armenian":   { "native": "զբոսայգի","ipa":"zbɔsɑjˈɡi","latin":"zbosaygi","cyrillic":"збосайги" },
+        "armenian":   { "native": "պարկ", "ipa": "pʰɑɾk",   "latin": "park",     "cyrillic": "парк" },
         "georgian":   { "native": "პარკი",  "ipa": "ˈpʼɑɾkʼi","latin": "p'ark'i",  "cyrillic": "парки" },
         "hiragana":   { "native": "ぱーく",  "ipa": "paːkɯ",   "latin": "pāku",     "cyrillic": "па:ку" },
         "devanagari": { "native": "पार्क",  "ipa": "paːɾk",   "latin": "pārk",     "cyrillic": "парк" },
@@ -355,7 +355,7 @@
     {
       "concept": "mama",
       "meaning": "mom",
-      "note": "WARNING: in Georgian 'მამა' (mama) means FATHER, not mother — a classic false friend.",
+      "note": {"en": "WARNING: in Georgian 'მამა' (mama) means FATHER, not mother — a classic false friend.", "ru": "ВНИМАНИЕ: в грузинском «მამა» (mama) означает ОТЦА, а не мать — классический ложный друг переводчика."},
       "forms": {
         "greek":      { "native": "μαμά",   "ipa": "maˈma",   "latin": "mama",     "cyrillic": "мама" },
         "cyrillic":   { "native": "мама",   "ipa": "ˈmamə",   "latin": "mama",     "cyrillic": "мама" },

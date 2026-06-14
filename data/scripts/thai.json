@@ -3,9 +3,9 @@
   "letters": [
     { "glyph": "ก", "ipa": "k", "latin": "k", "cyrillic": "к", "example": { "native": "กา", "ipa": "kaː", "latin": "kaa", "cyrillic": "каа", "meaning": "crow" } },
     { "glyph": "ข", "ipa": "kʰ", "latin": "kh", "cyrillic": "кх", "example": { "native": "ไข่", "ipa": "kʰàj", "latin": "khai", "cyrillic": "кхай", "meaning": "egg" } },
-    { "glyph": "ฃ", "ipa": "kʰ", "latin": "kh", "cyrillic": "кх", "example": { "native": "ขวด", "ipa": "kʰùat", "latin": "khuat", "cyrillic": "кхуат", "meaning": "bottle (obsolete letter)" }, "note": "Obsolete; replaced by ข in modern usage." },
+    { "glyph": "ฃ", "ipa": "kʰ", "latin": "kh", "cyrillic": "кх", "example": { "native": "ขวด", "ipa": "kʰùat", "latin": "khuat", "cyrillic": "кхуат", "meaning": "bottle (obsolete letter)" }, "note": {"en": "Obsolete; replaced by ข in modern usage.", "ru": "Устаревшая буква; в современном тайском заменена на ข."} },
     { "glyph": "ค", "ipa": "kʰ", "latin": "kh", "cyrillic": "кх", "example": { "native": "ควาย", "ipa": "kʰwaːj", "latin": "khwai", "cyrillic": "кхвай", "meaning": "buffalo" } },
-    { "glyph": "ฅ", "ipa": "kʰ", "latin": "kh", "cyrillic": "кх", "example": { "native": "คน", "ipa": "kʰon", "latin": "khon", "cyrillic": "кхон", "meaning": "person (obsolete letter)" }, "note": "Obsolete; replaced by ค." },
+    { "glyph": "ฅ", "ipa": "kʰ", "latin": "kh", "cyrillic": "кх", "example": { "native": "คน", "ipa": "kʰon", "latin": "khon", "cyrillic": "кхон", "meaning": "person (obsolete letter)" }, "note": {"en": "Obsolete; replaced by ค.", "ru": "Устаревшая буква; заменена на ค."} },
     { "glyph": "ฆ", "ipa": "kʰ", "latin": "kh", "cyrillic": "кх", "example": { "native": "ระฆัง", "ipa": "rákʰaŋ", "latin": "rakhang", "cyrillic": "ракханг", "meaning": "bell" } },
     { "glyph": "ง", "ipa": "ŋ", "latin": "ng", "cyrillic": "нг", "example": { "native": "งู", "ipa": "ŋuː", "latin": "ngu", "cyrillic": "нгу", "meaning": "snake" } },
     { "glyph": "จ", "ipa": "tɕ", "latin": "ch / j", "cyrillic": "ч", "example": { "native": "จาน", "ipa": "tɕaːn", "latin": "chan", "cyrillic": "чан", "meaning": "plate" } },
@@ -41,13 +41,13 @@
     { "glyph": "ศ", "ipa": "s", "latin": "s", "cyrillic": "с", "example": { "native": "ศาลา", "ipa": "sǎːlaː", "latin": "sala", "cyrillic": "сала", "meaning": "pavilion" } },
     { "glyph": "ษ", "ipa": "s", "latin": "s", "cyrillic": "с", "example": { "native": "ฤๅษี", "ipa": "rɯːsǐː", "latin": "ruesi", "cyrillic": "рыси", "meaning": "hermit" } },
     { "glyph": "ส", "ipa": "s", "latin": "s", "cyrillic": "с", "example": { "native": "สวัสดี", "ipa": "sa.wàt.diː", "latin": "sawatdi", "cyrillic": "саватди", "meaning": "hello" } },
-    { "glyph": "ห", "ipa": "h", "latin": "h", "cyrillic": "х", "example": { "native": "หมา", "ipa": "mǎː", "latin": "ma", "cyrillic": "ма", "meaning": "dog" }, "note": "Often silent; used as a tone modifier before sonorants." },
+    { "glyph": "ห", "ipa": "h", "latin": "h", "cyrillic": "х", "example": { "native": "หมา", "ipa": "mǎː", "latin": "ma", "cyrillic": "ма", "meaning": "dog" }, "note": {"en": "Often silent; used as a tone modifier before sonorants.", "ru": "Часто не произносится; перед сонорными используется как показатель тона."} },
     { "glyph": "ฬ", "ipa": "l", "latin": "l", "cyrillic": "л", "example": { "native": "กีฬา", "ipa": "kiː.laː", "latin": "kila", "cyrillic": "кила", "meaning": "sport" } },
-    { "glyph": "อ", "ipa": "ʔ", "latin": "o / —", "cyrillic": "о / —", "example": { "native": "อา", "ipa": "ʔaː", "latin": "a", "cyrillic": "а", "meaning": "aunt/uncle" }, "note": "Silent consonant; also marks the long /ɔː/ vowel." },
+    { "glyph": "อ", "ipa": "ʔ", "latin": "o / —", "cyrillic": "о / —", "example": { "native": "อา", "ipa": "ʔaː", "latin": "a", "cyrillic": "а", "meaning": "aunt/uncle" }, "note": {"en": "Silent consonant; also marks the long /ɔː/ vowel.", "ru": "Беззвучный согласный; также обозначает долгий гласный /ɔː/."} },
     { "glyph": "ฮ", "ipa": "h", "latin": "h", "cyrillic": "х", "example": { "native": "ฮา", "ipa": "haː", "latin": "ha", "cyrillic": "ха", "meaning": "laugh" } },
 
-    { "glyph": "อะ", "ipa": "a", "latin": "a", "cyrillic": "а", "example": { "native": "และ", "ipa": "lɛ́ʔ", "latin": "lae", "cyrillic": "лэ", "meaning": "and" }, "note": "Short /a/." },
-    { "glyph": "อา", "ipa": "aː", "latin": "aa", "cyrillic": "а:", "example": { "native": "ตา", "ipa": "taː", "latin": "ta", "cyrillic": "та", "meaning": "eye" }, "note": "Long /aː/." },
+    { "glyph": "อะ", "ipa": "a", "latin": "a", "cyrillic": "а", "example": { "native": "และ", "ipa": "lɛ́ʔ", "latin": "lae", "cyrillic": "лэ", "meaning": "and" }, "note": {"en": "Short /a/.", "ru": "Краткий /a/."} },
+    { "glyph": "อา", "ipa": "aː", "latin": "aa", "cyrillic": "а:", "example": { "native": "ตา", "ipa": "taː", "latin": "ta", "cyrillic": "та", "meaning": "eye" }, "note": {"en": "Long /aː/.", "ru": "Долгий /aː/."} },
     { "glyph": "อิ", "ipa": "i", "latin": "i", "cyrillic": "и", "example": { "native": "ดิน", "ipa": "din", "latin": "din", "cyrillic": "дин", "meaning": "earth" } },
     { "glyph": "อี", "ipa": "iː", "latin": "ii", "cyrillic": "и:", "example": { "native": "ปี", "ipa": "piː", "latin": "pi", "cyrillic": "пи", "meaning": "year" } },
     { "glyph": "อึ", "ipa": "ɯ", "latin": "ue", "cyrillic": "ы", "example": { "native": "หนึ่ง", "ipa": "nɯ̀ŋ", "latin": "nueng", "cyrillic": "ныынг", "meaning": "one" } },
@@ -59,10 +59,10 @@
     { "glyph": "ไอ", "ipa": "aj", "latin": "ai", "cyrillic": "ай", "example": { "native": "ไป", "ipa": "paj", "latin": "pai", "cyrillic": "пай", "meaning": "go" } },
     { "glyph": "อำ", "ipa": "am", "latin": "am", "cyrillic": "ам", "example": { "native": "น้ำ", "ipa": "náːm", "latin": "nam", "cyrillic": "нам", "meaning": "water" } },
 
-    { "glyph": "อ\u0E48", "ipa": "˨˩", "latin": "(low tone)", "cyrillic": "(низкий тон)", "example": { "native": "ไข่", "ipa": "kʰàj", "latin": "khài", "cyrillic": "кхай", "meaning": "egg" }, "note": "Mai ek: low tone marker." },
-    { "glyph": "อ\u0E49", "ipa": "˥˩", "latin": "(falling tone)", "cyrillic": "(нисходящий тон)", "example": { "native": "น้ำ", "ipa": "náːm", "latin": "nám", "cyrillic": "нам", "meaning": "water" }, "note": "Mai tho: falling tone (with low-class consonants) or high tone (with mid/high-class)." },
-    { "glyph": "อ\u0E4A", "ipa": "˦˥", "latin": "(high tone)", "cyrillic": "(высокий тон)", "example": { "native": "โต๊ะ", "ipa": "tóʔ", "latin": "tó", "cyrillic": "то", "meaning": "table" }, "note": "Mai tri: high tone marker." },
-    { "glyph": "อ\u0E4B", "ipa": "˨˩˦", "latin": "(rising tone)", "cyrillic": "(восходящий тон)", "example": { "native": "เดี๋ยว", "ipa": "dǐaw", "latin": "dǐao", "cyrillic": "дйао", "meaning": "wait / soon" }, "note": "Mai chattawa: rising tone marker." }
+    { "glyph": "อ\u0E48", "ipa": "˨˩", "latin": "(low tone)", "cyrillic": "(низкий тон)", "example": { "native": "ไข่", "ipa": "kʰàj", "latin": "khài", "cyrillic": "кхай", "meaning": "egg" }, "note": {"en": "Mai ek: low tone marker.", "ru": "Май эк: знак низкого тона."} },
+    { "glyph": "อ\u0E49", "ipa": "˥˩", "latin": "(falling tone)", "cyrillic": "(нисходящий тон)", "example": { "native": "น้ำ", "ipa": "náːm", "latin": "nám", "cyrillic": "нам", "meaning": "water" }, "note": {"en": "Mai tho: falling tone (with low-class consonants) or high tone (with mid/high-class).", "ru": "Май тхо: нисходящий тон (с согласными низкого класса) или высокий тон (со средним/высоким классом)."} },
+    { "glyph": "อ\u0E4A", "ipa": "˦˥", "latin": "(high tone)", "cyrillic": "(высокий тон)", "example": { "native": "โต๊ะ", "ipa": "tóʔ", "latin": "tó", "cyrillic": "то", "meaning": "table" }, "note": {"en": "Mai tri: high tone marker.", "ru": "Май три: знак высокого тона."} },
+    { "glyph": "อ\u0E4B", "ipa": "˨˩˦", "latin": "(rising tone)", "cyrillic": "(восходящий тон)", "example": { "native": "เดี๋ยว", "ipa": "dǐaw", "latin": "dǐao", "cyrillic": "дйао", "meaning": "wait / soon" }, "note": {"en": "Mai chattawa: rising tone marker.", "ru": "Май чаттава: знак восходящего тона."} }
   ],
   "words": [
     { "native": "สวัสดี", "ipa": "saˈwat.diː", "latin": "sawatdi", "cyrillic": "саватди", "meaning": "hello" },

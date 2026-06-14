@@ -54,6 +54,10 @@ export function startRouter(mountEl) {
   return dispatch();
 }
 
+export function redispatch() {
+  return dispatch();
+}
+
 export function navigate(hash) {
   if (location.hash === hash) {
     return dispatch();

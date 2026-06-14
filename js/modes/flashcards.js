@@ -1,7 +1,7 @@
 import { getScript } from '../data.js';
 import { getSettings, updateSettings, recordLetter, getLetterProgress } from '../storage.js';
 import { el, escapeHtml, shuffle, fieldFor, nextTranscription, formatMinutes } from '../ui/dom.js';
-import { t, transcriptionLabel } from '../i18n.js';
+import { t, transcriptionLabel, localized } from '../i18n.js';
 
 function ratings() {
   return [
@@ -94,7 +94,7 @@ export async function renderFlashcards(_, mount) {
     const ex = letter.example || {};
     backEl.innerHTML = `
       <div class="transcription">${escapeHtml(transcription)}</div>
-      ${letter.note ? `<div class="note">${escapeHtml(letter.note)}</div>` : ''}
+      ${letter.note ? `<div class="note">${escapeHtml(localized(letter.note))}</div>` : ''}
       ${ex.native ? `
         <div class="example">
           <span class="example-native" dir="${script.meta.direction}">${escapeHtml(ex.native)}</span>

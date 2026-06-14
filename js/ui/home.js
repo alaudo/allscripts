@@ -4,10 +4,10 @@ import { el, escapeHtml } from './dom.js';
 import { t, transcriptionLabel, inputSystemLabel, localized } from '../i18n.js';
 
 const PRACTICE_MODES = [
-  { id: 'flashcards', titleKey: 'mode.flashcards.title', blurbKey: 'mode.flashcards.blurb' },
-  { id: 'read',       titleKey: 'mode.read.title',       blurbKey: 'mode.read.blurb' },
-  { id: 'spell',      titleKey: 'mode.spell.title',      blurbKey: 'mode.spell.blurb' },
-  { id: 'phrases',    titleKey: 'mode.phrases.title',    blurbKey: 'mode.phrases.blurb' }
+  { id: 'flashcards', titleKey: 'mode.flashcards.title', blurbKey: 'mode.flashcards.blurb', icon: '🃏' },
+  { id: 'read',       titleKey: 'mode.read.title',       blurbKey: 'mode.read.blurb',       icon: '👁️' },
+  { id: 'spell',      titleKey: 'mode.spell.title',      blurbKey: 'mode.spell.blurb',      icon: '✍️' },
+  { id: 'phrases',    titleKey: 'mode.phrases.title',    blurbKey: 'mode.phrases.blurb',    icon: '💭' }
 ];
 
 const REVIEW_MODES = [
@@ -43,7 +43,7 @@ export async function renderHome(_, mount) {
          <span class="script-native" dir="${s.direction}">${escapeHtml(s.nativeName)}</span>
          <span class="script-name">${escapeHtml(s.name)}</span>
          <span class="script-stats">
-           <span class="stat" title="${escapeHtml(t('home.stat.letters'))}">📝 ${stats.lettersKnown}/${totalsFor.totalLetters}</span>
+           <span class="stat" title="${escapeHtml(t('home.stat.letters'))}">🔤 ${stats.lettersKnown}/${totalsFor.totalLetters}</span>
            <span class="stat-sep">·</span>
            <span class="stat" title="${escapeHtml(t('home.stat.words'))}">💬 ${stats.wordsLearned}/${totalsFor.totalWords}</span>
          </span>
@@ -100,8 +100,11 @@ export async function renderHome(_, mount) {
   for (const m of PRACTICE_MODES) {
     const a = el(
       `<a class="mode-card" href="#/${m.id}">
-         <h3>${escapeHtml(t(m.titleKey))}</h3>
-         <p>${escapeHtml(t(m.blurbKey))}</p>
+         <span class="mode-card-icon" aria-hidden="true">${m.icon}</span>
+         <div class="mode-card-text">
+           <h3>${escapeHtml(t(m.titleKey))}</h3>
+           <p>${escapeHtml(t(m.blurbKey))}</p>
+         </div>
        </a>`
     );
     modeGrid.appendChild(a);

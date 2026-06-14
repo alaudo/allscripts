@@ -5,7 +5,7 @@
 import { getScript, getManifest } from '../data.js';
 import { getSettings, updateSettings } from '../storage.js';
 import { el, escapeHtml, fieldFor, nextTranscription } from '../ui/dom.js';
-import { t, transcriptionLabel } from '../i18n.js';
+import { t, transcriptionLabel, localized } from '../i18n.js';
 
 // Characters we consider as IPA vowels (a superset covering all the scripts
 // shipped in this app). Diacritics like ː / ˈ are stripped before testing.
@@ -95,8 +95,9 @@ export async function renderPreviewLetters(_route, mount) {
     const filtered = script.letters.filter(l => active.has(letterCategory(l)));
     for (const l of filtered) {
       const trans = l[tField] || l.ipa || '';
-      const note = l.note
-        ? `<span class="preview-note" title="${escapeHtml(l.note)}" aria-label="${escapeHtml(l.note)}">ℹ︎</span>`
+      const noteText = localized(l.note);
+      const note = noteText
+        ? `<span class="preview-note" title="${escapeHtml(noteText)}" aria-label="${escapeHtml(noteText)}">ℹ︎</span>`
         : '';
       const cell = el(
         `<div class="preview-cell" data-cat="${letterCategory(l)}">

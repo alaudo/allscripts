@@ -6,7 +6,7 @@
 import { getManifest, getWordPool } from '../data.js';
 import { getSettings, updateSettings } from '../storage.js';
 import { el, escapeHtml, fieldFor, nextTranscription } from '../ui/dom.js';
-import { t, transcriptionLabel } from '../i18n.js';
+import { t, transcriptionLabel, localized } from '../i18n.js';
 
 function wordLength(w) {
   // Count user-visible characters; combining marks count as part of the base
@@ -126,8 +126,9 @@ export async function renderPreviewWords(_route, mount) {
       const native = (useVoweled && w.nativeVoweled) || w.native;
       const trans = w[tField] || w.ipa || '';
       const meaning = w.meaning ? `<span class="preview-meaning muted">${escapeHtml(w.meaning)}</span>` : '';
-      const note = w.note
-        ? `<span class="preview-note" title="${escapeHtml(w.note)}" aria-label="${escapeHtml(w.note)}">ℹ︎</span>`
+      const noteText = localized(w.note);
+      const note = noteText
+        ? `<span class="preview-note" title="${escapeHtml(noteText)}" aria-label="${escapeHtml(noteText)}">ℹ︎</span>`
         : '';
       const cell = el(
         `<div class="preview-cell word-cell" data-src="${w.source}">
