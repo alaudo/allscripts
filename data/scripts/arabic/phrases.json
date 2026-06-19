@@ -1,0 +1,276 @@
+{
+  "version": 3,
+  "language": "Modern Standard Arabic",
+  "phrases": [
+    {
+      "native": "مرحبا. شكرا.",
+      "latin": "Marḥaban. Shukran.",
+      "cyrillic": "мархабан. шукран",
+      "translations": {
+        "en": "Hello. Thank you.",
+        "ru": "Здравствуйте. Спасибо."
+      }
+    },
+    {
+      "native": "من فضلك. عفوا.",
+      "latin": "Min faḍlik. ʿAfwan.",
+      "cyrillic": "мин фадлик. афван",
+      "translations": {
+        "en": "Please. Excuse me.",
+        "ru": "Пожалуйста. Извините."
+      }
+    },
+    {
+      "native": "نعم. لا.",
+      "latin": "Naʿam. Lā.",
+      "cyrillic": "наам. ла",
+      "translations": {
+        "en": "Yes. No.",
+        "ru": "Да. Нет."
+      }
+    },
+    {
+      "native": "هل تتكلم الإنجليزية؟",
+      "latin": "Hal tatakallam al-injilīziyya?",
+      "cyrillic": "халь татакаллам аль-инджилизия",
+      "translations": {
+        "en": "Do you speak English?",
+        "ru": "Вы говорите по-английски?"
+      }
+    },
+    {
+      "native": "لا أفهم. تكلم ببطء من فضلك.",
+      "latin": "Lā afham. Takallam bi-buṭʾ min faḍlik.",
+      "cyrillic": "ла афхам. такаллам би-бут мин фадлик",
+      "translations": {
+        "en": "I don't understand. Please speak slowly.",
+        "ru": "Я не понимаю. Говорите медленнее, пожалуйста."
+      }
+    },
+    {
+      "native": "أرني على الخريطة من فضلك.",
+      "latin": "Arinī ʿalā al-kharīṭa min faḍlik.",
+      "cyrillic": "арини аля аль-харита мин фадлик",
+      "translations": {
+        "en": "Can you show me on the map?",
+        "ru": "Покажите мне на карте."
+      }
+    },
+    {
+      "native": "أين الحمام؟",
+      "latin": "Ayna al-ḥammām?",
+      "cyrillic": "айна аль-хаммам",
+      "translations": {
+        "en": "Where is the toilet?",
+        "ru": "Где туалет?"
+      }
+    },
+    {
+      "native": "كم سعر هذا؟",
+      "latin": "Kam siʿr hādhā?",
+      "cyrillic": "кам сир хаза",
+      "translations": {
+        "en": "How much is this?",
+        "ru": "Сколько это стоит?"
+      }
+    },
+    {
+      "native": "أريد هذا.",
+      "latin": "Urīd hādhā.",
+      "cyrillic": "урид хаза",
+      "translations": {
+        "en": "I would like this.",
+        "ru": "Я хочу это."
+      }
+    },
+    {
+      "native": "ماء من فضلك. الحساب من فضلك.",
+      "latin": "Māʾ min faḍlik. Al-ḥisāb min faḍlik.",
+      "cyrillic": "ма мин фадлик. аль-хисаб мин фадлик",
+      "translations": {
+        "en": "Water, please. The bill, please.",
+        "ru": "Воды, пожалуйста. Счёт, пожалуйста."
+      }
+    },
+    {
+      "native": "هل يمكنني الدفع بالبطاقة؟",
+      "latin": "Hal yumkinunī ad-dafʿ bil-biṭāqa?",
+      "cyrillic": "халь юмкинуни ад-даф биль-битака",
+      "translations": {
+        "en": "Can I pay by card?",
+        "ru": "Можно оплатить картой?"
+      }
+    },
+    {
+      "native": "أين محطة المترو؟",
+      "latin": "Ayna maḥaṭṭat al-metrū?",
+      "cyrillic": "айна махаттат аль-метру",
+      "translations": {
+        "en": "Where is the metro station?",
+        "ru": "Где станция метро?"
+      }
+    },
+    {
+      "native": "تذكرة واحدة من فضلك.",
+      "latin": "Tadhkira wāḥida min faḍlik.",
+      "cyrillic": "тазкира вахида мин фадлик",
+      "translations": {
+        "en": "One ticket, please.",
+        "ru": "Один билет, пожалуйста."
+      }
+    },
+    {
+      "native": "أحتاج إلى سيارة أجرة.",
+      "latin": "Aḥtāj ilā sayyārat ujra.",
+      "cyrillic": "ахтадж иля сайярат уджра",
+      "translations": {
+        "en": "I need a taxi.",
+        "ru": "Мне нужно такси."
+      }
+    },
+    {
+      "native": "خذني إلى هذا العنوان من فضلك.",
+      "latin": "Khudhnī ilā hādhā al-ʿunwān min faḍlik.",
+      "cyrillic": "худни иля хаза аль-унван мин фадлик",
+      "translations": {
+        "en": "Please take me to this address.",
+        "ru": "Отвезите меня по этому адресу, пожалуйста."
+      }
+    },
+    {
+      "native": "يسار. يمين. إلى الأمام.",
+      "latin": "Yasār. Yamīn. Ilā al-amām.",
+      "cyrillic": "ясар. ямин. иля аль-амам",
+      "translations": {
+        "en": "Left. Right. Straight ahead.",
+        "ru": "Налево. Направо. Прямо."
+      }
+    },
+    {
+      "native": "أنا تائه.",
+      "latin": "Anā tāʾih.",
+      "cyrillic": "ана таих",
+      "translations": {
+        "en": "I am lost.",
+        "ru": "Я заблудился/заблудилась."
+      }
+    },
+    {
+      "native": "النجدة! اتصل بالشرطة.",
+      "latin": "An-najdah! Ittaṣil bil-shurṭa.",
+      "cyrillic": "ан-наджда! иттасиль биль-шурта",
+      "translations": {
+        "en": "Help! Call the police.",
+        "ru": "Помогите! Вызовите полицию."
+      }
+    },
+    {
+      "native": "أحتاج إلى طبيب.",
+      "latin": "Aḥtāj ilā ṭabīb.",
+      "cyrillic": "ахтадж иля табиб",
+      "translations": {
+        "en": "I need a doctor.",
+        "ru": "Мне нужен врач."
+      }
+    },
+    {
+      "native": "لدي حساسية.",
+      "latin": "Ladayya ḥasāsiyya.",
+      "cyrillic": "ладайя хасасия",
+      "translations": {
+        "en": "I have an allergy.",
+        "ru": "У меня аллергия."
+      }
+    },
+    {
+      "native": "اليوم. غدا. الآن. لاحقا.",
+      "latin": "Al-yawm. Ghadan. Al-ān. Lāḥiqan.",
+      "cyrillic": "аль-йаум. гадан. аль-ан. лахикан",
+      "translations": {
+        "en": "Today. Tomorrow. Now. Later.",
+        "ru": "Сегодня. Завтра. Сейчас. Позже."
+      }
+    },
+    {
+      "native": "مفتوح. مغلق.",
+      "latin": "Maftūḥ. Mughlaq.",
+      "cyrillic": "мафтух. муглак",
+      "translations": {
+        "en": "Open. Closed.",
+        "ru": "Открыто. Закрыто."
+      }
+    },
+    {
+      "native": "هنا. هناك. قريب. بعيد.",
+      "latin": "Hunā. Hunāk. Qarīb. Baʿīd.",
+      "cyrillic": "хуна. хунак. кариб. баид",
+      "translations": {
+        "en": "Here. There. Near. Far.",
+        "ru": "Здесь. Там. Близко. Далеко."
+      }
+    },
+    {
+      "native": "مدخل. مخرج.",
+      "latin": "Madkhal. Makhraj.",
+      "cyrillic": "мадхаль. махрадж",
+      "translations": {
+        "en": "Entrance. Exit.",
+        "ru": "Вход. Выход."
+      }
+    },
+    {
+      "native": "ساخن. بارد.",
+      "latin": "Sākhin. Bārid.",
+      "cyrillic": "сахин. барид",
+      "translations": {
+        "en": "Hot. Cold.",
+        "ru": "Горячее. Холодное."
+      }
+    },
+    {
+      "native": "صغير. كبير.",
+      "latin": "Ṣaghīr. Kabīr.",
+      "cyrillic": "сагир. кабир",
+      "translations": {
+        "en": "Small. Large.",
+        "ru": "Маленькое. Большое."
+      }
+    },
+    {
+      "native": "قهوة. شاي.",
+      "latin": "Qahwa. Shāy.",
+      "cyrillic": "кахва. шай",
+      "translations": {
+        "en": "Coffee. Tea.",
+        "ru": "Кофе. Чай."
+      }
+    },
+    {
+      "native": "بدون لحم. نباتي.",
+      "latin": "Bidūn laḥm. Nabātī.",
+      "cyrillic": "бидун лахм. набати",
+      "translations": {
+        "en": "Without meat. Vegetarian.",
+        "ru": "Без мяса. Вегетарианское."
+      }
+    },
+    {
+      "native": "غير حار. بدون مكسرات.",
+      "latin": "Ghayr ḥārr. Bidūn mukassarāt.",
+      "cyrillic": "гайр харр. бидун мукассарат",
+      "translations": {
+        "en": "Not spicy. No nuts.",
+        "ru": "Не острое. Без орехов."
+      }
+    },
+    {
+      "native": "لدي حجز. ما كلمة سر الواي فاي؟",
+      "latin": "Ladayya ḥajz. Mā kalimat sirr al-Wi-Fi?",
+      "cyrillic": "ладайя хаджз. ма калимат сирр аль-вай-фай",
+      "translations": {
+        "en": "I have a reservation. What is the Wi-Fi password?",
+        "ru": "У меня бронь. Какой пароль от Wi-Fi?"
+      }
+    }
+  ]
+}

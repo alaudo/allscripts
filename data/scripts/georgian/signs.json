@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "category": {
+    "id": "signs",
+    "label": {
+      "en": "Signs and signboards",
+      "ru": "Вывески и указатели"
+    }
+  },
+  "entries": [
+    {
+      "concept": "entrance",
+      "meaning": {
+        "en": "Entrance",
+        "ru": "Вход"
+      },
+      "native": "შესასვლელი",
+      "ipa": "ʃesasvleli",
+      "latin": "shesasvleli",
+      "cyrillic": "шесасвлели"
+    },
+    {
+      "concept": "exit",
+      "meaning": {
+        "en": "Exit",
+        "ru": "Выход"
+      },
+      "native": "გასასვლელი",
+      "ipa": "ɡasasvleli",
+      "latin": "gasasvleli",
+      "cyrillic": "гасасвлели"
+    },
+    {
+      "concept": "toilets",
+      "meaning": {
+        "en": "Toilets",
+        "ru": "Туалеты"
+      },
+      "native": "ტუალეტი",
+      "ipa": "tʼualetʼi",
+      "latin": "tualeti",
+      "cyrillic": "туалети"
+    },
+    {
+      "concept": "information",
+      "meaning": {
+        "en": "Information",
+        "ru": "Информация"
+      },
+      "native": "ინფორმაცია",
+      "ipa": "inpormatsia",
+      "latin": "informatsia",
+      "cyrillic": "информациа"
+    },
+    {
+      "concept": "open",
+      "meaning": {
+        "en": "Open",
+        "ru": "Открыто"
+      },
+      "native": "ღია",
+      "ipa": "ɣia",
+      "latin": "ghia",
+      "cyrillic": "гиа"
+    },
+    {
+      "concept": "closed",
+      "meaning": {
+        "en": "Closed",
+        "ru": "Закрыто"
+      },
+      "native": "დაკეტილია",
+      "ipa": "daketʼilia",
+      "latin": "daketilia",
+      "cyrillic": "дакетилиа"
+    },
+    {
+      "concept": "stop",
+      "meaning": {
+        "en": "Stop",
+        "ru": "Стоп"
+      },
+      "native": "გაჩერდი",
+      "ipa": "ɡatʃerdi",
+      "latin": "gacherdi",
+      "cyrillic": "гачерди"
+    },
+    {
+      "concept": "no_entry",
+      "meaning": {
+        "en": "No entry",
+        "ru": "Вход запрещён"
+      },
+      "native": "შესვლა აკრძალულია",
+      "ipa": "ʃesvla akrdzalulia",
+      "latin": "shesvla akrdzalulia",
+      "cyrillic": "шесвла акрдзалулиа"
+    },
+    {
+      "concept": "parking",
+      "meaning": {
+        "en": "Parking",
+        "ru": "Парковка"
+      },
+      "native": "პარკინგი",
+      "ipa": "pʼarkʼinɡi",
+      "latin": "parkingi",
+      "cyrillic": "паркинги"
+    },
+    {
+      "concept": "pharmacy",
+      "meaning": {
+        "en": "Pharmacy",
+        "ru": "Аптека"
+      },
+      "native": "აფთიაქი",
+      "ipa": "aptʰiaki",
+      "latin": "aptiaki",
+      "cyrillic": "аптиаки"
+    }
+  ]
+}

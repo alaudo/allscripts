@@ -1,0 +1,102 @@
+{
+  "id": "arabic",
+  "name": {
+    "en": "Arabic",
+    "ru": "Арабский"
+  },
+  "nativeName": "العربية",
+  "language": "ar",
+  "direction": "rtl",
+  "flagsSvg": "flags.svg",
+  "info": {
+    "en": "The Arabic script developed from Nabataean Aramaic around the 4th century AD and spread with Islam from the 7th century onward. Written right-to-left, it is cursive: nearly every letter has four contextual forms. Short vowels are usually unwritten but may be marked with diacritics (harakat).",
+    "ru": "Арабское письмо сформировалось из набатейско-арамейского около IV века н. э. и распространилось вместе с исламом начиная с VII века. Оно пишется справа налево и является курсивным: почти у каждой буквы четыре контекстных формы. Краткие гласные обычно не обозначаются, но могут указываться диакритическими знаками (харакат)."
+  },
+  "composition": {
+    "en": "Arabic is an abjad: only consonants and long vowels are normally written, while short vowels are left implicit and recovered from context — much like reading 'cnsnts wtht vwls' in English. Even in print the script is cursive, so almost every letter has four contextual shapes — isolated, initial, medial and final — depending on where it sits in the word. Six letters (ا د ذ ر ز و) are 'non-joining': they connect to the previous letter but never to the next, which visually breaks a word into smaller cursive chunks. Optional diacritics called ḥarakāt fill in the missing detail: ◌َ (fatḥa, /a/), ◌ِ (kasra, /i/), ◌ُ (ḍamma, /u/), ◌ْ (sukūn, no vowel), ◌ّ (shadda, doubled consonant) and ◌ً ◌ٍ ◌ٌ (tanwīn, indefinite endings); they appear in dictionaries, children's books and the Qur'an, but are usually omitted from everyday text.",
+    "ru": "Арабское письмо — абджад: на письме обычно фиксируются только согласные и долгие гласные, а краткие гласные подразумеваются и восстанавливаются из контекста — как если бы по-русски читать «сглсн бз глсн». Даже в печати оно остаётся курсивным, поэтому почти у каждой буквы четыре контекстных формы — изолированная, начальная, срединная и конечная — в зависимости от положения в слове. Шесть букв (ا د ذ ر ز و) «несоединимы слева»: они присоединяются к предыдущей букве, но никогда — к последующей, визуально разбивая слово на меньшие курсивные «куски». Необязательные диакритики харакат добавляют недостающее: ◌َ (фатха, /a/), ◌ِ (кясра, /i/), ◌ُ (дамма, /u/), ◌ْ (сукун, отсутствие гласной), ◌ّ (шадда, удвоение согласной) и ◌ً ◌ٍ ◌ٌ (танвин, неопределённые окончания); они встречаются в словарях, детских книгах и Коране, но в обычных текстах обычно опускаются."
+  },
+  "countries": [
+    {
+      "flag": "🇸🇦",
+      "name": {
+        "en": "Saudi Arabia",
+        "ru": "Саудовская Аравия"
+      }
+    },
+    {
+      "flag": "🇪🇬",
+      "name": {
+        "en": "Egypt",
+        "ru": "Египет"
+      }
+    },
+    {
+      "flag": "🇲🇦",
+      "name": {
+        "en": "Morocco",
+        "ru": "Марокко"
+      }
+    },
+    {
+      "flag": "🇩🇿",
+      "name": {
+        "en": "Algeria",
+        "ru": "Алжир"
+      }
+    },
+    {
+      "flag": "🇮🇶",
+      "name": {
+        "en": "Iraq",
+        "ru": "Ирак"
+      }
+    },
+    {
+      "flag": "🇸🇾",
+      "name": {
+        "en": "Syria",
+        "ru": "Сирия"
+      }
+    },
+    {
+      "flag": "🇯🇴",
+      "name": {
+        "en": "Jordan",
+        "ru": "Иордания"
+      }
+    },
+    {
+      "flag": "🇱🇧",
+      "name": {
+        "en": "Lebanon",
+        "ru": "Ливан"
+      }
+    },
+    {
+      "flag": "🇦🇪",
+      "name": {
+        "en": "UAE",
+        "ru": "ОАЭ"
+      }
+    },
+    {
+      "flag": "🇮🇷",
+      "name": {
+        "en": "Iran (Persian)",
+        "ru": "Иран (персидский)"
+      }
+    },
+    {
+      "flag": "🇵🇰",
+      "name": {
+        "en": "Pakistan (Urdu)",
+        "ru": "Пакистан (урду)"
+      }
+    }
+  ],
+  "writingConventions": {
+    "en": "Arabic has no capitals, but almost every letter has contextual shapes; those initial/medial/final forms matter more than uppercase practice. Combination cases worth surfacing are lam-alif (لا), shadda for doubled consonants, sun-letter assimilation after ال-, and non-joining letters that break the cursive flow. Arabic punctuation has mirrored or script-specific forms such as ؟ ، ؛, and text runs right-to-left while numbers often run left-to-right. Regions vary between Eastern Arabic digits ٠١٢٣٤٥٦٧٨٩ and Western digits; digits are useful as a later reference/sign-reading set, but contextual forms and vowel marks are the higher-priority training.",
+    "ru": "В арабском нет заглавных букв, зато почти у каждой буквы есть позиционные формы; начальная, срединная и конечная формы важнее любой тренировки регистра. Из сочетаний стоит отдельно показывать лям-алиф (لا), шадду для удвоенных согласных, ассимиляцию «солнечных» букв после ال- и несоединяющиеся буквы, разрывающие курсивный поток. Арабская пунктуация имеет зеркальные или специальные формы — ؟ ، ؛, а текст идёт справа налево, тогда как числа часто читаются слева направо. По регионам используются восточно-арабские цифры ٠١٢٣٤٥٦٧٨٩ или западные; цифры полезно позже добавить как справочный набор для вывесок, но позиционные формы и огласовки важнее для тренировки."
+  }
+}

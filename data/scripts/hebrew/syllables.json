@@ -1,0 +1,192 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "native": "של",
+      "ipa": "ʃel",
+      "latin": "shel",
+      "cyrillic": "шель",
+      "category": "common"
+    },
+    {
+      "native": "ים",
+      "ipa": "im",
+      "latin": "im",
+      "cyrillic": "им",
+      "category": "common"
+    },
+    {
+      "native": "ית",
+      "ipa": "it",
+      "latin": "it",
+      "cyrillic": "ит",
+      "category": "common"
+    },
+    {
+      "native": "מי",
+      "ipa": "mi",
+      "latin": "mi",
+      "cyrillic": "ми",
+      "category": "common"
+    },
+    {
+      "native": "ון",
+      "ipa": "on",
+      "latin": "on",
+      "cyrillic": "он",
+      "category": "common"
+    },
+    {
+      "native": "מא",
+      "ipa": "ma",
+      "latin": "ma",
+      "cyrillic": "ма",
+      "category": "common"
+    },
+    {
+      "native": "כ / ך",
+      "ipa": "k / x",
+      "latin": "kaf forms",
+      "cyrillic": "формы каф",
+      "category": "form",
+      "match": [
+        "כ",
+        "ך"
+      ],
+      "note": {
+        "en": "Regular and final kaf.",
+        "ru": "Обычная и конечная форма каф."
+      }
+    },
+    {
+      "native": "מ / ם",
+      "ipa": "m",
+      "latin": "mem forms",
+      "cyrillic": "формы мем",
+      "category": "form",
+      "match": [
+        "מ",
+        "ם"
+      ],
+      "note": {
+        "en": "Regular and final mem.",
+        "ru": "Обычная и конечная форма мем."
+      }
+    },
+    {
+      "native": "נ / ן",
+      "ipa": "n",
+      "latin": "nun forms",
+      "cyrillic": "формы нун",
+      "category": "form",
+      "match": [
+        "נ",
+        "ן"
+      ],
+      "note": {
+        "en": "Regular and final nun.",
+        "ru": "Обычная и конечная форма нун."
+      }
+    },
+    {
+      "native": "פ / ף",
+      "ipa": "p / f",
+      "latin": "pe forms",
+      "cyrillic": "формы пэ",
+      "category": "form",
+      "match": [
+        "פ",
+        "ף"
+      ],
+      "note": {
+        "en": "Regular and final pe.",
+        "ru": "Обычная и конечная форма пэ."
+      }
+    },
+    {
+      "native": "צ / ץ",
+      "ipa": "ts",
+      "latin": "tsadi forms",
+      "cyrillic": "формы цади",
+      "category": "form",
+      "match": [
+        "צ",
+        "ץ"
+      ],
+      "note": {
+        "en": "Regular and final tsadi.",
+        "ru": "Обычная и конечная форма цади."
+      }
+    },
+    {
+      "native": "טר",
+      "ipa": "ter",
+      "latin": "ter",
+      "cyrillic": "тер",
+      "category": "common"
+    },
+    {
+      "native": "ני",
+      "ipa": "ni",
+      "latin": "ni",
+      "cyrillic": "ни",
+      "category": "common"
+    },
+    {
+      "native": "ול",
+      "ipa": "ol",
+      "latin": "ol",
+      "cyrillic": "оль",
+      "category": "common"
+    },
+    {
+      "native": "ור",
+      "ipa": "or",
+      "latin": "or",
+      "cyrillic": "ор",
+      "category": "common"
+    },
+    {
+      "native": "טל",
+      "ipa": "tel",
+      "latin": "tel",
+      "cyrillic": "тель",
+      "category": "common"
+    },
+    {
+      "native": "יא",
+      "ipa": "ja",
+      "latin": "ya",
+      "cyrillic": "я",
+      "category": "common"
+    },
+    {
+      "native": "מו",
+      "ipa": "mo",
+      "latin": "mo",
+      "cyrillic": "мо",
+      "category": "common"
+    },
+    {
+      "native": "פי",
+      "ipa": "fi",
+      "latin": "fi",
+      "cyrillic": "фи",
+      "category": "common"
+    },
+    {
+      "native": "או",
+      "ipa": "o",
+      "latin": "o",
+      "cyrillic": "о",
+      "category": "common"
+    },
+    {
+      "native": "דה",
+      "ipa": "da",
+      "latin": "da",
+      "cyrillic": "да",
+      "category": "common"
+    }
+  ]
+}

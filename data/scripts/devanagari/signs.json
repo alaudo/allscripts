@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "category": {
+    "id": "signs",
+    "label": {
+      "en": "Signs and signboards",
+      "ru": "Вывески и указатели"
+    }
+  },
+  "entries": [
+    {
+      "concept": "entrance",
+      "meaning": {
+        "en": "Entrance",
+        "ru": "Вход"
+      },
+      "native": "प्रवेश",
+      "ipa": "prəˈveːʃ",
+      "latin": "pravesh",
+      "cyrillic": "правеш"
+    },
+    {
+      "concept": "exit",
+      "meaning": {
+        "en": "Exit",
+        "ru": "Выход"
+      },
+      "native": "निकास",
+      "ipa": "nɪˈkaːs",
+      "latin": "nikas",
+      "cyrillic": "никас"
+    },
+    {
+      "concept": "toilets",
+      "meaning": {
+        "en": "Toilets",
+        "ru": "Туалеты"
+      },
+      "native": "शौचालय",
+      "ipa": "ʃɔːtʃaːlaj",
+      "latin": "shauchalay",
+      "cyrillic": "шаучалай"
+    },
+    {
+      "concept": "information",
+      "meaning": {
+        "en": "Information",
+        "ru": "Информация"
+      },
+      "native": "सूचना",
+      "ipa": "suːtʃnaː",
+      "latin": "suchna",
+      "cyrillic": "сучна"
+    },
+    {
+      "concept": "open",
+      "meaning": {
+        "en": "Open",
+        "ru": "Открыто"
+      },
+      "native": "खुला",
+      "ipa": "kʰʊlaː",
+      "latin": "khula",
+      "cyrillic": "кхула"
+    },
+    {
+      "concept": "closed",
+      "meaning": {
+        "en": "Closed",
+        "ru": "Закрыто"
+      },
+      "native": "बंद",
+      "ipa": "band",
+      "latin": "band",
+      "cyrillic": "банд"
+    },
+    {
+      "concept": "stop",
+      "meaning": {
+        "en": "Stop",
+        "ru": "Стоп"
+      },
+      "native": "रुकें",
+      "ipa": "rʊkeː̃",
+      "latin": "ruken",
+      "cyrillic": "рукен"
+    },
+    {
+      "concept": "no_entry",
+      "meaning": {
+        "en": "No entry",
+        "ru": "Вход запрещён"
+      },
+      "native": "प्रवेश निषेध",
+      "ipa": "prəveːʃ nɪʃeːdʱ",
+      "latin": "pravesh nishedh",
+      "cyrillic": "правеш нишедх"
+    },
+    {
+      "concept": "parking",
+      "meaning": {
+        "en": "Parking",
+        "ru": "Парковка"
+      },
+      "native": "पार्किंग",
+      "ipa": "paːrkiŋɡ",
+      "latin": "parking",
+      "cyrillic": "паркинг"
+    },
+    {
+      "concept": "pharmacy",
+      "meaning": {
+        "en": "Pharmacy",
+        "ru": "Аптека"
+      },
+      "native": "फार्मेसी",
+      "ipa": "faːrmeːsiː",
+      "latin": "pharmacy",
+      "cyrillic": "фармеси"
+    }
+  ]
+}

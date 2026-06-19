@@ -1,0 +1,276 @@
+{
+  "version": 3,
+  "language": "Thai",
+  "phrases": [
+    {
+      "native": "สวัสดี. ขอบคุณ.",
+      "latin": "Sawatdi. Khop khun.",
+      "cyrillic": "савадди. кхоп кхун",
+      "translations": {
+        "en": "Hello. Thank you.",
+        "ru": "Здравствуйте. Спасибо."
+      }
+    },
+    {
+      "native": "กรุณา. ขอโทษ.",
+      "latin": "Karuna. Kho thot.",
+      "cyrillic": "каруна. кхо тхот",
+      "translations": {
+        "en": "Please. Excuse me.",
+        "ru": "Пожалуйста. Извините."
+      }
+    },
+    {
+      "native": "ใช่. ไม่ใช่.",
+      "latin": "Chai. Mai chai.",
+      "cyrillic": "чай. май чай",
+      "translations": {
+        "en": "Yes. No.",
+        "ru": "Да. Нет."
+      }
+    },
+    {
+      "native": "พูดภาษาอังกฤษได้ไหม?",
+      "latin": "Phut phasa angkrit dai mai?",
+      "cyrillic": "пхут пхаса ангкрит дай май",
+      "translations": {
+        "en": "Do you speak English?",
+        "ru": "Вы говорите по-английски?"
+      }
+    },
+    {
+      "native": "ไม่เข้าใจ. กรุณาพูดช้า ๆ.",
+      "latin": "Mai khao chai. Karuna phut cha cha.",
+      "cyrillic": "май кхао чай. каруна пхут ча ча",
+      "translations": {
+        "en": "I don't understand. Please speak slowly.",
+        "ru": "Я не понимаю. Говорите медленнее, пожалуйста."
+      }
+    },
+    {
+      "native": "ช่วยชี้ในแผนที่ได้ไหม?",
+      "latin": "Chuai chi nai phaen thi dai mai?",
+      "cyrillic": "чуай чи най пхэн тхи дай май",
+      "translations": {
+        "en": "Can you show me on the map?",
+        "ru": "Покажите мне на карте?"
+      }
+    },
+    {
+      "native": "ห้องน้ำอยู่ที่ไหน?",
+      "latin": "Hong nam yu thi nai?",
+      "cyrillic": "хонг нам ю тхи най",
+      "translations": {
+        "en": "Where is the toilet?",
+        "ru": "Где туалет?"
+      }
+    },
+    {
+      "native": "ราคาเท่าไหร่?",
+      "latin": "Rakha thao rai?",
+      "cyrillic": "ракха тхао рай",
+      "translations": {
+        "en": "How much is this?",
+        "ru": "Сколько это стоит?"
+      }
+    },
+    {
+      "native": "เอาอันนี้.",
+      "latin": "Ao an ni.",
+      "cyrillic": "ао ан ни",
+      "translations": {
+        "en": "I would like this.",
+        "ru": "Я хочу это."
+      }
+    },
+    {
+      "native": "น้ำเปล่า. ขอเช็กบิลด้วย.",
+      "latin": "Nam plao. Kho chek bin duai.",
+      "cyrillic": "нам плао. кхо чек бин дуай",
+      "translations": {
+        "en": "Water, please. The bill, please.",
+        "ru": "Воды, пожалуйста. Счёт, пожалуйста."
+      }
+    },
+    {
+      "native": "จ่ายด้วยบัตรได้ไหม?",
+      "latin": "Chai duai bat dai mai?",
+      "cyrillic": "чай дуай бат дай май",
+      "translations": {
+        "en": "Can I pay by card?",
+        "ru": "Можно оплатить картой?"
+      }
+    },
+    {
+      "native": "สถานีรถไฟฟ้าอยู่ที่ไหน?",
+      "latin": "Sathani rot fai fa yu thi nai?",
+      "cyrillic": "сатхани рот фай фа ю тхи най",
+      "translations": {
+        "en": "Where is the metro station?",
+        "ru": "Где станция метро?"
+      }
+    },
+    {
+      "native": "ขอตั๋วหนึ่งใบ.",
+      "latin": "Kho tua nueng bai.",
+      "cyrillic": "кхо туа ныанг бай",
+      "translations": {
+        "en": "One ticket, please.",
+        "ru": "Один билет, пожалуйста."
+      }
+    },
+    {
+      "native": "ต้องการแท็กซี่.",
+      "latin": "Tong kan thaeksi.",
+      "cyrillic": "тонг кан тхэкси",
+      "translations": {
+        "en": "I need a taxi.",
+        "ru": "Мне нужно такси."
+      }
+    },
+    {
+      "native": "ช่วยไปที่อยู่นี้.",
+      "latin": "Chuai pai thi yu ni.",
+      "cyrillic": "чуай пай тхи ю ни",
+      "translations": {
+        "en": "Please take me to this address.",
+        "ru": "Отвезите меня по этому адресу, пожалуйста."
+      }
+    },
+    {
+      "native": "ซ้าย. ขวา. ตรงไป.",
+      "latin": "Sai. Khwa. Trong pai.",
+      "cyrillic": "сай. кхва. тронг пай",
+      "translations": {
+        "en": "Left. Right. Straight ahead.",
+        "ru": "Налево. Направо. Прямо."
+      }
+    },
+    {
+      "native": "หลงทาง.",
+      "latin": "Long thang.",
+      "cyrillic": "лонг тханг",
+      "translations": {
+        "en": "I am lost.",
+        "ru": "Я заблудился/заблудилась."
+      }
+    },
+    {
+      "native": "ช่วยด้วย! เรียกตำรวจให้หน่อย.",
+      "latin": "Chuai duai! Riak tamruat hai noi.",
+      "cyrillic": "чуай дуай! риак тамруат хай ной",
+      "translations": {
+        "en": "Help! Call the police.",
+        "ru": "Помогите! Вызовите полицию."
+      }
+    },
+    {
+      "native": "ต้องการหมอ.",
+      "latin": "Tong kan mo.",
+      "cyrillic": "тонг кан мо",
+      "translations": {
+        "en": "I need a doctor.",
+        "ru": "Мне нужен врач."
+      }
+    },
+    {
+      "native": "ฉันมีอาการแพ้.",
+      "latin": "Chan mi akan phae.",
+      "cyrillic": "чан ми акан пхэ",
+      "translations": {
+        "en": "I have an allergy.",
+        "ru": "У меня аллергия."
+      }
+    },
+    {
+      "native": "วันนี้. พรุ่งนี้. ตอนนี้. ทีหลัง.",
+      "latin": "Wan ni. Phrung ni. Ton ni. Thi lang.",
+      "cyrillic": "ван ни. пхрунг ни. тон ни. тхи ланг",
+      "translations": {
+        "en": "Today. Tomorrow. Now. Later.",
+        "ru": "Сегодня. Завтра. Сейчас. Позже."
+      }
+    },
+    {
+      "native": "เปิด. ปิด.",
+      "latin": "Poet. Pit.",
+      "cyrillic": "пёт. пит",
+      "translations": {
+        "en": "Open. Closed.",
+        "ru": "Открыто. Закрыто."
+      }
+    },
+    {
+      "native": "ที่นี่. ที่นั่น. ใกล้. ไกล.",
+      "latin": "Thi ni. Thi nan. Klai. Klai.",
+      "cyrillic": "тхи ни. тхи нан. клай. клай",
+      "translations": {
+        "en": "Here. There. Near. Far.",
+        "ru": "Здесь. Там. Близко. Далеко."
+      }
+    },
+    {
+      "native": "ทางเข้า. ทางออก.",
+      "latin": "Thang khao. Thang ok.",
+      "cyrillic": "тханг кхао. тханг ок",
+      "translations": {
+        "en": "Entrance. Exit.",
+        "ru": "Вход. Выход."
+      }
+    },
+    {
+      "native": "ร้อน. เย็น.",
+      "latin": "Ron. Yen.",
+      "cyrillic": "рон. йен",
+      "translations": {
+        "en": "Hot. Cold.",
+        "ru": "Горячее. Холодное."
+      }
+    },
+    {
+      "native": "เล็ก. ใหญ่.",
+      "latin": "Lek. Yai.",
+      "cyrillic": "лек. яй",
+      "translations": {
+        "en": "Small. Large.",
+        "ru": "Маленькое. Большое."
+      }
+    },
+    {
+      "native": "กาแฟ. ชา.",
+      "latin": "Kafae. Cha.",
+      "cyrillic": "кафэ. ча",
+      "translations": {
+        "en": "Coffee. Tea.",
+        "ru": "Кофе. Чай."
+      }
+    },
+    {
+      "native": "ไม่เอาเนื้อ. มังสวิรัติ.",
+      "latin": "Mai ao nuea. Mang sawirat.",
+      "cyrillic": "май ао ныа. манг савират",
+      "translations": {
+        "en": "Without meat. Vegetarian.",
+        "ru": "Без мяса. Вегетарианское."
+      }
+    },
+    {
+      "native": "ไม่เผ็ด. ไม่เอาถั่ว.",
+      "latin": "Mai phet. Mai ao thua.",
+      "cyrillic": "май пхет. май ао тхуа",
+      "translations": {
+        "en": "Not spicy. No nuts.",
+        "ru": "Не острое. Без орехов."
+      }
+    },
+    {
+      "native": "จองไว้แล้ว. รหัสไวไฟคืออะไร?",
+      "latin": "Chong wai laeo. Rahat wai-fai khue arai?",
+      "cyrillic": "чонг вай лэо. рахат вай-фай кхы арай",
+      "translations": {
+        "en": "I have a reservation. What is the Wi-Fi password?",
+        "ru": "У меня бронь. Какой пароль от Wi-Fi?"
+      }
+    }
+  ]
+}

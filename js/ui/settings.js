@@ -123,6 +123,31 @@ export async function renderSettings(_, mount) {
       </div>
 
       <div class="card">
+        <h2>${escapeHtml(t('settings.flashcards.syllables'))}</h2>
+        <small class="muted">${escapeHtml(t('settings.flashcards.syllables.hint'))}</small>
+
+        <label class="field">
+          <span class="field-label">${escapeHtml(t('settings.timer'))}</span>
+          <select id="syllablesTimer"></select>
+          <small class="muted">${escapeHtml(t('settings.timer.hint'))}</small>
+        </label>
+
+        <fieldset class="field srs-field">
+          <legend class="field-label">${escapeHtml(t('settings.srs.title'))}</legend>
+          <small class="muted">${escapeHtml(t('settings.srs.hint'))}</small>
+          <div class="srs-grid">
+            ${SRS_FIELDS.map(f => `
+              <label class="srs-cell">
+                <span>${escapeHtml(t(f.labelKey))}</span>
+                <input type="number" min="0" step="1" inputmode="numeric" data-srs-syllables="${f.key}" value="${settings.syllablesSrsIntervals[f.key] ?? 0}" />
+                <small class="muted">${escapeHtml(t(f.hintKey))}</small>
+              </label>
+            `).join('')}
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="card">
         <h2>${escapeHtml(t('settings.flashcards.words'))}</h2>
         <small class="muted">${escapeHtml(t('settings.flashcards.words.hint'))}</small>
 
@@ -260,6 +285,18 @@ export async function renderSettings(_, mount) {
     updateSettings({ flashcardTimerSec: Number(timerSel.value) });
   });
 
+  // Syllables timer
+  const syllablesTimerSel = root.querySelector('#syllablesTimer');
+  for (const o of timerOptions()) {
+    const opt = document.createElement('option');
+    opt.value = String(o.value); opt.textContent = o.label;
+    if (o.value === settings.syllablesTimerSec) opt.selected = true;
+    syllablesTimerSel.appendChild(opt);
+  }
+  syllablesTimerSel.addEventListener('change', () => {
+    updateSettings({ syllablesTimerSec: Number(syllablesTimerSel.value) });
+  });
+
   // Phrases timer
   const phrasesTimerSel = root.querySelector('#phrasesTimer');
   for (const o of timerOptions()) {
@@ -290,6 +327,15 @@ export async function renderSettings(_, mount) {
       const key = input.getAttribute('data-srs');
       const val = Math.max(0, Math.round(Number(input.value) || 0));
       updateSettings({ srsIntervals: { ...getSettings().srsIntervals, [key]: val } });
+    });
+  }
+
+  // SRS intervals (syllables)
+  for (const input of root.querySelectorAll('input[data-srs-syllables]')) {
+    input.addEventListener('change', () => {
+      const key = input.getAttribute('data-srs-syllables');
+      const val = Math.max(0, Math.round(Number(input.value) || 0));
+      updateSettings({ syllablesSrsIntervals: { ...getSettings().syllablesSrsIntervals, [key]: val } });
     });
   }
 

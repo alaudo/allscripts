@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "native": "ար",
+      "ipa": "ar",
+      "latin": "ar",
+      "cyrillic": "ар",
+      "category": "common"
+    },
+    {
+      "native": "ան",
+      "ipa": "an",
+      "latin": "an",
+      "cyrillic": "ан",
+      "category": "common"
+    },
+    {
+      "native": "եր",
+      "ipa": "er",
+      "latin": "er",
+      "cyrillic": "ер",
+      "category": "common"
+    },
+    {
+      "native": "ին",
+      "ipa": "in",
+      "latin": "in",
+      "cyrillic": "ин",
+      "category": "common"
+    },
+    {
+      "native": "ել",
+      "ipa": "el",
+      "latin": "el",
+      "cyrillic": "ел",
+      "category": "common"
+    },
+    {
+      "native": "ու",
+      "ipa": "u",
+      "latin": "u",
+      "cyrillic": "у",
+      "category": "common",
+      "note": {
+        "en": "Two-letter vowel spelling, read as /u/.",
+        "ru": "Двухбуквенная запись гласного /u/."
+      }
+    },
+    {
+      "native": "մա",
+      "ipa": "ma",
+      "latin": "ma",
+      "cyrillic": "ма",
+      "category": "common"
+    },
+    {
+      "native": "կա",
+      "ipa": "ka",
+      "latin": "ka",
+      "cyrillic": "ка",
+      "category": "common"
+    },
+    {
+      "native": "հա",
+      "ipa": "ha",
+      "latin": "ha",
+      "cyrillic": "ха",
+      "category": "common"
+    },
+    {
+      "native": "տա",
+      "ipa": "ta",
+      "latin": "ta",
+      "cyrillic": "та",
+      "category": "common"
+    },
+    {
+      "native": "այ",
+      "ipa": "aj",
+      "latin": "ay",
+      "cyrillic": "ай",
+      "category": "common"
+    },
+    {
+      "native": "ատ",
+      "ipa": "at",
+      "latin": "at",
+      "cyrillic": "ат",
+      "category": "common"
+    },
+    {
+      "native": "ուն",
+      "ipa": "un",
+      "latin": "un",
+      "cyrillic": "ун",
+      "category": "common"
+    },
+    {
+      "native": "տո",
+      "ipa": "to",
+      "latin": "to",
+      "cyrillic": "то",
+      "category": "common"
+    },
+    {
+      "native": "ետ",
+      "ipa": "et",
+      "latin": "et",
+      "cyrillic": "ет",
+      "category": "common"
+    },
+    {
+      "native": "թե",
+      "ipa": "tʰe",
+      "latin": "te",
+      "cyrillic": "те",
+      "category": "common"
+    },
+    {
+      "native": "մե",
+      "ipa": "me",
+      "latin": "me",
+      "cyrillic": "ме",
+      "category": "common"
+    },
+    {
+      "native": "յո",
+      "ipa": "jo",
+      "latin": "yo",
+      "cyrillic": "йо",
+      "category": "common"
+    },
+    {
+      "native": "նա",
+      "ipa": "na",
+      "latin": "na",
+      "cyrillic": "на",
+      "category": "common"
+    },
+    {
+      "native": "պա",
+      "ipa": "pa",
+      "latin": "pa",
+      "cyrillic": "па",
+      "category": "common"
+    }
+  ]
+}

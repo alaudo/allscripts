@@ -1,0 +1,161 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "native": "प्र",
+      "ipa": "prə",
+      "latin": "pra",
+      "cyrillic": "пра",
+      "category": "common"
+    },
+    {
+      "native": "नि",
+      "ipa": "ni",
+      "latin": "ni",
+      "cyrillic": "ни",
+      "category": "common"
+    },
+    {
+      "native": "का",
+      "ipa": "kaː",
+      "latin": "ka",
+      "cyrillic": "ка",
+      "category": "common"
+    },
+    {
+      "native": "ला",
+      "ipa": "laː",
+      "latin": "la",
+      "cyrillic": "ла",
+      "category": "common"
+    },
+    {
+      "native": "मा",
+      "ipa": "maː",
+      "latin": "ma",
+      "cyrillic": "ма",
+      "category": "common"
+    },
+    {
+      "native": "ता",
+      "ipa": "taː",
+      "latin": "ta",
+      "cyrillic": "та",
+      "category": "common"
+    },
+    {
+      "native": "ना",
+      "ipa": "naː",
+      "latin": "na",
+      "cyrillic": "на",
+      "category": "common"
+    },
+    {
+      "native": "रा",
+      "ipa": "raː",
+      "latin": "ra",
+      "cyrillic": "ра",
+      "category": "common"
+    },
+    {
+      "native": "स्त",
+      "ipa": "st̪ə",
+      "latin": "sta",
+      "cyrillic": "ста",
+      "category": "conjunct",
+      "note": {
+        "en": "Conjunct स् + त, as in namaste.",
+        "ru": "Лигатура स् + त, как в namaste."
+      }
+    },
+    {
+      "native": "स्क",
+      "ipa": "skə",
+      "latin": "ska",
+      "cyrillic": "ска",
+      "category": "conjunct",
+      "note": {
+        "en": "Conjunct स् + क, as in school.",
+        "ru": "Лигатура स् + क, как в school."
+      }
+    },
+    {
+      "native": "र्क",
+      "ipa": "rkə",
+      "latin": "rka",
+      "cyrillic": "рка",
+      "category": "conjunct",
+      "note": {
+        "en": "Conjunct र् + क, common in borrowed words like park.",
+        "ru": "Лигатура र् + क, часто в заимствованиях вроде park."
+      }
+    },
+    {
+      "native": "ट्र",
+      "ipa": "ʈrə",
+      "latin": "tra",
+      "cyrillic": "тра",
+      "category": "conjunct",
+      "note": {
+        "en": "Conjunct ट् + र, common in words like metro.",
+        "ru": "Лигатура ट् + र, часто в словах вроде metro."
+      }
+    },
+    {
+      "native": "टर",
+      "ipa": "ʈar",
+      "latin": "tar",
+      "cyrillic": "тар",
+      "category": "common"
+    },
+    {
+      "native": "पा",
+      "ipa": "paː",
+      "latin": "pa",
+      "cyrillic": "па",
+      "category": "common"
+    },
+    {
+      "native": "चा",
+      "ipa": "tʃaː",
+      "latin": "cha",
+      "cyrillic": "ча",
+      "category": "common"
+    },
+    {
+      "native": "ज़",
+      "ipa": "z",
+      "latin": "z",
+      "cyrillic": "з",
+      "category": "common"
+    },
+    {
+      "native": "ड़",
+      "ipa": "ɽ",
+      "latin": "r",
+      "cyrillic": "р",
+      "category": "common"
+    },
+    {
+      "native": "यू",
+      "ipa": "juː",
+      "latin": "yu",
+      "cyrillic": "ю",
+      "category": "common"
+    },
+    {
+      "native": "कि",
+      "ipa": "ki",
+      "latin": "ki",
+      "cyrillic": "ки",
+      "category": "common"
+    },
+    {
+      "native": "गा",
+      "ipa": "ɡaː",
+      "latin": "ga",
+      "cyrillic": "га",
+      "category": "common"
+    }
+  ]
+}

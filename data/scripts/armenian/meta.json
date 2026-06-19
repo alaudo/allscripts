@@ -1,0 +1,32 @@
+{
+  "id": "armenian",
+  "name": {
+    "en": "Armenian",
+    "ru": "Армянский"
+  },
+  "nativeName": "Հայերեն",
+  "language": "hy",
+  "direction": "ltr",
+  "flagsSvg": "flags.svg",
+  "info": {
+    "en": "The Armenian alphabet was created around 405 AD by the linguist and theologian Mesrop Mashtots, with the explicit purpose of translating the Bible into Armenian. It has 39 letters in its modern form and is one of very few scripts whose inventor is known.",
+    "ru": "Армянский алфавит был создан около 405 года н. э. лингвистом и богословом Месропом Маштоцем специально для перевода Библии на армянский. В современном виде он содержит 39 букв и принадлежит к числу немногих письменностей, чей создатель известен."
+  },
+  "composition": {
+    "en": "Armenian is a true alphabet — separate letters for vowels and consonants — and is bicameral: every letter has an uppercase and lowercase form (Ա/ա, Բ/բ). Spelling is strictly phonemic: each letter consistently maps to one sound, including pairs of stops that English merges (aspirated vs. unaspirated վ/բ-style contrasts). Armenian punctuation is its own: a sentence ends with the verjaket (։, looking like a colon, not a dot), the question mark (՞) is placed above the stressed vowel of the question word rather than at the sentence end, and the emphasis/exclamation mark (՜) sits above a vowel inside the emphasized word. A small mark called the bowt (՟) — historically — and the apostrophe-like patiw indicated abbreviations.",
+    "ru": "Армянский — полноценный алфавит с отдельными буквами для гласных и согласных; он двухпалатный: у каждой буквы есть прописная и строчная форма (Ա/ա, Բ/բ). Орфография строго фонематична: каждая буква неизменно передаёт один звук, включая пары смычных, которые в английском совпадают (придыхательные и непридыхательные согласные обозначаются разными буквами). У армянского своя пунктуация: предложение завершается верчакетом (։, похожим на двоеточие, а не на точку), вопросительный знак (՞) ставится над ударной гласной вопросительного слова, а не в конце предложения, а знак восклицания/эмфазы (՜) — над гласной выделяемого слова. Сокращения исторически отмечались знаком патив (֊)."
+  },
+  "countries": [
+    {
+      "flag": "🇦🇲",
+      "name": {
+        "en": "Armenia",
+        "ru": "Армения"
+      }
+    }
+  ],
+  "writingConventions": {
+    "en": "Armenian is bicameral, so capitals exist and are useful on signs, but the alphabet cards already pair uppercase with lowercase. The main combination to add to practice is ու, a two-letter digraph read as /u/; learners should also notice that ե and ո have y-/v-like readings at the start of words. Armenian punctuation is distinctive and worth a reference line: the full stop is ։, the question mark ՞ and emphasis mark ՜ sit over the stressed vowel, and the comma-like marks do not always map one-to-one to English. Modern writing uses Western digits; historical Armenian letter-numerals are cultural knowledge, not core tourist-reading practice.",
+    "ru": "Армянский двухпалатный, поэтому заглавные существуют и важны на вывесках, но карточки букв уже показывают прописную и строчную формы вместе. Главное сочетание для отдельной практики — ու, двухбуквенный диграф со звуком /u/; также стоит помнить, что ե и ո в начале слова получают чтения с й-/в-. Пунктуация необычна и заслуживает справки: точка — это ։, вопросительный знак ՞ и знак эмфазы ՜ ставятся над ударной гласной, а запятые и подобные знаки не всегда совпадают с английскими по функции. В современной записи используются западные цифры; исторические армянские буквенные числа — культурная справка, а не ключевая туристическая тренировка."
+  }
+}

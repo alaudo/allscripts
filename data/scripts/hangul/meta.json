@@ -1,0 +1,39 @@
+{
+  "id": "hangul",
+  "name": {
+    "en": "Hangul",
+    "ru": "Хангыль"
+  },
+  "nativeName": "한글",
+  "language": "ko",
+  "direction": "ltr",
+  "flagsSvg": "flags.svg",
+  "info": {
+    "en": "Hangul was promulgated in 1443 by King Sejong the Great of Joseon, who wanted a writing system the common people could actually learn. Its consonant shapes are diagrammatic — they depict the position of the tongue and lips — and letters cluster into syllable-blocks rather than being written in a line.",
+    "ru": "Хангыль был обнародован в 1443 году королём Седжоном Великим из династии Чосон, желавшим письменности, которой смогли бы овладеть простые люди. Формы согласных схематичны — они изображают положение языка и губ, — а буквы объединяются в слоговые блоки, а не пишутся в строку."
+  },
+  "composition": {
+    "en": "Hangul is an alphabet that doesn't read in a line — its letters (jamo) are stacked into square syllable blocks of two to four jamo. Each block holds an initial consonant, a medial vowel and an optional final consonant called the batchim (ㄱ + ㅏ + ㅁ → 감 'kam'). The layout depends on the vowel's shape: vertical vowels like ㅏ ㅓ ㅣ sit to the right of the initial (가 ka), horizontal vowels like ㅗ ㅜ ㅡ sit underneath it (구 ku), and the batchim, when present, slides under the whole block (각 kak, 군 kun). The basic shapes are 'featural': consonants ㄱ ㄴ ㅁ ㅅ ㅇ diagram the tongue or lip position used to pronounce them, and aspirated or tense variants are formed by adding strokes or doubling the letter (ㄱ k → ㅋ k h → ㄲ kk). Twenty-four basic jamo combine into 11,172 possible syllables, all of which a learner can read after mastering just the building blocks.",
+    "ru": "Хангыль — это алфавит, который не пишется в строку: его буквы (чамо) складываются в квадратные слоговые блоки из двух–четырёх чамо. В каждом блоке есть начальная согласная, гласная и необязательная конечная согласная — патчхим (ㄱ + ㅏ + ㅁ → 감 «кам»). Расположение зависит от формы гласной: вертикальные гласные ㅏ ㅓ ㅣ ставятся справа от начальной согласной (가 ka), горизонтальные ㅗ ㅜ ㅡ — снизу (구 ku), а патчхим, если он есть, помещается под весь блок (각 kak, 군 kun). Сами формы «фичерные»: согласные ㄱ ㄴ ㅁ ㅅ ㅇ изображают положение языка или губ при их произнесении, а придыхательные и напряжённые варианты получают дополнительные штрихи или удваиваются (ㄱ k → ㅋ kʰ → ㄲ kk). Двадцать четыре базовых чамо складываются в 11 172 возможных слога — и все их учащийся сможет прочитать, освоив лишь сами кирпичики."
+  },
+  "countries": [
+    {
+      "flag": "🇰🇷",
+      "name": {
+        "en": "South Korea",
+        "ru": "Южная Корея"
+      }
+    },
+    {
+      "flag": "🇰🇵",
+      "name": {
+        "en": "North Korea",
+        "ru": "Северная Корея"
+      }
+    }
+  ],
+  "writingConventions": {
+    "en": "Hangul has no capitals. The important combinations are syllable blocks: initial consonant + vowel + optional final batchim, plus tense/doubled consonants (ㄲ ㄸ ㅃ ㅆ ㅉ), aspirated consonants (ㅋ ㅌ ㅍ ㅊ), compound vowels (ㅘ ㅝ ㅢ) and common final-consonant sound changes. These belong in syllable/block practice rather than separate punctuation drills. Korean punctuation and numbers are mostly modern Western in everyday signage; Korean has native and Sino-Korean number words, but the written digits are normally 0-9, so number training is lower priority than block reading.",
+    "ru": "В хангыле нет заглавных букв. Главные сочетания — слоговые блоки: начальная согласная + гласная + необязательный финальный патчхим, а также напряжённые/удвоенные согласные (ㄲ ㄸ ㅃ ㅆ ㅉ), придыхательные (ㅋ ㅌ ㅍ ㅊ), составные гласные (ㅘ ㅝ ㅢ) и частые изменения чтения конечных согласных. Это материал для тренировки слогов/блоков, а не для отдельных карточек пунктуации. Корейская пунктуация и цифры на повседневных вывесках в основном современные западные; есть корейские и сино-корейские числительные как слова, но цифры обычно 0-9, поэтому чтение блоков важнее отдельной тренировки чисел."
+  }
+}

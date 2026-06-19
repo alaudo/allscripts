@@ -1,216 +1,46 @@
 {
-  "version": 1,
+  "version": 2,
+  "_comment": "Each script entry points to a self-contained folder. To add a script, create data/scripts/<id>/ with meta.json, letters.json, words.json, phrases.json, syllables.json, signs.json, and international.json, then add one entry here.",
   "scripts": [
     {
       "id": "greek",
-      "name": { "en": "Greek", "ru": "Греческий" },
-      "nativeName": "Ελληνικά",
-      "language": "el",
-      "direction": "ltr",
-      "file": "scripts/greek.json",
-      "info": {
-        "en": "The Greek alphabet has been in continuous use since the 9th century BC, descended from the Phoenician script. It was the first true alphabet — the first script to assign letters to vowels as well as consonants — and its letterforms are the ancestors of Latin and Cyrillic.",
-        "ru": "Греческий алфавит непрерывно используется с IX века до н. э. и происходит от финикийского письма. Это первый настоящий алфавит — первая письменность, в которой отдельные буквы обозначали не только согласные, но и гласные; от него произошли латиница и кириллица."
-      },
-      "composition": {
-        "en": "Greek is bicameral — every letter has an uppercase and lowercase form (Α/α, Β/β), just like Latin or Cyrillic. One letter, the lowercase sigma, even takes a special word-final form: σ at the start of or inside a word, ς at the end (σοσ never appears — it is written σος). Vowels are written as full letters of their own, and modern Greek uses only one diacritic, the tonos (´), to mark the stressed syllable in polysyllabic words. Spelling is largely phonemic, though several letters and digraphs (η, ι, υ, ει, οι, υι) now all read as /i/ — a fossil of ancient pronunciations.",
-        "ru": "Греческий — двухпалатный алфавит: у каждой буквы есть прописная и строчная форма (Α/α, Β/β), как в латинице или кириллице. У строчной сигмы есть особая конечная форма: σ в начале и середине слова, ς — в конце (запись σοσ невозможна — пишется σος). Гласные обозначаются отдельными буквами, а из диакритик в современной орфографии используется только тонос (´), указывающий ударный слог в многосложных словах. Орфография в целом фонематична, хотя несколько букв и диграфов (η, ι, υ, ει, οι, υι) сегодня читаются одинаково — как /i/, — что является наследием древнего произношения."
-      },
-      "countries": [
-        { "flag": "🇬🇷", "name": { "en": "Greece", "ru": "Греция" } },
-        { "flag": "🇨🇾", "name": { "en": "Cyprus", "ru": "Кипр" } }
-      ]
+      "folder": "scripts/greek"
     },
     {
       "id": "cyrillic",
-      "name": { "en": "Cyrillic", "ru": "Кириллица" },
-      "nativeName": "Кириллица",
-      "language": "ru",
-      "direction": "ltr",
-      "file": "scripts/cyrillic.json",
-      "info": {
-        "en": "Cyrillic was developed in the 9th–10th centuries in the First Bulgarian Empire by disciples of Saints Cyril and Methodius, adapting Greek uncial letters to write Slavic languages. Today it is used by over 250 million people across Slavic, Turkic, Mongolic and Iranian languages.",
-        "ru": "Кириллица была создана в IX–X веках в Первом Болгарском царстве учениками святых Кирилла и Мефодия на основе греческого унциального письма для записи славянских языков. Сегодня ею пользуются более 250 миллионов человек на славянских, тюркских, монгольских и иранских языках."
-      },
-      "composition": {
-        "en": "Cyrillic is bicameral and largely phonemic — usually one letter, one sound, with no silent letters. Several Cyrillic letters look exactly like Latin ones but read very differently — Р = r, Н = n, С = s, В = v, У = u, Х = kh — and these 'false friends' are the most common stumble for learners. Two letters carry no sound of their own: the soft sign (ь) palatalizes the consonant before it, and the hard sign (ъ) blocks that palatalization at morpheme boundaries. Different Slavic and non-Slavic languages tune the alphabet to their own phonology — so Ukrainian has і, ї, є; Serbian writes ј, љ, њ, ћ, џ; Belarusian uses ў — meaning Russian, Ukrainian, Serbian and Mongolian Cyrillic all overlap but are not identical.",
-        "ru": "Кириллица — двухпалатное письмо, в целом фонематическое: как правило, одной букве соответствует один звук, а немых букв нет. Несколько букв внешне совпадают с латинскими, но читаются совсем иначе — Р = r, Н = n, С = s, В = v, У = u, Х = kh, — и именно эти «ложные друзья» чаще всего сбивают с толку учащихся. Две буквы собственного звука не имеют: мягкий знак (ь) смягчает предыдущую согласную, а твёрдый знак (ъ) блокирует это смягчение на границе морфем. Разные славянские и неславянские языки подгоняют алфавит под свою фонетику — у украинцев есть і, ї, є, у сербов ј, љ, њ, ћ, џ, у белорусов ў, — поэтому русская, украинская, сербская и монгольская кириллицы пересекаются, но не совпадают."
-      },
-      "countries": [
-        { "flag": "🇷🇺", "name": { "en": "Russia", "ru": "Россия" } },
-        { "flag": "🇺🇦", "name": { "en": "Ukraine", "ru": "Украина" } },
-        { "flag": "🇧🇾", "name": { "en": "Belarus", "ru": "Беларусь" } },
-        { "flag": "🇧🇬", "name": { "en": "Bulgaria", "ru": "Болгария" } },
-        { "flag": "🇷🇸", "name": { "en": "Serbia", "ru": "Сербия" } },
-        { "flag": "🇲🇰", "name": { "en": "North Macedonia", "ru": "Северная Македония" } },
-        { "flag": "🇰🇿", "name": { "en": "Kazakhstan", "ru": "Казахстан" } },
-        { "flag": "🇰🇬", "name": { "en": "Kyrgyzstan", "ru": "Киргизия" } },
-        { "flag": "🇲🇳", "name": { "en": "Mongolia", "ru": "Монголия" } }
-      ]
+      "folder": "scripts/cyrillic"
     },
     {
       "id": "armenian",
-      "name": { "en": "Armenian", "ru": "Армянский" },
-      "nativeName": "Հայերեն",
-      "language": "hy",
-      "direction": "ltr",
-      "file": "scripts/armenian.json",
-      "info": {
-        "en": "The Armenian alphabet was created around 405 AD by the linguist and theologian Mesrop Mashtots, with the explicit purpose of translating the Bible into Armenian. It has 39 letters in its modern form and is one of very few scripts whose inventor is known.",
-        "ru": "Армянский алфавит был создан около 405 года н. э. лингвистом и богословом Месропом Маштоцем специально для перевода Библии на армянский. В современном виде он содержит 39 букв и принадлежит к числу немногих письменностей, чей создатель известен."
-      },
-      "composition": {
-        "en": "Armenian is a true alphabet — separate letters for vowels and consonants — and is bicameral: every letter has an uppercase and lowercase form (Ա/ա, Բ/բ). Spelling is strictly phonemic: each letter consistently maps to one sound, including pairs of stops that English merges (aspirated vs. unaspirated վ/բ-style contrasts). Armenian punctuation is its own: a sentence ends with the verjaket (։, looking like a colon, not a dot), the question mark (՞) is placed above the stressed vowel of the question word rather than at the sentence end, and the emphasis/exclamation mark (՜) sits above a vowel inside the emphasized word. A small mark called the bowt (՟) — historically — and the apostrophe-like patiw indicated abbreviations.",
-        "ru": "Армянский — полноценный алфавит с отдельными буквами для гласных и согласных; он двухпалатный: у каждой буквы есть прописная и строчная форма (Ա/ա, Բ/բ). Орфография строго фонематична: каждая буква неизменно передаёт один звук, включая пары смычных, которые в английском совпадают (придыхательные и непридыхательные согласные обозначаются разными буквами). У армянского своя пунктуация: предложение завершается верчакетом (։, похожим на двоеточие, а не на точку), вопросительный знак (՞) ставится над ударной гласной вопросительного слова, а не в конце предложения, а знак восклицания/эмфазы (՜) — над гласной выделяемого слова. Сокращения исторически отмечались знаком патив (֊)."
-      },
-      "countries": [
-        { "flag": "🇦🇲", "name": { "en": "Armenia", "ru": "Армения" } }
-      ]
+      "folder": "scripts/armenian"
     },
     {
       "id": "georgian",
-      "name": { "en": "Georgian", "ru": "Грузинский" },
-      "nativeName": "ქართული",
-      "language": "ka",
-      "direction": "ltr",
-      "file": "scripts/georgian.json",
-      "info": {
-        "en": "Georgian (Mkhedruli) is one of three related Georgian scripts; together they form a unique alphabetic family recognized by UNESCO as Intangible Cultural Heritage. The earliest inscriptions date to the 5th century AD. Mkhedruli has 33 letters and lacks both uppercase and silent letters.",
-        "ru": "Грузинское письмо (мхедрули) — одна из трёх родственных грузинских письменностей; вместе они образуют уникальную алфавитную семью, внесённую ЮНЕСКО в список нематериального культурного наследия. Древнейшие надписи относятся к V веку н. э. В мхедрули 33 буквы, нет ни заглавных, ни немых букв."
-      },
-      "composition": {
-        "en": "Georgian is unicameral — there is no upper- vs. lowercase distinction at all; sentences and proper nouns start with the same letter forms as everything else. Spelling is essentially one letter per sound, with no silent letters and no diacritics; punctuation today follows European conventions. The language distinguishes ejective consonants — produced with a tight glottal closure (კ, პ, ტ, წ, ჭ, ყ) — from their regular voiceless counterparts (ქ, ფ, თ, ც, ჩ, ხ), a three-way contrast that has no Latin or Cyrillic equivalent and is written with entirely separate letters rather than diacritics. The 'capital' look you sometimes see on signs is the historical Mtavruli script, used as a stylistic all-caps alternative rather than as true uppercase letters.",
-        "ru": "Грузинское письмо однопалатно — деления на прописные и строчные нет вовсе; предложения и имена собственные начинаются с тех же форм, что и всё остальное. Орфография фактически отражает принцип «одна буква — один звук»: нет ни немых букв, ни диакритик, пунктуация сегодня следует европейским правилам. Язык различает абруптивные (эйективные) согласные — образующиеся с резким смыканием голосовой щели (კ, პ, ტ, წ, ჭ, ყ) — и обычные глухие согласные (ქ, ფ, თ, ც, ჩ, ხ): это троичное противопоставление, не имеющее аналогов в латинице и кириллице, передаётся не диакритиками, а полностью разными буквами. «Заглавный» вид, который иногда встречается на вывесках, — это историческое мтаврули, используемое как стилистический «капс», а не как настоящие прописные буквы."
-      },
-      "countries": [
-        { "flag": "🇬🇪", "name": { "en": "Georgia", "ru": "Грузия" } }
-      ]
+      "folder": "scripts/georgian"
     },
     {
       "id": "hiragana",
-      "name": { "en": "Hiragana", "ru": "Хирагана" },
-      "nativeName": "ひらがな",
-      "language": "ja",
-      "direction": "ltr",
-      "file": "scripts/hiragana.json",
-      "info": {
-        "en": "Hiragana is a Japanese syllabary that evolved from cursive forms of Chinese characters (man'yōgana) during the Heian period (8th–12th c.). It was once dismissively called 'women's writing' but is now used for native words, grammatical particles and verb endings alongside kanji and katakana.",
-        "ru": "Хирагана — японская слоговая азбука, развившаяся из скорописных форм китайских иероглифов (манъёгана) в эпоху Хэйан (VIII–XII вв.). Когда-то её пренебрежительно называли «женским письмом», а сегодня она используется для исконно японских слов, грамматических частиц и окончаний глаголов наряду с кандзи и катаканой."
-      },
-      "composition": {
-        "en": "Hiragana is a syllabary, not an alphabet: each character stands for a whole mora — usually a consonant + vowel (か = ka) or a single vowel (あ = a). The 46 base symbols are extended by small modifiers: dakuten (゛) voices a consonant (か ka → が ga, さ sa → ざ za), handakuten (゜) turns the h-row into the p-row (は ha → ぱ pa), and a small や ゅ ょ fuses with i-row syllables to form palatalized sounds (き + ゃ → きゃ kya). A small tsu (っ) doesn't have a sound of its own — it doubles the following consonant (がっこう = gakkō, 'school'). Written Japanese mixes hiragana with katakana (a parallel syllabary used mainly for loanwords) and kanji (Chinese characters), so hiragana usually handles grammatical particles and inflectional endings rather than whole sentences on its own.",
-        "ru": "Хирагана — слоговое письмо, а не алфавит: каждый знак передаёт целую мору — обычно согласный + гласный (か = ka) или одну гласную (あ = a). 46 базовых знаков расширяются мелкими модификаторами: дакутэн (゛) озвончает согласный (か ka → が ga, さ sa → ざ za), хандакутэн (゜) превращает ряд h в ряд p (は ha → ぱ pa), а маленькие や ゅ ょ сливаются со слогами ряда «i», образуя палатализованные звуки (き + ゃ → きゃ kya). Маленькая つ (っ) собственного звука не имеет — она удваивает следующий согласный (がっこう = gakkō, «школа»). В японской письменности хирагана сочетается с катаканой (параллельной азбукой, в основном для заимствований) и кандзи (китайскими иероглифами), поэтому самой хираганой обычно записывают грамматические частицы и окончания, а не целые предложения."
-      },
-      "countries": [
-        { "flag": "🇯🇵", "name": { "en": "Japan", "ru": "Япония" } }
-      ]
+      "folder": "scripts/hiragana"
     },
     {
       "id": "devanagari",
-      "name": { "en": "Devanagari", "ru": "Деванагари" },
-      "nativeName": "देवनागरी",
-      "language": "hi",
-      "direction": "ltr",
-      "file": "scripts/devanagari.json",
-      "info": {
-        "en": "Devanagari is an abugida descended from the ancient Brahmi script (3rd c. BC). Its distinctive horizontal headstroke (shirorekha) ties letters into words. It is used to write Hindi, Marathi, Sanskrit, Nepali and several other Indo-Aryan languages — roughly 600 million speakers in total.",
-        "ru": "Деванагари — абугида, происходящая от древнего письма брахми (III в. до н. э.). Её характерная горизонтальная верхняя черта (широрекха) объединяет буквы в слова. Деванагари используют для записи хинди, маратхи, санскрита, непальского и ряда других индоарийских языков — суммарно около 600 миллионов носителей."
-      },
-      "composition": {
-        "en": "Devanagari is an abugida: each consonant letter carries an inherent 'a' vowel built in — क by itself reads ka, not k. Other vowels are written as small marks called mātrās attached above, below, before or after the consonant (कि = ki, की = kī, कु = ku, के = ke, को = ko, का = kā). At the start of a word, vowels use their own full letters (अ इ उ ए ओ) instead of mātrās. A small slash called the virāma or halant (्) cancels the inherent vowel; when two or more consonants meet without a vowel between them they typically merge into a ligature (क + ष → क्ष, क + र → क्र). The horizontal headstroke at the top — the shirorekhā — ties the letters of each word together into a single line, which is why a Hindi word visually looks like one connected unit.",
-        "ru": "Деванагари — это абугида: каждая согласная буква уже содержит «встроенную» гласную «а» (क сама по себе читается ka, а не k). Другие гласные передаются маленькими значками — матрами, которые ставятся над буквой, под ней, перед или после неё (कि = ki, की = kī, कु = ku, के = ke, को = ko, का = kā). В начале слова используются полные буквы гласных (अ इ उ ए ओ), а не матры. Маленький штрих вирама (или халант, ्) подавляет встроенную гласную; если две или больше согласных идут подряд без гласной, они обычно сливаются в лигатуру (क + ष → क्ष, क + र → क्र). Характерная верхняя горизонтальная черта — широрекха — объединяет буквы каждого слова в единую линию, поэтому хиндийское слово визуально выглядит как одно связное целое."
-      },
-      "countries": [
-        { "flag": "🇮🇳", "name": { "en": "India", "ru": "Индия" } },
-        { "flag": "🇳🇵", "name": { "en": "Nepal", "ru": "Непал" } }
-      ]
+      "folder": "scripts/devanagari"
     },
     {
       "id": "arabic",
-      "name": { "en": "Arabic", "ru": "Арабский" },
-      "nativeName": "العربية",
-      "language": "ar",
-      "direction": "rtl",
-      "file": "scripts/arabic.json",
-      "info": {
-        "en": "The Arabic script developed from Nabataean Aramaic around the 4th century AD and spread with Islam from the 7th century onward. Written right-to-left, it is cursive: nearly every letter has four contextual forms. Short vowels are usually unwritten but may be marked with diacritics (harakat).",
-        "ru": "Арабское письмо сформировалось из набатейско-арамейского около IV века н. э. и распространилось вместе с исламом начиная с VII века. Оно пишется справа налево и является курсивным: почти у каждой буквы четыре контекстных формы. Краткие гласные обычно не обозначаются, но могут указываться диакритическими знаками (харакат)."
-      },
-      "composition": {
-        "en": "Arabic is an abjad: only consonants and long vowels are normally written, while short vowels are left implicit and recovered from context — much like reading 'cnsnts wtht vwls' in English. Even in print the script is cursive, so almost every letter has four contextual shapes — isolated, initial, medial and final — depending on where it sits in the word. Six letters (ا د ذ ر ز و) are 'non-joining': they connect to the previous letter but never to the next, which visually breaks a word into smaller cursive chunks. Optional diacritics called ḥarakāt fill in the missing detail: ◌َ (fatḥa, /a/), ◌ِ (kasra, /i/), ◌ُ (ḍamma, /u/), ◌ْ (sukūn, no vowel), ◌ّ (shadda, doubled consonant) and ◌ً ◌ٍ ◌ٌ (tanwīn, indefinite endings); they appear in dictionaries, children's books and the Qur'an, but are usually omitted from everyday text.",
-        "ru": "Арабское письмо — абджад: на письме обычно фиксируются только согласные и долгие гласные, а краткие гласные подразумеваются и восстанавливаются из контекста — как если бы по-русски читать «сглсн бз глсн». Даже в печати оно остаётся курсивным, поэтому почти у каждой буквы четыре контекстных формы — изолированная, начальная, срединная и конечная — в зависимости от положения в слове. Шесть букв (ا د ذ ر ز و) «несоединимы слева»: они присоединяются к предыдущей букве, но никогда — к последующей, визуально разбивая слово на меньшие курсивные «куски». Необязательные диакритики харакат добавляют недостающее: ◌َ (фатха, /a/), ◌ِ (кясра, /i/), ◌ُ (дамма, /u/), ◌ْ (сукун, отсутствие гласной), ◌ّ (шадда, удвоение согласной) и ◌ً ◌ٍ ◌ٌ (танвин, неопределённые окончания); они встречаются в словарях, детских книгах и Коране, но в обычных текстах обычно опускаются."
-      },
-      "countries": [
-        { "flag": "🇸🇦", "name": { "en": "Saudi Arabia", "ru": "Саудовская Аравия" } },
-        { "flag": "🇪🇬", "name": { "en": "Egypt", "ru": "Египет" } },
-        { "flag": "🇲🇦", "name": { "en": "Morocco", "ru": "Марокко" } },
-        { "flag": "🇩🇿", "name": { "en": "Algeria", "ru": "Алжир" } },
-        { "flag": "🇮🇶", "name": { "en": "Iraq", "ru": "Ирак" } },
-        { "flag": "🇸🇾", "name": { "en": "Syria", "ru": "Сирия" } },
-        { "flag": "🇯🇴", "name": { "en": "Jordan", "ru": "Иордания" } },
-        { "flag": "🇱🇧", "name": { "en": "Lebanon", "ru": "Ливан" } },
-        { "flag": "🇦🇪", "name": { "en": "UAE", "ru": "ОАЭ" } },
-        { "flag": "🇮🇷", "name": { "en": "Iran (Persian)", "ru": "Иран (персидский)" } },
-        { "flag": "🇵🇰", "name": { "en": "Pakistan (Urdu)", "ru": "Пакистан (урду)" } }
-      ]
+      "folder": "scripts/arabic"
     },
     {
       "id": "hebrew",
-      "name": { "en": "Hebrew", "ru": "Иврит" },
-      "nativeName": "עברית",
-      "language": "he",
-      "direction": "rtl",
-      "file": "scripts/hebrew.json",
-      "info": {
-        "en": "The Hebrew alphabet (the 'square script', ketav ashuri) descends from the Imperial Aramaic script around the 5th century BC. It has 22 consonants and is written right-to-left. Vowels are normally implicit, but can be indicated with niqqud — small dots and dashes above or below letters.",
-        "ru": "Еврейский алфавит («квадратное письмо», ктав ашури) восходит к имперскому арамейскому письму примерно V века до н. э. В нём 22 согласные, и он пишется справа налево. Гласные обычно не указываются, но могут обозначаться никкудом — маленькими точками и чёрточками над буквами или под ними."
-      },
-      "composition": {
-        "en": "Hebrew is an abjad: the 22 letters all stand for consonants and vowels are normally left out, so a reader has to know the word in order to vocalise it correctly. The letters do not connect into cursive shapes — each one is a separate square block — but five of them have a distinct 'final' shape used only at the end of a word: כ → ך (kaf), מ → ם (mem), נ → ן (nun), פ → ף (pe), צ → ץ (tsadi). Four letters do double duty as vowel placeholders, the so-called matres lectionis (א ה ו י), so the same ו can stand for the consonant /v/ or for the vowel /u/ or /o/ depending on context. A separate system of dots and dashes called niqqud is layered above, below or inside a letter to spell vowels precisely (בָּ /ba/, בִּ /bi/, בּוּ /bu/); it is used in poetry, scripture, dictionaries and learners' material but omitted from ordinary text. Hebrew is written right-to-left, but numbers (in their modern Western form) still run left-to-right inside a line.",
-        "ru": "Иврит — абджад: все 22 буквы передают согласные, а гласные обычно не пишутся, поэтому, чтобы правильно озвучить слово, читатель должен его узнавать. Буквы не сливаются в курсив — каждая стоит отдельным квадратным блоком, — но у пяти из них есть особая «конечная» форма, употребляемая только в конце слова: כ → ך (каф), מ → ם (мем), נ → ן (нун), פ → ף (пе), צ → ץ (цади). Четыре буквы исполняют двойную роль — это так называемые matres lectionis (א ה ו י): одна и та же ו может обозначать согласный /v/ или гласный /u/ или /o/ — в зависимости от контекста. Отдельная система точек и чёрточек — никкуд — наносится над буквой, под ней или внутри неё и точно фиксирует гласные (בָּ /ba/, בִּ /bi/, בּוּ /bu/); её используют в поэзии, священных текстах, словарях и учебных материалах, но опускают в обычных текстах. Иврит пишется справа налево, однако числа (в современном «западном» начертании) внутри строки по-прежнему идут слева направо."
-      },
-      "countries": [
-        { "flag": "🇮🇱", "name": { "en": "Israel", "ru": "Израиль" } }
-      ]
+      "folder": "scripts/hebrew"
     },
     {
       "id": "hangul",
-      "name": { "en": "Hangul", "ru": "Хангыль" },
-      "nativeName": "한글",
-      "language": "ko",
-      "direction": "ltr",
-      "file": "scripts/hangul.json",
-      "info": {
-        "en": "Hangul was promulgated in 1443 by King Sejong the Great of Joseon, who wanted a writing system the common people could actually learn. Its consonant shapes are diagrammatic — they depict the position of the tongue and lips — and letters cluster into syllable-blocks rather than being written in a line.",
-        "ru": "Хангыль был обнародован в 1443 году королём Седжоном Великим из династии Чосон, желавшим письменности, которой смогли бы овладеть простые люди. Формы согласных схематичны — они изображают положение языка и губ, — а буквы объединяются в слоговые блоки, а не пишутся в строку."
-      },
-      "composition": {
-        "en": "Hangul is an alphabet that doesn't read in a line — its letters (jamo) are stacked into square syllable blocks of two to four jamo. Each block holds an initial consonant, a medial vowel and an optional final consonant called the batchim (ㄱ + ㅏ + ㅁ → 감 'kam'). The layout depends on the vowel's shape: vertical vowels like ㅏ ㅓ ㅣ sit to the right of the initial (가 ka), horizontal vowels like ㅗ ㅜ ㅡ sit underneath it (구 ku), and the batchim, when present, slides under the whole block (각 kak, 군 kun). The basic shapes are 'featural': consonants ㄱ ㄴ ㅁ ㅅ ㅇ diagram the tongue or lip position used to pronounce them, and aspirated or tense variants are formed by adding strokes or doubling the letter (ㄱ k → ㅋ k h → ㄲ kk). Twenty-four basic jamo combine into 11,172 possible syllables, all of which a learner can read after mastering just the building blocks.",
-        "ru": "Хангыль — это алфавит, который не пишется в строку: его буквы (чамо) складываются в квадратные слоговые блоки из двух–четырёх чамо. В каждом блоке есть начальная согласная, гласная и необязательная конечная согласная — патчхим (ㄱ + ㅏ + ㅁ → 감 «кам»). Расположение зависит от формы гласной: вертикальные гласные ㅏ ㅓ ㅣ ставятся справа от начальной согласной (가 ka), горизонтальные ㅗ ㅜ ㅡ — снизу (구 ku), а патчхим, если он есть, помещается под весь блок (각 kak, 군 kun). Сами формы «фичерные»: согласные ㄱ ㄴ ㅁ ㅅ ㅇ изображают положение языка или губ при их произнесении, а придыхательные и напряжённые варианты получают дополнительные штрихи или удваиваются (ㄱ k → ㅋ kʰ → ㄲ kk). Двадцать четыре базовых чамо складываются в 11 172 возможных слога — и все их учащийся сможет прочитать, освоив лишь сами кирпичики."
-      },
-      "countries": [
-        { "flag": "🇰🇷", "name": { "en": "South Korea", "ru": "Южная Корея" } },
-        { "flag": "🇰🇵", "name": { "en": "North Korea", "ru": "Северная Корея" } }
-      ]
+      "folder": "scripts/hangul"
     },
     {
       "id": "thai",
-      "name": { "en": "Thai", "ru": "Тайский" },
-      "nativeName": "ไทย",
-      "language": "th",
-      "direction": "ltr",
-      "file": "scripts/thai.json",
-      "info": {
-        "en": "The Thai script was created in 1283 by King Ramkhamhaeng, adapted from the Old Khmer script (itself descended from Brahmi). It is an abugida with 44 consonants, 15 vowel symbols (which can combine), and 4 tone marks. It is written left-to-right with no spaces between words.",
-        "ru": "Тайская письменность была создана в 1283 году королём Рамкхамхэнгом на основе древнекхмерского письма (происходящего, в свою очередь, от брахми). Это абугида с 44 согласными, 15 знаками гласных (которые могут сочетаться) и 4 тоновыми знаками. Пишется слева направо, без пробелов между словами."
-      },
-      "composition": {
-        "en": "Thai is an abugida with no spaces between words — spaces are used instead to separate phrases or sentences, so the reader has to segment words mentally. Each of the 44 consonant letters carries an implicit vowel (/a/ in an open syllable, /o/ in a closed one); other vowels are written with separate signs that can stand before, after, above, below or even wrap around the consonant they belong to (เก = ke, ใก = kai, ไก = kai, กิ = ki, กุ = ku, ก้อ = kɔ̂ɔ). The 44 consonants are split into three 'classes' — high, mid, low — and that class, together with vowel length, syllable shape (live vs. dead) and the four tone marks (◌่ ◌้ ◌๊ ◌๋), determines which of Thai's five tones a syllable carries. Several letters write the same consonant sound; the redundancies are kept to preserve etymology (mostly Sanskrit and Pali borrowings) and to spell out the correct tone.",
-        "ru": "Тайский — абугида, пишущаяся без пробелов между словами: пробелы вместо этого разделяют фразы и предложения, так что границы слов читатель определяет «в уме». У каждой из 44 согласных есть встроенная гласная (/a/ — в открытом слоге, /o/ — в закрытом); прочие гласные обозначаются отдельными знаками, которые могут стоять до, после, над, под или даже обрамлять свою согласную (เก = ke, ใก = kai, ไก = kai, กิ = ki, กุ = ku, ก้อ = kɔ̂ɔ). 44 согласные делятся на три «класса» — высокий, средний и низкий, — и именно класс вместе с долготой гласной, типом слога («живой» или «мёртвый») и четырьмя тоновыми знаками (◌่ ◌้ ◌๊ ◌๋) определяет, какой из пяти тайских тонов несёт слог. Несколько букв обозначают один и тот же согласный звук: эта избыточность сохраняется ради этимологии (в основном это санскритские и палийские заимствования) и для правильной передачи тона."
-      },
-      "countries": [
-        { "flag": "🇹🇭", "name": { "en": "Thailand", "ru": "Таиланд" } }
-      ]
+      "folder": "scripts/thai"
     }
   ]
 }

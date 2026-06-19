@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "category": {
+    "id": "signs",
+    "label": {
+      "en": "Signs and signboards",
+      "ru": "Вывески и указатели"
+    }
+  },
+  "entries": [
+    {
+      "concept": "entrance",
+      "meaning": {
+        "en": "Entrance",
+        "ru": "Вход"
+      },
+      "native": "вход",
+      "ipa": "fxot",
+      "latin": "vkhod",
+      "cyrillic": "вход"
+    },
+    {
+      "concept": "exit",
+      "meaning": {
+        "en": "Exit",
+        "ru": "Выход"
+      },
+      "native": "выход",
+      "ipa": "ˈvɨxət",
+      "latin": "vykhod",
+      "cyrillic": "выход"
+    },
+    {
+      "concept": "toilets",
+      "meaning": {
+        "en": "Toilets",
+        "ru": "Туалеты"
+      },
+      "native": "туалет",
+      "ipa": "tʊɐˈlʲet",
+      "latin": "tualet",
+      "cyrillic": "туалет"
+    },
+    {
+      "concept": "information",
+      "meaning": {
+        "en": "Information",
+        "ru": "Информация"
+      },
+      "native": "информация",
+      "ipa": "ɪnfɐrˈmatsɨjə",
+      "latin": "informatsiya",
+      "cyrillic": "информация"
+    },
+    {
+      "concept": "open",
+      "meaning": {
+        "en": "Open",
+        "ru": "Открыто"
+      },
+      "native": "открыто",
+      "ipa": "ɐtˈkrɨtə",
+      "latin": "otkryto",
+      "cyrillic": "открыто"
+    },
+    {
+      "concept": "closed",
+      "meaning": {
+        "en": "Closed",
+        "ru": "Закрыто"
+      },
+      "native": "закрыто",
+      "ipa": "zɐˈkrɨtə",
+      "latin": "zakryto",
+      "cyrillic": "закрыто"
+    },
+    {
+      "concept": "stop",
+      "meaning": {
+        "en": "Stop",
+        "ru": "Стоп"
+      },
+      "native": "стоп",
+      "ipa": "stop",
+      "latin": "stop",
+      "cyrillic": "стоп"
+    },
+    {
+      "concept": "no_entry",
+      "meaning": {
+        "en": "No entry",
+        "ru": "Вход запрещён"
+      },
+      "native": "вход запрещён",
+      "ipa": "fxot zəprʲɪˈɕːon",
+      "latin": "vkhod zapreshchyon",
+      "cyrillic": "вход запрещён"
+    },
+    {
+      "concept": "parking",
+      "meaning": {
+        "en": "Parking",
+        "ru": "Парковка"
+      },
+      "native": "парковка",
+      "ipa": "pɐrˈkofkə",
+      "latin": "parkovka",
+      "cyrillic": "парковка"
+    },
+    {
+      "concept": "pharmacy",
+      "meaning": {
+        "en": "Pharmacy",
+        "ru": "Аптека"
+      },
+      "native": "аптека",
+      "ipa": "ɐpˈtʲekə",
+      "latin": "apteka",
+      "cyrillic": "аптека"
+    }
+  ]
+}

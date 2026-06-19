@@ -1,0 +1,344 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "concept": "taxi",
+      "meaning": {
+        "en": "taxi",
+        "ru": "такси"
+      },
+      "note": {
+        "en": "A truly international loanword — pronounced almost identically across these languages.",
+        "ru": "По-настоящему интернациональное слово — звучит почти одинаково во всех этих языках."
+      },
+      "native": "택시",
+      "ipa": "tʰɛk̚ɕi",
+      "latin": "taeksi",
+      "cyrillic": "тхэкси"
+    },
+    {
+      "concept": "metro",
+      "meaning": {
+        "en": "metro / subway",
+        "ru": "метро"
+      },
+      "native": "메트로",
+      "ipa": "metʰɯɾo",
+      "latin": "meteuro",
+      "cyrillic": "метхыро"
+    },
+    {
+      "concept": "coffee",
+      "meaning": {
+        "en": "coffee",
+        "ru": "кофе"
+      },
+      "note": {
+        "en": "Goes back to Arabic 'qahwa' — many of these forms are descendants.",
+        "ru": "Восходит к арабскому «qahwa» — многие из этих форм являются его потомками."
+      },
+      "native": "커피",
+      "ipa": "kʰʌpʰi",
+      "latin": "keopi",
+      "cyrillic": "копхи"
+    },
+    {
+      "concept": "tea",
+      "meaning": {
+        "en": "tea",
+        "ru": "чай"
+      },
+      "native": "차",
+      "ipa": "tɕʰa",
+      "latin": "cha",
+      "cyrillic": "чха"
+    },
+    {
+      "concept": "telephone",
+      "meaning": {
+        "en": "telephone",
+        "ru": "телефон"
+      },
+      "native": "텔레폰",
+      "ipa": "tʰellepʰon",
+      "latin": "tellepon",
+      "cyrillic": "тхелльепхон"
+    },
+    {
+      "concept": "radio",
+      "meaning": {
+        "en": "radio",
+        "ru": "радио"
+      },
+      "native": "라디오",
+      "ipa": "ɾadio",
+      "latin": "radio",
+      "cyrillic": "радио"
+    },
+    {
+      "concept": "music",
+      "meaning": {
+        "en": "music",
+        "ru": "музыка"
+      },
+      "native": "뮤직",
+      "ipa": "mjudʑik̚",
+      "latin": "myujik",
+      "cyrillic": "мьюджик"
+    },
+    {
+      "concept": "theater",
+      "meaning": {
+        "en": "theater",
+        "ru": "театр"
+      },
+      "note": {
+        "en": "Greek 'théatron' is the source of most European forms.",
+        "ru": "Источник большинства европейских форм — греческое «théatron»."
+      },
+      "native": "시어터",
+      "ipa": "ɕiʌtʰʌ",
+      "latin": "sieoteo",
+      "cyrillic": "сиотхо"
+    },
+    {
+      "concept": "cinema",
+      "meaning": {
+        "en": "cinema / movies",
+        "ru": "кино"
+      },
+      "native": "시네마",
+      "ipa": "ɕinema",
+      "latin": "sinema",
+      "cyrillic": "синэма"
+    },
+    {
+      "concept": "museum",
+      "meaning": {
+        "en": "museum",
+        "ru": "музей"
+      },
+      "native": "뮤지엄",
+      "ipa": "mjudʑiʌm",
+      "latin": "myujieom",
+      "cyrillic": "мьюджиом"
+    },
+    {
+      "concept": "university",
+      "meaning": {
+        "en": "university",
+        "ru": "университет"
+      },
+      "native": "유니버시티",
+      "ipa": "junibʌɕitʰi",
+      "latin": "yunibeositi",
+      "cyrillic": "юнибосити"
+    },
+    {
+      "concept": "mathematics",
+      "meaning": {
+        "en": "mathematics",
+        "ru": "математика"
+      },
+      "native": "마테마티카",
+      "ipa": "matʰematʰikʰa",
+      "latin": "matemathika",
+      "cyrillic": "матхэматхикха"
+    },
+    {
+      "concept": "doctor",
+      "meaning": {
+        "en": "doctor",
+        "ru": "врач"
+      },
+      "native": "닥터",
+      "ipa": "tak̚tʰʌ",
+      "latin": "dakteo",
+      "cyrillic": "тактхо"
+    },
+    {
+      "concept": "hospital",
+      "meaning": {
+        "en": "hospital",
+        "ru": "больница"
+      },
+      "note": {
+        "en": "Mostly native words, not a true international borrowing — pick whichever feels natural to learn.",
+        "ru": "В основном исконные слова, а не настоящее международное заимствование — выберите то, что удобнее запомнить."
+      },
+      "native": "호스피탈",
+      "ipa": "hosɯpʰitʰal",
+      "latin": "hoseupital",
+      "cyrillic": "хосыпхитхаль"
+    },
+    {
+      "concept": "bank",
+      "meaning": {
+        "en": "bank (financial institution)",
+        "ru": "банк (финансовое учреждение)"
+      },
+      "native": "뱅크",
+      "ipa": "pɛŋkʰɯ",
+      "latin": "baengkeu",
+      "cyrillic": "пэнкхы"
+    },
+    {
+      "concept": "computer",
+      "meaning": {
+        "en": "computer",
+        "ru": "компьютер"
+      },
+      "native": "컴퓨터",
+      "ipa": "kʰʌmpʰjutʰʌ",
+      "latin": "keompyuteo",
+      "cyrillic": "компхьютхо"
+    },
+    {
+      "concept": "internet",
+      "meaning": {
+        "en": "internet",
+        "ru": "интернет"
+      },
+      "native": "인터넷",
+      "ipa": "intʰʌnet̚",
+      "latin": "inteonet",
+      "cyrillic": "интхонет"
+    },
+    {
+      "concept": "kilometer",
+      "meaning": {
+        "en": "kilometer",
+        "ru": "километр"
+      },
+      "native": "킬로미터",
+      "ipa": "kʰillomitʰʌ",
+      "latin": "killomiteo",
+      "cyrillic": "кхиллёмитхо"
+    },
+    {
+      "concept": "dollar",
+      "meaning": {
+        "en": "dollar",
+        "ru": "доллар"
+      },
+      "native": "달러",
+      "ipa": "talʌ",
+      "latin": "dalleo",
+      "cyrillic": "талло"
+    },
+    {
+      "concept": "salad",
+      "meaning": {
+        "en": "salad",
+        "ru": "салат"
+      },
+      "native": "샐러드",
+      "ipa": "sɛllʌdɯ",
+      "latin": "saelleodeu",
+      "cyrillic": "сэллодый"
+    },
+    {
+      "concept": "chocolate",
+      "meaning": {
+        "en": "chocolate",
+        "ru": "шоколад"
+      },
+      "native": "초콜릿",
+      "ipa": "tɕʰokʰollit̚",
+      "latin": "chokollit",
+      "cyrillic": "чхокхоллит"
+    },
+    {
+      "concept": "pizza",
+      "meaning": {
+        "en": "pizza",
+        "ru": "пицца"
+      },
+      "native": "피자",
+      "ipa": "pʰidʑa",
+      "latin": "pija",
+      "cyrillic": "пхиджа"
+    },
+    {
+      "concept": "piano",
+      "meaning": {
+        "en": "piano",
+        "ru": "пианино"
+      },
+      "native": "피아노",
+      "ipa": "pʰiano",
+      "latin": "piano",
+      "cyrillic": "пхиано"
+    },
+    {
+      "concept": "hotel",
+      "meaning": {
+        "en": "hotel",
+        "ru": "отель"
+      },
+      "native": "호텔",
+      "ipa": "hotʰel",
+      "latin": "hotel",
+      "cyrillic": "хотхель"
+    },
+    {
+      "concept": "restaurant",
+      "meaning": {
+        "en": "restaurant",
+        "ru": "ресторан"
+      },
+      "native": "레스토랑",
+      "ipa": "ɾesɯtʰoɾaŋ",
+      "latin": "reseutorang",
+      "cyrillic": "рэсытхоран"
+    },
+    {
+      "concept": "park",
+      "meaning": {
+        "en": "park (public garden)",
+        "ru": "парк"
+      },
+      "native": "파크",
+      "ipa": "pʰakʰɯ",
+      "latin": "pakeu",
+      "cyrillic": "пхакхы"
+    },
+    {
+      "concept": "police",
+      "meaning": {
+        "en": "police",
+        "ru": "полиция"
+      },
+      "native": "폴리스",
+      "ipa": "pʰolisɯ",
+      "latin": "poliseu",
+      "cyrillic": "пхолисы"
+    },
+    {
+      "concept": "mama",
+      "meaning": {
+        "en": "mom",
+        "ru": "мама"
+      },
+      "note": {
+        "en": "WARNING: in Georgian 'მამა' (mama) means FATHER, not mother — a classic false friend.",
+        "ru": "ВНИМАНИЕ: в грузинском «მამა» (mama) означает ОТЦА, а не мать — классический ложный друг переводчика."
+      },
+      "native": "마마",
+      "ipa": "mama",
+      "latin": "mama",
+      "cyrillic": "мама"
+    },
+    {
+      "concept": "papa",
+      "meaning": {
+        "en": "dad",
+        "ru": "папа"
+      },
+      "native": "파파",
+      "ipa": "pʰapʰa",
+      "latin": "papa",
+      "cyrillic": "пхапха"
+    }
+  ]
+}

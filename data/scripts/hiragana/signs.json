@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "category": {
+    "id": "signs",
+    "label": {
+      "en": "Signs and signboards",
+      "ru": "Вывески и указатели"
+    }
+  },
+  "entries": [
+    {
+      "concept": "entrance",
+      "meaning": {
+        "en": "Entrance",
+        "ru": "Вход"
+      },
+      "native": "いりぐち",
+      "ipa": "iɾiɡɯtɕi",
+      "latin": "iriguchi",
+      "cyrillic": "иригути"
+    },
+    {
+      "concept": "exit",
+      "meaning": {
+        "en": "Exit",
+        "ru": "Выход"
+      },
+      "native": "でぐち",
+      "ipa": "deɡɯtɕi",
+      "latin": "deguchi",
+      "cyrillic": "дэгути"
+    },
+    {
+      "concept": "toilets",
+      "meaning": {
+        "en": "Toilets",
+        "ru": "Туалеты"
+      },
+      "native": "おてあらい",
+      "ipa": "oteaɾai",
+      "latin": "otearai",
+      "cyrillic": "отэараи"
+    },
+    {
+      "concept": "information",
+      "meaning": {
+        "en": "Information",
+        "ru": "Информация"
+      },
+      "native": "あんない",
+      "ipa": "anːai",
+      "latin": "annai",
+      "cyrillic": "аннай"
+    },
+    {
+      "concept": "open",
+      "meaning": {
+        "en": "Open",
+        "ru": "Открыто"
+      },
+      "native": "えいぎょうちゅう",
+      "ipa": "eiɡjoːtɕɯː",
+      "latin": "eigyochu",
+      "cyrillic": "эйгётю:"
+    },
+    {
+      "concept": "closed",
+      "meaning": {
+        "en": "Closed",
+        "ru": "Закрыто"
+      },
+      "native": "じゅんびちゅう",
+      "ipa": "dʑɯmbitɕɯː",
+      "latin": "junbichu",
+      "cyrillic": "дзюнбитю:"
+    },
+    {
+      "concept": "stop",
+      "meaning": {
+        "en": "Stop",
+        "ru": "Стоп"
+      },
+      "native": "とまれ",
+      "ipa": "tomaɾe",
+      "latin": "tomare",
+      "cyrillic": "томарэ"
+    },
+    {
+      "concept": "no_entry",
+      "meaning": {
+        "en": "No entry",
+        "ru": "Вход запрещён"
+      },
+      "native": "たちいりきんし",
+      "ipa": "tatɕiiɾi kinɕi",
+      "latin": "tachiiri kinshi",
+      "cyrillic": "татиири кинси"
+    },
+    {
+      "concept": "parking",
+      "meaning": {
+        "en": "Parking",
+        "ru": "Парковка"
+      },
+      "native": "ちゅうしゃじょう",
+      "ipa": "tɕɯːɕadʑoː",
+      "latin": "chushajo",
+      "cyrillic": "тю:сядзё:"
+    },
+    {
+      "concept": "pharmacy",
+      "meaning": {
+        "en": "Pharmacy",
+        "ru": "Аптека"
+      },
+      "native": "くすりや",
+      "ipa": "kɯsɯɾija",
+      "latin": "kusuriya",
+      "cyrillic": "кусурия"
+    }
+  ]
+}

@@ -1,0 +1,305 @@
+{
+  "version": 1,
+  "words": [
+    {
+      "native": "բարև",
+      "ipa": "bɑˈɾɛv",
+      "latin": "barev",
+      "cyrillic": "барэв",
+      "meaning": {
+        "en": "hello",
+        "ru": "привет"
+      }
+    },
+    {
+      "native": "շնորհակալություն",
+      "ipa": "ʃnɔɾhɑkɑluˈtʰjun",
+      "latin": "shnorhakalut'yun",
+      "cyrillic": "шнорhакалутьюн",
+      "meaning": {
+        "en": "thank you",
+        "ru": "спасибо"
+      }
+    },
+    {
+      "native": "այո",
+      "ipa": "ɑˈjɔ",
+      "latin": "ayo",
+      "cyrillic": "айо",
+      "meaning": {
+        "en": "yes",
+        "ru": "да"
+      }
+    },
+    {
+      "native": "ոչ",
+      "ipa": "vɔtʃʰ",
+      "latin": "voch'",
+      "cyrillic": "воч",
+      "meaning": {
+        "en": "no",
+        "ru": "нет"
+      }
+    },
+    {
+      "native": "ջուր",
+      "ipa": "dʒuɾ",
+      "latin": "jur",
+      "cyrillic": "джур",
+      "meaning": {
+        "en": "water",
+        "ru": "вода"
+      }
+    },
+    {
+      "native": "հաց",
+      "ipa": "hɑts",
+      "latin": "hats'",
+      "cyrillic": "hац",
+      "meaning": {
+        "en": "bread",
+        "ru": "хлеб"
+      }
+    },
+    {
+      "native": "կաթ",
+      "ipa": "kɑtʰ",
+      "latin": "kat'",
+      "cyrillic": "кат",
+      "meaning": {
+        "en": "milk",
+        "ru": "молоко"
+      }
+    },
+    {
+      "native": "գինի",
+      "ipa": "ɡiˈni",
+      "latin": "gini",
+      "cyrillic": "гини",
+      "meaning": {
+        "en": "wine",
+        "ru": "вино"
+      }
+    },
+    {
+      "native": "տուն",
+      "ipa": "tun",
+      "latin": "tun",
+      "cyrillic": "тун",
+      "meaning": {
+        "en": "house",
+        "ru": "дом"
+      }
+    },
+    {
+      "native": "դպրոց",
+      "ipa": "dəpˈɾɔts",
+      "latin": "dprots'",
+      "cyrillic": "дпроц",
+      "meaning": {
+        "en": "school",
+        "ru": "школа"
+      }
+    },
+    {
+      "native": "գիրք",
+      "ipa": "ɡiɾkʰ",
+      "latin": "girk'",
+      "cyrillic": "гирк",
+      "meaning": {
+        "en": "book",
+        "ru": "книга"
+      }
+    },
+    {
+      "native": "ընկեր",
+      "ipa": "əŋˈkɛɾ",
+      "latin": "ənker",
+      "cyrillic": "ынкэр",
+      "meaning": {
+        "en": "friend",
+        "ru": "друг"
+      }
+    },
+    {
+      "native": "հայ",
+      "ipa": "hɑj",
+      "latin": "hay",
+      "cyrillic": "hай",
+      "meaning": {
+        "en": "Armenian (person)",
+        "ru": "армянин"
+      }
+    },
+    {
+      "native": "Հայաստան",
+      "ipa": "hɑjɑsˈtɑn",
+      "latin": "Hayastan",
+      "cyrillic": "hайастан",
+      "meaning": {
+        "en": "Armenia",
+        "ru": "Армения"
+      }
+    },
+    {
+      "native": "մայր",
+      "ipa": "mɑjɾ",
+      "latin": "mayr",
+      "cyrillic": "майр",
+      "meaning": {
+        "en": "mother",
+        "ru": "мать"
+      }
+    },
+    {
+      "native": "հայր",
+      "ipa": "hɑjɾ",
+      "latin": "hayr",
+      "cyrillic": "hайр",
+      "meaning": {
+        "en": "father",
+        "ru": "отец"
+      }
+    },
+    {
+      "native": "երեխա",
+      "ipa": "jɛɾɛˈxɑ",
+      "latin": "yerekha",
+      "cyrillic": "ерэха",
+      "meaning": {
+        "en": "child",
+        "ru": "ребёнок"
+      }
+    },
+    {
+      "native": "արև",
+      "ipa": "ɑˈɾɛv",
+      "latin": "arev",
+      "cyrillic": "арэв",
+      "meaning": {
+        "en": "sun",
+        "ru": "солнце"
+      }
+    },
+    {
+      "native": "լուսին",
+      "ipa": "luˈsin",
+      "latin": "lusin",
+      "cyrillic": "лусин",
+      "meaning": {
+        "en": "moon",
+        "ru": "луна"
+      }
+    },
+    {
+      "native": "աստղ",
+      "ipa": "ɑstʁ",
+      "latin": "astgh",
+      "cyrillic": "астг",
+      "meaning": {
+        "en": "star",
+        "ru": "звезда"
+      }
+    },
+    {
+      "native": "ծով",
+      "ipa": "tsɔv",
+      "latin": "tsov",
+      "cyrillic": "цов",
+      "meaning": {
+        "en": "sea",
+        "ru": "море"
+      }
+    },
+    {
+      "native": "լեռ",
+      "ipa": "lɛr",
+      "latin": "leṙ",
+      "cyrillic": "лэрр",
+      "meaning": {
+        "en": "mountain",
+        "ru": "гора"
+      }
+    },
+    {
+      "native": "քաղաք",
+      "ipa": "kʰɑˈʁɑkʰ",
+      "latin": "k'aghak'",
+      "cyrillic": "кахак",
+      "meaning": {
+        "en": "city",
+        "ru": "город"
+      }
+    },
+    {
+      "native": "ճանապարհ",
+      "ipa": "tʃɑnɑˈpɑɾh",
+      "latin": "chanaparh",
+      "cyrillic": "чанапарh",
+      "meaning": {
+        "en": "road",
+        "ru": "дорога"
+      }
+    },
+    {
+      "native": "մեքենա",
+      "ipa": "mɛkʰɛˈnɑ",
+      "latin": "mek'ena",
+      "cyrillic": "мэкэна",
+      "meaning": {
+        "en": "car",
+        "ru": "машина"
+      }
+    },
+    {
+      "native": "կատու",
+      "ipa": "kɑˈtu",
+      "latin": "katu",
+      "cyrillic": "кату",
+      "meaning": {
+        "en": "cat",
+        "ru": "кошка"
+      }
+    },
+    {
+      "native": "շուն",
+      "ipa": "ʃun",
+      "latin": "shun",
+      "cyrillic": "шун",
+      "meaning": {
+        "en": "dog",
+        "ru": "собака"
+      }
+    },
+    {
+      "native": "ձմեռ",
+      "ipa": "dzmɛr",
+      "latin": "dzmeṙ",
+      "cyrillic": "дзмэрр",
+      "meaning": {
+        "en": "winter",
+        "ru": "зима"
+      }
+    },
+    {
+      "native": "ամառ",
+      "ipa": "ɑˈmɑr",
+      "latin": "amaṙ",
+      "cyrillic": "амарр",
+      "meaning": {
+        "en": "summer",
+        "ru": "лето"
+      }
+    },
+    {
+      "native": "օր",
+      "ipa": "ɔɾ",
+      "latin": "ōr",
+      "cyrillic": "ор",
+      "meaning": {
+        "en": "day",
+        "ru": "день"
+      }
+    }
+  ]
+}

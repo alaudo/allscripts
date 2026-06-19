@@ -26,8 +26,8 @@ export async function renderPreviewWords(_route, mount) {
   const minLen = lengths.length ? Math.min(...lengths) : 1;
   const maxLen = lengths.length ? Math.max(...lengths) : 1;
 
-  // Filters: which sources are enabled, and the [min, max] length window.
-  const sources = new Set(['curated', 'international']);
+  // Filters: which word buckets are enabled, and the [min, max] length window.
+  const sources = new Set(['curated', 'signs', 'international']);
   let lo = minLen;
   let hi = maxLen;
   let transcription = settings.transcription;
@@ -45,15 +45,16 @@ export async function renderPreviewWords(_route, mount) {
   root.appendChild(header);
 
   // Source chips
-  const srcCounts = { curated: 0, international: 0 };
+  const srcCounts = { curated: 0, signs: 0, international: 0 };
   for (const w of pool) srcCounts[w.source]++;
   const srcBar = el(`<div class="filter-bar" role="group" aria-label="${escapeHtml(t('preview.filter'))}"></div>`);
   const srcLabels = {
     curated: t('preview.src.curated'),
+    signs: t('preview.src.signs'),
     international: t('preview.src.international')
   };
   const srcChips = {};
-  for (const s of ['curated', 'international']) {
+  for (const s of ['curated', 'signs', 'international']) {
     if (srcCounts[s] === 0) continue;
     const chip = el(
       `<button type="button" class="chip on" data-src="${s}" aria-pressed="true">

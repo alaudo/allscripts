@@ -22,7 +22,7 @@ export async function renderPreviewPhrases(_route, mount) {
     `<header class="mode-header">
        <a href="#/home" class="back">${escapeHtml(t('nav.back_home'))}</a>
        <h2>${escapeHtml(t('preview.phrases.header', { name: localized(meta.name) }))}</h2>
-       <button type="button" class="transcription-toggle clickable" id="trans-toggle" title="${escapeHtml(t('transcription.cycle_tooltip'))}">${escapeHtml(transcriptionLabel(transcription))}</button>
+       <button type="button" class="transcription-toggle clickable" id="trans-toggle" title="${escapeHtml(t('transcription.cycle_tooltip'))}">${escapeHtml(phraseTranscriptionLabel())}</button>
      </header>`
   );
   root.appendChild(header);
@@ -63,9 +63,15 @@ export async function renderPreviewPhrases(_route, mount) {
   header.querySelector('#trans-toggle').addEventListener('click', () => {
     transcription = nextTranscription(transcription);
     updateSettings({ transcription });
-    header.querySelector('#trans-toggle').textContent = transcriptionLabel(transcription);
+    header.querySelector('#trans-toggle').textContent = phraseTranscriptionLabel();
     paint();
   });
 
   paint();
+
+  function phraseTranscriptionLabel() {
+    return transcription === 'ipa' && phrases.every(p => !p.ipa)
+      ? 'Latin'
+      : transcriptionLabel(transcription);
+  }
 }

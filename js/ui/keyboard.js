@@ -11,8 +11,10 @@ export function renderKeyboard(container, rows, handlers, { direction = 'ltr' } 
   for (const row of rows) {
     const r = el('<div class="keyboard-row"></div>');
     for (const key of row) {
-      const b = el(`<button type="button" class="keyboard-key" data-key="${escapeHtml(key)}">${escapeHtml(key)}</button>`);
-      b.addEventListener('click', () => handlers.onInput && handlers.onInput(key));
+      const label = typeof key === 'object' ? key.label : key;
+      const value = typeof key === 'object' ? key.value : String(label).replace(/\u25cc/g, '');
+      const b = el(`<button type="button" class="keyboard-key" data-key="${escapeHtml(value)}">${escapeHtml(label)}</button>`);
+      b.addEventListener('click', () => handlers.onInput && handlers.onInput(value));
       r.appendChild(b);
     }
     container.appendChild(r);

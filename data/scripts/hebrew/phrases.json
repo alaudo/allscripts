@@ -1,0 +1,276 @@
+{
+  "version": 3,
+  "language": "Modern Hebrew",
+  "phrases": [
+    {
+      "native": "שלום. תודה.",
+      "latin": "Shalom. Toda.",
+      "cyrillic": "шалом. тода",
+      "translations": {
+        "en": "Hello. Thank you.",
+        "ru": "Здравствуйте. Спасибо."
+      }
+    },
+    {
+      "native": "בבקשה. סליחה.",
+      "latin": "Bevakasha. Slicha.",
+      "cyrillic": "бэвакаша. слиха",
+      "translations": {
+        "en": "Please. Excuse me.",
+        "ru": "Пожалуйста. Извините."
+      }
+    },
+    {
+      "native": "כן. לא.",
+      "latin": "Ken. Lo.",
+      "cyrillic": "кен. ло",
+      "translations": {
+        "en": "Yes. No.",
+        "ru": "Да. Нет."
+      }
+    },
+    {
+      "native": "מדברים אנגלית?",
+      "latin": "Medabrim anglit?",
+      "cyrillic": "медабрим англит",
+      "translations": {
+        "en": "Do you speak English?",
+        "ru": "Вы говорите по-английски?"
+      }
+    },
+    {
+      "native": "אני לא מבין. דבר לאט, בבקשה.",
+      "latin": "Ani lo mevin. Daber le'at, bevakasha.",
+      "cyrillic": "ани ло мевин. дабер леат, бэвакаша",
+      "translations": {
+        "en": "I don't understand. Please speak slowly.",
+        "ru": "Я не понимаю. Говорите медленнее, пожалуйста."
+      }
+    },
+    {
+      "native": "אפשר להראות לי במפה?",
+      "latin": "Efshar lehar'ot li bamapa?",
+      "cyrillic": "эфшар леhарот ли бамапа",
+      "translations": {
+        "en": "Can you show me on the map?",
+        "ru": "Покажите мне на карте?"
+      }
+    },
+    {
+      "native": "איפה השירותים?",
+      "latin": "Eifo ha-sherutim?",
+      "cyrillic": "эйфо ха-шерутим",
+      "translations": {
+        "en": "Where is the toilet?",
+        "ru": "Где туалет?"
+      }
+    },
+    {
+      "native": "כמה זה עולה?",
+      "latin": "Kama ze ole?",
+      "cyrillic": "кама зэ оле",
+      "translations": {
+        "en": "How much is this?",
+        "ru": "Сколько это стоит?"
+      }
+    },
+    {
+      "native": "אני רוצה את זה.",
+      "latin": "Ani rotse et ze.",
+      "cyrillic": "ани роцэ эт зэ",
+      "translations": {
+        "en": "I would like this.",
+        "ru": "Я хочу это."
+      }
+    },
+    {
+      "native": "מים, בבקשה. חשבון, בבקשה.",
+      "latin": "Mayim, bevakasha. Heshbon, bevakasha.",
+      "cyrillic": "майим, бэвакаша. хешбон, бэвакаша",
+      "translations": {
+        "en": "Water, please. The bill, please.",
+        "ru": "Воды, пожалуйста. Счёт, пожалуйста."
+      }
+    },
+    {
+      "native": "אפשר לשלם בכרטיס?",
+      "latin": "Efshar leshalem bekartis?",
+      "cyrillic": "эфшар лешалем бэкартис",
+      "translations": {
+        "en": "Can I pay by card?",
+        "ru": "Можно оплатить картой?"
+      }
+    },
+    {
+      "native": "איפה תחנת הרכבת?",
+      "latin": "Eifo takhanat ha-rakevet?",
+      "cyrillic": "эйфо таханат ха-ракевет",
+      "translations": {
+        "en": "Where is the train station?",
+        "ru": "Где станция?"
+      }
+    },
+    {
+      "native": "כרטיס אחד, בבקשה.",
+      "latin": "Kartis ekhad, bevakasha.",
+      "cyrillic": "картис эхад, бэвакаша",
+      "translations": {
+        "en": "One ticket, please.",
+        "ru": "Один билет, пожалуйста."
+      }
+    },
+    {
+      "native": "אני צריך מונית.",
+      "latin": "Ani tsarikh monit.",
+      "cyrillic": "ани царих монит",
+      "translations": {
+        "en": "I need a taxi.",
+        "ru": "Мне нужно такси."
+      }
+    },
+    {
+      "native": "קח אותי לכתובת הזאת, בבקשה.",
+      "latin": "Kakh oti la-ktovet ha-zot, bevakasha.",
+      "cyrillic": "ках оти ла-ктовет ха-зот, бэвакаша",
+      "translations": {
+        "en": "Please take me to this address.",
+        "ru": "Отвезите меня по этому адресу, пожалуйста."
+      }
+    },
+    {
+      "native": "שמאלה. ימינה. ישר.",
+      "latin": "Smola. Yamina. Yashar.",
+      "cyrillic": "смола. ямина. яшар",
+      "translations": {
+        "en": "Left. Right. Straight ahead.",
+        "ru": "Налево. Направо. Прямо."
+      }
+    },
+    {
+      "native": "הלכתי לאיבוד.",
+      "latin": "Halakhti le'ibud.",
+      "cyrillic": "халахти леибуд",
+      "translations": {
+        "en": "I am lost.",
+        "ru": "Я заблудился/заблудилась."
+      }
+    },
+    {
+      "native": "הצילו! תקראו למשטרה.",
+      "latin": "Hatsilu! Tikre'u la-mishtara.",
+      "cyrillic": "хацилу! тикрэу ла-миштара",
+      "translations": {
+        "en": "Help! Call the police.",
+        "ru": "Помогите! Вызовите полицию."
+      }
+    },
+    {
+      "native": "אני צריך רופא.",
+      "latin": "Ani tsarikh rofe.",
+      "cyrillic": "ани царих рофэ",
+      "translations": {
+        "en": "I need a doctor.",
+        "ru": "Мне нужен врач."
+      }
+    },
+    {
+      "native": "יש לי אלרגיה.",
+      "latin": "Yesh li alergia.",
+      "cyrillic": "еш ли алергия",
+      "translations": {
+        "en": "I have an allergy.",
+        "ru": "У меня аллергия."
+      }
+    },
+    {
+      "native": "היום. מחר. עכשיו. אחר כך.",
+      "latin": "Hayom. Makhar. Akhshav. Akhar kakh.",
+      "cyrillic": "хайом. махар. ахшав. ахар ках",
+      "translations": {
+        "en": "Today. Tomorrow. Now. Later.",
+        "ru": "Сегодня. Завтра. Сейчас. Позже."
+      }
+    },
+    {
+      "native": "פתוח. סגור.",
+      "latin": "Patuakh. Sagur.",
+      "cyrillic": "патуах. сагур",
+      "translations": {
+        "en": "Open. Closed.",
+        "ru": "Открыто. Закрыто."
+      }
+    },
+    {
+      "native": "כאן. שם. קרוב. רחוק.",
+      "latin": "Kan. Sham. Karov. Rakhok.",
+      "cyrillic": "кан. шам. каров. рахок",
+      "translations": {
+        "en": "Here. There. Near. Far.",
+        "ru": "Здесь. Там. Близко. Далеко."
+      }
+    },
+    {
+      "native": "כניסה. יציאה.",
+      "latin": "Knisa. Yetsia.",
+      "cyrillic": "книса. еция",
+      "translations": {
+        "en": "Entrance. Exit.",
+        "ru": "Вход. Выход."
+      }
+    },
+    {
+      "native": "חם. קר.",
+      "latin": "Kham. Kar.",
+      "cyrillic": "хам. кар",
+      "translations": {
+        "en": "Hot. Cold.",
+        "ru": "Горячее. Холодное."
+      }
+    },
+    {
+      "native": "קטן. גדול.",
+      "latin": "Katan. Gadol.",
+      "cyrillic": "катан. гадоль",
+      "translations": {
+        "en": "Small. Large.",
+        "ru": "Маленькое. Большое."
+      }
+    },
+    {
+      "native": "קפה. תה.",
+      "latin": "Kafe. Te.",
+      "cyrillic": "кафе. тэ",
+      "translations": {
+        "en": "Coffee. Tea.",
+        "ru": "Кофе. Чай."
+      }
+    },
+    {
+      "native": "בלי בשר. צמחוני.",
+      "latin": "Bli basar. Tsimkhoni.",
+      "cyrillic": "бли басар. цимхони",
+      "translations": {
+        "en": "Without meat. Vegetarian.",
+        "ru": "Без мяса. Вегетарианское."
+      }
+    },
+    {
+      "native": "לא חריף. בלי אגוזים.",
+      "latin": "Lo kharif. Bli egozim.",
+      "cyrillic": "ло хариф. бли эгозим",
+      "translations": {
+        "en": "Not spicy. No nuts.",
+        "ru": "Не острое. Без орехов."
+      }
+    },
+    {
+      "native": "יש לי הזמנה. מה סיסמת ה-Wi-Fi?",
+      "latin": "Yesh li hazmana. Ma sismat ha-Wi-Fi?",
+      "cyrillic": "еш ли hазмана. ма сисмат ха-вай-фай",
+      "translations": {
+        "en": "I have a reservation. What is the Wi-Fi password?",
+        "ru": "У меня бронь. Какой пароль от Wi-Fi?"
+      }
+    }
+  ]
+}

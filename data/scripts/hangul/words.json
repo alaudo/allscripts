@@ -1,0 +1,305 @@
+{
+  "version": 1,
+  "words": [
+    {
+      "native": "안녕",
+      "ipa": "an.njʌŋ",
+      "latin": "annyeong",
+      "cyrillic": "аннён",
+      "meaning": {
+        "en": "hello / goodbye (informal)",
+        "ru": "привет / пока (неформальное)"
+      }
+    },
+    {
+      "native": "감사합니다",
+      "ipa": "kam.sa.ham.ni.da",
+      "latin": "gamsahamnida",
+      "cyrillic": "камсахамнида",
+      "meaning": {
+        "en": "thank you",
+        "ru": "спасибо"
+      }
+    },
+    {
+      "native": "네",
+      "ipa": "ne",
+      "latin": "ne",
+      "cyrillic": "нэ",
+      "meaning": {
+        "en": "yes",
+        "ru": "да"
+      }
+    },
+    {
+      "native": "아니요",
+      "ipa": "a.ni.jo",
+      "latin": "aniyo",
+      "cyrillic": "анийо",
+      "meaning": {
+        "en": "no",
+        "ru": "нет"
+      }
+    },
+    {
+      "native": "커피",
+      "ipa": "kʰʌ.pi",
+      "latin": "keopi",
+      "cyrillic": "кхопхи",
+      "meaning": {
+        "en": "coffee",
+        "ru": "кофе"
+      }
+    },
+    {
+      "native": "차",
+      "ipa": "tɕʰa",
+      "latin": "cha",
+      "cyrillic": "ча",
+      "meaning": {
+        "en": "tea / car",
+        "ru": "чай / машина"
+      }
+    },
+    {
+      "native": "물",
+      "ipa": "mul",
+      "latin": "mul",
+      "cyrillic": "муль",
+      "meaning": {
+        "en": "water",
+        "ru": "вода"
+      }
+    },
+    {
+      "native": "택시",
+      "ipa": "tʰɛk.ɕi",
+      "latin": "taeksi",
+      "cyrillic": "тхэкси",
+      "meaning": {
+        "en": "taxi",
+        "ru": "такси"
+      }
+    },
+    {
+      "native": "버스",
+      "ipa": "pʌ.sɯ",
+      "latin": "beoseu",
+      "cyrillic": "посы",
+      "meaning": {
+        "en": "bus",
+        "ru": "автобус"
+      }
+    },
+    {
+      "native": "호텔",
+      "ipa": "ho.tʰel",
+      "latin": "hotel",
+      "cyrillic": "хотхэль",
+      "meaning": {
+        "en": "hotel",
+        "ru": "отель"
+      }
+    },
+    {
+      "native": "비행기",
+      "ipa": "pi.hɛŋ.ɡi",
+      "latin": "bihaenggi",
+      "cyrillic": "пихэнги",
+      "meaning": {
+        "en": "airplane",
+        "ru": "самолёт"
+      }
+    },
+    {
+      "native": "음악",
+      "ipa": "ɯ.mak",
+      "latin": "eumak",
+      "cyrillic": "ымак",
+      "meaning": {
+        "en": "music",
+        "ru": "музыка"
+      }
+    },
+    {
+      "native": "영화",
+      "ipa": "jʌŋ.hwa",
+      "latin": "yeonghwa",
+      "cyrillic": "ёнхва",
+      "meaning": {
+        "en": "movie / cinema",
+        "ru": "кино"
+      }
+    },
+    {
+      "native": "학교",
+      "ipa": "hak.kjo",
+      "latin": "hakgyo",
+      "cyrillic": "хаккё",
+      "meaning": {
+        "en": "school",
+        "ru": "школа"
+      }
+    },
+    {
+      "native": "대학",
+      "ipa": "tɛ.hak",
+      "latin": "daehak",
+      "cyrillic": "тэхак",
+      "meaning": {
+        "en": "university",
+        "ru": "университет"
+      }
+    },
+    {
+      "native": "병원",
+      "ipa": "pjʌŋ.wʌn",
+      "latin": "byeongwon",
+      "cyrillic": "пёнвон",
+      "meaning": {
+        "en": "hospital",
+        "ru": "больница"
+      }
+    },
+    {
+      "native": "은행",
+      "ipa": "ɯn.hɛŋ",
+      "latin": "eunhaeng",
+      "cyrillic": "ынхэн",
+      "meaning": {
+        "en": "bank",
+        "ru": "банк"
+      }
+    },
+    {
+      "native": "식당",
+      "ipa": "ɕik.t͈aŋ",
+      "latin": "sikdang",
+      "cyrillic": "сиктан",
+      "meaning": {
+        "en": "restaurant",
+        "ru": "ресторан"
+      }
+    },
+    {
+      "native": "카페",
+      "ipa": "kʰa.pʰe",
+      "latin": "kape",
+      "cyrillic": "кхапхэ",
+      "meaning": {
+        "en": "café",
+        "ru": "кафе"
+      }
+    },
+    {
+      "native": "라디오",
+      "ipa": "ɾa.di.o",
+      "latin": "radio",
+      "cyrillic": "радио",
+      "meaning": {
+        "en": "radio",
+        "ru": "радио"
+      }
+    },
+    {
+      "native": "컴퓨터",
+      "ipa": "kʰʌm.pʰju.tʰʌ",
+      "latin": "keompyuteo",
+      "cyrillic": "кхомпхютхо",
+      "meaning": {
+        "en": "computer",
+        "ru": "компьютер"
+      }
+    },
+    {
+      "native": "인터넷",
+      "ipa": "in.tʰʌ.net",
+      "latin": "inteonet",
+      "cyrillic": "интхонэт",
+      "meaning": {
+        "en": "internet",
+        "ru": "интернет"
+      }
+    },
+    {
+      "native": "박물관",
+      "ipa": "paŋ.mul.ɡwan",
+      "latin": "bangmulgwan",
+      "cyrillic": "панмульгван",
+      "meaning": {
+        "en": "museum",
+        "ru": "музей"
+      }
+    },
+    {
+      "native": "어머니",
+      "ipa": "ʌ.mʌ.ni",
+      "latin": "eomeoni",
+      "cyrillic": "омони",
+      "meaning": {
+        "en": "mother",
+        "ru": "мать"
+      }
+    },
+    {
+      "native": "아버지",
+      "ipa": "a.bʌ.dʑi",
+      "latin": "abeoji",
+      "cyrillic": "абоджи",
+      "meaning": {
+        "en": "father",
+        "ru": "отец"
+      }
+    },
+    {
+      "native": "친구",
+      "ipa": "tɕʰin.ɡu",
+      "latin": "chingu",
+      "cyrillic": "чхингу",
+      "meaning": {
+        "en": "friend",
+        "ru": "друг"
+      }
+    },
+    {
+      "native": "사람",
+      "ipa": "sa.ɾam",
+      "latin": "saram",
+      "cyrillic": "сарам",
+      "meaning": {
+        "en": "person",
+        "ru": "человек"
+      }
+    },
+    {
+      "native": "도시",
+      "ipa": "to.ɕi",
+      "latin": "dosi",
+      "cyrillic": "доси",
+      "meaning": {
+        "en": "city",
+        "ru": "город"
+      }
+    },
+    {
+      "native": "김치",
+      "ipa": "kim.tɕʰi",
+      "latin": "gimchi",
+      "cyrillic": "кимчхи",
+      "meaning": {
+        "en": "kimchi",
+        "ru": "кимчи"
+      }
+    },
+    {
+      "native": "피자",
+      "ipa": "pʰi.dʑa",
+      "latin": "pija",
+      "cyrillic": "пхиджа",
+      "meaning": {
+        "en": "pizza",
+        "ru": "пицца"
+      }
+    }
+  ]
+}

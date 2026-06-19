@@ -1,0 +1,305 @@
+{
+  "version": 1,
+  "words": [
+    {
+      "native": "नमस्ते",
+      "ipa": "nəməsˈt̪eː",
+      "latin": "namaste",
+      "cyrillic": "намастэ",
+      "meaning": {
+        "en": "hello / greetings",
+        "ru": "приветствие"
+      }
+    },
+    {
+      "native": "धन्यवाद",
+      "ipa": "d̪ʱənjəˈʋaːd̪",
+      "latin": "dhanyavād",
+      "cyrillic": "дханьявад",
+      "meaning": {
+        "en": "thank you",
+        "ru": "спасибо"
+      }
+    },
+    {
+      "native": "हाँ",
+      "ipa": "ɦãː",
+      "latin": "hāṁ",
+      "cyrillic": "ха",
+      "meaning": {
+        "en": "yes",
+        "ru": "да"
+      }
+    },
+    {
+      "native": "नहीं",
+      "ipa": "nəˈɦĩː",
+      "latin": "nahīṁ",
+      "cyrillic": "нахи",
+      "meaning": {
+        "en": "no",
+        "ru": "нет"
+      }
+    },
+    {
+      "native": "माँ",
+      "ipa": "mãː",
+      "latin": "māṁ",
+      "cyrillic": "ма",
+      "meaning": {
+        "en": "mother",
+        "ru": "мать"
+      }
+    },
+    {
+      "native": "पिता",
+      "ipa": "pɪt̪aː",
+      "latin": "pitā",
+      "cyrillic": "пита",
+      "meaning": {
+        "en": "father",
+        "ru": "отец"
+      }
+    },
+    {
+      "native": "घर",
+      "ipa": "ɡʱəɾ",
+      "latin": "ghar",
+      "cyrillic": "гхар",
+      "meaning": {
+        "en": "house",
+        "ru": "дом"
+      }
+    },
+    {
+      "native": "पानी",
+      "ipa": "paːniː",
+      "latin": "pānī",
+      "cyrillic": "пани",
+      "meaning": {
+        "en": "water",
+        "ru": "вода"
+      }
+    },
+    {
+      "native": "रोटी",
+      "ipa": "ɾoːʈiː",
+      "latin": "roṭī",
+      "cyrillic": "роти",
+      "meaning": {
+        "en": "bread",
+        "ru": "хлеб"
+      }
+    },
+    {
+      "native": "चाय",
+      "ipa": "tʃaːj",
+      "latin": "cāy",
+      "cyrillic": "чай",
+      "meaning": {
+        "en": "tea",
+        "ru": "чай"
+      }
+    },
+    {
+      "native": "दूध",
+      "ipa": "d̪uːd̪ʱ",
+      "latin": "dūdh",
+      "cyrillic": "дудх",
+      "meaning": {
+        "en": "milk",
+        "ru": "молоко"
+      }
+    },
+    {
+      "native": "किताब",
+      "ipa": "kɪˈt̪aːb",
+      "latin": "kitāb",
+      "cyrillic": "китаб",
+      "meaning": {
+        "en": "book",
+        "ru": "книга"
+      }
+    },
+    {
+      "native": "स्कूल",
+      "ipa": "skuːl",
+      "latin": "skūl",
+      "cyrillic": "скул",
+      "meaning": {
+        "en": "school",
+        "ru": "школа"
+      }
+    },
+    {
+      "native": "दोस्त",
+      "ipa": "d̪oːst̪",
+      "latin": "dost",
+      "cyrillic": "дост",
+      "meaning": {
+        "en": "friend",
+        "ru": "друг"
+      }
+    },
+    {
+      "native": "दिन",
+      "ipa": "d̪ɪn",
+      "latin": "din",
+      "cyrillic": "дин",
+      "meaning": {
+        "en": "day",
+        "ru": "день"
+      }
+    },
+    {
+      "native": "रात",
+      "ipa": "ɾaːt̪",
+      "latin": "rāt",
+      "cyrillic": "рат",
+      "meaning": {
+        "en": "night",
+        "ru": "ночь"
+      }
+    },
+    {
+      "native": "सूरज",
+      "ipa": "suːɾədʒ",
+      "latin": "sūraj",
+      "cyrillic": "сурадж",
+      "meaning": {
+        "en": "sun",
+        "ru": "солнце"
+      }
+    },
+    {
+      "native": "चाँद",
+      "ipa": "tʃãːd̪",
+      "latin": "cāṁd",
+      "cyrillic": "чанд",
+      "meaning": {
+        "en": "moon",
+        "ru": "луна"
+      }
+    },
+    {
+      "native": "तारा",
+      "ipa": "t̪aːɾaː",
+      "latin": "tārā",
+      "cyrillic": "тара",
+      "meaning": {
+        "en": "star",
+        "ru": "звезда"
+      }
+    },
+    {
+      "native": "आसमान",
+      "ipa": "aːsˈmaːn",
+      "latin": "āsmān",
+      "cyrillic": "асман",
+      "meaning": {
+        "en": "sky",
+        "ru": "небо"
+      }
+    },
+    {
+      "native": "पेड़",
+      "ipa": "peːɽ",
+      "latin": "peṛ",
+      "cyrillic": "пер",
+      "meaning": {
+        "en": "tree",
+        "ru": "дерево"
+      }
+    },
+    {
+      "native": "फूल",
+      "ipa": "pʰuːl",
+      "latin": "phūl",
+      "cyrillic": "пхул",
+      "meaning": {
+        "en": "flower",
+        "ru": "цветок"
+      }
+    },
+    {
+      "native": "शहर",
+      "ipa": "ʃəɦəɾ",
+      "latin": "śahar",
+      "cyrillic": "шахар",
+      "meaning": {
+        "en": "city",
+        "ru": "город"
+      }
+    },
+    {
+      "native": "गाँव",
+      "ipa": "ɡãːʋ",
+      "latin": "gāṁv",
+      "cyrillic": "ганв",
+      "meaning": {
+        "en": "village",
+        "ru": "деревня"
+      }
+    },
+    {
+      "native": "सड़क",
+      "ipa": "səɽək",
+      "latin": "saṛak",
+      "cyrillic": "сарак",
+      "meaning": {
+        "en": "road",
+        "ru": "дорога"
+      }
+    },
+    {
+      "native": "गाड़ी",
+      "ipa": "ɡaːɽiː",
+      "latin": "gāṛī",
+      "cyrillic": "гари",
+      "meaning": {
+        "en": "car / vehicle",
+        "ru": "машина / транспорт"
+      }
+    },
+    {
+      "native": "रेलगाड़ी",
+      "ipa": "ɾeːlɡaːɽiː",
+      "latin": "relgāṛī",
+      "cyrillic": "рэлгари",
+      "meaning": {
+        "en": "train",
+        "ru": "поезд"
+      }
+    },
+    {
+      "native": "खाना",
+      "ipa": "kʰaːnaː",
+      "latin": "khānā",
+      "cyrillic": "кхана",
+      "meaning": {
+        "en": "food",
+        "ru": "еда"
+      }
+    },
+    {
+      "native": "कुत्ता",
+      "ipa": "kʊtːaː",
+      "latin": "kuttā",
+      "cyrillic": "кутта",
+      "meaning": {
+        "en": "dog",
+        "ru": "собака"
+      }
+    },
+    {
+      "native": "बिल्ली",
+      "ipa": "bɪlliː",
+      "latin": "billī",
+      "cyrillic": "билли",
+      "meaning": {
+        "en": "cat",
+        "ru": "кошка"
+      }
+    }
+  ]
+}

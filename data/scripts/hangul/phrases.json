@@ -1,0 +1,276 @@
+{
+  "version": 3,
+  "language": "Korean",
+  "phrases": [
+    {
+      "native": "안녕하세요. 감사합니다.",
+      "latin": "Annyeonghaseyo. Gamsahamnida.",
+      "cyrillic": "аннёнхасэё. камсахамнида",
+      "translations": {
+        "en": "Hello. Thank you.",
+        "ru": "Здравствуйте. Спасибо."
+      }
+    },
+    {
+      "native": "부탁합니다. 죄송합니다.",
+      "latin": "Butakhamnida. Joesonghamnida.",
+      "cyrillic": "путакхамнида. чвесонхамнида",
+      "translations": {
+        "en": "Please. Excuse me.",
+        "ru": "Пожалуйста. Извините."
+      }
+    },
+    {
+      "native": "네. 아니요.",
+      "latin": "Ne. Aniyo.",
+      "cyrillic": "нэ. аниё",
+      "translations": {
+        "en": "Yes. No.",
+        "ru": "Да. Нет."
+      }
+    },
+    {
+      "native": "영어 하세요?",
+      "latin": "Yeongeo haseyo?",
+      "cyrillic": "ёно хасэё",
+      "translations": {
+        "en": "Do you speak English?",
+        "ru": "Вы говорите по-английски?"
+      }
+    },
+    {
+      "native": "이해 못 했어요. 천천히 말해 주세요.",
+      "latin": "Ihae mot haesseoyo. Cheoncheonhi malhae juseyo.",
+      "cyrillic": "ихэ мот хэссоё. чончони мальхэ джусэё",
+      "translations": {
+        "en": "I don't understand. Please speak slowly.",
+        "ru": "Я не понимаю. Говорите медленнее, пожалуйста."
+      }
+    },
+    {
+      "native": "지도에서 보여 주세요.",
+      "latin": "Jidoeseo boyeo juseyo.",
+      "cyrillic": "джидоэсо поё джусэё",
+      "translations": {
+        "en": "Can you show me on the map?",
+        "ru": "Покажите мне на карте."
+      }
+    },
+    {
+      "native": "화장실이 어디예요?",
+      "latin": "Hwajangsiri eodiyeyo?",
+      "cyrillic": "хваджансири одиэё",
+      "translations": {
+        "en": "Where is the toilet?",
+        "ru": "Где туалет?"
+      }
+    },
+    {
+      "native": "이거 얼마예요?",
+      "latin": "Igeo eolmayeyo?",
+      "cyrillic": "иго ольмаэё",
+      "translations": {
+        "en": "How much is this?",
+        "ru": "Сколько это стоит?"
+      }
+    },
+    {
+      "native": "이거 주세요.",
+      "latin": "Igeo juseyo.",
+      "cyrillic": "иго джусэё",
+      "translations": {
+        "en": "I would like this.",
+        "ru": "Дайте это, пожалуйста."
+      }
+    },
+    {
+      "native": "물 주세요. 계산서 주세요.",
+      "latin": "Mul juseyo. Gyesanseo juseyo.",
+      "cyrillic": "муль джусэё. кэсансо джусэё",
+      "translations": {
+        "en": "Water, please. The bill, please.",
+        "ru": "Воды, пожалуйста. Счёт, пожалуйста."
+      }
+    },
+    {
+      "native": "카드로 결제할 수 있어요?",
+      "latin": "Kadeuro gyeoljehal su isseoyo?",
+      "cyrillic": "кадиро кёльджэхаль су иссоё",
+      "translations": {
+        "en": "Can I pay by card?",
+        "ru": "Можно оплатить картой?"
+      }
+    },
+    {
+      "native": "지하철역이 어디예요?",
+      "latin": "Jihacheolyeogi eodiyeyo?",
+      "cyrillic": "джихачорёги одиэё",
+      "translations": {
+        "en": "Where is the metro station?",
+        "ru": "Где станция метро?"
+      }
+    },
+    {
+      "native": "표 한 장 주세요.",
+      "latin": "Pyo han jang juseyo.",
+      "cyrillic": "пё хан джан джусэё",
+      "translations": {
+        "en": "One ticket, please.",
+        "ru": "Один билет, пожалуйста."
+      }
+    },
+    {
+      "native": "택시가 필요해요.",
+      "latin": "Taeksiga piryohaeyo.",
+      "cyrillic": "тэксига пирёхэё",
+      "translations": {
+        "en": "I need a taxi.",
+        "ru": "Мне нужно такси."
+      }
+    },
+    {
+      "native": "이 주소로 가 주세요.",
+      "latin": "I jusoro ga juseyo.",
+      "cyrillic": "и джусоро ка джусэё",
+      "translations": {
+        "en": "Please take me to this address.",
+        "ru": "Отвезите меня по этому адресу, пожалуйста."
+      }
+    },
+    {
+      "native": "왼쪽. 오른쪽. 직진.",
+      "latin": "Oenjjok. Oreunjjok. Jikjin.",
+      "cyrillic": "венчок. орыджок. чикчин",
+      "translations": {
+        "en": "Left. Right. Straight ahead.",
+        "ru": "Налево. Направо. Прямо."
+      }
+    },
+    {
+      "native": "길을 잃었어요.",
+      "latin": "Gireul ireosseoyo.",
+      "cyrillic": "кирыль ироссоё",
+      "translations": {
+        "en": "I am lost.",
+        "ru": "Я заблудился/заблудилась."
+      }
+    },
+    {
+      "native": "도와주세요! 경찰을 불러 주세요.",
+      "latin": "Dowajuseyo! Gyeongchareul bulleo juseyo.",
+      "cyrillic": "товаджусэё! кёнчарыль пулло джусэё",
+      "translations": {
+        "en": "Help! Call the police.",
+        "ru": "Помогите! Вызовите полицию."
+      }
+    },
+    {
+      "native": "의사가 필요해요.",
+      "latin": "Uisaga piryohaeyo.",
+      "cyrillic": "ыйсага пирёхэё",
+      "translations": {
+        "en": "I need a doctor.",
+        "ru": "Мне нужен врач."
+      }
+    },
+    {
+      "native": "알레르기가 있어요.",
+      "latin": "Allereugiga isseoyo.",
+      "cyrillic": "аллерыгига иссоё",
+      "translations": {
+        "en": "I have an allergy.",
+        "ru": "У меня аллергия."
+      }
+    },
+    {
+      "native": "오늘. 내일. 지금. 나중에.",
+      "latin": "Oneul. Naeil. Jigeum. Najunge.",
+      "cyrillic": "оныль. нэиль. чигым. наджунгэ",
+      "translations": {
+        "en": "Today. Tomorrow. Now. Later.",
+        "ru": "Сегодня. Завтра. Сейчас. Позже."
+      }
+    },
+    {
+      "native": "열려 있어요. 닫혀 있어요.",
+      "latin": "Yeollyeo isseoyo. Dathyeo isseoyo.",
+      "cyrillic": "ёллё иссоё. татхё иссоё",
+      "translations": {
+        "en": "Open. Closed.",
+        "ru": "Открыто. Закрыто."
+      }
+    },
+    {
+      "native": "여기. 저기. 가까워요. 멀어요.",
+      "latin": "Yeogi. Jeogi. Gakkawoyo. Meoreoyo.",
+      "cyrillic": "ёги. чоги. какавойо. мороё",
+      "translations": {
+        "en": "Here. There. Near. Far.",
+        "ru": "Здесь. Там. Близко. Далеко."
+      }
+    },
+    {
+      "native": "입구. 출구.",
+      "latin": "Ipgu. Chulgu.",
+      "cyrillic": "ипгу. чульгу",
+      "translations": {
+        "en": "Entrance. Exit.",
+        "ru": "Вход. Выход."
+      }
+    },
+    {
+      "native": "뜨거워요. 차가워요.",
+      "latin": "Tteugeowoyo. Chagawoyo.",
+      "cyrillic": "ттыговойо. чагавойо",
+      "translations": {
+        "en": "Hot. Cold.",
+        "ru": "Горячее. Холодное."
+      }
+    },
+    {
+      "native": "작아요. 커요.",
+      "latin": "Jagayo. Keoyo.",
+      "cyrillic": "чагаё. коё",
+      "translations": {
+        "en": "Small. Large.",
+        "ru": "Маленькое. Большое."
+      }
+    },
+    {
+      "native": "커피. 차.",
+      "latin": "Keopi. Cha.",
+      "cyrillic": "копи. ча",
+      "translations": {
+        "en": "Coffee. Tea.",
+        "ru": "Кофе. Чай."
+      }
+    },
+    {
+      "native": "고기 빼 주세요. 채식이에요.",
+      "latin": "Gogi ppae juseyo. Chaesigieyo.",
+      "cyrillic": "коги ппэ джусэё. чхэсигиё",
+      "translations": {
+        "en": "Without meat. Vegetarian.",
+        "ru": "Без мяса. Вегетарианское."
+      }
+    },
+    {
+      "native": "맵지 않게. 견과류 빼 주세요.",
+      "latin": "Maepji anke. Gyeongwaryu ppae juseyo.",
+      "cyrillic": "мэпчи анкэ. кёнгварю ппэ джусэё",
+      "translations": {
+        "en": "Not spicy. No nuts.",
+        "ru": "Не острое. Без орехов."
+      }
+    },
+    {
+      "native": "예약했어요. 와이파이 비밀번호가 뭐예요?",
+      "latin": "Yeyakhaesseoyo. Waipai bimilbeonhoga mwoyeyo?",
+      "cyrillic": "еякхэссоё. вайпай бимильбоно мвоэё",
+      "translations": {
+        "en": "I have a reservation. What is the Wi-Fi password?",
+        "ru": "У меня бронь. Какой пароль от Wi-Fi?"
+      }
+    }
+  ]
+}

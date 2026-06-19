@@ -1,0 +1,276 @@
+{
+  "version": 3,
+  "language": "Armenian",
+  "phrases": [
+    {
+      "native": "Բարև։ Շնորհակալություն։",
+      "latin": "Barev. Shnorhakalut'yun.",
+      "cyrillic": "барэв. шноракалутюн",
+      "translations": {
+        "en": "Hello. Thank you.",
+        "ru": "Здравствуйте. Спасибо."
+      }
+    },
+    {
+      "native": "Խնդրեմ։ Ներեցեք։",
+      "latin": "Khndrem. Nerets'ek'.",
+      "cyrillic": "хндрэм. нэрэцэк",
+      "translations": {
+        "en": "Please. Excuse me.",
+        "ru": "Пожалуйста. Извините."
+      }
+    },
+    {
+      "native": "Այո։ Ոչ։",
+      "latin": "Ayo. Voch'.",
+      "cyrillic": "айо. воч",
+      "translations": {
+        "en": "Yes. No.",
+        "ru": "Да. Нет."
+      }
+    },
+    {
+      "native": "Անգլերեն խոսու՞մ եք։",
+      "latin": "Angleren khosum ek'?",
+      "cyrillic": "англерэн хосум эк",
+      "translations": {
+        "en": "Do you speak English?",
+        "ru": "Вы говорите по-английски?"
+      }
+    },
+    {
+      "native": "Չեմ հասկանում։ Խնդրում եմ դանդաղ խոսեք։",
+      "latin": "Ch'em haskanum. Khndrum em dandagh khosek'.",
+      "cyrillic": "чем хасканум. хндрум эм дандах хосэк",
+      "translations": {
+        "en": "I don't understand. Please speak slowly.",
+        "ru": "Я не понимаю. Говорите медленнее, пожалуйста."
+      }
+    },
+    {
+      "native": "Կարո՞ղ եք ցույց տալ քարտեզի վրա։",
+      "latin": "Karogh ek' ts'uyts' tal k'artezi vra?",
+      "cyrillic": "карох эк цуйц тал картэзи вра",
+      "translations": {
+        "en": "Can you show me on the map?",
+        "ru": "Покажите мне на карте?"
+      }
+    },
+    {
+      "native": "Որտե՞ղ է զուգարանը։",
+      "latin": "Vortegh e zugaraně?",
+      "cyrillic": "вортэх э зугаранэ",
+      "translations": {
+        "en": "Where is the toilet?",
+        "ru": "Где туалет?"
+      }
+    },
+    {
+      "native": "Սա որքա՞ն արժե։",
+      "latin": "Sa vork'an arzhe?",
+      "cyrillic": "са воркан аржэ",
+      "translations": {
+        "en": "How much is this?",
+        "ru": "Сколько это стоит?"
+      }
+    },
+    {
+      "native": "Ես սա եմ ուզում։",
+      "latin": "Yes sa em uzum.",
+      "cyrillic": "ес са эм узум",
+      "translations": {
+        "en": "I would like this.",
+        "ru": "Я хочу это."
+      }
+    },
+    {
+      "native": "Ջուր, խնդրում եմ։ Հաշիվը, խնդրում եմ։",
+      "latin": "Jur, khndrum em. Hashivě, khndrum em.",
+      "cyrillic": "джур, хндрум эм. hашивэ, хндрум эм",
+      "translations": {
+        "en": "Water, please. The bill, please.",
+        "ru": "Воды, пожалуйста. Счёт, пожалуйста."
+      }
+    },
+    {
+      "native": "Կարո՞ղ եմ քարտով վճարել։",
+      "latin": "Karogh em k'artov vcharel?",
+      "cyrillic": "карох эм картов вчарэл",
+      "translations": {
+        "en": "Can I pay by card?",
+        "ru": "Можно оплатить картой?"
+      }
+    },
+    {
+      "native": "Որտե՞ղ է մետրոյի կայարանը։",
+      "latin": "Vortegh e metroyi kayaraně?",
+      "cyrillic": "вортэх э мэтройи кайаранэ",
+      "translations": {
+        "en": "Where is the metro station?",
+        "ru": "Где станция метро?"
+      }
+    },
+    {
+      "native": "Մեկ տոմս, խնդրում եմ։",
+      "latin": "Mek toms, khndrum em.",
+      "cyrillic": "мэк томс, хндрум эм",
+      "translations": {
+        "en": "One ticket, please.",
+        "ru": "Один билет, пожалуйста."
+      }
+    },
+    {
+      "native": "Ինձ տաքսի է պետք։",
+      "latin": "Indz tak'si e petk'.",
+      "cyrillic": "индз такси э пэтк",
+      "translations": {
+        "en": "I need a taxi.",
+        "ru": "Мне нужно такси."
+      }
+    },
+    {
+      "native": "Խնդրում եմ տարեք ինձ այս հասցեով։",
+      "latin": "Khndrum em tarek' indz ays hastseov.",
+      "cyrillic": "хндрум эм тарэк индз айс hасцэов",
+      "translations": {
+        "en": "Please take me to this address.",
+        "ru": "Отвезите меня по этому адресу, пожалуйста."
+      }
+    },
+    {
+      "native": "Ձախ։ Աջ։ Ուղիղ։",
+      "latin": "Dzakh. Aj. Ughigh.",
+      "cyrillic": "дзах. адж. ухих",
+      "translations": {
+        "en": "Left. Right. Straight ahead.",
+        "ru": "Налево. Направо. Прямо."
+      }
+    },
+    {
+      "native": "Ես կորել եմ։",
+      "latin": "Yes korel em.",
+      "cyrillic": "ес корэл эм",
+      "translations": {
+        "en": "I am lost.",
+        "ru": "Я заблудился/заблудилась."
+      }
+    },
+    {
+      "native": "Օգնեցե՛ք։ Կանչեք ոստիկանություն։",
+      "latin": "Ognets'ek'. Kanchek' vostikanut'yun.",
+      "cyrillic": "огнэцэк. канчэк востиканутюн",
+      "translations": {
+        "en": "Help! Call the police.",
+        "ru": "Помогите! Вызовите полицию."
+      }
+    },
+    {
+      "native": "Ինձ բժիշկ է պետք։",
+      "latin": "Indz bzhishk e petk'.",
+      "cyrillic": "индз бжишк э пэтк",
+      "translations": {
+        "en": "I need a doctor.",
+        "ru": "Мне нужен врач."
+      }
+    },
+    {
+      "native": "Ես ալերգիա ունեմ։",
+      "latin": "Yes alergia unem.",
+      "cyrillic": "ес алергия унэм",
+      "translations": {
+        "en": "I have an allergy.",
+        "ru": "У меня аллергия."
+      }
+    },
+    {
+      "native": "Այսօր։ Վաղը։ Հիմա։ Ավելի ուշ։",
+      "latin": "Aysor. Vaghě. Hima. Aveli ush.",
+      "cyrillic": "айсор. вагэ. hима. авэли уш",
+      "translations": {
+        "en": "Today. Tomorrow. Now. Later.",
+        "ru": "Сегодня. Завтра. Сейчас. Позже."
+      }
+    },
+    {
+      "native": "Բաց է։ Փակ է։",
+      "latin": "Bats e. Pak e.",
+      "cyrillic": "бац э. пак э",
+      "translations": {
+        "en": "Open. Closed.",
+        "ru": "Открыто. Закрыто."
+      }
+    },
+    {
+      "native": "Այստեղ։ Այնտեղ։ Մոտ։ Հեռու։",
+      "latin": "Aystegh. Ayntegh. Mot. Heru.",
+      "cyrillic": "айстэх. айнтэх. мот. hэру",
+      "translations": {
+        "en": "Here. There. Near. Far.",
+        "ru": "Здесь. Там. Близко. Далеко."
+      }
+    },
+    {
+      "native": "Մուտք։ Ելք։",
+      "latin": "Mutk'. Yelk'.",
+      "cyrillic": "мутк. елк",
+      "translations": {
+        "en": "Entrance. Exit.",
+        "ru": "Вход. Выход."
+      }
+    },
+    {
+      "native": "Տաք։ Սառը։",
+      "latin": "Tak'. Sarě.",
+      "cyrillic": "так. сарэ",
+      "translations": {
+        "en": "Hot. Cold.",
+        "ru": "Горячее. Холодное."
+      }
+    },
+    {
+      "native": "Փոքր։ Մեծ։",
+      "latin": "P'okr. Mets.",
+      "cyrillic": "покр. мэц",
+      "translations": {
+        "en": "Small. Large.",
+        "ru": "Маленькое. Большое."
+      }
+    },
+    {
+      "native": "Սուրճ։ Թեյ։",
+      "latin": "Surch. T'ey.",
+      "cyrillic": "сурч. тэй",
+      "translations": {
+        "en": "Coffee. Tea.",
+        "ru": "Кофе. Чай."
+      }
+    },
+    {
+      "native": "Առանց մսի։ Բուսակերական։",
+      "latin": "Arants msi. Busakerakan.",
+      "cyrillic": "аранц мси. бусакэракан",
+      "translations": {
+        "en": "Without meat. Vegetarian.",
+        "ru": "Без мяса. Вегетарианское."
+      }
+    },
+    {
+      "native": "Կծու չէ։ Առանց ընկույզի։",
+      "latin": "Ktsu che. Arants ěnkuyzi.",
+      "cyrillic": "кцу чэ. аранц энкуйзи",
+      "translations": {
+        "en": "Not spicy. No nuts.",
+        "ru": "Не острое. Без орехов."
+      }
+    },
+    {
+      "native": "Ես ամրագրում ունեմ։ Ո՞րն է Wi-Fi-ի գաղտնաբառը։",
+      "latin": "Yes amragrum unem. Vorn e Wi-Fi-i gaghtnabarě?",
+      "cyrillic": "ес амрагрум унэм. ворн э вай-файи гахтнабарэ",
+      "translations": {
+        "en": "I have a reservation. What is the Wi-Fi password?",
+        "ru": "У меня бронь. Какой пароль от Wi-Fi?"
+      }
+    }
+  ]
+}

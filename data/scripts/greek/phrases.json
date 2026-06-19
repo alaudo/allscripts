@@ -1,0 +1,276 @@
+{
+  "version": 3,
+  "language": "Greek",
+  "phrases": [
+    {
+      "native": "Γεια σας. Ευχαριστώ.",
+      "latin": "Yia sas. Efcharistó.",
+      "cyrillic": "я сас. эфхаристо",
+      "translations": {
+        "en": "Hello. Thank you.",
+        "ru": "Здравствуйте. Спасибо."
+      }
+    },
+    {
+      "native": "Παρακαλώ. Συγγνώμη.",
+      "latin": "Parakaló. Sygnómi.",
+      "cyrillic": "паракало. сигноми",
+      "translations": {
+        "en": "Please. Excuse me.",
+        "ru": "Пожалуйста. Извините."
+      }
+    },
+    {
+      "native": "Ναι. Όχι.",
+      "latin": "Ne. Ochi.",
+      "cyrillic": "нэ. охи",
+      "translations": {
+        "en": "Yes. No.",
+        "ru": "Да. Нет."
+      }
+    },
+    {
+      "native": "Μιλάτε Αγγλικά;",
+      "latin": "Miláte Angliká?",
+      "cyrillic": "милатэ англика",
+      "translations": {
+        "en": "Do you speak English?",
+        "ru": "Вы говорите по-английски?"
+      }
+    },
+    {
+      "native": "Δεν καταλαβαίνω. Μιλήστε αργά, παρακαλώ.",
+      "latin": "Den katalavéno. Milíste argá, parakaló.",
+      "cyrillic": "дэн каталавэно. милистэ арга, паракало",
+      "translations": {
+        "en": "I don't understand. Please speak slowly.",
+        "ru": "Я не понимаю. Говорите медленнее, пожалуйста."
+      }
+    },
+    {
+      "native": "Μπορείτε να μου το δείξετε στον χάρτη;",
+      "latin": "Boríte na mou to díxete ston chárti?",
+      "cyrillic": "боритэ на му то диксетэ стон харти",
+      "translations": {
+        "en": "Can you show me on the map?",
+        "ru": "Покажите мне на карте?"
+      }
+    },
+    {
+      "native": "Πού είναι η τουαλέτα;",
+      "latin": "Pou íne i toualéta?",
+      "cyrillic": "пу инэ и туалэта",
+      "translations": {
+        "en": "Where is the toilet?",
+        "ru": "Где туалет?"
+      }
+    },
+    {
+      "native": "Πόσο κοστίζει αυτό;",
+      "latin": "Póso kostízi aftó?",
+      "cyrillic": "посо костизи афто",
+      "translations": {
+        "en": "How much is this?",
+        "ru": "Сколько это стоит?"
+      }
+    },
+    {
+      "native": "Θα ήθελα αυτό.",
+      "latin": "Tha íthela aftó.",
+      "cyrillic": "та итэла афто",
+      "translations": {
+        "en": "I would like this.",
+        "ru": "Я бы хотел(а) это."
+      }
+    },
+    {
+      "native": "Νερό, παρακαλώ. Τον λογαριασμό, παρακαλώ.",
+      "latin": "Neró, parakaló. Ton logariasmó, parakaló.",
+      "cyrillic": "нэро, паракало. тон логариазмо, паракало",
+      "translations": {
+        "en": "Water, please. The bill, please.",
+        "ru": "Воды, пожалуйста. Счёт, пожалуйста."
+      }
+    },
+    {
+      "native": "Μπορώ να πληρώσω με κάρτα;",
+      "latin": "Boró na pliróso me kárta?",
+      "cyrillic": "боро на плиросо мэ карта",
+      "translations": {
+        "en": "Can I pay by card?",
+        "ru": "Можно оплатить картой?"
+      }
+    },
+    {
+      "native": "Πού είναι ο σταθμός του μετρό;",
+      "latin": "Pou íne o stathmós tou metró?",
+      "cyrillic": "пу инэ о статмос ту мэтро",
+      "translations": {
+        "en": "Where is the metro station?",
+        "ru": "Где станция метро?"
+      }
+    },
+    {
+      "native": "Ένα εισιτήριο, παρακαλώ.",
+      "latin": "Éna isitírio, parakaló.",
+      "cyrillic": "эна иситирио, паракало",
+      "translations": {
+        "en": "One ticket, please.",
+        "ru": "Один билет, пожалуйста."
+      }
+    },
+    {
+      "native": "Χρειάζομαι ταξί.",
+      "latin": "Chriázome taxí.",
+      "cyrillic": "хриазомэ такси",
+      "translations": {
+        "en": "I need a taxi.",
+        "ru": "Мне нужно такси."
+      }
+    },
+    {
+      "native": "Πηγαίνετέ με σε αυτή τη διεύθυνση, παρακαλώ.",
+      "latin": "Pigéneté me se aftí ti diéfsthinsi, parakaló.",
+      "cyrillic": "пигэнэтэ мэ сэ афти ти диэфтинси, паракало",
+      "translations": {
+        "en": "Please take me to this address.",
+        "ru": "Отвезите меня по этому адресу, пожалуйста."
+      }
+    },
+    {
+      "native": "Αριστερά. Δεξιά. Ευθεία.",
+      "latin": "Aristerá. Dexiá. Efthía.",
+      "cyrillic": "аристэра. дэксья. эфтиа",
+      "translations": {
+        "en": "Left. Right. Straight ahead.",
+        "ru": "Налево. Направо. Прямо."
+      }
+    },
+    {
+      "native": "Έχω χαθεί.",
+      "latin": "Écho chatheí.",
+      "cyrillic": "эхо хати",
+      "translations": {
+        "en": "I am lost.",
+        "ru": "Я заблудился/заблудилась."
+      }
+    },
+    {
+      "native": "Βοήθεια! Καλέστε την αστυνομία.",
+      "latin": "Voíthia! Kaléste tin astynomía.",
+      "cyrillic": "воитья! калэстэ тин астиномиа",
+      "translations": {
+        "en": "Help! Call the police.",
+        "ru": "Помогите! Вызовите полицию."
+      }
+    },
+    {
+      "native": "Χρειάζομαι γιατρό.",
+      "latin": "Chriázome giatró.",
+      "cyrillic": "хриазомэ ятро",
+      "translations": {
+        "en": "I need a doctor.",
+        "ru": "Мне нужен врач."
+      }
+    },
+    {
+      "native": "Έχω αλλεργία.",
+      "latin": "Écho allergía.",
+      "cyrillic": "эхо алергия",
+      "translations": {
+        "en": "I have an allergy.",
+        "ru": "У меня аллергия."
+      }
+    },
+    {
+      "native": "Σήμερα. Αύριο. Τώρα. Αργότερα.",
+      "latin": "Símera. Ávrio. Tóra. Argótera.",
+      "cyrillic": "симэра. аврио. тора. арготэра",
+      "translations": {
+        "en": "Today. Tomorrow. Now. Later.",
+        "ru": "Сегодня. Завтра. Сейчас. Позже."
+      }
+    },
+    {
+      "native": "Ανοιχτά. Κλειστά.",
+      "latin": "Anichtá. Klistá.",
+      "cyrillic": "анихта. клиста",
+      "translations": {
+        "en": "Open. Closed.",
+        "ru": "Открыто. Закрыто."
+      }
+    },
+    {
+      "native": "Εδώ. Εκεί. Κοντά. Μακριά.",
+      "latin": "Edó. Ekí. Kontá. Makriá.",
+      "cyrillic": "эдо. эки. конта. макриа",
+      "translations": {
+        "en": "Here. There. Near. Far.",
+        "ru": "Здесь. Там. Близко. Далеко."
+      }
+    },
+    {
+      "native": "Είσοδος. Έξοδος.",
+      "latin": "Ísodos. Éxodos.",
+      "cyrillic": "исодос. эксодос",
+      "translations": {
+        "en": "Entrance. Exit.",
+        "ru": "Вход. Выход."
+      }
+    },
+    {
+      "native": "Ζεστό. Κρύο.",
+      "latin": "Zestó. Krío.",
+      "cyrillic": "зэсто. крио",
+      "translations": {
+        "en": "Hot. Cold.",
+        "ru": "Горячее. Холодное."
+      }
+    },
+    {
+      "native": "Μικρό. Μεγάλο.",
+      "latin": "Mikró. Megálo.",
+      "cyrillic": "микро. мэгало",
+      "translations": {
+        "en": "Small. Large.",
+        "ru": "Маленькое. Большое."
+      }
+    },
+    {
+      "native": "Καφές. Τσάι.",
+      "latin": "Kafés. Tsái.",
+      "cyrillic": "кафэс. цай",
+      "translations": {
+        "en": "Coffee. Tea.",
+        "ru": "Кофе. Чай."
+      }
+    },
+    {
+      "native": "Χωρίς κρέας. Χορτοφαγικό.",
+      "latin": "Chorís kréas. Chortofagikó.",
+      "cyrillic": "хорис крэас. хортофагико",
+      "translations": {
+        "en": "Without meat. Vegetarian.",
+        "ru": "Без мяса. Вегетарианское."
+      }
+    },
+    {
+      "native": "Όχι καυτερό. Χωρίς ξηρούς καρπούς.",
+      "latin": "Óchi kaftéro. Chorís xiroús karpoús.",
+      "cyrillic": "охи кафтэро. хорис ксирус карпус",
+      "translations": {
+        "en": "Not spicy. No nuts.",
+        "ru": "Не острое. Без орехов."
+      }
+    },
+    {
+      "native": "Έχω κράτηση. Ποιος είναι ο κωδικός Wi-Fi;",
+      "latin": "Écho krátisi. Pios íne o kodikós Wi-Fi?",
+      "cyrillic": "эхо кратиси. пйос инэ о кодикос вай-фай",
+      "translations": {
+        "en": "I have a reservation. What is the Wi-Fi password?",
+        "ru": "У меня бронь. Какой пароль от Wi-Fi?"
+      }
+    }
+  ]
+}

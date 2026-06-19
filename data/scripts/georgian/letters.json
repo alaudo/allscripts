@@ -1,0 +1,569 @@
+{
+  "version": 1,
+  "letters": [
+    {
+      "glyph": "ა",
+      "ipa": "ɑ",
+      "latin": "a",
+      "cyrillic": "а",
+      "example": {
+        "native": "ალუბალი",
+        "ipa": "ɑluˈbɑli",
+        "latin": "alubali",
+        "cyrillic": "алубали",
+        "meaning": {
+          "en": "cherry",
+          "ru": "вишня"
+        }
+      }
+    },
+    {
+      "glyph": "ბ",
+      "ipa": "b",
+      "latin": "b",
+      "cyrillic": "б",
+      "example": {
+        "native": "ბავშვი",
+        "ipa": "bɑvʃvi",
+        "latin": "bavshvi",
+        "cyrillic": "бавшви",
+        "meaning": {
+          "en": "child",
+          "ru": "ребёнок"
+        }
+      }
+    },
+    {
+      "glyph": "გ",
+      "ipa": "ɡ",
+      "latin": "g",
+      "cyrillic": "г",
+      "example": {
+        "native": "გზა",
+        "ipa": "ɡzɑ",
+        "latin": "gza",
+        "cyrillic": "гза",
+        "meaning": {
+          "en": "road",
+          "ru": "дорога"
+        }
+      }
+    },
+    {
+      "glyph": "დ",
+      "ipa": "d",
+      "latin": "d",
+      "cyrillic": "д",
+      "example": {
+        "native": "დედა",
+        "ipa": "ˈdɛdɑ",
+        "latin": "deda",
+        "cyrillic": "дэда",
+        "meaning": {
+          "en": "mother",
+          "ru": "мать"
+        }
+      }
+    },
+    {
+      "glyph": "ე",
+      "ipa": "ɛ",
+      "latin": "e",
+      "cyrillic": "э",
+      "example": {
+        "native": "ერთი",
+        "ipa": "ˈɛɾti",
+        "latin": "erti",
+        "cyrillic": "эрти",
+        "meaning": {
+          "en": "one",
+          "ru": "один"
+        }
+      }
+    },
+    {
+      "glyph": "ვ",
+      "ipa": "v",
+      "latin": "v",
+      "cyrillic": "в",
+      "example": {
+        "native": "ვაშლი",
+        "ipa": "ˈvɑʃli",
+        "latin": "vashli",
+        "cyrillic": "вашли",
+        "meaning": {
+          "en": "apple",
+          "ru": "яблоко"
+        }
+      }
+    },
+    {
+      "glyph": "ზ",
+      "ipa": "z",
+      "latin": "z",
+      "cyrillic": "з",
+      "example": {
+        "native": "ზღვა",
+        "ipa": "zʁvɑ",
+        "latin": "zghva",
+        "cyrillic": "згва",
+        "meaning": {
+          "en": "sea",
+          "ru": "море"
+        }
+      }
+    },
+    {
+      "glyph": "თ",
+      "ipa": "tʰ",
+      "latin": "t",
+      "cyrillic": "т",
+      "example": {
+        "native": "თვალი",
+        "ipa": "ˈtʰvɑli",
+        "latin": "tvali",
+        "cyrillic": "твали",
+        "meaning": {
+          "en": "eye",
+          "ru": "глаз"
+        }
+      },
+      "note": {
+        "en": "Aspirated t.",
+        "ru": "Придыхательный т."
+      }
+    },
+    {
+      "glyph": "ი",
+      "ipa": "i",
+      "latin": "i",
+      "cyrillic": "и",
+      "example": {
+        "native": "ია",
+        "ipa": "iˈɑ",
+        "latin": "ia",
+        "cyrillic": "иа",
+        "meaning": {
+          "en": "violet (flower)",
+          "ru": "фиалка"
+        }
+      }
+    },
+    {
+      "glyph": "კ",
+      "ipa": "kʼ",
+      "latin": "k'",
+      "cyrillic": "к",
+      "example": {
+        "native": "კატა",
+        "ipa": "ˈkʼɑtɑ",
+        "latin": "k'ata",
+        "cyrillic": "ката",
+        "meaning": {
+          "en": "cat",
+          "ru": "кошка"
+        }
+      },
+      "note": {
+        "en": "Ejective k.",
+        "ru": "Абруптивный (эйективный) к."
+      }
+    },
+    {
+      "glyph": "ლ",
+      "ipa": "l",
+      "latin": "l",
+      "cyrillic": "л",
+      "example": {
+        "native": "ლომი",
+        "ipa": "ˈlɔmi",
+        "latin": "lomi",
+        "cyrillic": "ломи",
+        "meaning": {
+          "en": "lion",
+          "ru": "лев"
+        }
+      }
+    },
+    {
+      "glyph": "მ",
+      "ipa": "m",
+      "latin": "m",
+      "cyrillic": "м",
+      "example": {
+        "native": "მამა",
+        "ipa": "ˈmɑmɑ",
+        "latin": "mama",
+        "cyrillic": "мама",
+        "meaning": {
+          "en": "father",
+          "ru": "отец"
+        }
+      }
+    },
+    {
+      "glyph": "ნ",
+      "ipa": "n",
+      "latin": "n",
+      "cyrillic": "н",
+      "example": {
+        "native": "ნუგბარი",
+        "ipa": "nuɡˈbɑɾi",
+        "latin": "nugbari",
+        "cyrillic": "нугбари",
+        "meaning": {
+          "en": "dessert",
+          "ru": "десерт"
+        }
+      }
+    },
+    {
+      "glyph": "ო",
+      "ipa": "ɔ",
+      "latin": "o",
+      "cyrillic": "о",
+      "example": {
+        "native": "ოთახი",
+        "ipa": "ˈɔtʰɑxi",
+        "latin": "otakhi",
+        "cyrillic": "отахи",
+        "meaning": {
+          "en": "room",
+          "ru": "комната"
+        }
+      }
+    },
+    {
+      "glyph": "პ",
+      "ipa": "pʼ",
+      "latin": "p'",
+      "cyrillic": "п",
+      "example": {
+        "native": "პური",
+        "ipa": "ˈpʼuɾi",
+        "latin": "p'uri",
+        "cyrillic": "пури",
+        "meaning": {
+          "en": "bread",
+          "ru": "хлеб"
+        }
+      },
+      "note": {
+        "en": "Ejective p.",
+        "ru": "Абруптивный (эйективный) п."
+      }
+    },
+    {
+      "glyph": "ჟ",
+      "ipa": "ʒ",
+      "latin": "zh",
+      "cyrillic": "ж",
+      "example": {
+        "native": "ჟურნალი",
+        "ipa": "ʒurˈnɑli",
+        "latin": "zhurnali",
+        "cyrillic": "журнали",
+        "meaning": {
+          "en": "magazine",
+          "ru": "журнал"
+        }
+      }
+    },
+    {
+      "glyph": "რ",
+      "ipa": "r",
+      "latin": "r",
+      "cyrillic": "р",
+      "example": {
+        "native": "რძე",
+        "ipa": "rdzɛ",
+        "latin": "rdze",
+        "cyrillic": "рдзэ",
+        "meaning": {
+          "en": "milk",
+          "ru": "молоко"
+        }
+      }
+    },
+    {
+      "glyph": "ს",
+      "ipa": "s",
+      "latin": "s",
+      "cyrillic": "с",
+      "example": {
+        "native": "სახლი",
+        "ipa": "ˈsɑxli",
+        "latin": "sakhli",
+        "cyrillic": "сахли",
+        "meaning": {
+          "en": "house",
+          "ru": "дом"
+        }
+      }
+    },
+    {
+      "glyph": "ტ",
+      "ipa": "tʼ",
+      "latin": "t'",
+      "cyrillic": "т",
+      "example": {
+        "native": "ტყე",
+        "ipa": "ˈtʼqʼɛ",
+        "latin": "t'q'e",
+        "cyrillic": "тке",
+        "meaning": {
+          "en": "forest",
+          "ru": "лес"
+        }
+      },
+      "note": {
+        "en": "Ejective t.",
+        "ru": "Абруптивный (эйективный) т."
+      }
+    },
+    {
+      "glyph": "უ",
+      "ipa": "u",
+      "latin": "u",
+      "cyrillic": "у",
+      "example": {
+        "native": "უცხო",
+        "ipa": "ˈutsʰxɔ",
+        "latin": "utskho",
+        "cyrillic": "уцхо",
+        "meaning": {
+          "en": "foreign",
+          "ru": "иностранный"
+        }
+      }
+    },
+    {
+      "glyph": "ფ",
+      "ipa": "pʰ",
+      "latin": "p",
+      "cyrillic": "п",
+      "example": {
+        "native": "ფული",
+        "ipa": "ˈpʰuli",
+        "latin": "puli",
+        "cyrillic": "пули",
+        "meaning": {
+          "en": "money",
+          "ru": "деньги"
+        }
+      },
+      "note": {
+        "en": "Aspirated p.",
+        "ru": "Придыхательный п."
+      }
+    },
+    {
+      "glyph": "ქ",
+      "ipa": "kʰ",
+      "latin": "k",
+      "cyrillic": "к",
+      "example": {
+        "native": "ქალაქი",
+        "ipa": "ˈkʰɑlɑkʰi",
+        "latin": "kalaki",
+        "cyrillic": "калаки",
+        "meaning": {
+          "en": "city",
+          "ru": "город"
+        }
+      },
+      "note": {
+        "en": "Aspirated k.",
+        "ru": "Придыхательный к."
+      }
+    },
+    {
+      "glyph": "ღ",
+      "ipa": "ɣ",
+      "latin": "gh",
+      "cyrillic": "г",
+      "example": {
+        "native": "ღვინო",
+        "ipa": "ˈɣvinɔ",
+        "latin": "ghvino",
+        "cyrillic": "гвино",
+        "meaning": {
+          "en": "wine",
+          "ru": "вино"
+        }
+      }
+    },
+    {
+      "glyph": "ყ",
+      "ipa": "qʼ",
+      "latin": "q'",
+      "cyrillic": "к",
+      "example": {
+        "native": "ყავა",
+        "ipa": "ˈqʼɑvɑ",
+        "latin": "q'ava",
+        "cyrillic": "кава",
+        "meaning": {
+          "en": "coffee",
+          "ru": "кофе"
+        }
+      },
+      "note": {
+        "en": "Ejective uvular q.",
+        "ru": "Абруптивный увулярный к."
+      }
+    },
+    {
+      "glyph": "შ",
+      "ipa": "ʃ",
+      "latin": "sh",
+      "cyrillic": "ш",
+      "example": {
+        "native": "შენ",
+        "ipa": "ʃɛn",
+        "latin": "shen",
+        "cyrillic": "шэн",
+        "meaning": {
+          "en": "you",
+          "ru": "ты"
+        }
+      }
+    },
+    {
+      "glyph": "ჩ",
+      "ipa": "tʃʰ",
+      "latin": "ch",
+      "cyrillic": "ч",
+      "example": {
+        "native": "ჩაი",
+        "ipa": "ˈtʃʰɑi",
+        "latin": "chai",
+        "cyrillic": "чаи",
+        "meaning": {
+          "en": "tea",
+          "ru": "чай"
+        }
+      }
+    },
+    {
+      "glyph": "ც",
+      "ipa": "tsʰ",
+      "latin": "ts",
+      "cyrillic": "ц",
+      "example": {
+        "native": "ცა",
+        "ipa": "tsʰɑ",
+        "latin": "tsa",
+        "cyrillic": "ца",
+        "meaning": {
+          "en": "sky",
+          "ru": "небо"
+        }
+      }
+    },
+    {
+      "glyph": "ძ",
+      "ipa": "dz",
+      "latin": "dz",
+      "cyrillic": "дз",
+      "example": {
+        "native": "ძმა",
+        "ipa": "dzmɑ",
+        "latin": "dzma",
+        "cyrillic": "дзма",
+        "meaning": {
+          "en": "brother",
+          "ru": "брат"
+        }
+      }
+    },
+    {
+      "glyph": "წ",
+      "ipa": "tsʼ",
+      "latin": "ts'",
+      "cyrillic": "ц",
+      "example": {
+        "native": "წყალი",
+        "ipa": "ˈtsʼqʼɑli",
+        "latin": "ts'q'ali",
+        "cyrillic": "цкали",
+        "meaning": {
+          "en": "water",
+          "ru": "вода"
+        }
+      },
+      "note": {
+        "en": "Ejective ts.",
+        "ru": "Абруптивный ц."
+      }
+    },
+    {
+      "glyph": "ჭ",
+      "ipa": "tʃʼ",
+      "latin": "ch'",
+      "cyrillic": "ч",
+      "example": {
+        "native": "ჭიქა",
+        "ipa": "ˈtʃʼikʰɑ",
+        "latin": "ch'ika",
+        "cyrillic": "чика",
+        "meaning": {
+          "en": "glass",
+          "ru": "стекло"
+        }
+      },
+      "note": {
+        "en": "Ejective ch.",
+        "ru": "Абруптивный ч."
+      }
+    },
+    {
+      "glyph": "ხ",
+      "ipa": "x",
+      "latin": "kh",
+      "cyrillic": "х",
+      "example": {
+        "native": "ხაჭაპური",
+        "ipa": "xɑtʃʼɑˈpʼuɾi",
+        "latin": "khach'ap'uri",
+        "cyrillic": "хачапури",
+        "meaning": {
+          "en": "khachapuri (cheese bread)",
+          "ru": "хачапури (сырный хлеб)"
+        }
+      }
+    },
+    {
+      "glyph": "ჯ",
+      "ipa": "dʒ",
+      "latin": "j",
+      "cyrillic": "дж",
+      "example": {
+        "native": "ჯარი",
+        "ipa": "ˈdʒɑɾi",
+        "latin": "jari",
+        "cyrillic": "джари",
+        "meaning": {
+          "en": "army",
+          "ru": "армия"
+        }
+      }
+    },
+    {
+      "glyph": "ჰ",
+      "ipa": "h",
+      "latin": "h",
+      "cyrillic": "h",
+      "example": {
+        "native": "ჰაერი",
+        "ipa": "ˈhɑɛɾi",
+        "latin": "haeri",
+        "cyrillic": "hаэри",
+        "meaning": {
+          "en": "air",
+          "ru": "воздух"
+        }
+      }
+    }
+  ]
+}

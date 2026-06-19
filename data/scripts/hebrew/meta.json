@@ -1,0 +1,32 @@
+{
+  "id": "hebrew",
+  "name": {
+    "en": "Hebrew",
+    "ru": "Иврит"
+  },
+  "nativeName": "עברית",
+  "language": "he",
+  "direction": "rtl",
+  "flagsSvg": "flags.svg",
+  "info": {
+    "en": "The Hebrew alphabet (the 'square script', ketav ashuri) descends from the Imperial Aramaic script around the 5th century BC. It has 22 consonants and is written right-to-left. Vowels are normally implicit, but can be indicated with niqqud — small dots and dashes above or below letters.",
+    "ru": "Еврейский алфавит («квадратное письмо», ктав ашури) восходит к имперскому арамейскому письму примерно V века до н. э. В нём 22 согласные, и он пишется справа налево. Гласные обычно не указываются, но могут обозначаться никкудом — маленькими точками и чёрточками над буквами или под ними."
+  },
+  "composition": {
+    "en": "Hebrew is an abjad: the 22 letters all stand for consonants and vowels are normally left out, so a reader has to know the word in order to vocalise it correctly. The letters do not connect into cursive shapes — each one is a separate square block — but five of them have a distinct 'final' shape used only at the end of a word: כ → ך (kaf), מ → ם (mem), נ → ן (nun), פ → ף (pe), צ → ץ (tsadi). Four letters do double duty as vowel placeholders, the so-called matres lectionis (א ה ו י), so the same ו can stand for the consonant /v/ or for the vowel /u/ or /o/ depending on context. A separate system of dots and dashes called niqqud is layered above, below or inside a letter to spell vowels precisely (בָּ /ba/, בִּ /bi/, בּוּ /bu/); it is used in poetry, scripture, dictionaries and learners' material but omitted from ordinary text. Hebrew is written right-to-left, but numbers (in their modern Western form) still run left-to-right inside a line.",
+    "ru": "Иврит — абджад: все 22 буквы передают согласные, а гласные обычно не пишутся, поэтому, чтобы правильно озвучить слово, читатель должен его узнавать. Буквы не сливаются в курсив — каждая стоит отдельным квадратным блоком, — но у пяти из них есть особая «конечная» форма, употребляемая только в конце слова: כ → ך (каф), מ → ם (мем), נ → ן (нун), פ → ף (пе), צ → ץ (цади). Четыре буквы исполняют двойную роль — это так называемые matres lectionis (א ה ו י): одна и та же ו может обозначать согласный /v/ или гласный /u/ или /o/ — в зависимости от контекста. Отдельная система точек и чёрточек — никкуд — наносится над буквой, под ней или внутри неё и точно фиксирует гласные (בָּ /ba/, בִּ /bi/, בּוּ /bu/); её используют в поэзии, священных текстах, словарях и учебных материалах, но опускают в обычных текстах. Иврит пишется справа налево, однако числа (в современном «западном» начертании) внутри строки по-прежнему идут слева направо."
+  },
+  "countries": [
+    {
+      "flag": "🇮🇱",
+      "name": {
+        "en": "Israel",
+        "ru": "Израиль"
+      }
+    }
+  ],
+  "writingConventions": {
+    "en": "Hebrew has no capitals and no joined cursive in ordinary print. The cases to drill are final letter forms ך ם ן ף ץ, matres lectionis where א/ה/ו/י can support vowel reading, and optional niqqud/dagesh dots that change or clarify pronunciation. Punctuation is mostly Western, though it appears inside right-to-left text; numbers are normally Western digits and run left-to-right. Hebrew letters can also act as numerals in dates and religious contexts, but for tourist reading the final forms and vowel-dot logic are much more important than numeric letters.",
+    "ru": "В иврите нет заглавных букв и нет соединённого курсива в обычной печати. Тренировать стоит конечные формы ך ם ן ף ץ, matres lectionis, где א/ה/ו/י помогают читать гласные, а также необязательные точки никкуда/дагеша, которые уточняют или меняют произношение. Пунктуация в основном западная, но находится внутри текста справа налево; числа обычно записываются западными цифрами и идут слева направо. Буквы иврита могут служить числами в датах и религиозных контекстах, но для туристического чтения конечные формы и логика огласовок намного важнее буквенных чисел."
+  }
+}

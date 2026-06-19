@@ -3,13 +3,15 @@ import { getSettings, summary } from '../storage.js';
 import { el, escapeHtml } from './dom.js';
 import { t, transcriptionLabel, inputSystemLabel, localized } from '../i18n.js';
 
-// Order: flashcards (letters → words → phrases) first, then the multiple-choice
-// "Choose" drills (letters → words → phrases), then read & spell at the end.
+// Order: flashcards (letters → syllables → words → phrases) first, then the
+// multiple-choice "Choose" drills in the same progression, then read & spell.
 const PRACTICE_MODES = [
   { id: 'flashcards',        titleKey: 'mode.flashcards.title',        blurbKey: 'mode.flashcards.blurb',        icon: '🃏' },
+  { id: 'flashcards-syllables', titleKey: 'mode.flashcards-syllables.title', blurbKey: 'mode.flashcards-syllables.blurb', icon: '🃏' },
   { id: 'flashcards-words',  titleKey: 'mode.flashcards-words.title',  blurbKey: 'mode.flashcards-words.blurb',  icon: '🃏' },
   { id: 'phrases',           titleKey: 'mode.phrases.title',           blurbKey: 'mode.phrases.blurb',           icon: '🃏' },
   { id: 'choose-letters',    titleKey: 'mode.choose-letters.title',    blurbKey: 'mode.choose-letters.blurb',    icon: '🎯' },
+  { id: 'choose-syllables',  titleKey: 'mode.choose-syllables.title',  blurbKey: 'mode.choose-syllables.blurb',  icon: '🎯' },
   { id: 'choose-words',      titleKey: 'mode.choose-words.title',      blurbKey: 'mode.choose-words.blurb',      icon: '🎯' },
   { id: 'choose-phrases',    titleKey: 'mode.choose-phrases.title',    blurbKey: 'mode.choose-phrases.blurb',    icon: '🎯' },
   { id: 'read',              titleKey: 'mode.read.title',              blurbKey: 'mode.read.blurb',              icon: '👁️' },
@@ -17,9 +19,10 @@ const PRACTICE_MODES = [
 ];
 
 const REVIEW_MODES = [
-  { id: 'preview-letters', titleKey: 'mode.preview-letters.title', blurbKey: 'mode.preview-letters.blurb', icon: '🔤' },
-  { id: 'preview-words',   titleKey: 'mode.preview-words.title',   blurbKey: 'mode.preview-words.blurb',   icon: '💬' },
-  { id: 'preview-phrases', titleKey: 'mode.preview-phrases.title', blurbKey: 'mode.preview-phrases.blurb', icon: '🗒️' }
+  { id: 'preview-letters',   titleKey: 'mode.preview-letters.title',   blurbKey: 'mode.preview-letters.blurb',   icon: '🔤' },
+  { id: 'preview-syllables', titleKey: 'mode.preview-syllables.title', blurbKey: 'mode.preview-syllables.blurb', icon: '🔡' },
+  { id: 'preview-words',     titleKey: 'mode.preview-words.title',     blurbKey: 'mode.preview-words.blurb',     icon: '💬' },
+  { id: 'preview-phrases',   titleKey: 'mode.preview-phrases.title',   blurbKey: 'mode.preview-phrases.blurb',   icon: '🗒️' }
 ];
 
 export async function renderHome(_, mount) {
@@ -64,18 +67,23 @@ export async function renderHome(_, mount) {
   }
   root.appendChild(picker);
 
-  // Active script info card (history + flags)
+  // Active script info card (history + flags), rendered after the tools below.
   const current = manifest.scripts.find(s => s.id === settings.activeScript) || manifest.scripts[0];
   const infoText = localized(current.info);
   const compositionText = localized(current.composition);
-  if (infoText || compositionText || (current.countries && current.countries.length)) {
-    const flags = (current.countries || [])
-      .map(c => {
-        const cname = localized(c.name);
-        return `<span class="flag" title="${escapeHtml(cname)}">${c.flag}</span>`;
-      })
-      .join('');
-    const aboutCard = el(
+  const conventionsText = localized(current.writingConventions);
+  let aboutCard = null;
+  if (infoText || compositionText || conventionsText || (current.countries && current.countries.length)) {
+    const countryNames = (current.countries || []).map(c => localized(c.name)).filter(Boolean).join(', ');
+    const flags = current.flagsSvg
+      ? `<img class="flag-strip" src="${escapeHtml(`data/${current.folder}/${current.flagsSvg}`)}" alt="${escapeHtml(countryNames || localized(current.name))}" title="${escapeHtml(countryNames)}" />`
+      : (current.countries || [])
+        .map(c => {
+          const cname = localized(c.name);
+          return `<span class="flag" title="${escapeHtml(cname)}">${escapeHtml(c.flag || '')}</span>`;
+        })
+        .join('');
+    aboutCard = el(
       `<div class="card script-about">
          <div class="about-header">
            <h2>${escapeHtml(t('home.about'))} <span class="muted">${escapeHtml(localized(current.name))}</span></h2>
@@ -84,9 +92,10 @@ export async function renderHome(_, mount) {
          ${infoText ? `<p class="about-text">${escapeHtml(infoText)}</p>` : ''}
          ${compositionText ? `<h3 class="about-subheading">${escapeHtml(t('home.composition'))}</h3>
          <p class="about-text">${escapeHtml(compositionText)}</p>` : ''}
+         ${conventionsText ? `<h3 class="about-subheading">${escapeHtml(t('home.writing_conventions'))}</h3>
+         <p class="about-text">${escapeHtml(conventionsText)}</p>` : ''}
        </div>`
     );
-    root.appendChild(aboutCard);
   }
 
   // Mode picker (practise)
@@ -142,6 +151,7 @@ export async function renderHome(_, mount) {
     reviewGrid.appendChild(a);
   }
   root.appendChild(reviewCard);
+  if (aboutCard) root.appendChild(aboutCard);
 
   mount.appendChild(root);
 }

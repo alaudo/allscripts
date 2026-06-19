@@ -1,0 +1,32 @@
+{
+  "id": "hiragana",
+  "name": {
+    "en": "Hiragana",
+    "ru": "Хирагана"
+  },
+  "nativeName": "ひらがな",
+  "language": "ja",
+  "direction": "ltr",
+  "flagsSvg": "flags.svg",
+  "info": {
+    "en": "Hiragana is a Japanese syllabary that evolved from cursive forms of Chinese characters (man'yōgana) during the Heian period (8th–12th c.). It was once dismissively called 'women's writing' but is now used for native words, grammatical particles and verb endings alongside kanji and katakana.",
+    "ru": "Хирагана — японская слоговая азбука, развившаяся из скорописных форм китайских иероглифов (манъёгана) в эпоху Хэйан (VIII–XII вв.). Когда-то её пренебрежительно называли «женским письмом», а сегодня она используется для исконно японских слов, грамматических частиц и окончаний глаголов наряду с кандзи и катаканой."
+  },
+  "composition": {
+    "en": "Hiragana is a syllabary, not an alphabet: each character stands for a whole mora — usually a consonant + vowel (か = ka) or a single vowel (あ = a). The 46 base symbols are extended by small modifiers: dakuten (゛) voices a consonant (か ka → が ga, さ sa → ざ za), handakuten (゜) turns the h-row into the p-row (は ha → ぱ pa), and a small や ゅ ょ fuses with i-row syllables to form palatalized sounds (き + ゃ → きゃ kya). A small tsu (っ) doesn't have a sound of its own — it doubles the following consonant (がっこう = gakkō, 'school'). Written Japanese mixes hiragana with katakana (a parallel syllabary used mainly for loanwords) and kanji (Chinese characters), so hiragana usually handles grammatical particles and inflectional endings rather than whole sentences on its own.",
+    "ru": "Хирагана — слоговое письмо, а не алфавит: каждый знак передаёт целую мору — обычно согласный + гласный (か = ka) или одну гласную (あ = a). 46 базовых знаков расширяются мелкими модификаторами: дакутэн (゛) озвончает согласный (か ka → が ga, さ sa → ざ za), хандакутэн (゜) превращает ряд h в ряд p (は ha → ぱ pa), а маленькие や ゅ ょ сливаются со слогами ряда «i», образуя палатализованные звуки (き + ゃ → きゃ kya). Маленькая つ (っ) собственного звука не имеет — она удваивает следующий согласный (がっこう = gakkō, «школа»). В японской письменности хирагана сочетается с катаканой (параллельной азбукой, в основном для заимствований) и кандзи (китайскими иероглифами), поэтому самой хираганой обычно записывают грамматические частицы и окончания, а не целые предложения."
+  },
+  "countries": [
+    {
+      "flag": "🇯🇵",
+      "name": {
+        "en": "Japan",
+        "ru": "Япония"
+      }
+    }
+  ],
+  "writingConventions": {
+    "en": "Hiragana has no capitals. The important 'bigraph-like' cases are yōon combinations: small ゃ/ゅ/ょ attach to i-row kana (きゃ, しゅ, ちょ), dakuten/handakuten change consonant voicing (か→が, は→ぱ), and small っ doubles the next consonant. These combinations are exactly the kind of material that belongs in the syllables/forms layer. Japanese punctuation uses 。 and 、 plus Western ? ! in casual text, and numbers are usually Western digits or kanji numerals; neither needs SRS drilling for this app yet.",
+    "ru": "В хирагане нет заглавных букв. Важные «похожие на диграфы» случаи — ёон-сочетания: маленькие ゃ/ゅ/ょ присоединяются к знакам ряда i (きゃ, しゅ, ちょ), дакутэн/хандакутэн меняют звонкость (か→が, は→ぱ), а маленькая っ удваивает следующую согласную. Именно такие сочетания и стоит тренировать в слое слогов и форм. В японской пунктуации используются 。 и 、, а в неформальном тексте также западные ? !; числа обычно записываются западными цифрами или кандзи. Для этого приложения их пока достаточно оставить справкой, без SRS."
+  }
+}

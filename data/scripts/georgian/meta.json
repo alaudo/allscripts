@@ -1,0 +1,32 @@
+{
+  "id": "georgian",
+  "name": {
+    "en": "Georgian",
+    "ru": "Грузинский"
+  },
+  "nativeName": "ქართული",
+  "language": "ka",
+  "direction": "ltr",
+  "flagsSvg": "flags.svg",
+  "info": {
+    "en": "Georgian (Mkhedruli) is one of three related Georgian scripts; together they form a unique alphabetic family recognized by UNESCO as Intangible Cultural Heritage. The earliest inscriptions date to the 5th century AD. Mkhedruli has 33 letters and lacks both uppercase and silent letters.",
+    "ru": "Грузинское письмо (мхедрули) — одна из трёх родственных грузинских письменностей; вместе они образуют уникальную алфавитную семью, внесённую ЮНЕСКО в список нематериального культурного наследия. Древнейшие надписи относятся к V веку н. э. В мхедрули 33 буквы, нет ни заглавных, ни немых букв."
+  },
+  "composition": {
+    "en": "Georgian is unicameral — there is no upper- vs. lowercase distinction at all; sentences and proper nouns start with the same letter forms as everything else. Spelling is essentially one letter per sound, with no silent letters and no diacritics; punctuation today follows European conventions. The language distinguishes ejective consonants — produced with a tight glottal closure (კ, პ, ტ, წ, ჭ, ყ) — from their regular voiceless counterparts (ქ, ფ, თ, ც, ჩ, ხ), a three-way contrast that has no Latin or Cyrillic equivalent and is written with entirely separate letters rather than diacritics. The 'capital' look you sometimes see on signs is the historical Mtavruli script, used as a stylistic all-caps alternative rather than as true uppercase letters.",
+    "ru": "Грузинское письмо однопалатно — деления на прописные и строчные нет вовсе; предложения и имена собственные начинаются с тех же форм, что и всё остальное. Орфография фактически отражает принцип «одна буква — один звук»: нет ни немых букв, ни диакритик, пунктуация сегодня следует европейским правилам. Язык различает абруптивные (эйективные) согласные — образующиеся с резким смыканием голосовой щели (კ, პ, ტ, წ, ჭ, ყ) — и обычные глухие согласные (ქ, ფ, თ, ც, ჩ, ხ): это троичное противопоставление, не имеющее аналогов в латинице и кириллице, передаётся не диакритиками, а полностью разными буквами. «Заглавный» вид, который иногда встречается на вывесках, — это историческое мтаврули, используемое как стилистический «капс», а не как настоящие прописные буквы."
+  },
+  "countries": [
+    {
+      "flag": "🇬🇪",
+      "name": {
+        "en": "Georgia",
+        "ru": "Грузия"
+      }
+    }
+  ],
+  "writingConventions": {
+    "en": "Modern Georgian Mkhedruli has no uppercase/lowercase contrast. The large, capital-looking Mtavruli style appears on signs and headings, but it is stylistic all-caps rather than a separate case system, so it can be a reference preview later rather than SRS material now. Georgian writes one sound per letter with no digraphs or silent letters; the hard part is distinguishing ejective consonants such as კ/პ/ტ/წ/ჭ/ყ from aspirated-looking neighbors. Punctuation and numbers are modern European/Western, so no separate digit or punctuation cards are needed.",
+    "ru": "В современном грузинском мхедрули нет противопоставления прописных и строчных. Крупный «заглавный» стиль мтаврули встречается на вывесках и в заголовках, но это стилистический капс, а не отдельная система регистра, поэтому его можно позже добавить в справочный обзор, но не обязательно в интервальные карточки. Грузинское письмо в основном даёт один звук на букву, без диграфов и немых букв; сложнее всего различать эйективные согласные კ/პ/ტ/წ/ჭ/ყ и соседние придыхательные. Пунктуация и цифры современные европейские/западные, отдельные карточки для них не нужны."
+  }
+}

@@ -1,0 +1,661 @@
+{
+  "version": 1,
+  "letters": [
+    {
+      "glyph": "ا",
+      "ipa": "aː",
+      "latin": "ā",
+      "cyrillic": "а",
+      "example": {
+        "native": "أم",
+        "ipa": "ʔumm",
+        "latin": "umm",
+        "cyrillic": "умм",
+        "meaning": {
+          "en": "mother",
+          "ru": "мать"
+        }
+      },
+      "note": {
+        "en": "Alif — mostly carries the long /aː/ vowel; can be a seat for hamza.",
+        "ru": "Алиф — обычно обозначает долгий гласный /aː/; может служить подставкой для хамзы."
+      }
+    },
+    {
+      "glyph": "ب",
+      "ipa": "b",
+      "latin": "b",
+      "cyrillic": "б",
+      "example": {
+        "native": "باب",
+        "ipa": "baːb",
+        "latin": "bāb",
+        "cyrillic": "баб",
+        "meaning": {
+          "en": "door",
+          "ru": "дверь"
+        }
+      }
+    },
+    {
+      "glyph": "ت",
+      "ipa": "t",
+      "latin": "t",
+      "cyrillic": "т",
+      "example": {
+        "native": "تفاح",
+        "ipa": "tuˈfːaːħ",
+        "latin": "tuffāḥ",
+        "cyrillic": "туффах",
+        "meaning": {
+          "en": "apple",
+          "ru": "яблоко"
+        }
+      }
+    },
+    {
+      "glyph": "ث",
+      "ipa": "θ",
+      "latin": "th",
+      "cyrillic": "т",
+      "example": {
+        "native": "ثلج",
+        "ipa": "θald͡ʒ",
+        "latin": "thalj",
+        "cyrillic": "тальдж",
+        "meaning": {
+          "en": "snow",
+          "ru": "снег"
+        }
+      },
+      "note": {
+        "en": "Like 'th' in 'think'.",
+        "ru": "Как th в английском think (глухой межзубный)."
+      }
+    },
+    {
+      "glyph": "ج",
+      "ipa": "dʒ",
+      "latin": "j",
+      "cyrillic": "дж",
+      "example": {
+        "native": "جبل",
+        "ipa": "d͡ʒabal",
+        "latin": "jabal",
+        "cyrillic": "джабаль",
+        "meaning": {
+          "en": "mountain",
+          "ru": "гора"
+        }
+      }
+    },
+    {
+      "glyph": "ح",
+      "ipa": "ħ",
+      "latin": "ḥ",
+      "cyrillic": "х",
+      "example": {
+        "native": "حب",
+        "ipa": "ħubb",
+        "latin": "ḥubb",
+        "cyrillic": "хубб",
+        "meaning": {
+          "en": "love",
+          "ru": "любовь"
+        }
+      },
+      "note": {
+        "en": "Pharyngeal h — like a heavy breath from the throat.",
+        "ru": "Глоточный х — словно тяжёлый выдох из горла."
+      }
+    },
+    {
+      "glyph": "خ",
+      "ipa": "x",
+      "latin": "kh",
+      "cyrillic": "х",
+      "example": {
+        "native": "خبز",
+        "ipa": "xubz",
+        "latin": "khubz",
+        "cyrillic": "хубз",
+        "meaning": {
+          "en": "bread",
+          "ru": "хлеб"
+        }
+      }
+    },
+    {
+      "glyph": "د",
+      "ipa": "d",
+      "latin": "d",
+      "cyrillic": "д",
+      "example": {
+        "native": "دار",
+        "ipa": "daːr",
+        "latin": "dār",
+        "cyrillic": "дар",
+        "meaning": {
+          "en": "home / house",
+          "ru": "дом"
+        }
+      }
+    },
+    {
+      "glyph": "ذ",
+      "ipa": "ð",
+      "latin": "dh",
+      "cyrillic": "з",
+      "example": {
+        "native": "ذهب",
+        "ipa": "ðahab",
+        "latin": "dhahab",
+        "cyrillic": "захаб",
+        "meaning": {
+          "en": "gold",
+          "ru": "золото"
+        }
+      },
+      "note": {
+        "en": "Like 'th' in 'this'.",
+        "ru": "Как th в английском this (звонкий межзубный)."
+      }
+    },
+    {
+      "glyph": "ر",
+      "ipa": "r",
+      "latin": "r",
+      "cyrillic": "р",
+      "example": {
+        "native": "رجل",
+        "ipa": "rad͡ʒul",
+        "latin": "rajul",
+        "cyrillic": "раджуль",
+        "meaning": {
+          "en": "man",
+          "ru": "мужчина"
+        }
+      }
+    },
+    {
+      "glyph": "ز",
+      "ipa": "z",
+      "latin": "z",
+      "cyrillic": "з",
+      "example": {
+        "native": "زهرة",
+        "ipa": "zahra",
+        "latin": "zahra",
+        "cyrillic": "захра",
+        "meaning": {
+          "en": "flower",
+          "ru": "цветок"
+        }
+      }
+    },
+    {
+      "glyph": "س",
+      "ipa": "s",
+      "latin": "s",
+      "cyrillic": "с",
+      "example": {
+        "native": "سماء",
+        "ipa": "samaːʔ",
+        "latin": "samāʾ",
+        "cyrillic": "сама",
+        "meaning": {
+          "en": "sky",
+          "ru": "небо"
+        }
+      }
+    },
+    {
+      "glyph": "ش",
+      "ipa": "ʃ",
+      "latin": "sh",
+      "cyrillic": "ш",
+      "example": {
+        "native": "شمس",
+        "ipa": "ʃams",
+        "latin": "shams",
+        "cyrillic": "шамс",
+        "meaning": {
+          "en": "sun",
+          "ru": "солнце"
+        }
+      }
+    },
+    {
+      "glyph": "ص",
+      "ipa": "sˤ",
+      "latin": "ṣ",
+      "cyrillic": "с",
+      "example": {
+        "native": "صديق",
+        "ipa": "sˤadiːq",
+        "latin": "ṣadīq",
+        "cyrillic": "садик",
+        "meaning": {
+          "en": "friend",
+          "ru": "друг"
+        }
+      },
+      "note": {
+        "en": "Emphatic (pharyngealised) s.",
+        "ru": "Эмфатический (фарингализованный) с."
+      }
+    },
+    {
+      "glyph": "ض",
+      "ipa": "dˤ",
+      "latin": "ḍ",
+      "cyrillic": "д",
+      "example": {
+        "native": "ضوء",
+        "ipa": "dˤawʔ",
+        "latin": "ḍawʾ",
+        "cyrillic": "дау",
+        "meaning": {
+          "en": "light",
+          "ru": "свет"
+        }
+      },
+      "note": {
+        "en": "Emphatic d.",
+        "ru": "Эмфатический д."
+      }
+    },
+    {
+      "glyph": "ط",
+      "ipa": "tˤ",
+      "latin": "ṭ",
+      "cyrillic": "т",
+      "example": {
+        "native": "طفل",
+        "ipa": "tˤifl",
+        "latin": "ṭifl",
+        "cyrillic": "тыфль",
+        "meaning": {
+          "en": "child",
+          "ru": "ребёнок"
+        }
+      },
+      "note": {
+        "en": "Emphatic t.",
+        "ru": "Эмфатический т."
+      }
+    },
+    {
+      "glyph": "ظ",
+      "ipa": "ðˤ",
+      "latin": "ẓ",
+      "cyrillic": "з",
+      "example": {
+        "native": "ظل",
+        "ipa": "ðˤill",
+        "latin": "ẓill",
+        "cyrillic": "зыль",
+        "meaning": {
+          "en": "shadow",
+          "ru": "тень"
+        }
+      },
+      "note": {
+        "en": "Emphatic dh.",
+        "ru": "Эмфатический звонкий межзубный (как th в this)."
+      }
+    },
+    {
+      "glyph": "ع",
+      "ipa": "ʕ",
+      "latin": "ʿ",
+      "cyrillic": "‘",
+      "example": {
+        "native": "عين",
+        "ipa": "ʕajn",
+        "latin": "ʿayn",
+        "cyrillic": "айн",
+        "meaning": {
+          "en": "eye / spring",
+          "ru": "глаз / источник"
+        }
+      },
+      "note": {
+        "en": "Voiced pharyngeal — a tight throat sound, no English equivalent.",
+        "ru": "Звонкий глоточный — напряжённый горловой звук, аналога в русском и английском нет."
+      }
+    },
+    {
+      "glyph": "غ",
+      "ipa": "ɣ",
+      "latin": "gh",
+      "cyrillic": "г",
+      "example": {
+        "native": "غيم",
+        "ipa": "ɣajm",
+        "latin": "ghaym",
+        "cyrillic": "гайм",
+        "meaning": {
+          "en": "cloud",
+          "ru": "облако"
+        }
+      }
+    },
+    {
+      "glyph": "ف",
+      "ipa": "f",
+      "latin": "f",
+      "cyrillic": "ф",
+      "example": {
+        "native": "فيل",
+        "ipa": "fiːl",
+        "latin": "fīl",
+        "cyrillic": "филь",
+        "meaning": {
+          "en": "elephant",
+          "ru": "слон"
+        }
+      }
+    },
+    {
+      "glyph": "ق",
+      "ipa": "q",
+      "latin": "q",
+      "cyrillic": "к",
+      "example": {
+        "native": "قمر",
+        "ipa": "qamar",
+        "latin": "qamar",
+        "cyrillic": "камар",
+        "meaning": {
+          "en": "moon",
+          "ru": "луна"
+        }
+      },
+      "note": {
+        "en": "Uvular k — formed at the very back of the mouth.",
+        "ru": "Увулярный к — образуется в самой задней части рта."
+      }
+    },
+    {
+      "glyph": "ك",
+      "ipa": "k",
+      "latin": "k",
+      "cyrillic": "к",
+      "example": {
+        "native": "كتاب",
+        "ipa": "kitaːb",
+        "latin": "kitāb",
+        "cyrillic": "китаб",
+        "meaning": {
+          "en": "book",
+          "ru": "книга"
+        }
+      }
+    },
+    {
+      "glyph": "ل",
+      "ipa": "l",
+      "latin": "l",
+      "cyrillic": "л",
+      "example": {
+        "native": "ليل",
+        "ipa": "lajl",
+        "latin": "layl",
+        "cyrillic": "ляйль",
+        "meaning": {
+          "en": "night",
+          "ru": "ночь"
+        }
+      }
+    },
+    {
+      "glyph": "م",
+      "ipa": "m",
+      "latin": "m",
+      "cyrillic": "м",
+      "example": {
+        "native": "ماء",
+        "ipa": "maːʔ",
+        "latin": "māʾ",
+        "cyrillic": "ма",
+        "meaning": {
+          "en": "water",
+          "ru": "вода"
+        }
+      }
+    },
+    {
+      "glyph": "ن",
+      "ipa": "n",
+      "latin": "n",
+      "cyrillic": "н",
+      "example": {
+        "native": "نجم",
+        "ipa": "nad͡ʒm",
+        "latin": "najm",
+        "cyrillic": "наджм",
+        "meaning": {
+          "en": "star",
+          "ru": "звезда"
+        }
+      }
+    },
+    {
+      "glyph": "ه",
+      "ipa": "h",
+      "latin": "h",
+      "cyrillic": "х",
+      "example": {
+        "native": "هواء",
+        "ipa": "hawaːʔ",
+        "latin": "hawāʾ",
+        "cyrillic": "хауа",
+        "meaning": {
+          "en": "air",
+          "ru": "воздух"
+        }
+      }
+    },
+    {
+      "glyph": "و",
+      "ipa": "w",
+      "latin": "w",
+      "cyrillic": "в",
+      "example": {
+        "native": "ورد",
+        "ipa": "ward",
+        "latin": "ward",
+        "cyrillic": "вард",
+        "meaning": {
+          "en": "rose",
+          "ru": "роза"
+        }
+      },
+      "note": {
+        "en": "Also the long vowel /uː/ depending on context.",
+        "ru": "В зависимости от контекста также обозначает долгий гласный /uː/."
+      }
+    },
+    {
+      "glyph": "ي",
+      "ipa": "j",
+      "latin": "y",
+      "cyrillic": "й",
+      "example": {
+        "native": "يوم",
+        "ipa": "jawm",
+        "latin": "yawm",
+        "cyrillic": "яум",
+        "meaning": {
+          "en": "day",
+          "ru": "день"
+        }
+      },
+      "note": {
+        "en": "Also the long vowel /iː/ depending on context.",
+        "ru": "В зависимости от контекста также обозначает долгий гласный /iː/."
+      }
+    },
+    {
+      "glyph": "◌َ",
+      "ipa": "a",
+      "latin": "a",
+      "cyrillic": "а",
+      "example": {
+        "native": "كَتَبَ",
+        "ipa": "kataba",
+        "latin": "kataba",
+        "cyrillic": "катаба",
+        "meaning": {
+          "en": "he wrote",
+          "ru": "он написал"
+        }
+      },
+      "note": {
+        "en": "Fatḥa — short /a/, a small slanted stroke above the consonant.",
+        "ru": "Фатха — краткий /a/, маленький наклонный штрих над согласной."
+      }
+    },
+    {
+      "glyph": "◌ِ",
+      "ipa": "i",
+      "latin": "i",
+      "cyrillic": "и",
+      "example": {
+        "native": "بِنْت",
+        "ipa": "bint",
+        "latin": "bint",
+        "cyrillic": "бинт",
+        "meaning": {
+          "en": "girl",
+          "ru": "девочка"
+        }
+      },
+      "note": {
+        "en": "Kasra — short /i/, a small stroke below the consonant.",
+        "ru": "Касра — краткий /i/, маленький штрих под согласной."
+      }
+    },
+    {
+      "glyph": "◌ُ",
+      "ipa": "u",
+      "latin": "u",
+      "cyrillic": "у",
+      "example": {
+        "native": "كُتُب",
+        "ipa": "kutub",
+        "latin": "kutub",
+        "cyrillic": "кутуб",
+        "meaning": {
+          "en": "books",
+          "ru": "книги"
+        }
+      },
+      "note": {
+        "en": "Ḍamma — short /u/, a small ‘waw’ above the consonant.",
+        "ru": "Дамма — краткий /u/, маленький значок в виде «вав» над согласной."
+      }
+    },
+    {
+      "glyph": "◌ْ",
+      "ipa": "—",
+      "latin": "—",
+      "cyrillic": "—",
+      "example": {
+        "native": "اِبْن",
+        "ipa": "ibn",
+        "latin": "ibn",
+        "cyrillic": "ибн",
+        "meaning": {
+          "en": "son",
+          "ru": "сын"
+        }
+      },
+      "note": {
+        "en": "Sukūn — marks the absence of a vowel (consonant ends a syllable).",
+        "ru": "Сукун — обозначает отсутствие гласного (согласная замыкает слог)."
+      }
+    },
+    {
+      "glyph": "◌ّ",
+      "ipa": "(geminate)",
+      "latin": "(double)",
+      "cyrillic": "(удвоение)",
+      "example": {
+        "native": "سَيَّارَة",
+        "ipa": "sajjaːra",
+        "latin": "sayyāra",
+        "cyrillic": "сайяра",
+        "meaning": {
+          "en": "car",
+          "ru": "машина"
+        }
+      },
+      "note": {
+        "en": "Shadda — doubles (geminates) the consonant it sits over.",
+        "ru": "Шадда — удваивает (геминирует) согласную, над которой стоит."
+      }
+    },
+    {
+      "glyph": "◌ً",
+      "ipa": "an",
+      "latin": "an",
+      "cyrillic": "ан",
+      "example": {
+        "native": "شُكْرًا",
+        "ipa": "ʃukran",
+        "latin": "shukran",
+        "cyrillic": "шукран",
+        "meaning": {
+          "en": "thanks",
+          "ru": "спасибо"
+        }
+      },
+      "note": {
+        "en": "Tanwīn fatḥ — indefinite accusative ending /-an/.",
+        "ru": "Танвин фатх — окончание неопределённого винительного падежа /-an/."
+      }
+    },
+    {
+      "glyph": "◌ٍ",
+      "ipa": "in",
+      "latin": "in",
+      "cyrillic": "ин",
+      "example": {
+        "native": "بَيْتٍ",
+        "ipa": "bajtin",
+        "latin": "baytin",
+        "cyrillic": "байтин",
+        "meaning": {
+          "en": "of a house",
+          "ru": "дома (род. п.)"
+        }
+      },
+      "note": {
+        "en": "Tanwīn kasr — indefinite genitive ending /-in/.",
+        "ru": "Танвин касра — окончание неопределённого родительного падежа /-in/."
+      }
+    },
+    {
+      "glyph": "◌ٌ",
+      "ipa": "un",
+      "latin": "un",
+      "cyrillic": "ун",
+      "example": {
+        "native": "بَيْتٌ",
+        "ipa": "bajtun",
+        "latin": "baytun",
+        "cyrillic": "байтун",
+        "meaning": {
+          "en": "a house (nom.)",
+          "ru": "дом (им. п.)"
+        }
+      },
+      "note": {
+        "en": "Tanwīn ḍamm — indefinite nominative ending /-un/.",
+        "ru": "Танвин дамма — окончание неопределённого именительного падежа /-un/."
+      }
+    }
+  ]
+}

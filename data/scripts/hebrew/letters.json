@@ -1,0 +1,673 @@
+{
+  "version": 1,
+  "letters": [
+    {
+      "glyph": "א",
+      "ipa": "ʔ",
+      "latin": "'",
+      "cyrillic": "ʼ",
+      "example": {
+        "native": "אבא",
+        "ipa": "ˈaba",
+        "latin": "aba",
+        "cyrillic": "аба",
+        "meaning": {
+          "en": "father",
+          "ru": "отец"
+        }
+      },
+      "note": {
+        "en": "Silent / glottal stop; carries vowels.",
+        "ru": "Не произносится / гортанная смычка; служит подставкой для гласных."
+      }
+    },
+    {
+      "glyph": "ב",
+      "ipa": "b/v",
+      "latin": "b / v",
+      "cyrillic": "б / в",
+      "example": {
+        "native": "בית",
+        "ipa": "ˈbajit",
+        "latin": "bayit",
+        "cyrillic": "байит",
+        "meaning": {
+          "en": "house",
+          "ru": "дом"
+        }
+      },
+      "note": {
+        "en": "/b/ with dagesh (בּ), /v/ without.",
+        "ru": "/b/ с дагешем (בּ), /v/ без него."
+      }
+    },
+    {
+      "glyph": "ג",
+      "ipa": "ɡ",
+      "latin": "g",
+      "cyrillic": "г",
+      "example": {
+        "native": "גמל",
+        "ipa": "ɡaˈmal",
+        "latin": "gamal",
+        "cyrillic": "гамал",
+        "meaning": {
+          "en": "camel",
+          "ru": "верблюд"
+        }
+      }
+    },
+    {
+      "glyph": "ד",
+      "ipa": "d",
+      "latin": "d",
+      "cyrillic": "д",
+      "example": {
+        "native": "דג",
+        "ipa": "daɡ",
+        "latin": "dag",
+        "cyrillic": "даг",
+        "meaning": {
+          "en": "fish",
+          "ru": "рыба"
+        }
+      }
+    },
+    {
+      "glyph": "ה",
+      "ipa": "h",
+      "latin": "h",
+      "cyrillic": "х",
+      "example": {
+        "native": "הר",
+        "ipa": "har",
+        "latin": "har",
+        "cyrillic": "хар",
+        "meaning": {
+          "en": "mountain",
+          "ru": "гора"
+        }
+      },
+      "note": {
+        "en": "Often silent at word-end.",
+        "ru": "В конце слова часто не произносится."
+      }
+    },
+    {
+      "glyph": "ו",
+      "ipa": "v",
+      "latin": "v / w",
+      "cyrillic": "в",
+      "example": {
+        "native": "ורד",
+        "ipa": "ˈveʁed",
+        "latin": "vered",
+        "cyrillic": "веред",
+        "meaning": {
+          "en": "rose",
+          "ru": "роза"
+        }
+      },
+      "note": {
+        "en": "Also marks /o/ (וֹ) and /u/ (וּ) as a mater lectionis.",
+        "ru": "Также обозначает /o/ (וֹ) и /u/ (וּ) как mater lectionis."
+      }
+    },
+    {
+      "glyph": "ז",
+      "ipa": "z",
+      "latin": "z",
+      "cyrillic": "з",
+      "example": {
+        "native": "זמן",
+        "ipa": "zman",
+        "latin": "zman",
+        "cyrillic": "зман",
+        "meaning": {
+          "en": "time",
+          "ru": "время"
+        }
+      }
+    },
+    {
+      "glyph": "ח",
+      "ipa": "χ",
+      "latin": "ch / kh",
+      "cyrillic": "х",
+      "example": {
+        "native": "חלום",
+        "ipa": "χaˈlom",
+        "latin": "chalom",
+        "cyrillic": "халом",
+        "meaning": {
+          "en": "dream",
+          "ru": "сон"
+        }
+      }
+    },
+    {
+      "glyph": "ט",
+      "ipa": "t",
+      "latin": "t",
+      "cyrillic": "т",
+      "example": {
+        "native": "טוב",
+        "ipa": "tov",
+        "latin": "tov",
+        "cyrillic": "тов",
+        "meaning": {
+          "en": "good",
+          "ru": "хороший"
+        }
+      }
+    },
+    {
+      "glyph": "י",
+      "ipa": "j",
+      "latin": "y",
+      "cyrillic": "й",
+      "example": {
+        "native": "יום",
+        "ipa": "jom",
+        "latin": "yom",
+        "cyrillic": "йом",
+        "meaning": {
+          "en": "day",
+          "ru": "день"
+        }
+      },
+      "note": {
+        "en": "Also marks /i/ as a mater lectionis.",
+        "ru": "Также обозначает /i/ как mater lectionis."
+      }
+    },
+    {
+      "glyph": "כ",
+      "ipa": "k/χ",
+      "latin": "k / kh",
+      "cyrillic": "к / х",
+      "example": {
+        "native": "כסף",
+        "ipa": "ˈkesef",
+        "latin": "kesef",
+        "cyrillic": "кесэф",
+        "meaning": {
+          "en": "silver / money",
+          "ru": "серебро / деньги"
+        }
+      },
+      "note": {
+        "en": "/k/ with dagesh (כּ), /χ/ without.",
+        "ru": "/k/ с дагешем (כּ), /χ/ без него."
+      }
+    },
+    {
+      "glyph": "ך",
+      "ipa": "χ",
+      "latin": "kh",
+      "cyrillic": "х",
+      "example": {
+        "native": "מלך",
+        "ipa": "ˈmeleχ",
+        "latin": "melekh",
+        "cyrillic": "мелех",
+        "meaning": {
+          "en": "king",
+          "ru": "король"
+        }
+      },
+      "note": {
+        "en": "Final form of kaf.",
+        "ru": "Конечная форма буквы каф."
+      }
+    },
+    {
+      "glyph": "ל",
+      "ipa": "l",
+      "latin": "l",
+      "cyrillic": "л",
+      "example": {
+        "native": "לחם",
+        "ipa": "ˈleχem",
+        "latin": "lechem",
+        "cyrillic": "лехем",
+        "meaning": {
+          "en": "bread",
+          "ru": "хлеб"
+        }
+      }
+    },
+    {
+      "glyph": "מ",
+      "ipa": "m",
+      "latin": "m",
+      "cyrillic": "м",
+      "example": {
+        "native": "מים",
+        "ipa": "ˈmajim",
+        "latin": "mayim",
+        "cyrillic": "майим",
+        "meaning": {
+          "en": "water",
+          "ru": "вода"
+        }
+      }
+    },
+    {
+      "glyph": "ם",
+      "ipa": "m",
+      "latin": "m",
+      "cyrillic": "м",
+      "example": {
+        "native": "שלום",
+        "ipa": "ʃaˈlom",
+        "latin": "shalom",
+        "cyrillic": "шалом",
+        "meaning": {
+          "en": "peace / hello",
+          "ru": "мир / здравствуйте"
+        }
+      },
+      "note": {
+        "en": "Final form of mem.",
+        "ru": "Конечная форма буквы мем."
+      }
+    },
+    {
+      "glyph": "נ",
+      "ipa": "n",
+      "latin": "n",
+      "cyrillic": "н",
+      "example": {
+        "native": "נר",
+        "ipa": "neʁ",
+        "latin": "ner",
+        "cyrillic": "нер",
+        "meaning": {
+          "en": "candle",
+          "ru": "свеча"
+        }
+      }
+    },
+    {
+      "glyph": "ן",
+      "ipa": "n",
+      "latin": "n",
+      "cyrillic": "н",
+      "example": {
+        "native": "בן",
+        "ipa": "ben",
+        "latin": "ben",
+        "cyrillic": "бен",
+        "meaning": {
+          "en": "son",
+          "ru": "сын"
+        }
+      },
+      "note": {
+        "en": "Final form of nun.",
+        "ru": "Конечная форма буквы нун."
+      }
+    },
+    {
+      "glyph": "ס",
+      "ipa": "s",
+      "latin": "s",
+      "cyrillic": "с",
+      "example": {
+        "native": "ספר",
+        "ipa": "ˈsefeʁ",
+        "latin": "sefer",
+        "cyrillic": "сефер",
+        "meaning": {
+          "en": "book",
+          "ru": "книга"
+        }
+      }
+    },
+    {
+      "glyph": "ע",
+      "ipa": "ʔ",
+      "latin": "'",
+      "cyrillic": "ʼ",
+      "example": {
+        "native": "עיר",
+        "ipa": "ʔiʁ",
+        "latin": "ir",
+        "cyrillic": "ир",
+        "meaning": {
+          "en": "city",
+          "ru": "город"
+        }
+      },
+      "note": {
+        "en": "Historically a pharyngeal; usually silent in modern Israeli Hebrew.",
+        "ru": "Исторически глоточный согласный; в современном израильском иврите обычно не произносится."
+      }
+    },
+    {
+      "glyph": "פ",
+      "ipa": "p/f",
+      "latin": "p / f",
+      "cyrillic": "п / ф",
+      "example": {
+        "native": "פה",
+        "ipa": "pe",
+        "latin": "pe",
+        "cyrillic": "пэ",
+        "meaning": {
+          "en": "mouth",
+          "ru": "рот"
+        }
+      },
+      "note": {
+        "en": "/p/ with dagesh (פּ), /f/ without.",
+        "ru": "/p/ с дагешем (פּ), /f/ без него."
+      }
+    },
+    {
+      "glyph": "ף",
+      "ipa": "f",
+      "latin": "f",
+      "cyrillic": "ф",
+      "example": {
+        "native": "סוף",
+        "ipa": "sof",
+        "latin": "sof",
+        "cyrillic": "соф",
+        "meaning": {
+          "en": "end",
+          "ru": "конец"
+        }
+      },
+      "note": {
+        "en": "Final form of pe.",
+        "ru": "Конечная форма буквы пэ."
+      }
+    },
+    {
+      "glyph": "צ",
+      "ipa": "ts",
+      "latin": "ts / tz",
+      "cyrillic": "ц",
+      "example": {
+        "native": "צבע",
+        "ipa": "ˈtseva",
+        "latin": "tseva",
+        "cyrillic": "цева",
+        "meaning": {
+          "en": "colour",
+          "ru": "цвет"
+        }
+      }
+    },
+    {
+      "glyph": "ץ",
+      "ipa": "ts",
+      "latin": "ts",
+      "cyrillic": "ц",
+      "example": {
+        "native": "ארץ",
+        "ipa": "ˈeʁets",
+        "latin": "eretz",
+        "cyrillic": "эрец",
+        "meaning": {
+          "en": "land / country",
+          "ru": "земля / страна"
+        }
+      },
+      "note": {
+        "en": "Final form of tsadi.",
+        "ru": "Конечная форма буквы цади."
+      }
+    },
+    {
+      "glyph": "ק",
+      "ipa": "k",
+      "latin": "k / q",
+      "cyrillic": "к",
+      "example": {
+        "native": "קפה",
+        "ipa": "kaˈfe",
+        "latin": "kafe",
+        "cyrillic": "кафэ",
+        "meaning": {
+          "en": "coffee",
+          "ru": "кофе"
+        }
+      }
+    },
+    {
+      "glyph": "ר",
+      "ipa": "ʁ",
+      "latin": "r",
+      "cyrillic": "р",
+      "example": {
+        "native": "ראש",
+        "ipa": "ʁoʃ",
+        "latin": "rosh",
+        "cyrillic": "рош",
+        "meaning": {
+          "en": "head",
+          "ru": "голова"
+        }
+      }
+    },
+    {
+      "glyph": "ש",
+      "ipa": "ʃ/s",
+      "latin": "sh / s",
+      "cyrillic": "ш / с",
+      "example": {
+        "native": "שמש",
+        "ipa": "ˈʃemeʃ",
+        "latin": "shemesh",
+        "cyrillic": "шемеш",
+        "meaning": {
+          "en": "sun",
+          "ru": "солнце"
+        }
+      },
+      "note": {
+        "en": "Dot on right (שׁ) = /ʃ/; on left (שׂ) = /s/.",
+        "ru": "Точка справа (שׁ) = /ʃ/; слева (שׂ) = /s/."
+      }
+    },
+    {
+      "glyph": "ת",
+      "ipa": "t",
+      "latin": "t",
+      "cyrillic": "т",
+      "example": {
+        "native": "תודה",
+        "ipa": "toˈda",
+        "latin": "toda",
+        "cyrillic": "тода",
+        "meaning": {
+          "en": "thanks",
+          "ru": "спасибо"
+        }
+      }
+    },
+    {
+      "glyph": "◌ַ",
+      "ipa": "a",
+      "latin": "a",
+      "cyrillic": "а",
+      "example": {
+        "native": "אַבָּא",
+        "ipa": "ˈaba",
+        "latin": "aba",
+        "cyrillic": "аба",
+        "meaning": {
+          "en": "father",
+          "ru": "отец"
+        }
+      },
+      "note": {
+        "en": "Patach: short /a/ vowel, placed under the consonant.",
+        "ru": "Патах: краткий гласный /a/, ставится под согласной."
+      }
+    },
+    {
+      "glyph": "◌ָ",
+      "ipa": "a",
+      "latin": "a",
+      "cyrillic": "а",
+      "example": {
+        "native": "יָם",
+        "ipa": "jam",
+        "latin": "yam",
+        "cyrillic": "ям",
+        "meaning": {
+          "en": "sea",
+          "ru": "море"
+        }
+      },
+      "note": {
+        "en": "Kamatz: long /a/ in modern Israeli; historically /ɔ/.",
+        "ru": "Камац: долгий /a/ в современном израильском иврите; исторически /ɔ/."
+      }
+    },
+    {
+      "glyph": "◌ֵ",
+      "ipa": "e",
+      "latin": "e",
+      "cyrillic": "э",
+      "example": {
+        "native": "סֵפֶר",
+        "ipa": "ˈsefeʁ",
+        "latin": "sefer",
+        "cyrillic": "сефер",
+        "meaning": {
+          "en": "book",
+          "ru": "книга"
+        }
+      },
+      "note": {
+        "en": "Tzere: /e/, two dots below.",
+        "ru": "Цере: /e/, две точки снизу."
+      }
+    },
+    {
+      "glyph": "◌ֶ",
+      "ipa": "e",
+      "latin": "e",
+      "cyrillic": "э",
+      "example": {
+        "native": "אֶרֶץ",
+        "ipa": "ˈeʁets",
+        "latin": "eretz",
+        "cyrillic": "эрец",
+        "meaning": {
+          "en": "land",
+          "ru": "земля"
+        }
+      },
+      "note": {
+        "en": "Segol: /e/, three dots in a triangle below.",
+        "ru": "Сеголь: /e/, три точки треугольником снизу."
+      }
+    },
+    {
+      "glyph": "◌ִ",
+      "ipa": "i",
+      "latin": "i",
+      "cyrillic": "и",
+      "example": {
+        "native": "אִישׁ",
+        "ipa": "iʃ",
+        "latin": "ish",
+        "cyrillic": "иш",
+        "meaning": {
+          "en": "man",
+          "ru": "мужчина"
+        }
+      },
+      "note": {
+        "en": "Hiriq: /i/.",
+        "ru": "Хирик: /i/."
+      }
+    },
+    {
+      "glyph": "◌ֹ",
+      "ipa": "o",
+      "latin": "o",
+      "cyrillic": "о",
+      "example": {
+        "native": "שָׁלוֹם",
+        "ipa": "ʃaˈlom",
+        "latin": "shalom",
+        "cyrillic": "шалом",
+        "meaning": {
+          "en": "peace",
+          "ru": "мир"
+        }
+      },
+      "note": {
+        "en": "Holam: /o/, dot above (usually written with ו).",
+        "ru": "Холам: /o/, точка сверху (обычно пишется с буквой ו)."
+      }
+    },
+    {
+      "glyph": "◌ֻ",
+      "ipa": "u",
+      "latin": "u",
+      "cyrillic": "у",
+      "example": {
+        "native": "שֻׁלְחָן",
+        "ipa": "ʃulˈχan",
+        "latin": "shulchan",
+        "cyrillic": "шулхан",
+        "meaning": {
+          "en": "table",
+          "ru": "стол"
+        }
+      },
+      "note": {
+        "en": "Qubutz: /u/.",
+        "ru": "Кубуц: /u/."
+      }
+    },
+    {
+      "glyph": "◌ְ",
+      "ipa": "ə",
+      "latin": "e / —",
+      "cyrillic": "э / —",
+      "example": {
+        "native": "סְפָרִים",
+        "ipa": "sfaˈʁim",
+        "latin": "sfarim",
+        "cyrillic": "сфарим",
+        "meaning": {
+          "en": "books",
+          "ru": "книги"
+        }
+      },
+      "note": {
+        "en": "Sheva: short /ə/ or silent.",
+        "ru": "Шва: краткий /ə/ или беззвучный."
+      }
+    },
+    {
+      "glyph": "◌ּ",
+      "ipa": "—",
+      "latin": "—",
+      "cyrillic": "—",
+      "example": {
+        "native": "סֻכָּר",
+        "ipa": "suˈkar",
+        "latin": "sukar",
+        "cyrillic": "сукар",
+        "meaning": {
+          "en": "sugar",
+          "ru": "сахар"
+        }
+      },
+      "note": {
+        "en": "Dagesh: dot inside a letter; gemination or hard plosive (בּ כּ פּ).",
+        "ru": "Дагеш: точка внутри буквы; обозначает удвоение или твёрдый смычный (בּ כּ פּ)."
+      }
+    }
+  ]
+}

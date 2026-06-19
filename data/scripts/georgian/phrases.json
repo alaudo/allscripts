@@ -1,0 +1,276 @@
+{
+  "version": 3,
+  "language": "Georgian",
+  "phrases": [
+    {
+      "native": "გამარჯობა. მადლობა.",
+      "latin": "Gamarjoba. Madloba.",
+      "cyrillic": "гамарджоба. мадлоба",
+      "translations": {
+        "en": "Hello. Thank you.",
+        "ru": "Здравствуйте. Спасибо."
+      }
+    },
+    {
+      "native": "გთხოვთ. უკაცრავად.",
+      "latin": "Gtkhovt. Ukatsravad.",
+      "cyrillic": "гтховт. укацравад",
+      "translations": {
+        "en": "Please. Excuse me.",
+        "ru": "Пожалуйста. Извините."
+      }
+    },
+    {
+      "native": "კი. არა.",
+      "latin": "Ki. Ara.",
+      "cyrillic": "ки. ара",
+      "translations": {
+        "en": "Yes. No.",
+        "ru": "Да. Нет."
+      }
+    },
+    {
+      "native": "ინგლისურად ლაპარაკობთ?",
+      "latin": "Inglisurad laparakobt?",
+      "cyrillic": "инглисурад лапаракобт",
+      "translations": {
+        "en": "Do you speak English?",
+        "ru": "Вы говорите по-английски?"
+      }
+    },
+    {
+      "native": "ვერ გავიგე. ნელა ილაპარაკეთ, გთხოვთ.",
+      "latin": "Ver gavige. Nela ilaparaket, gtkhovt.",
+      "cyrillic": "вэр гавигэ. нэла илапаракэт, гтховт",
+      "translations": {
+        "en": "I don't understand. Please speak slowly.",
+        "ru": "Я не понимаю. Говорите медленнее, пожалуйста."
+      }
+    },
+    {
+      "native": "შეგიძლიათ რუკაზე მაჩვენოთ?",
+      "latin": "Shegidzliat rukaze machvenot?",
+      "cyrillic": "шэгидзлиат руказэ мачвэнот",
+      "translations": {
+        "en": "Can you show me on the map?",
+        "ru": "Покажите мне на карте?"
+      }
+    },
+    {
+      "native": "სად არის ტუალეტი?",
+      "latin": "Sad aris tualeti?",
+      "cyrillic": "сад арис туалэти",
+      "translations": {
+        "en": "Where is the toilet?",
+        "ru": "Где туалет?"
+      }
+    },
+    {
+      "native": "ეს რა ღირს?",
+      "latin": "Es ra ghirs?",
+      "cyrillic": "эс ра гирс",
+      "translations": {
+        "en": "How much is this?",
+        "ru": "Сколько это стоит?"
+      }
+    },
+    {
+      "native": "ეს მინდა.",
+      "latin": "Es minda.",
+      "cyrillic": "эс минда",
+      "translations": {
+        "en": "I would like this.",
+        "ru": "Я хочу это."
+      }
+    },
+    {
+      "native": "წყალი, გთხოვთ. ანგარიში, გთხოვთ.",
+      "latin": "Tskali, gtkhovt. Angarishi, gtkhovt.",
+      "cyrillic": "цкали, гтховт. ангариши, гтховт",
+      "translations": {
+        "en": "Water, please. The bill, please.",
+        "ru": "Воды, пожалуйста. Счёт, пожалуйста."
+      }
+    },
+    {
+      "native": "ბარათით გადახდა შეიძლება?",
+      "latin": "Baratit gadakhda sheidzleba?",
+      "cyrillic": "баратид гадахда шеидзлеба",
+      "translations": {
+        "en": "Can I pay by card?",
+        "ru": "Можно оплатить картой?"
+      }
+    },
+    {
+      "native": "სად არის მეტროს სადგური?",
+      "latin": "Sad aris metros sadguri?",
+      "cyrillic": "сад арис мэтрос садгури",
+      "translations": {
+        "en": "Where is the metro station?",
+        "ru": "Где станция метро?"
+      }
+    },
+    {
+      "native": "ერთი ბილეთი, გთხოვთ.",
+      "latin": "Erti bileti, gtkhovt.",
+      "cyrillic": "эрти билэти, гтховт",
+      "translations": {
+        "en": "One ticket, please.",
+        "ru": "Один билет, пожалуйста."
+      }
+    },
+    {
+      "native": "ტაქსი მჭირდება.",
+      "latin": "Takksi mchirdeba.",
+      "cyrillic": "такси мчирдэба",
+      "translations": {
+        "en": "I need a taxi.",
+        "ru": "Мне нужно такси."
+      }
+    },
+    {
+      "native": "ამ მისამართზე წამიყვანეთ, გთხოვთ.",
+      "latin": "Am misamartze tsamiyvanet, gtkhovt.",
+      "cyrillic": "ам мисамартзэ цамикванэт, гтховт",
+      "translations": {
+        "en": "Please take me to this address.",
+        "ru": "Отвезите меня по этому адресу, пожалуйста."
+      }
+    },
+    {
+      "native": "მარცხნივ. მარჯვნივ. პირდაპირ.",
+      "latin": "Martskhniv. Marjvniv. Pirdapir.",
+      "cyrillic": "марцхнив. марджвнив. пирдапир",
+      "translations": {
+        "en": "Left. Right. Straight ahead.",
+        "ru": "Налево. Направо. Прямо."
+      }
+    },
+    {
+      "native": "დავიკარგე.",
+      "latin": "Davikarge.",
+      "cyrillic": "давикаргэ",
+      "translations": {
+        "en": "I am lost.",
+        "ru": "Я заблудился/заблудилась."
+      }
+    },
+    {
+      "native": "მიშველეთ! პოლიცია გამოიძახეთ.",
+      "latin": "Mishvelet! Politsia gamoidzakhet.",
+      "cyrillic": "мишвэлэт! полиция гамоицахэт",
+      "translations": {
+        "en": "Help! Call the police.",
+        "ru": "Помогите! Вызовите полицию."
+      }
+    },
+    {
+      "native": "ექიმი მჭირდება.",
+      "latin": "Ekimi mchirdeba.",
+      "cyrillic": "экими мчирдэба",
+      "translations": {
+        "en": "I need a doctor.",
+        "ru": "Мне нужен врач."
+      }
+    },
+    {
+      "native": "ალერგია მაქვს.",
+      "latin": "Alergia makvs.",
+      "cyrillic": "алергия маквс",
+      "translations": {
+        "en": "I have an allergy.",
+        "ru": "У меня аллергия."
+      }
+    },
+    {
+      "native": "დღეს. ხვალ. ახლა. მოგვიანებით.",
+      "latin": "Dghes. Khval. Akhla. Mogvianebit.",
+      "cyrillic": "дгэс. хвал. ахла. могвианэбит",
+      "translations": {
+        "en": "Today. Tomorrow. Now. Later.",
+        "ru": "Сегодня. Завтра. Сейчас. Позже."
+      }
+    },
+    {
+      "native": "ღიაა. დაკეტილია.",
+      "latin": "Ghiaa. Daketilia.",
+      "cyrillic": "гиаа. дакэтилия",
+      "translations": {
+        "en": "Open. Closed.",
+        "ru": "Открыто. Закрыто."
+      }
+    },
+    {
+      "native": "აქ. იქ. ახლოს. შორს.",
+      "latin": "Ak. Ik. Akhlos. Shors.",
+      "cyrillic": "ак. ик. ахлос. шорс",
+      "translations": {
+        "en": "Here. There. Near. Far.",
+        "ru": "Здесь. Там. Близко. Далеко."
+      }
+    },
+    {
+      "native": "შესასვლელი. გასასვლელი.",
+      "latin": "Shesasvleli. Gasasvleli.",
+      "cyrillic": "шэсасвлэли. гасасвлэли",
+      "translations": {
+        "en": "Entrance. Exit.",
+        "ru": "Вход. Выход."
+      }
+    },
+    {
+      "native": "ცხელი. ცივი.",
+      "latin": "Tskheli. Tsivi.",
+      "cyrillic": "цхэли. циви",
+      "translations": {
+        "en": "Hot. Cold.",
+        "ru": "Горячее. Холодное."
+      }
+    },
+    {
+      "native": "პატარა. დიდი.",
+      "latin": "Patara. Didi.",
+      "cyrillic": "патара. диди",
+      "translations": {
+        "en": "Small. Large.",
+        "ru": "Маленькое. Большое."
+      }
+    },
+    {
+      "native": "ყავა. ჩაი.",
+      "latin": "Qava. Chai.",
+      "cyrillic": "кава. чай",
+      "translations": {
+        "en": "Coffee. Tea.",
+        "ru": "Кофе. Чай."
+      }
+    },
+    {
+      "native": "ხორცის გარეშე. ვეგეტარიანული.",
+      "latin": "Khortsis gareshe. Vegetarianuli.",
+      "cyrillic": "хорцис гарэшэ. вэгэтарианули",
+      "translations": {
+        "en": "Without meat. Vegetarian.",
+        "ru": "Без мяса. Вегетарианское."
+      }
+    },
+    {
+      "native": "ცხარე არ არის. თხილის გარეშე.",
+      "latin": "Tskhare ar aris. Tkhilis gareshe.",
+      "cyrillic": "цхарэ ар арис. тхилис гарэшэ",
+      "translations": {
+        "en": "Not spicy. No nuts.",
+        "ru": "Не острое. Без орехов."
+      }
+    },
+    {
+      "native": "ჯავშანი მაქვს. Wi-Fi-ის პაროლი რა არის?",
+      "latin": "Javshani makvs. Wi-Fi-is paroli ra aris?",
+      "cyrillic": "джавшани маквс. вай-файис пароли ра арис",
+      "translations": {
+        "en": "I have a reservation. What is the Wi-Fi password?",
+        "ru": "У меня бронь. Какой пароль от Wi-Fi?"
+      }
+    }
+  ]
+}

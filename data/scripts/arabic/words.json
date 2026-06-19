@@ -1,0 +1,335 @@
+{
+  "version": 1,
+  "words": [
+    {
+      "native": "مرحبا",
+      "nativeVoweled": "مَرْحَبًا",
+      "ipa": "marħaban",
+      "latin": "marḥaban",
+      "cyrillic": "мархабан",
+      "meaning": {
+        "en": "hello",
+        "ru": "привет"
+      }
+    },
+    {
+      "native": "شكرا",
+      "nativeVoweled": "شُكْرًا",
+      "ipa": "ʃukran",
+      "latin": "shukran",
+      "cyrillic": "шукран",
+      "meaning": {
+        "en": "thank you",
+        "ru": "спасибо"
+      }
+    },
+    {
+      "native": "نعم",
+      "nativeVoweled": "نَعَمْ",
+      "ipa": "naʕam",
+      "latin": "naʿam",
+      "cyrillic": "наам",
+      "meaning": {
+        "en": "yes",
+        "ru": "да"
+      }
+    },
+    {
+      "native": "لا",
+      "nativeVoweled": "لَا",
+      "ipa": "laː",
+      "latin": "lā",
+      "cyrillic": "ля",
+      "meaning": {
+        "en": "no",
+        "ru": "нет"
+      }
+    },
+    {
+      "native": "ماء",
+      "nativeVoweled": "مَاءٌ",
+      "ipa": "maːʔ",
+      "latin": "māʾ",
+      "cyrillic": "ма",
+      "meaning": {
+        "en": "water",
+        "ru": "вода"
+      }
+    },
+    {
+      "native": "خبز",
+      "nativeVoweled": "خُبْز",
+      "ipa": "xubz",
+      "latin": "khubz",
+      "cyrillic": "хубз",
+      "meaning": {
+        "en": "bread",
+        "ru": "хлеб"
+      }
+    },
+    {
+      "native": "بيت",
+      "nativeVoweled": "بَيْت",
+      "ipa": "bajt",
+      "latin": "bayt",
+      "cyrillic": "байт",
+      "meaning": {
+        "en": "house",
+        "ru": "дом"
+      }
+    },
+    {
+      "native": "مدينة",
+      "nativeVoweled": "مَدِينَة",
+      "ipa": "madiːna",
+      "latin": "madīna",
+      "cyrillic": "мадина",
+      "meaning": {
+        "en": "city",
+        "ru": "город"
+      }
+    },
+    {
+      "native": "مدرسة",
+      "nativeVoweled": "مَدْرَسَة",
+      "ipa": "madrasa",
+      "latin": "madrasa",
+      "cyrillic": "мадраса",
+      "meaning": {
+        "en": "school",
+        "ru": "школа"
+      }
+    },
+    {
+      "native": "كتاب",
+      "nativeVoweled": "كِتَاب",
+      "ipa": "kitaːb",
+      "latin": "kitāb",
+      "cyrillic": "китаб",
+      "meaning": {
+        "en": "book",
+        "ru": "книга"
+      }
+    },
+    {
+      "native": "صديق",
+      "nativeVoweled": "صَدِيق",
+      "ipa": "sˤadiːq",
+      "latin": "ṣadīq",
+      "cyrillic": "садик",
+      "meaning": {
+        "en": "friend",
+        "ru": "друг"
+      }
+    },
+    {
+      "native": "أم",
+      "nativeVoweled": "أُمّ",
+      "ipa": "ʔumm",
+      "latin": "umm",
+      "cyrillic": "умм",
+      "meaning": {
+        "en": "mother",
+        "ru": "мать"
+      }
+    },
+    {
+      "native": "أب",
+      "nativeVoweled": "أَب",
+      "ipa": "ʔab",
+      "latin": "ab",
+      "cyrillic": "аб",
+      "meaning": {
+        "en": "father",
+        "ru": "отец"
+      }
+    },
+    {
+      "native": "طفل",
+      "nativeVoweled": "طِفْل",
+      "ipa": "tˤifl",
+      "latin": "ṭifl",
+      "cyrillic": "тыфль",
+      "meaning": {
+        "en": "child",
+        "ru": "ребёнок"
+      }
+    },
+    {
+      "native": "شمس",
+      "nativeVoweled": "شَمْس",
+      "ipa": "ʃams",
+      "latin": "shams",
+      "cyrillic": "шамс",
+      "meaning": {
+        "en": "sun",
+        "ru": "солнце"
+      }
+    },
+    {
+      "native": "قمر",
+      "nativeVoweled": "قَمَر",
+      "ipa": "qamar",
+      "latin": "qamar",
+      "cyrillic": "камар",
+      "meaning": {
+        "en": "moon",
+        "ru": "луна"
+      }
+    },
+    {
+      "native": "نجم",
+      "nativeVoweled": "نَجْم",
+      "ipa": "nad͡ʒm",
+      "latin": "najm",
+      "cyrillic": "наджм",
+      "meaning": {
+        "en": "star",
+        "ru": "звезда"
+      }
+    },
+    {
+      "native": "بحر",
+      "nativeVoweled": "بَحْر",
+      "ipa": "baħr",
+      "latin": "baḥr",
+      "cyrillic": "бахр",
+      "meaning": {
+        "en": "sea",
+        "ru": "море"
+      }
+    },
+    {
+      "native": "جبل",
+      "nativeVoweled": "جَبَل",
+      "ipa": "d͡ʒabal",
+      "latin": "jabal",
+      "cyrillic": "джабаль",
+      "meaning": {
+        "en": "mountain",
+        "ru": "гора"
+      }
+    },
+    {
+      "native": "سماء",
+      "nativeVoweled": "سَمَاء",
+      "ipa": "samaːʔ",
+      "latin": "samāʾ",
+      "cyrillic": "сама",
+      "meaning": {
+        "en": "sky",
+        "ru": "небо"
+      }
+    },
+    {
+      "native": "ليل",
+      "nativeVoweled": "لَيْل",
+      "ipa": "lajl",
+      "latin": "layl",
+      "cyrillic": "ляйль",
+      "meaning": {
+        "en": "night",
+        "ru": "ночь"
+      }
+    },
+    {
+      "native": "يوم",
+      "nativeVoweled": "يَوْم",
+      "ipa": "jawm",
+      "latin": "yawm",
+      "cyrillic": "яум",
+      "meaning": {
+        "en": "day",
+        "ru": "день"
+      }
+    },
+    {
+      "native": "سيارة",
+      "nativeVoweled": "سَيَّارَة",
+      "ipa": "sajːaːra",
+      "latin": "sayyāra",
+      "cyrillic": "сайяра",
+      "meaning": {
+        "en": "car",
+        "ru": "машина"
+      }
+    },
+    {
+      "native": "قطار",
+      "nativeVoweled": "قِطَار",
+      "ipa": "qitˤaːr",
+      "latin": "qiṭār",
+      "cyrillic": "китар",
+      "meaning": {
+        "en": "train",
+        "ru": "поезд"
+      }
+    },
+    {
+      "native": "مطعم",
+      "nativeVoweled": "مَطْعَم",
+      "ipa": "matˤʕam",
+      "latin": "maṭʿam",
+      "cyrillic": "матам",
+      "meaning": {
+        "en": "restaurant",
+        "ru": "ресторан"
+      }
+    },
+    {
+      "native": "مستشفى",
+      "nativeVoweled": "مُسْتَشْفَى",
+      "ipa": "mustaʃfaː",
+      "latin": "mustashfā",
+      "cyrillic": "мусташфа",
+      "meaning": {
+        "en": "hospital",
+        "ru": "больница"
+      }
+    },
+    {
+      "native": "سوق",
+      "nativeVoweled": "سُوق",
+      "ipa": "suːq",
+      "latin": "sūq",
+      "cyrillic": "сук",
+      "meaning": {
+        "en": "market",
+        "ru": "рынок"
+      }
+    },
+    {
+      "native": "شاي",
+      "nativeVoweled": "شَاي",
+      "ipa": "ʃaːj",
+      "latin": "shāy",
+      "cyrillic": "шай",
+      "meaning": {
+        "en": "tea",
+        "ru": "чай"
+      }
+    },
+    {
+      "native": "قهوة",
+      "nativeVoweled": "قَهْوَة",
+      "ipa": "qahwa",
+      "latin": "qahwa",
+      "cyrillic": "кахва",
+      "meaning": {
+        "en": "coffee",
+        "ru": "кофе"
+      }
+    },
+    {
+      "native": "حب",
+      "nativeVoweled": "حُبّ",
+      "ipa": "ħubb",
+      "latin": "ḥubb",
+      "cyrillic": "хубб",
+      "meaning": {
+        "en": "love",
+        "ru": "любовь"
+      }
+    }
+  ]
+}
