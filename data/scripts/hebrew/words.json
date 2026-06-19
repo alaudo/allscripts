@@ -1,0 +1,332 @@
+{
+  "version": 1,
+  "words": [
+    {
+      "native": "שלום",
+      "nativeVoweled": "שָׁלוֹם",
+      "ipa": "ʃaˈlom",
+      "latin": "shalom",
+      "cyrillic": "шалом",
+      "meaning": {
+        "en": "hello / peace",
+        "ru": "здравствуйте / мир"
+      }
+    },
+    {
+      "native": "תודה",
+      "nativeVoweled": "תּוֹדָה",
+      "ipa": "toˈda",
+      "latin": "toda",
+      "cyrillic": "тода",
+      "meaning": {
+        "en": "thanks",
+        "ru": "спасибо"
+      }
+    },
+    {
+      "native": "בבקשה",
+      "nativeVoweled": "בְּבַקָּשָׁה",
+      "ipa": "bevakaˈʃa",
+      "latin": "bevakasha",
+      "cyrillic": "бевакаша",
+      "meaning": {
+        "en": "please / you're welcome",
+        "ru": "пожалуйста"
+      }
+    },
+    {
+      "native": "כן",
+      "nativeVoweled": "כֵּן",
+      "ipa": "ken",
+      "latin": "ken",
+      "cyrillic": "кен",
+      "meaning": {
+        "en": "yes",
+        "ru": "да"
+      }
+    },
+    {
+      "native": "לא",
+      "nativeVoweled": "לֹא",
+      "ipa": "lo",
+      "latin": "lo",
+      "cyrillic": "ло",
+      "meaning": {
+        "en": "no",
+        "ru": "нет"
+      }
+    },
+    {
+      "native": "אבא",
+      "nativeVoweled": "אַבָּא",
+      "ipa": "ˈaba",
+      "latin": "aba",
+      "cyrillic": "аба",
+      "meaning": {
+        "en": "father",
+        "ru": "отец"
+      }
+    },
+    {
+      "native": "אמא",
+      "nativeVoweled": "אִמָּא",
+      "ipa": "ˈima",
+      "latin": "ima",
+      "cyrillic": "има",
+      "meaning": {
+        "en": "mother",
+        "ru": "мать"
+      }
+    },
+    {
+      "native": "ילד",
+      "nativeVoweled": "יֶלֶד",
+      "ipa": "ˈjeled",
+      "latin": "yeled",
+      "cyrillic": "йелед",
+      "meaning": {
+        "en": "boy / child",
+        "ru": "мальчик / ребёнок"
+      }
+    },
+    {
+      "native": "ילדה",
+      "nativeVoweled": "יַלְדָּה",
+      "ipa": "jalˈda",
+      "latin": "yalda",
+      "cyrillic": "ялда",
+      "meaning": {
+        "en": "girl",
+        "ru": "девочка"
+      }
+    },
+    {
+      "native": "מים",
+      "nativeVoweled": "מַיִם",
+      "ipa": "ˈmajim",
+      "latin": "mayim",
+      "cyrillic": "майим",
+      "meaning": {
+        "en": "water",
+        "ru": "вода"
+      }
+    },
+    {
+      "native": "לחם",
+      "nativeVoweled": "לֶחֶם",
+      "ipa": "ˈleχem",
+      "latin": "lechem",
+      "cyrillic": "лехем",
+      "meaning": {
+        "en": "bread",
+        "ru": "хлеб"
+      }
+    },
+    {
+      "native": "קפה",
+      "nativeVoweled": "קָפֶה",
+      "ipa": "kaˈfe",
+      "latin": "kafe",
+      "cyrillic": "кафэ",
+      "meaning": {
+        "en": "coffee",
+        "ru": "кофе"
+      }
+    },
+    {
+      "native": "תה",
+      "nativeVoweled": "תֵּה",
+      "ipa": "te",
+      "latin": "te",
+      "cyrillic": "тэ",
+      "meaning": {
+        "en": "tea",
+        "ru": "чай"
+      }
+    },
+    {
+      "native": "ספר",
+      "nativeVoweled": "סֵפֶר",
+      "ipa": "ˈsefeʁ",
+      "latin": "sefer",
+      "cyrillic": "сефер",
+      "meaning": {
+        "en": "book",
+        "ru": "книга"
+      }
+    },
+    {
+      "native": "בית",
+      "nativeVoweled": "בַּיִת",
+      "ipa": "ˈbajit",
+      "latin": "bayit",
+      "cyrillic": "байит",
+      "meaning": {
+        "en": "house",
+        "ru": "дом"
+      }
+    },
+    {
+      "native": "ים",
+      "nativeVoweled": "יָם",
+      "ipa": "jam",
+      "latin": "yam",
+      "cyrillic": "ям",
+      "meaning": {
+        "en": "sea",
+        "ru": "море"
+      }
+    },
+    {
+      "native": "שמש",
+      "nativeVoweled": "שֶׁמֶשׁ",
+      "ipa": "ˈʃemeʃ",
+      "latin": "shemesh",
+      "cyrillic": "шемеш",
+      "meaning": {
+        "en": "sun",
+        "ru": "солнце"
+      }
+    },
+    {
+      "native": "ירח",
+      "nativeVoweled": "יָרֵחַ",
+      "ipa": "jaˈʁeaχ",
+      "latin": "yareach",
+      "cyrillic": "яреах",
+      "meaning": {
+        "en": "moon",
+        "ru": "луна"
+      }
+    },
+    {
+      "native": "כוכב",
+      "nativeVoweled": "כּוֹכָב",
+      "ipa": "koˈχav",
+      "latin": "kochav",
+      "cyrillic": "кохав",
+      "meaning": {
+        "en": "star",
+        "ru": "звезда"
+      }
+    },
+    {
+      "native": "חתול",
+      "nativeVoweled": "חָתוּל",
+      "ipa": "χaˈtul",
+      "latin": "chatul",
+      "cyrillic": "хатул",
+      "meaning": {
+        "en": "cat",
+        "ru": "кошка"
+      }
+    },
+    {
+      "native": "כלב",
+      "nativeVoweled": "כֶּלֶב",
+      "ipa": "ˈkelev",
+      "latin": "kelev",
+      "cyrillic": "келев",
+      "meaning": {
+        "en": "dog",
+        "ru": "собака"
+      }
+    },
+    {
+      "native": "חבר",
+      "nativeVoweled": "חָבֵר",
+      "ipa": "χaˈveʁ",
+      "latin": "chaver",
+      "cyrillic": "хавер",
+      "meaning": {
+        "en": "friend",
+        "ru": "друг"
+      }
+    },
+    {
+      "native": "אהבה",
+      "nativeVoweled": "אַהֲבָה",
+      "ipa": "ahaˈva",
+      "latin": "ahava",
+      "cyrillic": "ахава",
+      "meaning": {
+        "en": "love",
+        "ru": "любовь"
+      }
+    },
+    {
+      "native": "שיר",
+      "nativeVoweled": "שִׁיר",
+      "ipa": "ʃiʁ",
+      "latin": "shir",
+      "cyrillic": "шир",
+      "meaning": {
+        "en": "song",
+        "ru": "песня"
+      }
+    },
+    {
+      "native": "מוזיקה",
+      "ipa": "ˈmuzika",
+      "latin": "muzika",
+      "cyrillic": "музика",
+      "meaning": {
+        "en": "music",
+        "ru": "музыка"
+      }
+    },
+    {
+      "native": "טלפון",
+      "ipa": "ˈtelefon",
+      "latin": "telefon",
+      "cyrillic": "телефон",
+      "meaning": {
+        "en": "telephone",
+        "ru": "телефон"
+      }
+    },
+    {
+      "native": "אוטובוס",
+      "ipa": "ˈotobus",
+      "latin": "otobus",
+      "cyrillic": "отобус",
+      "meaning": {
+        "en": "bus",
+        "ru": "автобус"
+      }
+    },
+    {
+      "native": "מונית",
+      "nativeVoweled": "מוֹנִית",
+      "ipa": "moˈnit",
+      "latin": "monit",
+      "cyrillic": "монит",
+      "meaning": {
+        "en": "taxi",
+        "ru": "такси"
+      }
+    },
+    {
+      "native": "מסעדה",
+      "nativeVoweled": "מִסְעָדָה",
+      "ipa": "misˈʔada",
+      "latin": "mis'ada",
+      "cyrillic": "мисъада",
+      "meaning": {
+        "en": "restaurant",
+        "ru": "ресторан"
+      }
+    },
+    {
+      "native": "מלון",
+      "nativeVoweled": "מָלוֹן",
+      "ipa": "maˈlon",
+      "latin": "malon",
+      "cyrillic": "малон",
+      "meaning": {
+        "en": "hotel",
+        "ru": "отель"
+      }
+    }
+  ]
+}

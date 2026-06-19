@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "category": {
+    "id": "signs",
+    "label": {
+      "en": "Signs and signboards",
+      "ru": "Вывески и указатели"
+    }
+  },
+  "entries": [
+    {
+      "concept": "entrance",
+      "meaning": {
+        "en": "Entrance",
+        "ru": "Вход"
+      },
+      "native": "ทางเข้า",
+      "ipa": "tʰaːŋ kʰâw",
+      "latin": "thang khao",
+      "cyrillic": "тханг кхао"
+    },
+    {
+      "concept": "exit",
+      "meaning": {
+        "en": "Exit",
+        "ru": "Выход"
+      },
+      "native": "ทางออก",
+      "ipa": "tʰaːŋ ʔɔ̀ːk",
+      "latin": "thang ok",
+      "cyrillic": "тханг ок"
+    },
+    {
+      "concept": "toilets",
+      "meaning": {
+        "en": "Toilets",
+        "ru": "Туалеты"
+      },
+      "native": "ห้องน้ำ",
+      "ipa": "hɔ̂ŋ náːm",
+      "latin": "hong nam",
+      "cyrillic": "хонг нам"
+    },
+    {
+      "concept": "information",
+      "meaning": {
+        "en": "Information",
+        "ru": "Информация"
+      },
+      "native": "ข้อมูล",
+      "ipa": "kʰɔ̂ː muːn",
+      "latin": "kho mun",
+      "cyrillic": "кхо мун"
+    },
+    {
+      "concept": "open",
+      "meaning": {
+        "en": "Open",
+        "ru": "Открыто"
+      },
+      "native": "เปิด",
+      "ipa": "pɤ̀ːt",
+      "latin": "poet",
+      "cyrillic": "пёт"
+    },
+    {
+      "concept": "closed",
+      "meaning": {
+        "en": "Closed",
+        "ru": "Закрыто"
+      },
+      "native": "ปิด",
+      "ipa": "pìt",
+      "latin": "pit",
+      "cyrillic": "пит"
+    },
+    {
+      "concept": "stop",
+      "meaning": {
+        "en": "Stop",
+        "ru": "Стоп"
+      },
+      "native": "หยุด",
+      "ipa": "jùt",
+      "latin": "yut",
+      "cyrillic": "ют"
+    },
+    {
+      "concept": "no_entry",
+      "meaning": {
+        "en": "No entry",
+        "ru": "Вход запрещён"
+      },
+      "native": "ห้ามเข้า",
+      "ipa": "hâːm kʰâw",
+      "latin": "ham khao",
+      "cyrillic": "хам кхао"
+    },
+    {
+      "concept": "parking",
+      "meaning": {
+        "en": "Parking",
+        "ru": "Парковка"
+      },
+      "native": "ที่จอดรถ",
+      "ipa": "tʰîː tɕɔ̀ːt rót",
+      "latin": "thi jot rot",
+      "cyrillic": "тхи чот рот"
+    },
+    {
+      "concept": "pharmacy",
+      "meaning": {
+        "en": "Pharmacy",
+        "ru": "Аптека"
+      },
+      "native": "ร้านขายยา",
+      "ipa": "ráːn kʰǎːj jaː",
+      "latin": "ran khai ya",
+      "cyrillic": "ран кхай я"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "category": {
+    "id": "signs",
+    "label": {
+      "en": "Signs and signboards",
+      "ru": "Вывески и указатели"
+    }
+  },
+  "entries": [
+    {
+      "concept": "entrance",
+      "meaning": {
+        "en": "Entrance",
+        "ru": "Вход"
+      },
+      "native": "Մուտք",
+      "ipa": "mutkʰ",
+      "latin": "mutk",
+      "cyrillic": "мутк"
+    },
+    {
+      "concept": "exit",
+      "meaning": {
+        "en": "Exit",
+        "ru": "Выход"
+      },
+      "native": "Ելք",
+      "ipa": "jelkʰ",
+      "latin": "yelk",
+      "cyrillic": "елк"
+    },
+    {
+      "concept": "toilets",
+      "meaning": {
+        "en": "Toilets",
+        "ru": "Туалеты"
+      },
+      "native": "Զուգարան",
+      "ipa": "zuɡaˈɾan",
+      "latin": "zugharan",
+      "cyrillic": "зугаран"
+    },
+    {
+      "concept": "information",
+      "meaning": {
+        "en": "Information",
+        "ru": "Информация"
+      },
+      "native": "Տեղեկատվություն",
+      "ipa": "teʁekatvuˈtʰjun",
+      "latin": "teghekatvutyun",
+      "cyrillic": "тегекатвутюн"
+    },
+    {
+      "concept": "open",
+      "meaning": {
+        "en": "Open",
+        "ru": "Открыто"
+      },
+      "native": "Բաց",
+      "ipa": "batsʰ",
+      "latin": "bats",
+      "cyrillic": "бац"
+    },
+    {
+      "concept": "closed",
+      "meaning": {
+        "en": "Closed",
+        "ru": "Закрыто"
+      },
+      "native": "Փակ",
+      "ipa": "pʰak",
+      "latin": "pak",
+      "cyrillic": "пак"
+    },
+    {
+      "concept": "stop",
+      "meaning": {
+        "en": "Stop",
+        "ru": "Стоп"
+      },
+      "native": "Կանգ",
+      "ipa": "kaŋɡ",
+      "latin": "kang",
+      "cyrillic": "канг"
+    },
+    {
+      "concept": "no_entry",
+      "meaning": {
+        "en": "No entry",
+        "ru": "Вход запрещён"
+      },
+      "native": "Մուտքն արգելված",
+      "ipa": "mutkʰn arɡelˈvats",
+      "latin": "mutkn argelvats",
+      "cyrillic": "муткн аргельвац"
+    },
+    {
+      "concept": "parking",
+      "meaning": {
+        "en": "Parking",
+        "ru": "Парковка"
+      },
+      "native": "Ավտոկայանատեղի",
+      "ipa": "avtokajanaˈteʁi",
+      "latin": "avtokayanateghi",
+      "cyrillic": "автокаянтеги"
+    },
+    {
+      "concept": "pharmacy",
+      "meaning": {
+        "en": "Pharmacy",
+        "ru": "Аптека"
+      },
+      "native": "Դեղատուն",
+      "ipa": "deʁaˈtun",
+      "latin": "deghatun",
+      "cyrillic": "дегатун"
+    }
+  ]
+}

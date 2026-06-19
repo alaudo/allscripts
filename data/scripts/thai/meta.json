@@ -1,0 +1,32 @@
+{
+  "id": "thai",
+  "name": {
+    "en": "Thai",
+    "ru": "Тайский"
+  },
+  "nativeName": "ไทย",
+  "language": "th",
+  "direction": "ltr",
+  "flagsSvg": "flags.svg",
+  "info": {
+    "en": "The Thai script was created in 1283 by King Ramkhamhaeng, adapted from the Old Khmer script (itself descended from Brahmi). It is an abugida with 44 consonants, 15 vowel symbols (which can combine), and 4 tone marks. It is written left-to-right with no spaces between words.",
+    "ru": "Тайская письменность была создана в 1283 году королём Рамкхамхэнгом на основе древнекхмерского письма (происходящего, в свою очередь, от брахми). Это абугида с 44 согласными, 15 знаками гласных (которые могут сочетаться) и 4 тоновыми знаками. Пишется слева направо, без пробелов между словами."
+  },
+  "composition": {
+    "en": "Thai is an abugida with no spaces between words — spaces are used instead to separate phrases or sentences, so the reader has to segment words mentally. Each of the 44 consonant letters carries an implicit vowel (/a/ in an open syllable, /o/ in a closed one); other vowels are written with separate signs that can stand before, after, above, below or even wrap around the consonant they belong to (เก = ke, ใก = kai, ไก = kai, กิ = ki, กุ = ku, ก้อ = kɔ̂ɔ). The 44 consonants are split into three 'classes' — high, mid, low — and that class, together with vowel length, syllable shape (live vs. dead) and the four tone marks (◌่ ◌้ ◌๊ ◌๋), determines which of Thai's five tones a syllable carries. Several letters write the same consonant sound; the redundancies are kept to preserve etymology (mostly Sanskrit and Pali borrowings) and to spell out the correct tone.",
+    "ru": "Тайский — абугида, пишущаяся без пробелов между словами: пробелы вместо этого разделяют фразы и предложения, так что границы слов читатель определяет «в уме». У каждой из 44 согласных есть встроенная гласная (/a/ — в открытом слоге, /o/ — в закрытом); прочие гласные обозначаются отдельными знаками, которые могут стоять до, после, над, под или даже обрамлять свою согласную (เก = ke, ใก = kai, ไก = kai, กิ = ki, กุ = ku, ก้อ = kɔ̂ɔ). 44 согласные делятся на три «класса» — высокий, средний и низкий, — и именно класс вместе с долготой гласной, типом слога («живой» или «мёртвый») и четырьмя тоновыми знаками (◌่ ◌้ ◌๊ ◌๋) определяет, какой из пяти тайских тонов несёт слог. Несколько букв обозначают один и тот же согласный звук: эта избыточность сохраняется ради этимологии (в основном это санскритские и палийские заимствования) и для правильной передачи тона."
+  },
+  "countries": [
+    {
+      "flag": "🇹🇭",
+      "name": {
+        "en": "Thailand",
+        "ru": "Таиланд"
+      }
+    }
+  ],
+  "writingConventions": {
+    "en": "Thai has no capitals and normally no spaces between words. The combination cases are the core of the script: vowel signs may appear before, after, above or below the consonant, tone marks stack above it, and consonant class plus syllable shape determines the tone. Thai punctuation is sparse in ordinary prose; spaces separate clauses, repetition can be marked with ๆ, abbreviation with ฯ, and the baht sign ฿ is common. Thai digits ๐๑๒๓๔๕๖๗๘๙ appear on signs and tickets but Western digits are also common, so digits would make sense as a small later reference/quiz set after tones and vowel placement.",
+    "ru": "В тайском нет заглавных букв и обычно нет пробелов между словами. Сочетания — сама основа письма: знаки гласных могут стоять перед согласной, после неё, над ней или под ней, тоновые знаки ставятся сверху, а класс согласной вместе с типом слога определяет тон. Пунктуации в обычном тексте мало: пробелы разделяют части фразы, повтор может отмечаться ๆ, сокращение — ฯ, а знак бата ฿ часто встречается. Тайские цифры ๐๑๒๓๔๕๖๗๘๙ бывают на вывесках и билетах, но западные цифры тоже распространены; цифры можно позже добавить как маленький справочный/тестовый набор после тонов и расположения гласных."
+  }
+}

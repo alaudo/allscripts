@@ -1,0 +1,39 @@
+{
+  "id": "greek",
+  "name": {
+    "en": "Greek",
+    "ru": "Греческий"
+  },
+  "nativeName": "Ελληνικά",
+  "language": "el",
+  "direction": "ltr",
+  "flagsSvg": "flags.svg",
+  "info": {
+    "en": "The Greek alphabet has been in continuous use since the 9th century BC, descended from the Phoenician script. It was the first true alphabet — the first script to assign letters to vowels as well as consonants — and its letterforms are the ancestors of Latin and Cyrillic.",
+    "ru": "Греческий алфавит непрерывно используется с IX века до н. э. и происходит от финикийского письма. Это первый настоящий алфавит — первая письменность, в которой отдельные буквы обозначали не только согласные, но и гласные; от него произошли латиница и кириллица."
+  },
+  "composition": {
+    "en": "Greek is bicameral — every letter has an uppercase and lowercase form (Α/α, Β/β), just like Latin or Cyrillic. One letter, the lowercase sigma, even takes a special word-final form: σ at the start of or inside a word, ς at the end (σοσ never appears — it is written σος). Vowels are written as full letters of their own, and modern Greek uses only one diacritic, the tonos (´), to mark the stressed syllable in polysyllabic words. Spelling is largely phonemic, though several letters and digraphs (η, ι, υ, ει, οι, υι) now all read as /i/ — a fossil of ancient pronunciations.",
+    "ru": "Греческий — двухпалатный алфавит: у каждой буквы есть прописная и строчная форма (Α/α, Β/β), как в латинице или кириллице. У строчной сигмы есть особая конечная форма: σ в начале и середине слова, ς — в конце (запись σοσ невозможна — пишется σος). Гласные обозначаются отдельными буквами, а из диакритик в современной орфографии используется только тонос (´), указывающий ударный слог в многосложных словах. Орфография в целом фонематична, хотя несколько букв и диграфов (η, ι, υ, ει, οι, υι) сегодня читаются одинаково — как /i/, — что является наследием древнего произношения."
+  },
+  "countries": [
+    {
+      "flag": "🇬🇷",
+      "name": {
+        "en": "Greece",
+        "ru": "Греция"
+      }
+    },
+    {
+      "flag": "🇨🇾",
+      "name": {
+        "en": "Cyprus",
+        "ru": "Кипр"
+      }
+    }
+  ],
+  "writingConventions": {
+    "en": "Greek has real uppercase/lowercase pairs, and the alphabet preview already shows them together, so separate capital flashcards are not urgent. The combinations worth learning are digraphs and sound shifts: αυ/ευ/ηυ can sound like av/ev/iv before voiced sounds but af/ef/if before voiceless ones; μπ, ντ and γκ often write b, d and g in loanwords or at word starts; γγ, γκ, γχ and γξ make nasal + velar sounds. Greek punctuation mostly follows European habits, but the question mark is written as a semicolon (;), and the raised dot · works like a semicolon/colon. Modern Greek uses ordinary Western digits; old Greek numerals are historical, so they belong in reference notes rather than drills.",
+    "ru": "В греческом есть настоящие прописные и строчные пары, и обзор алфавита уже показывает их вместе, поэтому отдельные карточки для заглавных сейчас не нужны. Важнее выучить диграфы и изменения чтения: αυ/ευ/ηυ могут звучать как av/ev/iv перед звонкими звуками и как af/ef/if перед глухими; μπ, ντ и γκ часто передают b, d и g в заимствованиях или в начале слова; γγ, γκ, γχ и γξ дают носовой + заднеязычный звук. Пунктуация в целом европейская, но вопросительный знак пишется как точка с запятой (;), а верхняя точка · похожа на двоеточие/точку с запятой. В современной Греции используются обычные западные цифры; старые греческие числовые записи исторические, их лучше держать как справку, а не как тренировку."
+  }
+}

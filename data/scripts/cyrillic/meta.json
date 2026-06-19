@@ -1,0 +1,88 @@
+{
+  "id": "cyrillic",
+  "name": {
+    "en": "Cyrillic",
+    "ru": "Кириллица"
+  },
+  "nativeName": "Кириллица",
+  "language": "ru",
+  "direction": "ltr",
+  "flagsSvg": "flags.svg",
+  "info": {
+    "en": "Cyrillic was developed in the 9th–10th centuries in the First Bulgarian Empire by disciples of Saints Cyril and Methodius, adapting Greek uncial letters to write Slavic languages. Today it is used by over 250 million people across Slavic, Turkic, Mongolic and Iranian languages.",
+    "ru": "Кириллица была создана в IX–X веках в Первом Болгарском царстве учениками святых Кирилла и Мефодия на основе греческого унциального письма для записи славянских языков. Сегодня ею пользуются более 250 миллионов человек на славянских, тюркских, монгольских и иранских языках."
+  },
+  "composition": {
+    "en": "Cyrillic is bicameral and largely phonemic — usually one letter, one sound, with no silent letters. Several Cyrillic letters look exactly like Latin ones but read very differently — Р = r, Н = n, С = s, В = v, У = u, Х = kh — and these 'false friends' are the most common stumble for learners. Two letters carry no sound of their own: the soft sign (ь) palatalizes the consonant before it, and the hard sign (ъ) blocks that palatalization at morpheme boundaries. Different Slavic and non-Slavic languages tune the alphabet to their own phonology — so Ukrainian has і, ї, є; Serbian writes ј, љ, њ, ћ, џ; Belarusian uses ў — meaning Russian, Ukrainian, Serbian and Mongolian Cyrillic all overlap but are not identical.",
+    "ru": "Кириллица — двухпалатное письмо, в целом фонематическое: как правило, одной букве соответствует один звук, а немых букв нет. Несколько букв внешне совпадают с латинскими, но читаются совсем иначе — Р = r, Н = n, С = s, В = v, У = u, Х = kh, — и именно эти «ложные друзья» чаще всего сбивают с толку учащихся. Две буквы собственного звука не имеют: мягкий знак (ь) смягчает предыдущую согласную, а твёрдый знак (ъ) блокирует это смягчение на границе морфем. Разные славянские и неславянские языки подгоняют алфавит под свою фонетику — у украинцев есть і, ї, є, у сербов ј, љ, њ, ћ, џ, у белорусов ў, — поэтому русская, украинская, сербская и монгольская кириллицы пересекаются, но не совпадают."
+  },
+  "countries": [
+    {
+      "flag": "🇷🇺",
+      "name": {
+        "en": "Russia",
+        "ru": "Россия"
+      }
+    },
+    {
+      "flag": "🇺🇦",
+      "name": {
+        "en": "Ukraine",
+        "ru": "Украина"
+      }
+    },
+    {
+      "flag": "🇧🇾",
+      "name": {
+        "en": "Belarus",
+        "ru": "Беларусь"
+      }
+    },
+    {
+      "flag": "🇧🇬",
+      "name": {
+        "en": "Bulgaria",
+        "ru": "Болгария"
+      }
+    },
+    {
+      "flag": "🇷🇸",
+      "name": {
+        "en": "Serbia",
+        "ru": "Сербия"
+      }
+    },
+    {
+      "flag": "🇲🇰",
+      "name": {
+        "en": "North Macedonia",
+        "ru": "Северная Македония"
+      }
+    },
+    {
+      "flag": "🇰🇿",
+      "name": {
+        "en": "Kazakhstan",
+        "ru": "Казахстан"
+      }
+    },
+    {
+      "flag": "🇰🇬",
+      "name": {
+        "en": "Kyrgyzstan",
+        "ru": "Киргизия"
+      }
+    },
+    {
+      "flag": "🇲🇳",
+      "name": {
+        "en": "Mongolia",
+        "ru": "Монголия"
+      }
+    }
+  ],
+  "writingConventions": {
+    "en": "Russian Cyrillic has uppercase/lowercase pairs, already shown together in the letter cards. It has few native digraphs, but several letters are best explained as combinations for learners: е/ё/ю/я can add an initial y-sound or soften the previous consonant, while ь and ъ are silent control signs. Transliteration uses digraphs such as zh, kh, ts, ch, sh and shch because Latin has no single letters for Ж, Х, Ц, Ч, Ш and Щ. Punctuation and numbers are essentially European/Western; extra practice should focus on false-friend letters and soft/hard-sign behavior, not punctuation or digits.",
+    "ru": "В русской кириллице есть прописные и строчные пары, и они уже показаны вместе в карточках букв. Собственных диграфов немного, но для учащегося несколько букв удобно объяснять как сочетания: е/ё/ю/я могут добавлять начальный звук й или смягчать предыдущую согласную, а ь и ъ — немые управляющие знаки. В транслитерации используются диграфы zh, kh, ts, ch, sh и shch, потому что в латинице нет отдельных букв для Ж, Х, Ц, Ч, Ш и Щ. Пунктуация и цифры практически европейские/западные; тренировать лучше «ложных друзей» и работу мягкого/твёрдого знака, а не знаки препинания или цифры."
+  }
+}

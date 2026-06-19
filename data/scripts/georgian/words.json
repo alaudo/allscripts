@@ -1,0 +1,305 @@
+{
+  "version": 1,
+  "words": [
+    {
+      "native": "გამარჯობა",
+      "ipa": "ɡɑmɑɾˈdʒɔbɑ",
+      "latin": "gamarjoba",
+      "cyrillic": "гамарджоба",
+      "meaning": {
+        "en": "hello",
+        "ru": "привет"
+      }
+    },
+    {
+      "native": "მადლობა",
+      "ipa": "mɑdˈlɔbɑ",
+      "latin": "madloba",
+      "cyrillic": "мадлоба",
+      "meaning": {
+        "en": "thank you",
+        "ru": "спасибо"
+      }
+    },
+    {
+      "native": "დიახ",
+      "ipa": "diˈɑx",
+      "latin": "diakh",
+      "cyrillic": "диах",
+      "meaning": {
+        "en": "yes",
+        "ru": "да"
+      }
+    },
+    {
+      "native": "არა",
+      "ipa": "ɑˈɾɑ",
+      "latin": "ara",
+      "cyrillic": "ара",
+      "meaning": {
+        "en": "no",
+        "ru": "нет"
+      }
+    },
+    {
+      "native": "მე",
+      "ipa": "mɛ",
+      "latin": "me",
+      "cyrillic": "мэ",
+      "meaning": {
+        "en": "I",
+        "ru": "я"
+      }
+    },
+    {
+      "native": "შენ",
+      "ipa": "ʃɛn",
+      "latin": "shen",
+      "cyrillic": "шэн",
+      "meaning": {
+        "en": "you",
+        "ru": "ты"
+      }
+    },
+    {
+      "native": "წყალი",
+      "ipa": "ˈtsʼqʼɑli",
+      "latin": "ts'q'ali",
+      "cyrillic": "цкали",
+      "meaning": {
+        "en": "water",
+        "ru": "вода"
+      }
+    },
+    {
+      "native": "პური",
+      "ipa": "ˈpʼuɾi",
+      "latin": "p'uri",
+      "cyrillic": "пури",
+      "meaning": {
+        "en": "bread",
+        "ru": "хлеб"
+      }
+    },
+    {
+      "native": "ღვინო",
+      "ipa": "ˈɣvinɔ",
+      "latin": "ghvino",
+      "cyrillic": "гвино",
+      "meaning": {
+        "en": "wine",
+        "ru": "вино"
+      }
+    },
+    {
+      "native": "ხინკალი",
+      "ipa": "xinˈkʼɑli",
+      "latin": "khink'ali",
+      "cyrillic": "хинкали",
+      "meaning": {
+        "en": "khinkali (dumpling)",
+        "ru": "хинкали (пельмени)"
+      }
+    },
+    {
+      "native": "ხაჭაპური",
+      "ipa": "xɑtʃʼɑˈpʼuɾi",
+      "latin": "khach'ap'uri",
+      "cyrillic": "хачапури",
+      "meaning": {
+        "en": "khachapuri (cheese bread)",
+        "ru": "хачапури (сырный хлеб)"
+      }
+    },
+    {
+      "native": "ქალაქი",
+      "ipa": "ˈkʰɑlɑkʰi",
+      "latin": "kalaki",
+      "cyrillic": "калаки",
+      "meaning": {
+        "en": "city",
+        "ru": "город"
+      }
+    },
+    {
+      "native": "სახლი",
+      "ipa": "ˈsɑxli",
+      "latin": "sakhli",
+      "cyrillic": "сахли",
+      "meaning": {
+        "en": "house",
+        "ru": "дом"
+      }
+    },
+    {
+      "native": "გზა",
+      "ipa": "ɡzɑ",
+      "latin": "gza",
+      "cyrillic": "гза",
+      "meaning": {
+        "en": "road",
+        "ru": "дорога"
+      }
+    },
+    {
+      "native": "მთა",
+      "ipa": "mtʰɑ",
+      "latin": "mta",
+      "cyrillic": "мта",
+      "meaning": {
+        "en": "mountain",
+        "ru": "гора"
+      }
+    },
+    {
+      "native": "ზღვა",
+      "ipa": "zʁvɑ",
+      "latin": "zghva",
+      "cyrillic": "згва",
+      "meaning": {
+        "en": "sea",
+        "ru": "море"
+      }
+    },
+    {
+      "native": "მზე",
+      "ipa": "mzɛ",
+      "latin": "mze",
+      "cyrillic": "мзэ",
+      "meaning": {
+        "en": "sun",
+        "ru": "солнце"
+      }
+    },
+    {
+      "native": "მთვარე",
+      "ipa": "mtʰˈvɑɾɛ",
+      "latin": "mtvare",
+      "cyrillic": "мтварэ",
+      "meaning": {
+        "en": "moon",
+        "ru": "луна"
+      }
+    },
+    {
+      "native": "ვარსკვლავი",
+      "ipa": "vɑɾskʼvˈlɑvi",
+      "latin": "varsk'vlavi",
+      "cyrillic": "варсквлави",
+      "meaning": {
+        "en": "star",
+        "ru": "звезда"
+      }
+    },
+    {
+      "native": "დღე",
+      "ipa": "dʁɛ",
+      "latin": "dghe",
+      "cyrillic": "дгэ",
+      "meaning": {
+        "en": "day",
+        "ru": "день"
+      }
+    },
+    {
+      "native": "ღამე",
+      "ipa": "ˈɣɑmɛ",
+      "latin": "ghame",
+      "cyrillic": "гамэ",
+      "meaning": {
+        "en": "night",
+        "ru": "ночь"
+      }
+    },
+    {
+      "native": "ბავშვი",
+      "ipa": "ˈbɑvʃvi",
+      "latin": "bavshvi",
+      "cyrillic": "бавшви",
+      "meaning": {
+        "en": "child",
+        "ru": "ребёнок"
+      }
+    },
+    {
+      "native": "დედა",
+      "ipa": "ˈdɛdɑ",
+      "latin": "deda",
+      "cyrillic": "дэда",
+      "meaning": {
+        "en": "mother",
+        "ru": "мать"
+      }
+    },
+    {
+      "native": "მამა",
+      "ipa": "ˈmɑmɑ",
+      "latin": "mama",
+      "cyrillic": "мама",
+      "meaning": {
+        "en": "father",
+        "ru": "отец"
+      }
+    },
+    {
+      "native": "ძმა",
+      "ipa": "dzmɑ",
+      "latin": "dzma",
+      "cyrillic": "дзма",
+      "meaning": {
+        "en": "brother",
+        "ru": "брат"
+      }
+    },
+    {
+      "native": "და",
+      "ipa": "dɑ",
+      "latin": "da",
+      "cyrillic": "да",
+      "meaning": {
+        "en": "sister",
+        "ru": "сестра"
+      }
+    },
+    {
+      "native": "მეგობარი",
+      "ipa": "mɛɡɔˈbɑɾi",
+      "latin": "megobari",
+      "cyrillic": "мэгобари",
+      "meaning": {
+        "en": "friend",
+        "ru": "друг"
+      }
+    },
+    {
+      "native": "წიგნი",
+      "ipa": "ˈtsʼiɡni",
+      "latin": "ts'igni",
+      "cyrillic": "цигни",
+      "meaning": {
+        "en": "book",
+        "ru": "книга"
+      }
+    },
+    {
+      "native": "სკოლა",
+      "ipa": "ˈskʼɔlɑ",
+      "latin": "sk'ola",
+      "cyrillic": "скола",
+      "meaning": {
+        "en": "school",
+        "ru": "школа"
+      }
+    },
+    {
+      "native": "მანქანა",
+      "ipa": "mɑnˈkʰɑnɑ",
+      "latin": "mankana",
+      "cyrillic": "манкана",
+      "meaning": {
+        "en": "car",
+        "ru": "машина"
+      }
+    }
+  ]
+}

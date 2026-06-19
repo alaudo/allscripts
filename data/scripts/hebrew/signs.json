@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "category": {
+    "id": "signs",
+    "label": {
+      "en": "Signs and signboards",
+      "ru": "Вывески и указатели"
+    }
+  },
+  "entries": [
+    {
+      "concept": "entrance",
+      "meaning": {
+        "en": "Entrance",
+        "ru": "Вход"
+      },
+      "native": "כניסה",
+      "nativeVoweled": "כְּנִיסָה",
+      "ipa": "kniˈsa",
+      "latin": "knisa",
+      "cyrillic": "книса"
+    },
+    {
+      "concept": "exit",
+      "meaning": {
+        "en": "Exit",
+        "ru": "Выход"
+      },
+      "native": "יציאה",
+      "nativeVoweled": "יְצִיאָה",
+      "ipa": "jetsiˈa",
+      "latin": "yetsia",
+      "cyrillic": "ециа"
+    },
+    {
+      "concept": "toilets",
+      "meaning": {
+        "en": "Toilets",
+        "ru": "Туалеты"
+      },
+      "native": "שירותים",
+      "nativeVoweled": "שֵׁירוּתִים",
+      "ipa": "ʃeʁuˈtim",
+      "latin": "sherutim",
+      "cyrillic": "шерутим"
+    },
+    {
+      "concept": "information",
+      "meaning": {
+        "en": "Information",
+        "ru": "Информация"
+      },
+      "native": "מידע",
+      "nativeVoweled": "מֵידָע",
+      "ipa": "mejˈda",
+      "latin": "meyda",
+      "cyrillic": "мейда"
+    },
+    {
+      "concept": "open",
+      "meaning": {
+        "en": "Open",
+        "ru": "Открыто"
+      },
+      "native": "פתוח",
+      "nativeVoweled": "פָּתוּחַ",
+      "ipa": "paˈtuax",
+      "latin": "patuach",
+      "cyrillic": "патуах"
+    },
+    {
+      "concept": "closed",
+      "meaning": {
+        "en": "Closed",
+        "ru": "Закрыто"
+      },
+      "native": "סגור",
+      "nativeVoweled": "סָגוּר",
+      "ipa": "saˈɡuʁ",
+      "latin": "sagur",
+      "cyrillic": "сагур"
+    },
+    {
+      "concept": "stop",
+      "meaning": {
+        "en": "Stop",
+        "ru": "Стоп"
+      },
+      "native": "עצור",
+      "nativeVoweled": "עֲצוֹר",
+      "ipa": "aˈtsoʁ",
+      "latin": "atzor",
+      "cyrillic": "ацор"
+    },
+    {
+      "concept": "no_entry",
+      "meaning": {
+        "en": "No entry",
+        "ru": "Вход запрещён"
+      },
+      "native": "אין כניסה",
+      "nativeVoweled": "אֵין כְּנִיסָה",
+      "ipa": "en kniˈsa",
+      "latin": "ein knisa",
+      "cyrillic": "эйн книса"
+    },
+    {
+      "concept": "parking",
+      "meaning": {
+        "en": "Parking",
+        "ru": "Парковка"
+      },
+      "native": "חניה",
+      "nativeVoweled": "חֲנָיָה",
+      "ipa": "xanaˈja",
+      "latin": "chanaya",
+      "cyrillic": "ханая"
+    },
+    {
+      "concept": "pharmacy",
+      "meaning": {
+        "en": "Pharmacy",
+        "ru": "Аптека"
+      },
+      "native": "בית מרקחת",
+      "nativeVoweled": "בֵּית מִרְקַחַת",
+      "ipa": "bet mirˈkaxat",
+      "latin": "beit mirkachat",
+      "cyrillic": "бейт миркахат"
+    }
+  ]
+}

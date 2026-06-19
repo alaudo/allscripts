@@ -1,10 +1,10 @@
 # allScripts
 
-> A static web app for learning non-Latin writing systems.
-> No backend, no build step — open it in a browser and you're done.
+> A static installable web app for learning non-Latin writing systems.
+> No backend and no build step: serve the folder over HTTP and open it in a browser.
 >
-> Статическое веб-приложение для изучения нелатинских систем письма.
-> Без бэкенда и без сборки — просто откройте его в браузере.
+> Статическое устанавливаемое веб-приложение для изучения нелатинских систем письма.
+> Без бэкенда и без сборки: отдайте папку по HTTP и откройте её в браузере.
 
 🇬🇧 [English](#english) · 🇷🇺 [Русский](#русский) · 📜 [Adding a new script](.github/prompts/add-script.prompt.md)
 
@@ -14,11 +14,11 @@
 
 ### What it is
 
-allScripts is a single-page, pure HTML / JS / CSS web app that helps you learn an unfamiliar writing system from scratch — letters, vocabulary, and survival phrases — using spaced-repetition flashcards, multiple-choice drills, and typing exercises. The UI runs in English and Russian.
+allScripts is a single-page HTML / CSS / JavaScript app for learning unfamiliar writing systems from scratch. It covers letters, intermediate syllables/forms, practical vocabulary, street signs, international loanwords, and standardized tourist-survival phrases through previews, flashcards, multiple-choice drills, and typing exercises. The UI is localized in English and Russian.
 
 ### Supported scripts
 
-| Script | Native name | Language family |
+| Script | Native name | Main language |
 |---|---|---|
 | Greek | Ελληνικά | Modern Greek |
 | Cyrillic | Кириллица | Russian |
@@ -31,108 +31,154 @@ allScripts is a single-page, pure HTML / JS / CSS web app that helps you learn a
 | Hangul | 한글 | Korean |
 | Thai | ไทย | Thai |
 
-Each script comes with its full alphabet, 10–25 curated words, the 29-concept international-loanword pool (so familiar words like *taxi*, *metro*, *hospital* are practised in every script), and a deck of 20 survival phrases.
+Each script is stored in its own folder and includes metadata, a local flag SVG strip, letters, syllables/forms, curated words, signboard words, international words, and phrases.
 
-### Features at a glance
+### Current learning content
 
-#### Home & navigation
+Each script currently provides:
 
-- **Home grid** of script tiles, each showing live progress: `📝 letters learned/total · 💬 words learned/total`.
-- **Language switch in the header** — toggle English ↔ Russian on every screen, including phrase translations and cultural notes.
-- **About card** for each script with a short **history blurb** *and* a longer **"How the script works"** section explaining the mechanics (alphabet / abjad / abugida / syllabary, contextual forms, vowel marks, etc.). Both sections are localized into the active UI language.
-- **Country flags** for each script.
+| Layer | Purpose |
+|---|---|
+| **Letters** | Alphabet or base character inventory, with IPA, Latin, Cyrillic transcription, example word, and optional cultural/phonetic notes. |
+| **Syllables & forms** | The layer between letters and words: common syllables/chunks for every script, plus script-specific cases such as Arabic contextual forms, Hebrew final forms, Devanagari conjuncts, and common Hangul blocks. |
+| **Words: Specific** | Curated vocabulary chosen for the script/language. |
+| **Words: Signs** | Common text visible on streets and signs, such as entrance, exit, toilets, information, open/closed, stop, parking, pharmacy. |
+| **Words: International** | A shared 29-concept recognition pool using familiar loanwords where possible: taxi, metro, coffee, telephone, hospital, computer, internet, hotel, restaurant, police, etc. |
+| **Phrases** | A standardized deck of 30 tourist-survival phrases focused on travel, navigation, help, payment, food, transport, and bundled opposites such as yes/no, open/closed, entrance/exit, left/right/straight. |
 
-#### Review (read-only previews)
+### Features
 
-These are reference views, not exercises — they live in their own section on the script home.
+#### Home, navigation, and script information
 
-- **Preview alphabet** — every letter at a glance with its IPA / Latin / Cyrillic transcription. Filter by **Consonants / Vowels / Marks**. **Click a letter** to expand an inlay showing every training word that contains it (works correctly for syllabic scripts like Hangul via Unicode decomposition).
-- **Preview words** — the full word pool as a grid, filterable by **Specific** (curated for the script) vs **International** (the 29-concept loanword pool) and by length via a dual-handle slider. Meanings render in the active UI language.
-- **Preview phrases** — all 20 survival phrases with native script, romanisation, and translation.
+- **Home grid** of script tiles with live progress.
+- **Practice and review sections** grouped by activity type.
+- **Language switcher** in the header for English and Russian UI.
+- **Theme switcher** for system, light, and dark themes.
+- **Script information panel** at the bottom of the home page for the selected script.
+- Localized script notes covering history, how the script works, capitals/case, digraphs or combinations, contextual forms, punctuation, and numbers.
+
+#### Review previews
+
+- **Preview alphabet**: browse letters with IPA / Latin / Cyrillic transcription. Filter by consonants, vowels, and marks. Click a letter to see words that contain it.
+- **Preview syllables & forms**: browse common syllables, forms, blocks, conjuncts, and positional variants. Click an item to see matching words and phrases.
+- **Preview words**: browse the full word pool with exactly three source filters: **Specific**, **Signs**, and **International**. A length filter helps narrow the list.
+- **Preview phrases**: browse all 30 tourist phrases with native script, transcription, and translation.
 
 #### Practice modes
 
-The Practice section is grouped in three clusters, in this order:
+- **Flashcards: letters, syllables, words, phrases**
+  - Front shows only the prompt.
+  - Back shows pronunciation/transcription and meaning/translation.
+  - Word and syllable pronunciation is emphasized with larger bold text.
+  - Spaced repetition ratings: **Again**, **Hard**, **Good**, **Easy**.
+  - Rating buttons show their numeric keyboard shortcuts and next-review intervals.
+  - Optional auto-advance timers show a countdown in the card's upper-right corner.
+  - Keyboard shortcuts: `Esc` home, `Space` flip, `Enter` skip, arrow keys previous/next, `1`-`4` rate.
 
-1. **Flashcards (🃏)** — Letters · Words · Phrases. Front shows the prompt, back shows the answer; a proper CSS 3D Y-axis **card-flip animation** plays on every flip. Spaced repetition: rate each card *Again / Hard / Good / Easy* and it vanishes from the deck for the configured interval. **Separate SRS settings per deck** (letters, words, phrases) so you can pace each independently. Optional per-card timer auto-flips and advances if you stall.
-2. **Choose (🎯)** — Letter · Word · Phrase. Multiple-choice drill: pick the right answer from **4, 6, or 8 options**. Toggle between *recognize* (native → translation) and *recall* (translation → native) directions. Feeds the same progress buckets as flashcards.
-3. **Type-in modes** —
-   - **✍️ Read & transcribe**: word in the target script → you type the transliteration. Choose Latin, Cyrillic, or **IPA** (with an on-screen IPA keyboard) via the header pill or in Settings.
-   - **⌨️ Spell in script**: word in Latin / Cyrillic / IPA → you spell it back in the target script using an on-screen keyboard (or your hardware keyboard if it has the layout).
+- **Choose drills: letters, syllables, words, phrases**
+  - Multiple-choice practice with 4, 6, or 8 options.
+  - Number badges on options match keyboard shortcuts.
+  - `Esc` returns home, `Space` skips or continues, number keys pick answers.
+  - If the matching auto-advance timer is enabled, a countdown appears in the pick card and reveal/advance happens automatically.
+  - Word modes: **Native -> meaning**, **Native -> pronunciation**, **Meaning -> native**, **Pronunciation -> native**.
+  - Letter, syllable, and phrase drills support recognition/recall directions.
+
+- **Typing drills**
+  - **Read & transcribe**: see a word in the target script and type the transliteration.
+  - **Spell in script**: see a transliteration and spell it using the on-screen script keyboard.
+  - Input systems: Latin, Cyrillic, and IPA, including an IPA keyboard.
+  - Optional fuzzy matching accepts small transliteration mistakes.
 
 #### Transcription systems
 
-Every letter, word, and phrase carries three transcriptions:
+Letters, syllables, words, and phrases can carry:
 
-- **IPA** — narrow phonetic.
-- **Latin** — practical English-keyboard re-spelling.
-- **Cyrillic** — practical Russian-keyboard re-spelling.
+- **IPA**: phonetic transcription.
+- **Latin**: practical English-keyboard respelling.
+- **Cyrillic**: practical Russian-keyboard respelling.
 
-The header pill cycles between them on the fly — no settings round-trip required.
+The transcription pill cycles between systems without leaving the current screen.
 
-#### International words
+#### Script-specific display options
 
-A pool of 29 concepts — *taxi, metro, coffee, telephone, hospital, computer, internet, …* — that exist as loanwords across most languages. Wherever possible the app uses the **loanword / transliterated form** (e.g. Russian `госпиталь` rather than `больница`) so learners can spend their attention decoding the **spelling** of a word they already know.
+- RTL scripts are rendered in the correct direction.
+- Arabic/Hebrew-style optional vocalization can be toggled where data includes pointed/voweled forms.
+- Hangul matching handles syllable blocks and decomposition where needed.
+- Notes explain when capitals, punctuation, and numbers are reference-only rather than separate drills.
 
-A few intentional exceptions are documented in their cultural notes — for example, the Georgian false-friend `მამა` ("mama") which actually means *father*.
+#### PWA / installability
 
-#### Cultural notes (ⓘ)
+The app includes:
 
-Letters and words can carry a small **ⓘ** info icon with a cultural / phonetic / etymology note (false friends, loanword origins, alphabet history quirks). Notes are localized into English and Russian.
+- `manifest.webmanifest`
+- service worker caching
+- install icons, including maskable icon
+- offline cache for the app shell and script data after first load
 
-#### Fuzzy matching
-
-Turn **fuzzy match** on in Settings to accept answers with small spelling slips — `t` for `th`, `c` for `k`, a missing single character. Tolerance scales with word length so short words still need to be (near-)exact.
-
-#### Vocalisation
-
-For scripts with optional diacritics — **Arabic ḥarakāt**, **Hebrew niqqud** — turn on **"Show full vocalisation"** in Settings. Prompts then show the fully-pointed form and the spell check requires the vocalised answer. Off, the bare consonantal form is shown and either form is accepted.
-
-#### Theme
-
-System / Light / Dark via the Settings picker.
-
-#### Mobile
-
-44-pixel tap targets, on-screen keyboards sized for thumbs, native numeric keypads for SRS interval inputs, horizontally scrollable progress tables on narrow screens. Inputs are sized so iOS won't auto-zoom when they're focused.
+Browsers can offer **Install app / Add to Home Screen** when the app is served over HTTPS or localhost.
 
 ### Running locally
 
-The app uses `fetch()` for its JSON data and ES modules, so it must be served over HTTP — `file://` won't work.
+The app uses `fetch()` for JSON and ES modules, so `file://` will not work. Serve the repository root over HTTP:
 
 ```bash
-# from the repo root
 python -m http.server 8000
-# then open http://localhost:8000
+# open http://localhost:8000
 ```
 
-Any other static server works too: `npx serve .`, `php -S localhost:8000`, VS Code Live Server, etc.
+Any static server is fine: `npx serve .`, `php -S localhost:8000`, VS Code Live Server, etc.
 
 ### Deploying to GitHub Pages
 
 A workflow under `.github/workflows/pages.yml` deploys on every push to `main`. One-time setup:
 
-1. Open **Settings → Pages**.
+1. Open **Settings -> Pages**.
 2. Set **Source** to **GitHub Actions**.
 3. Push to `main`. The site appears at `https://<user>.github.io/<repo>/`.
 
-### Adding a new script
+### Adding a new script or language
 
-All content is plain JSON under `data/` — no code changes needed for typical scripts. For full step-by-step instructions, schemas, validation checklists, and the conventions you need to follow (especially the international-words principle and the localization rules):
+Adding a normal script should be a data-only change:
 
-➡ **See [.github/prompts/add-script.prompt.md](.github/prompts/add-script.prompt.md)**
+1. Create `data/scripts/<id>/`.
+2. Add seven JSON files plus a local `flags.svg`: `meta.json`, `letters.json`, `words.json`, `syllables.json`, `signs.json`, `international.json`, `phrases.json`, `flags.svg`.
+3. Add one entry to `data/manifest.json`:
 
-The short version: add an entry to `data/manifest.json`, create `data/scripts/<id>.json`, append a 20-phrase deck to `data/phrases.json`, and add a `forms.<id>` block to every entry in `data/words-international.json`.
+```json
+{ "id": "<id>", "folder": "scripts/<id>" }
+```
+
+For exact schemas, conventions, phrase requirements, validation commands, and PR checklist, see:
+
+➡ **[.github/prompts/add-script.prompt.md](.github/prompts/add-script.prompt.md)**
+
+### Opening a PR to add a language
+
+1. Fork the repository or create a branch in your clone.
+2. Add the script folder and update `data/manifest.json`.
+3. Validate JSON and run a local smoke test over HTTP.
+4. Commit only the relevant data/docs changes.
+5. Open a pull request with:
+   - script/language name in the title;
+   - what folder was added;
+   - confirmation that previews, flashcards, choose drills, typing drills, and PWA data loading were checked;
+   - notes for any intentional exceptions, such as non-loanword international entries or missing IPA.
 
 ### Storage
 
-Settings and progress are kept in `localStorage` under the single key `scriptgame:v1`. A **"Reset all progress"** button lives in Settings.
+Settings and progress are kept in `localStorage` under `scriptgame:v1`. The Settings screen includes reset controls.
 
 ### Scope notes
 
-- Letter coverage is intentionally bounded to the most common glyphs in each script. Combining forms, ligatures, conjuncts, and contextual variants are noted in `note` fields where useful.
-- Read & transcribe accepts loose matches (case- and diacritic-insensitive) on the transliteration. Spell in script requires an exact native match (or a fuzzy match if enabled).
-- A few international "loanwords" are spelled idiomatically differently in some languages — these are flagged in the word's `note` field.
+- Letter coverage is intentionally practical, not exhaustive Unicode coverage.
+- Contextual forms, conjuncts, syllable blocks, and common chunks belong in `syllables.json`.
+- Punctuation, capitals, and numbers should be documented in `meta.json`; only add them as drills if they are genuinely part of learning the script.
+- International words should prefer familiar local loanwords/transliterations, but idiomatic exceptions are allowed when documented in `note`.
+- Phrase decks should be useful for tourists and standardized across scripts where possible.
+
+### Contact
+
+Alexander Galkin · Telegram: @alaudo
 
 ---
 
@@ -140,11 +186,11 @@ Settings and progress are kept in `localStorage` under the single key `scriptgam
 
 ### Что это
 
-allScripts — одностраничное веб-приложение на чистом HTML / JS / CSS, помогающее изучить незнакомую систему письма с нуля: буквы, словарь и базовые фразы. В арсенале — карточки с интервальными повторениями, тесты с выбором ответа и упражнения на ввод. Интерфейс работает на английском и русском.
+allScripts — одностраничное приложение на HTML / CSS / JavaScript для изучения незнакомых систем письма с нуля. Оно покрывает буквы, промежуточный слой слогов и форм, практические слова, вывески, международные заимствования и стандартизированные туристические фразы через справочные просмотры, карточки, тесты с выбором ответа и упражнения на ввод. Интерфейс локализован на английский и русский.
 
 ### Поддерживаемые письменности
 
-| Письменность | Самоназвание | Язык |
+| Письменность | Самоназвание | Основной язык |
 |---|---|---|
 | Греческая | Ελληνικά | Современный греческий |
 | Кириллица | Кириллица | Русский |
@@ -157,105 +203,149 @@ allScripts — одностраничное веб-приложение на ч�
 | Хангыль | 한글 | Корейский |
 | Тайская | ไทย | Тайский |
 
-В каждой письменности есть полный алфавит, 10–25 отобранных слов, общий пул из 29 международных заимствований (так что знакомые слова вроде *такси*, *метро*, *госпиталь* отрабатываются во всех письменностях) и колода из 20 базовых фраз.
+Каждая письменность хранится в отдельной папке и содержит метаданные, локальный SVG с флагами, буквы, слоги/формы, отобранные слова, слова с вывесок, международные слова и фразы.
+
+### Текущий учебный контент
+
+| Слой | Назначение |
+|---|---|
+| **Буквы** | Алфавит или базовый набор символов с IPA, латинской и кириллической транскрипцией, примером слова и необязательными заметками. |
+| **Слоги и формы** | Промежуточный слой между буквами и словами: частые слоги/куски для каждой письменности и особые случаи вроде арабских позиционных форм, конечных форм иврита, конъюнктов деванагари и частых блоков хангыля. |
+| **Слова: Specific** | Слова, выбранные специально для языка/письменности. |
+| **Слова: Signs** | Частые надписи на улице и вывесках: вход, выход, туалеты, информация, открыто/закрыто, стоп, парковка, аптека. |
+| **Слова: International** | Общий пул из 29 знакомых заимствований: такси, метро, кофе, телефон, госпиталь, компьютер, интернет, отель, ресторан, полиция и т. д. |
+| **Фразы** | Стандартизированная колода из 30 туристических фраз про поездки, навигацию, помощь, оплату, еду, транспорт и пары вроде да/нет, открыто/закрыто, вход/выход, налево/направо/прямо. |
 
 ### Возможности
 
-#### Главная и навигация
+#### Главная, навигация и информация о письменности
 
-- **Сетка плиток** письменностей с актуальным прогрессом: `📝 буквы выучены/всего · 💬 слова выучены/всего`.
-- **Переключатель языка прямо в шапке** — мгновенный переход с английского на русский и обратно на любом экране, включая переводы фраз и культурные заметки.
-- **Карточка «О письменности»** с краткой **исторической справкой** и более развёрнутым разделом **«Как устроено письмо»**, объясняющим механику (алфавит / абджад / абугида / силлабарий, позиционные формы, огласовки и т. д.). Оба раздела локализованы.
-- **Флаги стран**, где письменность используется.
+- **Сетка письменностей** с живым прогрессом.
+- **Секции тренировки и просмотра**, сгруппированные по типу действия.
+- **Переключатель языка** в шапке: английский и русский.
+- **Тема оформления**: системная, светлая, тёмная.
+- **Информационная панель** о выбранной письменности внизу главной страницы.
+- Локализованные объяснения истории, устройства письма, регистра, сочетаний букв, позиционных форм, пунктуации и чисел.
 
-#### Просмотр (справочные режимы)
+#### Справочные просмотры
 
-Это справочные экраны, а не упражнения, — они вынесены в отдельную секцию на главной письменности.
-
-- **Просмотр алфавита** — все буквы сразу, с транскрипцией IPA / латиница / кириллица. Фильтры: **согласные / гласные / знаки**. **Клик по букве** раскрывает врезку со всеми тренировочными словами, содержащими её (для слоговых письменностей вроде хангыля работает через декомпозицию Unicode).
-- **Просмотр слов** — весь пул слов в виде сетки; фильтры **«своё»** (отобрано для письменности) и **«международные»** (пул из 29 заимствований), а также фильтр по длине слова. Переводы — на текущем языке интерфейса.
-- **Просмотр фраз** — все 20 базовых фраз с родным написанием, транслитерацией и переводом.
+- **Просмотр алфавита**: буквы с IPA / латиницей / кириллицей. Фильтры по согласным, гласным и знакам. Клик по букве показывает слова, где она встречается.
+- **Просмотр слогов и форм**: частые слоги, формы, блоки, конъюнкты и позиционные варианты. Клик показывает подходящие слова и фразы.
+- **Просмотр слов**: весь словарь с тремя фильтрами источника: **Specific**, **Signs**, **International**, плюс фильтр по длине.
+- **Просмотр фраз**: 30 туристических фраз с родным написанием, транскрипцией и переводом.
 
 #### Тренировки
 
-Секция «Тренировки» сгруппирована в три кластера, в таком порядке:
+- **Карточки: буквы, слоги, слова, фразы**
+  - На лицевой стороне только задание.
+  - На обратной стороне транскрипция/произношение и значение/перевод.
+  - Произношение слов и слогов выделено крупным жирным шрифтом.
+  - Интервальные оценки: **Снова**, **Сложно**, **Хорошо**, **Легко**.
+  - На кнопках оценок показаны цифровые клавиши и интервалы до следующего повтора.
+  - Если включён таймер автоперехода, обратный отсчёт показывается в правом верхнем углу карточки.
+  - Клавиши: `Esc` домой, `Space` перевернуть, `Enter` пропустить, стрелки назад/вперёд, `1`-`4` оценить.
 
-1. **Карточки (🃏)** — буквы · слова · фразы. На лицевой стороне — задание, на обратной — ответ; при перевороте играет правильная **3D-анимация переворота карточки** по оси Y. Интервальные повторения: оцените карточку *Снова / Сложно / Хорошо / Легко*, и она пропадает из колоды на заданный интервал. **Отдельные настройки SRS для каждой колоды** (буквы, слова, фразы) — можно задать свой темп каждой. Опциональный таймер автоматически переворачивает и сдвигает карточку, если вы зависли.
-2. **Выбор (🎯)** — буква · слово · фраза. Тесты с множественным выбором: выберите правильный ответ из **4, 6 или 8 вариантов**. Переключайте направления *распознавание* (исходное → перевод) и *вспоминание* (перевод → исходное). Прогресс пишется в те же ячейки, что и у карточек.
-3. **Ввод с клавиатуры** —
-   - **✍️ Прочитай и запиши**: слово в целевой письменности → вы вводите транслитерацию. Латиница, кириллица или **IPA** (с экранной IPA-клавиатурой) — выбор через пилюлю в шапке или в настройках.
-   - **⌨️ Запиши в письме**: слово на латинице / кириллице / IPA → вы записываете его в целевой письменности через экранную клавиатуру (или физическую, если на ней есть нужная раскладка).
+- **Выбор ответа: буквы, слоги, слова, фразы**
+  - Тесты с 4, 6 или 8 вариантами.
+  - Цифровые бейджи на вариантах соответствуют клавишам.
+  - `Esc` домой, `Space` пропустить или продолжить, цифры выбирают ответ.
+  - Если включён соответствующий таймер автоперехода, отсчёт показывается на карточке выбора; по истечении времени ответ раскрывается и затем происходит переход дальше.
+  - Режимы слов: **исходное -> значение**, **исходное -> произношение**, **значение -> исходное**, **произношение -> исходное**.
+  - Буквы, слоги и фразы поддерживают направления распознавания и вспоминания.
+
+- **Ввод с клавиатуры**
+  - **Прочитай и запиши**: слово в целевой письменности -> введите транслитерацию.
+  - **Запиши в письме**: увидьте транслитерацию и наберите слово экранной клавиатурой письменности.
+  - Системы ввода: латиница, кириллица и IPA, включая экранную IPA-клавиатуру.
+  - Нечёткое совпадение может принимать небольшие ошибки в транслитерации.
 
 #### Системы транскрипции
 
-У каждой буквы, слова и фразы — три транскрипции:
+Буквы, слоги, слова и фразы могут иметь:
 
-- **IPA** — узкая фонетическая.
-- **Латиница** — практичная запись «как набрать на английской клавиатуре».
-- **Кириллица** — практичная запись «как набрать на русской клавиатуре».
+- **IPA**: фонетическая транскрипция.
+- **Латиницу**: практичную запись для английской клавиатуры.
+- **Кириллицу**: практичную запись для русской клавиатуры.
 
-Пилюля в шапке переключает их на лету — без захода в настройки.
+Пилюля транскрипции переключает системы без ухода с текущего экрана.
 
-#### Международные слова
+#### Особенности отображения
 
-Пул из 29 концептов — *такси, метро, кофе, телефон, госпиталь, компьютер, интернет, …* — существующих как заимствования в большинстве языков. По возможности используется именно **заимствованная / транслитерированная форма** (например, русское `госпиталь` вместо `больница`), чтобы учащийся тратил внимание на расшифровку **написания** уже знакомого слова.
+- RTL-письменности отображаются в правильном направлении.
+- Для арабского/иврита можно включать огласовки, если они есть в данных.
+- Для хангыля учитываются блоки слогов и декомпозиция там, где это нужно.
+- Заметки объясняют, когда регистр, пунктуация и числа являются справкой, а не отдельными упражнениями.
 
-Несколько намеренных исключений описаны в культурных заметках — например, грузинский «ложный друг» `მამა` («мама»), который на самом деле значит *папа*.
+#### PWA / установка
 
-#### Культурные заметки (ⓘ)
+В приложение добавлены:
 
-У букв и слов может быть маленькая иконка **ⓘ** с культурной / фонетической / этимологической заметкой (ложные друзья, происхождение заимствований, особенности истории алфавита). Заметки локализованы на английский и русский.
+- `manifest.webmanifest`
+- service worker
+- иконки для установки, включая maskable-иконку
+- офлайн-кэш оболочки приложения и данных после первой загрузки
 
-#### Нечёткое сопоставление
-
-Включите **«нечёткое совпадение»** в настройках, чтобы принимать ответы с мелкими опечатками — `t` вместо `th`, `c` вместо `k`, пропуск одного символа. Допуск масштабируется с длиной слова, так что короткие слова всё равно должны быть (почти) точными.
-
-#### Огласовка
-
-Для письменностей с опциональными диакритиками — **арабские хараки**, **еврейские некудот** — включите **«Показывать огласовки»** в настройках. Тогда задания показываются полностью огласованной формой и проверка требует огласованного ответа. Если выключено — отображается «голый» консонантный костяк, и принимается любая форма.
-
-#### Тема оформления
-
-Системная / светлая / тёмная — переключаются в настройках.
-
-#### Мобильные устройства
-
-Цели касания 44 пикселя, экранные клавиатуры под большие пальцы, цифровые клавиатуры iOS для SRS-интервалов, горизонтальная прокрутка таблиц прогресса на узких экранах. Поля ввода подобраны так, чтобы iOS не «зумился» при фокусе.
+Браузеры могут предлагать **установить приложение / добавить на главный экран**, если сайт открыт по HTTPS или localhost.
 
 ### Запуск локально
 
-Приложение использует `fetch()` для загрузки JSON и ES-модули, поэтому его нужно подавать по HTTP — открытие `index.html` через `file://` не сработает.
+Приложение загружает JSON через `fetch()` и использует ES-модули, поэтому `file://` не работает. Отдайте корень репозитория по HTTP:
 
 ```bash
-# из корня репозитория
 python -m http.server 8000
-# затем откройте http://localhost:8000
+# откройте http://localhost:8000
 ```
 
-Подойдёт любой статический сервер: `npx serve .`, `php -S localhost:8000`, VS Code Live Server и так далее.
+Подойдёт любой статический сервер: `npx serve .`, `php -S localhost:8000`, VS Code Live Server и т. д.
 
 ### Развёртывание на GitHub Pages
 
-Воркфлоу в `.github/workflows/pages.yml` развёртывает сайт при каждом пуше в `main`. Однократная настройка:
+Воркфлоу `.github/workflows/pages.yml` публикует сайт при каждом пуше в `main`. Однократная настройка:
 
-1. Откройте **Settings → Pages**.
-2. Выберите **Source** → **GitHub Actions**.
+1. Откройте **Settings -> Pages**.
+2. Выберите **Source -> GitHub Actions**.
 3. Запушьте в `main`. Сайт появится по адресу `https://<user>.github.io/<repo>/`.
 
-### Добавление новой письменности
+### Добавление новой письменности или языка
 
-Весь контент — обычный JSON в каталоге `data/`, для типовых письменностей правки кода не нужны. Полные пошаговые инструкции, схемы, чек-листы валидации и обязательные соглашения (особенно принцип международных слов и правила локализации) — в отдельном гайде:
+Обычная новая письменность должна добавляться только данными:
 
-➡ **См. [.github/prompts/add-script.prompt.md](.github/prompts/add-script.prompt.md)**
+1. Создайте `data/scripts/<id>/`.
+2. Добавьте семь JSON-файлов и локальный `flags.svg`: `meta.json`, `letters.json`, `words.json`, `syllables.json`, `signs.json`, `international.json`, `phrases.json`, `flags.svg`.
+3. Добавьте одну запись в `data/manifest.json`:
 
-Кратко: добавьте запись в `data/manifest.json`, создайте `data/scripts/<id>.json`, добавьте колоду из 20 фраз в `data/phrases.json`, и добавьте блок `forms.<id>` в каждую запись `data/words-international.json`.
+```json
+{ "id": "<id>", "folder": "scripts/<id>" }
+```
+
+Точные схемы, соглашения, требования к фразам, команды проверки и чек-лист PR:
+
+➡ **[.github/prompts/add-script.prompt.md](.github/prompts/add-script.prompt.md)**
+
+### Как открыть PR с новой письменностью
+
+1. Сделайте fork репозитория или создайте ветку в своём клоне.
+2. Добавьте папку письменности и обновите `data/manifest.json`.
+3. Проверьте JSON и сделайте локальный smoke test по HTTP.
+4. Закоммитьте только относящиеся к задаче данные/документацию.
+5. Откройте pull request и укажите:
+   - название письменности/языка в заголовке;
+   - какую папку добавили;
+   - что проверены просмотры, карточки, выбор ответа, ввод и загрузка данных для PWA;
+   - намеренные исключения: например, не-заимствованные international-слова или отсутствующий IPA.
 
 ### Хранение данных
 
-Настройки и прогресс хранятся в `localStorage` под единым ключом `scriptgame:v1`. Кнопка **«Сбросить весь прогресс»** доступна в настройках.
+Настройки и прогресс хранятся в `localStorage` под ключом `scriptgame:v1`. На экране Settings есть кнопки сброса.
 
 ### Заметки об охвате
 
-- Охват букв намеренно ограничен наиболее частыми глифами каждой письменности. Слитные формы, лигатуры, конъюнкты и контекстные варианты упоминаются в полях `note`, где это уместно.
-- «Прочитай и запиши» принимает мягкие совпадения транслитерации (без учёта регистра и диакритики). «Запиши в письме» требует точного совпадения в родной письменности (или нечёткого, если включено).
-- Несколько международных «заимствований» в отдельных языках пишутся идиоматически иначе — это помечено в поле `note` слова.
+- Набор букв практический, а не полный охват Unicode.
+- Контекстные формы, конъюнкты, слоговые блоки и частые куски относятся к `syllables.json`.
+- Пунктуацию, регистр и числа нужно описывать в `meta.json`; добавляйте их как упражнения только если они действительно нужны для изучения письменности.
+- Международные слова должны по возможности использовать знакомые местные заимствования/транслитерации, но идиоматические исключения допустимы, если описаны в `note`.
+- Фразы должны быть полезны туристу и по возможности стандартизированы между письменностями.
+
+### Контакты
+
+Alexander Galkin · Telegram: @alaudo

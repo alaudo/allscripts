@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "category": {
+    "id": "signs",
+    "label": {
+      "en": "Signs and signboards",
+      "ru": "Вывески и указатели"
+    }
+  },
+  "entries": [
+    {
+      "concept": "entrance",
+      "meaning": {
+        "en": "Entrance",
+        "ru": "Вход"
+      },
+      "native": "دخول",
+      "nativeVoweled": "دُخُول",
+      "ipa": "duˈxuːl",
+      "latin": "dukhūl",
+      "cyrillic": "духуль"
+    },
+    {
+      "concept": "exit",
+      "meaning": {
+        "en": "Exit",
+        "ru": "Выход"
+      },
+      "native": "خروج",
+      "nativeVoweled": "خُرُوج",
+      "ipa": "xuˈruːd͡ʒ",
+      "latin": "khurūj",
+      "cyrillic": "хурудж"
+    },
+    {
+      "concept": "toilets",
+      "meaning": {
+        "en": "Toilets",
+        "ru": "Туалеты"
+      },
+      "native": "دورات المياه",
+      "nativeVoweled": "دَوْرَاتُ المِيَاه",
+      "ipa": "dawraːt almiˈjaːh",
+      "latin": "dawrat al-miyah",
+      "cyrillic": "даураат аль-мия"
+    },
+    {
+      "concept": "information",
+      "meaning": {
+        "en": "Information",
+        "ru": "Информация"
+      },
+      "native": "معلومات",
+      "nativeVoweled": "مَعْلُومَات",
+      "ipa": "maʕluːˈmaːt",
+      "latin": "ma'lumat",
+      "cyrillic": "маалюмат"
+    },
+    {
+      "concept": "open",
+      "meaning": {
+        "en": "Open",
+        "ru": "Открыто"
+      },
+      "native": "مفتوح",
+      "nativeVoweled": "مَفْتُوح",
+      "ipa": "mafˈtuːħ",
+      "latin": "maftuh",
+      "cyrillic": "мафтух"
+    },
+    {
+      "concept": "closed",
+      "meaning": {
+        "en": "Closed",
+        "ru": "Закрыто"
+      },
+      "native": "مغلق",
+      "nativeVoweled": "مُغْلَق",
+      "ipa": "muɣlaq",
+      "latin": "mughlaq",
+      "cyrillic": "муглак"
+    },
+    {
+      "concept": "stop",
+      "meaning": {
+        "en": "Stop",
+        "ru": "Стоп"
+      },
+      "native": "قف",
+      "nativeVoweled": "قِفْ",
+      "ipa": "qif",
+      "latin": "qif",
+      "cyrillic": "киф"
+    },
+    {
+      "concept": "no_entry",
+      "meaning": {
+        "en": "No entry",
+        "ru": "Вход запрещён"
+      },
+      "native": "ممنوع الدخول",
+      "nativeVoweled": "مَمْنُوعُ الدُّخُول",
+      "ipa": "mamnuːʕ adduˈxuːl",
+      "latin": "mamnu' ad-dukhul",
+      "cyrillic": "мамну ад-духуль"
+    },
+    {
+      "concept": "parking",
+      "meaning": {
+        "en": "Parking",
+        "ru": "Парковка"
+      },
+      "native": "موقف سيارات",
+      "nativeVoweled": "مَوْقِفُ سَيَّارَات",
+      "ipa": "mawqif sajjaːˈraːt",
+      "latin": "mawqif sayyarat",
+      "cyrillic": "маукиф сайярат"
+    },
+    {
+      "concept": "pharmacy",
+      "meaning": {
+        "en": "Pharmacy",
+        "ru": "Аптека"
+      },
+      "native": "صيدلية",
+      "nativeVoweled": "صَيْدَلِيَّة",
+      "ipa": "sˤajdaˈlijja",
+      "latin": "saydaliyya",
+      "cyrillic": "сайдали́йя"
+    }
+  ]
+}

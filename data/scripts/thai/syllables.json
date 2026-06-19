@@ -1,0 +1,173 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "native": "ทาง",
+      "ipa": "tʰaːŋ",
+      "latin": "thang",
+      "cyrillic": "тханг",
+      "category": "common"
+    },
+    {
+      "native": "เข้า",
+      "ipa": "kʰâw",
+      "latin": "khao",
+      "cyrillic": "кхао",
+      "category": "common"
+    },
+    {
+      "native": "ออก",
+      "ipa": "ʔɔ̀ːk",
+      "latin": "ok",
+      "cyrillic": "ок",
+      "category": "common"
+    },
+    {
+      "native": "น้ำ",
+      "ipa": "náːm",
+      "latin": "nam",
+      "cyrillic": "нам",
+      "category": "common"
+    },
+    {
+      "native": "ร้าน",
+      "ipa": "ráːn",
+      "latin": "ran",
+      "cyrillic": "ран",
+      "category": "common"
+    },
+    {
+      "native": "รถ",
+      "ipa": "rót",
+      "latin": "rot",
+      "cyrillic": "рот",
+      "category": "common"
+    },
+    {
+      "native": "ที่",
+      "ipa": "tʰîː",
+      "latin": "thi",
+      "cyrillic": "тхи",
+      "category": "common"
+    },
+    {
+      "native": "ขาย",
+      "ipa": "kʰǎːj",
+      "latin": "khai",
+      "cyrillic": "кхай",
+      "category": "common"
+    },
+    {
+      "native": "เปิด",
+      "ipa": "pɤ̀ːt",
+      "latin": "poet",
+      "cyrillic": "пёт",
+      "category": "common"
+    },
+    {
+      "native": "ปิด",
+      "ipa": "pìt",
+      "latin": "pit",
+      "cyrillic": "пит",
+      "category": "common"
+    },
+    {
+      "native": "ห้อง",
+      "ipa": "hɔ̂ŋ",
+      "latin": "hong",
+      "cyrillic": "хонг",
+      "category": "common"
+    },
+    {
+      "native": "เมือง",
+      "ipa": "mɯaŋ",
+      "latin": "mueang",
+      "cyrillic": "мыанг",
+      "category": "common"
+    },
+    {
+      "native": "เท",
+      "ipa": "tʰeː",
+      "latin": "the",
+      "cyrillic": "тхе",
+      "category": "common"
+    },
+    {
+      "native": "เต",
+      "ipa": "teː",
+      "latin": "te",
+      "cyrillic": "те",
+      "category": "common"
+    },
+    {
+      "native": "มา",
+      "ipa": "maː",
+      "latin": "ma",
+      "cyrillic": "ма",
+      "category": "common"
+    },
+    {
+      "native": "ข้า",
+      "ipa": "kʰâː",
+      "latin": "kha",
+      "cyrillic": "кха",
+      "category": "common"
+    },
+    {
+      "native": "ซี",
+      "ipa": "siː",
+      "latin": "si",
+      "cyrillic": "си",
+      "category": "common"
+    },
+    {
+      "native": "ยา",
+      "ipa": "jaː",
+      "latin": "ya",
+      "cyrillic": "я",
+      "category": "common"
+    },
+    {
+      "native": "อง",
+      "ipa": "ɔːŋ",
+      "latin": "ong",
+      "cyrillic": "онг",
+      "category": "common"
+    },
+    {
+      "native": "อม",
+      "ipa": "ɔːm",
+      "latin": "om",
+      "cyrillic": "ом",
+      "category": "common"
+    },
+    {
+      "native": "กา",
+      "ipa": "kaː",
+      "latin": "ka",
+      "cyrillic": "ка",
+      "category": "common"
+    },
+    {
+      "native": "ร้า",
+      "ipa": "ráː",
+      "latin": "ra",
+      "cyrillic": "ра",
+      "category": "common"
+    },
+    {
+      "native": "เม",
+      "ipa": "meː",
+      "latin": "me",
+      "cyrillic": "ме",
+      "category": "common"
+    },
+    {
+      "native": "ปา",
+      "ipa": "paː",
+      "latin": "pa",
+      "cyrillic": "па",
+      "category": "common"
+    }
+  ]
+}

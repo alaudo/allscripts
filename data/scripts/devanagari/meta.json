@@ -1,0 +1,39 @@
+{
+  "id": "devanagari",
+  "name": {
+    "en": "Devanagari",
+    "ru": "Деванагари"
+  },
+  "nativeName": "देवनागरी",
+  "language": "hi",
+  "direction": "ltr",
+  "flagsSvg": "flags.svg",
+  "info": {
+    "en": "Devanagari is an abugida descended from the ancient Brahmi script (3rd c. BC). Its distinctive horizontal headstroke (shirorekha) ties letters into words. It is used to write Hindi, Marathi, Sanskrit, Nepali and several other Indo-Aryan languages — roughly 600 million speakers in total.",
+    "ru": "Деванагари — абугида, происходящая от древнего письма брахми (III в. до н. э.). Её характерная горизонтальная верхняя черта (широрекха) объединяет буквы в слова. Деванагари используют для записи хинди, маратхи, санскрита, непальского и ряда других индоарийских языков — суммарно около 600 миллионов носителей."
+  },
+  "composition": {
+    "en": "Devanagari is an abugida: each consonant letter carries an inherent 'a' vowel built in — क by itself reads ka, not k. Other vowels are written as small marks called mātrās attached above, below, before or after the consonant (कि = ki, की = kī, कु = ku, के = ke, को = ko, का = kā). At the start of a word, vowels use their own full letters (अ इ उ ए ओ) instead of mātrās. A small slash called the virāma or halant (्) cancels the inherent vowel; when two or more consonants meet without a vowel between them they typically merge into a ligature (क + ष → क्ष, क + र → क्र). The horizontal headstroke at the top — the shirorekhā — ties the letters of each word together into a single line, which is why a Hindi word visually looks like one connected unit.",
+    "ru": "Деванагари — это абугида: каждая согласная буква уже содержит «встроенную» гласную «а» (क сама по себе читается ka, а не k). Другие гласные передаются маленькими значками — матрами, которые ставятся над буквой, под ней, перед или после неё (कि = ki, की = kī, कु = ku, के = ke, को = ko, का = kā). В начале слова используются полные буквы гласных (अ इ उ ए ओ), а не матры. Маленький штрих вирама (или халант, ्) подавляет встроенную гласную; если две или больше согласных идут подряд без гласной, они обычно сливаются в лигатуру (क + ष → क्ष, क + र → क्र). Характерная верхняя горизонтальная черта — широрекха — объединяет буквы каждого слова в единую линию, поэтому хиндийское слово визуально выглядит как одно связное целое."
+  },
+  "countries": [
+    {
+      "flag": "🇮🇳",
+      "name": {
+        "en": "India",
+        "ru": "Индия"
+      }
+    },
+    {
+      "flag": "🇳🇵",
+      "name": {
+        "en": "Nepal",
+        "ru": "Непал"
+      }
+    }
+  ],
+  "writingConventions": {
+    "en": "Devanagari has no capitals. The key combinations are vowel mātrās around a consonant, the virāma/halant that cancels the inherent a, and consonant conjuncts such as क्ष, त्र, ज्ञ, क्र and प्र. Those conjuncts are not optional decoration: they are how consonant clusters are normally written, so they deserve syllable/form practice. Traditional punctuation includes the danda । and double danda ॥, while everyday Hindi also uses Western punctuation. Devanagari digits ०१२३४५६७८९ exist and are common enough on signs to add eventually as a small reference/quiz set, but Western digits are also widely used.",
+    "ru": "В деванагари нет заглавных букв. Главные сочетания — матры гласных вокруг согласной, вирама/халант, отменяющая встроенное a, и согласные лигатуры вроде क्ष, त्र, ज्ञ, क्र и प्र. Эти лигатуры не украшение: именно так обычно пишутся скопления согласных, поэтому им место в тренировке слогов и форм. Традиционная пунктуация включает данду । и двойную данду ॥, но в современном хинди часто используются и западные знаки. Цифры деванагари ०१२३४५६७८९ существуют и достаточно часто встречаются на вывесках, чтобы позже добавить маленький справочный/тестовый набор; при этом западные цифры тоже широко используются."
+  }
+}

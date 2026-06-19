@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "native": "სა",
+      "ipa": "sa",
+      "latin": "sa",
+      "cyrillic": "са",
+      "category": "common"
+    },
+    {
+      "native": "შე",
+      "ipa": "ʃe",
+      "latin": "she",
+      "cyrillic": "ше",
+      "category": "common"
+    },
+    {
+      "native": "გა",
+      "ipa": "ɡa",
+      "latin": "ga",
+      "cyrillic": "га",
+      "category": "common"
+    },
+    {
+      "native": "და",
+      "ipa": "da",
+      "latin": "da",
+      "cyrillic": "да",
+      "category": "common"
+    },
+    {
+      "native": "კა",
+      "ipa": "kʼa",
+      "latin": "ka",
+      "cyrillic": "ка",
+      "category": "common"
+    },
+    {
+      "native": "მა",
+      "ipa": "ma",
+      "latin": "ma",
+      "cyrillic": "ма",
+      "category": "common"
+    },
+    {
+      "native": "თა",
+      "ipa": "tʰa",
+      "latin": "ta",
+      "cyrillic": "та",
+      "category": "common"
+    },
+    {
+      "native": "ლი",
+      "ipa": "li",
+      "latin": "li",
+      "cyrillic": "ли",
+      "category": "common"
+    },
+    {
+      "native": "რი",
+      "ipa": "ri",
+      "latin": "ri",
+      "cyrillic": "ри",
+      "category": "common"
+    },
+    {
+      "native": "ცი",
+      "ipa": "tsi",
+      "latin": "tsi",
+      "cyrillic": "ци",
+      "category": "common"
+    },
+    {
+      "native": "არ",
+      "ipa": "ar",
+      "latin": "ar",
+      "cyrillic": "ар",
+      "category": "common"
+    },
+    {
+      "native": "ია",
+      "ipa": "ia",
+      "latin": "ia",
+      "cyrillic": "иа",
+      "category": "common"
+    },
+    {
+      "native": "ალ",
+      "ipa": "al",
+      "latin": "al",
+      "cyrillic": "ал",
+      "category": "common"
+    },
+    {
+      "native": "ლა",
+      "ipa": "la",
+      "latin": "la",
+      "cyrillic": "ла",
+      "category": "common"
+    },
+    {
+      "native": "ეტ",
+      "ipa": "etʼ",
+      "latin": "et",
+      "cyrillic": "ет",
+      "category": "common"
+    },
+    {
+      "native": "ინ",
+      "ipa": "in",
+      "latin": "in",
+      "cyrillic": "ин",
+      "category": "common"
+    },
+    {
+      "native": "ან",
+      "ipa": "an",
+      "latin": "an",
+      "cyrillic": "ан",
+      "category": "common"
+    },
+    {
+      "native": "ბა",
+      "ipa": "ba",
+      "latin": "ba",
+      "cyrillic": "ба",
+      "category": "common"
+    },
+    {
+      "native": "მე",
+      "ipa": "me",
+      "latin": "me",
+      "cyrillic": "ме",
+      "category": "common"
+    },
+    {
+      "native": "ტი",
+      "ipa": "tʼi",
+      "latin": "ti",
+      "cyrillic": "ти",
+      "category": "common"
+    }
+  ]
+}

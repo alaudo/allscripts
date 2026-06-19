@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "native": "こん",
+      "ipa": "kon",
+      "latin": "kon",
+      "cyrillic": "кон",
+      "category": "common"
+    },
+    {
+      "native": "すみ",
+      "ipa": "sumi",
+      "latin": "sumi",
+      "cyrillic": "суми",
+      "category": "common"
+    },
+    {
+      "native": "よう",
+      "ipa": "joː",
+      "latin": "yo",
+      "cyrillic": "ё:",
+      "category": "common"
+    },
+    {
+      "native": "ちゅう",
+      "ipa": "tɕuː",
+      "latin": "chu",
+      "cyrillic": "тю:",
+      "category": "common"
+    },
+    {
+      "native": "ない",
+      "ipa": "nai",
+      "latin": "nai",
+      "cyrillic": "най",
+      "category": "common"
+    },
+    {
+      "native": "とう",
+      "ipa": "toː",
+      "latin": "to",
+      "cyrillic": "то:",
+      "category": "common"
+    },
+    {
+      "native": "がく",
+      "ipa": "gaku",
+      "latin": "gaku",
+      "cyrillic": "гаку",
+      "category": "common"
+    },
+    {
+      "native": "せん",
+      "ipa": "sen",
+      "latin": "sen",
+      "cyrillic": "сэн",
+      "category": "common"
+    },
+    {
+      "native": "ちゃ",
+      "ipa": "tɕa",
+      "latin": "cha",
+      "cyrillic": "тя",
+      "category": "common"
+    },
+    {
+      "native": "しゃ",
+      "ipa": "ɕa",
+      "latin": "sha",
+      "cyrillic": "ся",
+      "category": "common"
+    },
+    {
+      "native": "たー",
+      "ipa": "taː",
+      "latin": "ta",
+      "cyrillic": "та:",
+      "category": "common"
+    },
+    {
+      "native": "ちゅ",
+      "ipa": "tɕɯ",
+      "latin": "chu",
+      "cyrillic": "тю",
+      "category": "common"
+    },
+    {
+      "native": "せい",
+      "ipa": "sei",
+      "latin": "sei",
+      "cyrillic": "сэй",
+      "category": "common"
+    },
+    {
+      "native": "ばん",
+      "ipa": "ban",
+      "latin": "ban",
+      "cyrillic": "бан",
+      "category": "common"
+    },
+    {
+      "native": "いり",
+      "ipa": "iɾi",
+      "latin": "iri",
+      "cyrillic": "ири",
+      "category": "common"
+    },
+    {
+      "native": "ぐち",
+      "ipa": "ɡɯtɕi",
+      "latin": "guchi",
+      "cyrillic": "гути",
+      "category": "common"
+    },
+    {
+      "native": "まて",
+      "ipa": "mate",
+      "latin": "mate",
+      "cyrillic": "матэ",
+      "category": "common"
+    },
+    {
+      "native": "みゅ",
+      "ipa": "mjɯ",
+      "latin": "myu",
+      "cyrillic": "мю",
+      "category": "common"
+    },
+    {
+      "native": "てぃ",
+      "ipa": "ti",
+      "latin": "ti",
+      "cyrillic": "ти",
+      "category": "common"
+    },
+    {
+      "native": "ょう",
+      "ipa": "joː",
+      "latin": "yo",
+      "cyrillic": "ё:",
+      "category": "common"
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "native": "터",
+      "ipa": "tʰʌ",
+      "latin": "teo",
+      "cyrillic": "тхо",
+      "category": "block"
+    },
+    {
+      "native": "피",
+      "ipa": "pʰi",
+      "latin": "pi",
+      "cyrillic": "пхи",
+      "category": "block"
+    },
+    {
+      "native": "다",
+      "ipa": "ta",
+      "latin": "da",
+      "cyrillic": "та",
+      "category": "block"
+    },
+    {
+      "native": "시",
+      "ipa": "ɕi",
+      "latin": "si",
+      "cyrillic": "си",
+      "category": "block"
+    },
+    {
+      "native": "국",
+      "ipa": "kuk",
+      "latin": "guk",
+      "cyrillic": "кук",
+      "category": "block"
+    },
+    {
+      "native": "마",
+      "ipa": "ma",
+      "latin": "ma",
+      "cyrillic": "ма",
+      "category": "block"
+    },
+    {
+      "native": "입",
+      "ipa": "ip",
+      "latin": "ip",
+      "cyrillic": "ип",
+      "category": "block"
+    },
+    {
+      "native": "출",
+      "ipa": "tɕʰul",
+      "latin": "chul",
+      "cyrillic": "чхуль",
+      "category": "block"
+    },
+    {
+      "native": "정",
+      "ipa": "tɕʌŋ",
+      "latin": "jeong",
+      "cyrillic": "чон",
+      "category": "block"
+    },
+    {
+      "native": "주",
+      "ipa": "tɕu",
+      "latin": "ju",
+      "cyrillic": "чу",
+      "category": "block"
+    },
+    {
+      "native": "차",
+      "ipa": "tɕʰa",
+      "latin": "cha",
+      "cyrillic": "чха",
+      "category": "block"
+    },
+    {
+      "native": "약",
+      "ipa": "jak",
+      "latin": "yak",
+      "cyrillic": "як",
+      "category": "block"
+    },
+    {
+      "native": "니",
+      "ipa": "ni",
+      "latin": "ni",
+      "cyrillic": "ни",
+      "category": "block"
+    },
+    {
+      "native": "스",
+      "ipa": "sɯ",
+      "latin": "seu",
+      "cyrillic": "сы",
+      "category": "block"
+    },
+    {
+      "native": "지",
+      "ipa": "tɕi",
+      "latin": "ji",
+      "cyrillic": "чи",
+      "category": "block"
+    },
+    {
+      "native": "아",
+      "ipa": "a",
+      "latin": "a",
+      "cyrillic": "а",
+      "category": "block"
+    },
+    {
+      "native": "버",
+      "ipa": "pʌ",
+      "latin": "beo",
+      "cyrillic": "по",
+      "category": "block"
+    },
+    {
+      "native": "호",
+      "ipa": "ho",
+      "latin": "ho",
+      "cyrillic": "хо",
+      "category": "block"
+    },
+    {
+      "native": "텔",
+      "ipa": "tʰel",
+      "latin": "tel",
+      "cyrillic": "тхель",
+      "category": "block"
+    },
+    {
+      "native": "구",
+      "ipa": "ku",
+      "latin": "gu",
+      "cyrillic": "ку",
+      "category": "block"
+    },
+    {
+      "native": "파",
+      "ipa": "pʰa",
+      "latin": "pa",
+      "cyrillic": "пха",
+      "category": "block"
+    },
+    {
+      "native": "안",
+      "ipa": "an",
+      "latin": "an",
+      "cyrillic": "ан",
+      "category": "block"
+    },
+    {
+      "native": "사",
+      "ipa": "sa",
+      "latin": "sa",
+      "cyrillic": "са",
+      "category": "block"
+    },
+    {
+      "native": "네",
+      "ipa": "ne",
+      "latin": "ne",
+      "cyrillic": "не",
+      "category": "block"
+    }
+  ]
+}

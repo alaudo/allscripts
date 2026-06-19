@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "category": {
+    "id": "signs",
+    "label": {
+      "en": "Signs and signboards",
+      "ru": "Вывески и указатели"
+    }
+  },
+  "entries": [
+    {
+      "concept": "entrance",
+      "meaning": {
+        "en": "Entrance",
+        "ru": "Вход"
+      },
+      "native": "Είσοδος",
+      "ipa": "ˈisoðos",
+      "latin": "eisodos",
+      "cyrillic": "исодос"
+    },
+    {
+      "concept": "exit",
+      "meaning": {
+        "en": "Exit",
+        "ru": "Выход"
+      },
+      "native": "Έξοδος",
+      "ipa": "ˈeksodos",
+      "latin": "exodos",
+      "cyrillic": "эксодос"
+    },
+    {
+      "concept": "toilets",
+      "meaning": {
+        "en": "Toilets",
+        "ru": "Туалеты"
+      },
+      "native": "Τουαλέτες",
+      "ipa": "tuaˈletes",
+      "latin": "toualetes",
+      "cyrillic": "туалетэс"
+    },
+    {
+      "concept": "information",
+      "meaning": {
+        "en": "Information",
+        "ru": "Информация"
+      },
+      "native": "Πληροφορίες",
+      "ipa": "plirofoˈries",
+      "latin": "plirofories",
+      "cyrillic": "плирофориэс"
+    },
+    {
+      "concept": "open",
+      "meaning": {
+        "en": "Open",
+        "ru": "Открыто"
+      },
+      "native": "Ανοιχτά",
+      "ipa": "aniˈxta",
+      "latin": "anoichta",
+      "cyrillic": "анихта"
+    },
+    {
+      "concept": "closed",
+      "meaning": {
+        "en": "Closed",
+        "ru": "Закрыто"
+      },
+      "native": "Κλειστά",
+      "ipa": "kliˈsta",
+      "latin": "kleista",
+      "cyrillic": "клиста"
+    },
+    {
+      "concept": "stop",
+      "meaning": {
+        "en": "Stop",
+        "ru": "Стоп"
+      },
+      "native": "Στοπ",
+      "ipa": "stop",
+      "latin": "stop",
+      "cyrillic": "стоп"
+    },
+    {
+      "concept": "no_entry",
+      "meaning": {
+        "en": "No entry",
+        "ru": "Вход запрещён"
+      },
+      "native": "Απαγορεύεται η είσοδος",
+      "ipa": "apaɣoˈrevete i ˈisoðos",
+      "latin": "apagorevetai i eisodos",
+      "cyrillic": "апагоревете и исодос"
+    },
+    {
+      "concept": "parking",
+      "meaning": {
+        "en": "Parking",
+        "ru": "Парковка"
+      },
+      "native": "Στάθμευση",
+      "ipa": "ˈstaθmefsi",
+      "latin": "stathmefsi",
+      "cyrillic": "статмефси"
+    },
+    {
+      "concept": "pharmacy",
+      "meaning": {
+        "en": "Pharmacy",
+        "ru": "Аптека"
+      },
+      "native": "Φαρμακείο",
+      "ipa": "farmaciˈo",
+      "latin": "farmakeio",
+      "cyrillic": "фармакио"
+    }
+  ]
+}

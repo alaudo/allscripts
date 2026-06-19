@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "category": {
+    "id": "signs",
+    "label": {
+      "en": "Signs and signboards",
+      "ru": "Вывески и указатели"
+    }
+  },
+  "entries": [
+    {
+      "concept": "entrance",
+      "meaning": {
+        "en": "Entrance",
+        "ru": "Вход"
+      },
+      "native": "입구",
+      "ipa": "ip̚ku",
+      "latin": "ipgu",
+      "cyrillic": "ипгу"
+    },
+    {
+      "concept": "exit",
+      "meaning": {
+        "en": "Exit",
+        "ru": "Выход"
+      },
+      "native": "출구",
+      "ipa": "tɕʰulɡu",
+      "latin": "chulgu",
+      "cyrillic": "чхульгу"
+    },
+    {
+      "concept": "toilets",
+      "meaning": {
+        "en": "Toilets",
+        "ru": "Туалеты"
+      },
+      "native": "화장실",
+      "ipa": "ɸwaːdʑaŋɕil",
+      "latin": "hwajangsil",
+      "cyrillic": "хваджансиль"
+    },
+    {
+      "concept": "information",
+      "meaning": {
+        "en": "Information",
+        "ru": "Информация"
+      },
+      "native": "안내",
+      "ipa": "anːe",
+      "latin": "annae",
+      "cyrillic": "аннэ"
+    },
+    {
+      "concept": "open",
+      "meaning": {
+        "en": "Open",
+        "ru": "Открыто"
+      },
+      "native": "영업중",
+      "ipa": "jʌŋʌp̚tɕuŋ",
+      "latin": "yeongeopjung",
+      "cyrillic": "ёнгопчжун"
+    },
+    {
+      "concept": "closed",
+      "meaning": {
+        "en": "Closed",
+        "ru": "Закрыто"
+      },
+      "native": "닫힘",
+      "ipa": "tatʰim",
+      "latin": "dathim",
+      "cyrillic": "датхим"
+    },
+    {
+      "concept": "stop",
+      "meaning": {
+        "en": "Stop",
+        "ru": "Стоп"
+      },
+      "native": "정지",
+      "ipa": "tɕʌŋdʑi",
+      "latin": "jeongji",
+      "cyrillic": "чонджи"
+    },
+    {
+      "concept": "no_entry",
+      "meaning": {
+        "en": "No entry",
+        "ru": "Вход запрещён"
+      },
+      "native": "출입 금지",
+      "ipa": "tɕʰuɾip̚ kɯmdʑi",
+      "latin": "churip geumji",
+      "cyrillic": "чхурип кымджи"
+    },
+    {
+      "concept": "parking",
+      "meaning": {
+        "en": "Parking",
+        "ru": "Парковка"
+      },
+      "native": "주차",
+      "ipa": "tɕutɕʰa",
+      "latin": "jucha",
+      "cyrillic": "чучха"
+    },
+    {
+      "concept": "pharmacy",
+      "meaning": {
+        "en": "Pharmacy",
+        "ru": "Аптека"
+      },
+      "native": "약국",
+      "ipa": "jak̚k͈uk̚",
+      "latin": "yakguk",
+      "cyrillic": "яккук"
+    }
+  ]
+}

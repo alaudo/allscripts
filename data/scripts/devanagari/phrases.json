@@ -1,0 +1,276 @@
+{
+  "version": 3,
+  "language": "Hindi",
+  "phrases": [
+    {
+      "native": "नमस्ते। धन्यवाद।",
+      "latin": "Namaste. Dhanyavād.",
+      "cyrillic": "намастэ. дханьявад",
+      "translations": {
+        "en": "Hello. Thank you.",
+        "ru": "Здравствуйте. Спасибо."
+      }
+    },
+    {
+      "native": "कृपया। माफ़ कीजिए।",
+      "latin": "Kripaya. Māf kījiye.",
+      "cyrillic": "крипая. маф киджие",
+      "translations": {
+        "en": "Please. Excuse me.",
+        "ru": "Пожалуйста. Извините."
+      }
+    },
+    {
+      "native": "हाँ। नहीं।",
+      "latin": "Hāṁ. Nahīṁ.",
+      "cyrillic": "ха. нахи",
+      "translations": {
+        "en": "Yes. No.",
+        "ru": "Да. Нет."
+      }
+    },
+    {
+      "native": "क्या आप अंग्रेज़ी बोलते हैं?",
+      "latin": "Kyā āp angrezī bolte haiṁ?",
+      "cyrillic": "кья ап ангрези болтэ хайн",
+      "translations": {
+        "en": "Do you speak English?",
+        "ru": "Вы говорите по-английски?"
+      }
+    },
+    {
+      "native": "मुझे समझ नहीं आया। कृपया धीरे बोलिए।",
+      "latin": "Mujhe samajh nahīṁ āyā. Kripaya dhīre boliye.",
+      "cyrillic": "муджхе самаджх нахи айя. крипая дхирэ болие",
+      "translations": {
+        "en": "I don't understand. Please speak slowly.",
+        "ru": "Я не понимаю. Говорите медленнее, пожалуйста."
+      }
+    },
+    {
+      "native": "कृपया नक्शे पर दिखाइए।",
+      "latin": "Kripaya nakshe par dikhāiye.",
+      "cyrillic": "крипая накше пар дихайе",
+      "translations": {
+        "en": "Can you show me on the map?",
+        "ru": "Покажите мне на карте."
+      }
+    },
+    {
+      "native": "शौचालय कहाँ है?",
+      "latin": "Shauchālay kahāṁ hai?",
+      "cyrillic": "шаучалай каха хай",
+      "translations": {
+        "en": "Where is the toilet?",
+        "ru": "Где туалет?"
+      }
+    },
+    {
+      "native": "यह कितने का है?",
+      "latin": "Yah kitne kā hai?",
+      "cyrillic": "йах китнэ ка хай",
+      "translations": {
+        "en": "How much is this?",
+        "ru": "Сколько это стоит?"
+      }
+    },
+    {
+      "native": "मुझे यह चाहिए।",
+      "latin": "Mujhe yah chāhiye.",
+      "cyrillic": "муджхе йах чахие",
+      "translations": {
+        "en": "I would like this.",
+        "ru": "Я хочу это."
+      }
+    },
+    {
+      "native": "पानी, कृपया। बिल, कृपया।",
+      "latin": "Pānī, kripaya. Bil, kripaya.",
+      "cyrillic": "пани, крипая. бил, крипая",
+      "translations": {
+        "en": "Water, please. The bill, please.",
+        "ru": "Воды, пожалуйста. Счёт, пожалуйста."
+      }
+    },
+    {
+      "native": "क्या मैं कार्ड से भुगतान कर सकता/सकती हूँ?",
+      "latin": "Kyā maiṁ kārd se bhugtān kar saktā/saktī hūṁ?",
+      "cyrillic": "кья майн кард сэ бхуктан кар сакта/сакти хун",
+      "translations": {
+        "en": "Can I pay by card?",
+        "ru": "Можно оплатить картой?"
+      }
+    },
+    {
+      "native": "मेट्रो स्टेशन कहाँ है?",
+      "latin": "Metro station kahāṁ hai?",
+      "cyrillic": "мэтро стэйшн каха хай",
+      "translations": {
+        "en": "Where is the metro station?",
+        "ru": "Где станция метро?"
+      }
+    },
+    {
+      "native": "एक टिकट, कृपया।",
+      "latin": "Ek ṭikaṭ, kripaya.",
+      "cyrillic": "эк тикат, крипая",
+      "translations": {
+        "en": "One ticket, please.",
+        "ru": "Один билет, пожалуйста."
+      }
+    },
+    {
+      "native": "मुझे टैक्सी चाहिए।",
+      "latin": "Mujhe ṭaiksī chāhiye.",
+      "cyrillic": "муджхе такси чахие",
+      "translations": {
+        "en": "I need a taxi.",
+        "ru": "Мне нужно такси."
+      }
+    },
+    {
+      "native": "कृपया मुझे इस पते पर ले चलिए।",
+      "latin": "Kripaya mujhe is pate par le chaliye.",
+      "cyrillic": "крипая муджхе ис патэ пар лэ чалие",
+      "translations": {
+        "en": "Please take me to this address.",
+        "ru": "Отвезите меня по этому адресу, пожалуйста."
+      }
+    },
+    {
+      "native": "बाएँ। दाएँ। सीधे।",
+      "latin": "Bāeṁ. Dāeṁ. Sīdhe.",
+      "cyrillic": "баэн. даэн. сидхэ",
+      "translations": {
+        "en": "Left. Right. Straight ahead.",
+        "ru": "Налево. Направо. Прямо."
+      }
+    },
+    {
+      "native": "मैं रास्ता भटक गया/गई हूँ।",
+      "latin": "Maiṁ rāstā bhaṭak gayā/gayī hūṁ.",
+      "cyrillic": "майн раста бхатак гая/гайи хун",
+      "translations": {
+        "en": "I am lost.",
+        "ru": "Я заблудился/заблудилась."
+      }
+    },
+    {
+      "native": "मदद! पुलिस को बुलाइए।",
+      "latin": "Madad! Pulīs ko bulāiye.",
+      "cyrillic": "мадад! пулис ко булайе",
+      "translations": {
+        "en": "Help! Call the police.",
+        "ru": "Помогите! Вызовите полицию."
+      }
+    },
+    {
+      "native": "मुझे डॉक्टर चाहिए।",
+      "latin": "Mujhe ḍokṭar chāhiye.",
+      "cyrillic": "муджхе доктор чахие",
+      "translations": {
+        "en": "I need a doctor.",
+        "ru": "Мне нужен врач."
+      }
+    },
+    {
+      "native": "मुझे एलर्जी है।",
+      "latin": "Mujhe elarjī hai.",
+      "cyrillic": "муджхе эларджи хай",
+      "translations": {
+        "en": "I have an allergy.",
+        "ru": "У меня аллергия."
+      }
+    },
+    {
+      "native": "आज। कल। अभी। बाद में।",
+      "latin": "Āj. Kal. Abhī. Bād meṁ.",
+      "cyrillic": "адж. кал. абхи. бад мэн",
+      "translations": {
+        "en": "Today. Tomorrow. Now. Later.",
+        "ru": "Сегодня. Завтра. Сейчас. Позже."
+      }
+    },
+    {
+      "native": "खुला। बंद।",
+      "latin": "Khulā. Band.",
+      "cyrillic": "кхула. банд",
+      "translations": {
+        "en": "Open. Closed.",
+        "ru": "Открыто. Закрыто."
+      }
+    },
+    {
+      "native": "यहाँ। वहाँ। पास। दूर।",
+      "latin": "Yahāṁ. Vahāṁ. Pās. Dūr.",
+      "cyrillic": "яха. ваха. пас. дур",
+      "translations": {
+        "en": "Here. There. Near. Far.",
+        "ru": "Здесь. Там. Близко. Далеко."
+      }
+    },
+    {
+      "native": "प्रवेश। निकास।",
+      "latin": "Pravesh. Nikās.",
+      "cyrillic": "правеш. никас",
+      "translations": {
+        "en": "Entrance. Exit.",
+        "ru": "Вход. Выход."
+      }
+    },
+    {
+      "native": "गरम। ठंडा।",
+      "latin": "Garam. Ṭhaṇḍā.",
+      "cyrillic": "гарам. тханда",
+      "translations": {
+        "en": "Hot. Cold.",
+        "ru": "Горячее. Холодное."
+      }
+    },
+    {
+      "native": "छोटा। बड़ा।",
+      "latin": "Chhoṭā. Baṛā.",
+      "cyrillic": "чхота. бара",
+      "translations": {
+        "en": "Small. Large.",
+        "ru": "Маленькое. Большое."
+      }
+    },
+    {
+      "native": "कॉफ़ी। चाय।",
+      "latin": "Kofī. Chāy.",
+      "cyrillic": "кофи. чай",
+      "translations": {
+        "en": "Coffee. Tea.",
+        "ru": "Кофе. Чай."
+      }
+    },
+    {
+      "native": "बिना मांस। शाकाहारी।",
+      "latin": "Binā māns. Shākāhārī.",
+      "cyrillic": "бина маанс. шакахари",
+      "translations": {
+        "en": "Without meat. Vegetarian.",
+        "ru": "Без мяса. Вегетарианское."
+      }
+    },
+    {
+      "native": "मसालेदार नहीं। बिना मेवे।",
+      "latin": "Masāledār nahīṁ. Binā meve.",
+      "cyrillic": "масаледар нахи. бина мевэ",
+      "translations": {
+        "en": "Not spicy. No nuts.",
+        "ru": "Не острое. Без орехов."
+      }
+    },
+    {
+      "native": "मेरी बुकिंग है। वाई-फ़ाई पासवर्ड क्या है?",
+      "latin": "Merī buking hai. Wi-Fi password kyā hai?",
+      "cyrillic": "мери букинг хай. вай-фай пасворд кья хай",
+      "translations": {
+        "en": "I have a reservation. What is the Wi-Fi password?",
+        "ru": "У меня бронь. Какой пароль от Wi-Fi?"
+      }
+    }
+  ]
+}

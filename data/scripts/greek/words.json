@@ -1,0 +1,305 @@
+{
+  "version": 1,
+  "words": [
+    {
+      "native": "καλημέρα",
+      "ipa": "kaliˈmera",
+      "latin": "kalimera",
+      "cyrillic": "калимэра",
+      "meaning": {
+        "en": "good morning",
+        "ru": "доброе утро"
+      }
+    },
+    {
+      "native": "ευχαριστώ",
+      "ipa": "efxaɾiˈsto",
+      "latin": "efcharisto",
+      "cyrillic": "эфхаристо",
+      "meaning": {
+        "en": "thank you",
+        "ru": "спасибо"
+      }
+    },
+    {
+      "native": "παρακαλώ",
+      "ipa": "paɾakaˈlo",
+      "latin": "parakalo",
+      "cyrillic": "паракало",
+      "meaning": {
+        "en": "please / you're welcome",
+        "ru": "пожалуйста"
+      }
+    },
+    {
+      "native": "γεια σου",
+      "ipa": "ˈʝa su",
+      "latin": "yia sou",
+      "cyrillic": "я су",
+      "meaning": {
+        "en": "hello / bye (informal)",
+        "ru": "привет / пока (неформальное)"
+      }
+    },
+    {
+      "native": "ψωμί",
+      "ipa": "psoˈmi",
+      "latin": "psomi",
+      "cyrillic": "псоми",
+      "meaning": {
+        "en": "bread",
+        "ru": "хлеб"
+      }
+    },
+    {
+      "native": "κρασί",
+      "ipa": "kraˈsi",
+      "latin": "krasi",
+      "cyrillic": "краси",
+      "meaning": {
+        "en": "wine",
+        "ru": "вино"
+      }
+    },
+    {
+      "native": "σχολείο",
+      "ipa": "sxoˈlio",
+      "latin": "scholio",
+      "cyrillic": "схолио",
+      "meaning": {
+        "en": "school",
+        "ru": "школа"
+      }
+    },
+    {
+      "native": "δάσκαλος",
+      "ipa": "ˈðaskalos",
+      "latin": "dhaskalos",
+      "cyrillic": "даскалос",
+      "meaning": {
+        "en": "teacher",
+        "ru": "учитель"
+      }
+    },
+    {
+      "native": "μέρα",
+      "ipa": "ˈmera",
+      "latin": "mera",
+      "cyrillic": "мэра",
+      "meaning": {
+        "en": "day",
+        "ru": "день"
+      }
+    },
+    {
+      "native": "νύχτα",
+      "ipa": "ˈnixta",
+      "latin": "nichta",
+      "cyrillic": "нихта",
+      "meaning": {
+        "en": "night",
+        "ru": "ночь"
+      }
+    },
+    {
+      "native": "φεγγάρι",
+      "ipa": "feˈŋɡari",
+      "latin": "fengari",
+      "cyrillic": "фэнгари",
+      "meaning": {
+        "en": "moon",
+        "ru": "луна"
+      }
+    },
+    {
+      "native": "αστέρι",
+      "ipa": "aˈsteri",
+      "latin": "asteri",
+      "cyrillic": "астэри",
+      "meaning": {
+        "en": "star",
+        "ru": "звезда"
+      }
+    },
+    {
+      "native": "άνθρωπος",
+      "ipa": "ˈanθropos",
+      "latin": "anthropos",
+      "cyrillic": "антропос",
+      "meaning": {
+        "en": "human being",
+        "ru": "человек"
+      }
+    },
+    {
+      "native": "γυναίκα",
+      "ipa": "ʝiˈneka",
+      "latin": "gyneka",
+      "cyrillic": "гинэка",
+      "meaning": {
+        "en": "woman",
+        "ru": "женщина"
+      }
+    },
+    {
+      "native": "άνδρας",
+      "ipa": "ˈanðras",
+      "latin": "andras",
+      "cyrillic": "андрас",
+      "meaning": {
+        "en": "man",
+        "ru": "мужчина"
+      }
+    },
+    {
+      "native": "παιδί",
+      "ipa": "peˈði",
+      "latin": "paidi",
+      "cyrillic": "пэди",
+      "meaning": {
+        "en": "child",
+        "ru": "ребёнок"
+      }
+    },
+    {
+      "native": "μήλο",
+      "ipa": "ˈmilo",
+      "latin": "milo",
+      "cyrillic": "мило",
+      "meaning": {
+        "en": "apple",
+        "ru": "яблоко"
+      }
+    },
+    {
+      "native": "πορτοκάλι",
+      "ipa": "portoˈkali",
+      "latin": "portokali",
+      "cyrillic": "портокали",
+      "meaning": {
+        "en": "orange (fruit)",
+        "ru": "апельсин"
+      }
+    },
+    {
+      "native": "ελιά",
+      "ipa": "eˈlia",
+      "latin": "elia",
+      "cyrillic": "элиа",
+      "meaning": {
+        "en": "olive",
+        "ru": "оливка"
+      }
+    },
+    {
+      "native": "μουσική",
+      "ipa": "musiˈki",
+      "latin": "mousiki",
+      "cyrillic": "мусики",
+      "meaning": {
+        "en": "music",
+        "ru": "музыка"
+      }
+    },
+    {
+      "native": "χορός",
+      "ipa": "xoˈros",
+      "latin": "choros",
+      "cyrillic": "хорос",
+      "meaning": {
+        "en": "dance",
+        "ru": "танец"
+      }
+    },
+    {
+      "native": "δρόμος",
+      "ipa": "ˈðromos",
+      "latin": "dhromos",
+      "cyrillic": "дромос",
+      "meaning": {
+        "en": "road",
+        "ru": "дорога"
+      }
+    },
+    {
+      "native": "εκκλησία",
+      "ipa": "ekliˈsia",
+      "latin": "ekklisia",
+      "cyrillic": "эклисиа",
+      "meaning": {
+        "en": "church",
+        "ru": "церковь"
+      }
+    },
+    {
+      "native": "φιλοσοφία",
+      "ipa": "filosoˈfia",
+      "latin": "filosofia",
+      "cyrillic": "философиа",
+      "meaning": {
+        "en": "philosophy",
+        "ru": "философия"
+      }
+    },
+    {
+      "native": "θάλασσα",
+      "ipa": "ˈθalasa",
+      "latin": "thalassa",
+      "cyrillic": "таласа",
+      "meaning": {
+        "en": "sea",
+        "ru": "море"
+      }
+    },
+    {
+      "native": "ουρανός",
+      "ipa": "uɾaˈnos",
+      "latin": "ouranos",
+      "cyrillic": "уранос",
+      "meaning": {
+        "en": "sky",
+        "ru": "небо"
+      }
+    },
+    {
+      "native": "βουνό",
+      "ipa": "vuˈno",
+      "latin": "vouno",
+      "cyrillic": "вуно",
+      "meaning": {
+        "en": "mountain",
+        "ru": "гора"
+      }
+    },
+    {
+      "native": "νησί",
+      "ipa": "niˈsi",
+      "latin": "nisi",
+      "cyrillic": "ниси",
+      "meaning": {
+        "en": "island",
+        "ru": "остров"
+      }
+    },
+    {
+      "native": "γάτα",
+      "ipa": "ˈɣata",
+      "latin": "ghata",
+      "cyrillic": "гата",
+      "meaning": {
+        "en": "cat",
+        "ru": "кошка"
+      }
+    },
+    {
+      "native": "σκύλος",
+      "ipa": "ˈskilos",
+      "latin": "skylos",
+      "cyrillic": "скилос",
+      "meaning": {
+        "en": "dog",
+        "ru": "собака"
+      }
+    }
+  ]
+}

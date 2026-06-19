@@ -110,13 +110,14 @@ export async function renderSpell(_, mount) {
     recordWord(script.meta.id, current.native, { correct });
     const noteText = localized(current.note);
     const note = noteText ? `<div class="note">📝 ${escapeHtml(noteText)}</div>` : '';
-    const voweledHint = current.nativeVoweled
+    const answerNative = settings.vocalised && current.nativeVoweled ? current.nativeVoweled : current.native;
+    const voweledHint = !settings.vocalised && current.nativeVoweled
       ? `<div class="muted small">${escapeHtml(t('read.vocalised_label'))} <span dir="${script.meta.direction}">${escapeHtml(current.nativeVoweled)}</span></div>` : '';
     resultEl.innerHTML = `
       <div class="verdict ${correct ? 'good' : 'bad'}">${correct ? escapeHtml(t('read.verdict_correct')) : escapeHtml(t('read.verdict_wrong'))}</div>
       <div class="answer-row">
         <span class="muted">${escapeHtml(t('read.answer'))}</span>
-        <strong class="answer-text" dir="${script.meta.direction}">${escapeHtml(current.native)}</strong>
+        <strong class="answer-text" dir="${script.meta.direction}">${escapeHtml(answerNative)}</strong>
       </div>
       ${voweledHint}
       ${current.ipa ? `<div class="ipa">/${escapeHtml(current.ipa)}/</div>` : ''}

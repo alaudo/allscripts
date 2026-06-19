@@ -1,0 +1,177 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "native": "ال",
+      "ipa": "al",
+      "latin": "al-",
+      "cyrillic": "аль",
+      "category": "common",
+      "note": {
+        "en": "The definite article, very common on signs and names.",
+        "ru": "Определённый артикль, часто встречается на вывесках и в названиях."
+      }
+    },
+    {
+      "native": "لا",
+      "ipa": "laː",
+      "latin": "la",
+      "cyrillic": "ля",
+      "category": "common"
+    },
+    {
+      "native": "ما",
+      "ipa": "maː",
+      "latin": "ma",
+      "cyrillic": "ма",
+      "category": "common"
+    },
+    {
+      "native": "مد",
+      "ipa": "mad",
+      "latin": "mad",
+      "cyrillic": "мад",
+      "category": "common"
+    },
+    {
+      "native": "مط",
+      "ipa": "mat",
+      "latin": "mat",
+      "cyrillic": "мат",
+      "category": "common"
+    },
+    {
+      "native": "مس",
+      "ipa": "mus",
+      "latin": "mus",
+      "cyrillic": "мус",
+      "category": "common"
+    },
+    {
+      "native": "ب  بـ  ـبـ  ـب",
+      "ipa": "b",
+      "latin": "b forms",
+      "cyrillic": "формы б",
+      "category": "form",
+      "match": [
+        "ب"
+      ],
+      "note": {
+        "en": "Isolated, initial, medial and final shapes of bāʾ.",
+        "ru": "Изолированная, начальная, срединная и конечная формы ба."
+      }
+    },
+    {
+      "native": "م  مـ  ـمـ  ـم",
+      "ipa": "m",
+      "latin": "m forms",
+      "cyrillic": "формы м",
+      "category": "form",
+      "match": [
+        "م"
+      ],
+      "note": {
+        "en": "Common contextual shapes of mīm.",
+        "ru": "Распространённые контекстные формы мим."
+      }
+    },
+    {
+      "native": "ع  عـ  ـعـ  ـع",
+      "ipa": "ʕ",
+      "latin": "' forms",
+      "cyrillic": "формы айн",
+      "category": "form",
+      "match": [
+        "ع"
+      ],
+      "note": {
+        "en": "ʿayn changes shape strongly by position.",
+        "ru": "Айн заметно меняет форму в зависимости от позиции."
+      }
+    },
+    {
+      "native": "ه  هـ  ـهـ  ـه",
+      "ipa": "h",
+      "latin": "h forms",
+      "cyrillic": "формы х",
+      "category": "form",
+      "match": [
+        "ه"
+      ],
+      "note": {
+        "en": "hāʾ has distinct middle and final shapes.",
+        "ru": "У ха разные срединные и конечные формы."
+      }
+    },
+    {
+      "native": "ات",
+      "ipa": "aːt",
+      "latin": "at",
+      "cyrillic": "ат",
+      "category": "common"
+    },
+    {
+      "native": "سي",
+      "ipa": "siː",
+      "latin": "si",
+      "cyrillic": "си",
+      "category": "common"
+    },
+    {
+      "native": "يو",
+      "ipa": "juː",
+      "latin": "yu",
+      "cyrillic": "ю",
+      "category": "common"
+    },
+    {
+      "native": "ار",
+      "ipa": "aːr",
+      "latin": "ar",
+      "cyrillic": "ар",
+      "category": "common"
+    },
+    {
+      "native": "بي",
+      "ipa": "biː",
+      "latin": "bi",
+      "cyrillic": "би",
+      "category": "common"
+    },
+    {
+      "native": "تر",
+      "ipa": "tr",
+      "latin": "tr",
+      "cyrillic": "тр",
+      "category": "common"
+    },
+    {
+      "native": "را",
+      "ipa": "raː",
+      "latin": "ra",
+      "cyrillic": "ра",
+      "category": "common"
+    },
+    {
+      "native": "ول",
+      "ipa": "uːl",
+      "latin": "ul",
+      "cyrillic": "уль",
+      "category": "common"
+    },
+    {
+      "native": "يا",
+      "ipa": "jaː",
+      "latin": "ya",
+      "cyrillic": "я",
+      "category": "common"
+    },
+    {
+      "native": "با",
+      "ipa": "baː",
+      "latin": "ba",
+      "cyrillic": "ба",
+      "category": "common"
+    }
+  ]
+}

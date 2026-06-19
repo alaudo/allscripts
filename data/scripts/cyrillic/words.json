@@ -1,0 +1,305 @@
+{
+  "version": 1,
+  "words": [
+    {
+      "native": "привет",
+      "ipa": "prʲɪˈvʲet",
+      "latin": "privet",
+      "cyrillic": "привет",
+      "meaning": {
+        "en": "hi",
+        "ru": "привет"
+      }
+    },
+    {
+      "native": "спасибо",
+      "ipa": "spɐˈsʲibə",
+      "latin": "spasibo",
+      "cyrillic": "спасибо",
+      "meaning": {
+        "en": "thank you",
+        "ru": "спасибо"
+      }
+    },
+    {
+      "native": "пожалуйста",
+      "ipa": "pɐˈʐaləstə",
+      "latin": "pozhaluysta",
+      "cyrillic": "пожалуйста",
+      "meaning": {
+        "en": "please / you're welcome",
+        "ru": "пожалуйста"
+      }
+    },
+    {
+      "native": "до свидания",
+      "ipa": "də svʲɪˈdanʲɪjə",
+      "latin": "do svidaniya",
+      "cyrillic": "до свидания",
+      "meaning": {
+        "en": "goodbye",
+        "ru": "до свидания"
+      }
+    },
+    {
+      "native": "хлеб",
+      "ipa": "xlʲep",
+      "latin": "khleb",
+      "cyrillic": "хлеб",
+      "meaning": {
+        "en": "bread",
+        "ru": "хлеб"
+      }
+    },
+    {
+      "native": "вода",
+      "ipa": "vɐˈda",
+      "latin": "voda",
+      "cyrillic": "вода",
+      "meaning": {
+        "en": "water",
+        "ru": "вода"
+      }
+    },
+    {
+      "native": "молоко",
+      "ipa": "məlɐˈko",
+      "latin": "moloko",
+      "cyrillic": "молоко",
+      "meaning": {
+        "en": "milk",
+        "ru": "молоко"
+      }
+    },
+    {
+      "native": "чай",
+      "ipa": "tɕaj",
+      "latin": "chay",
+      "cyrillic": "чай",
+      "meaning": {
+        "en": "tea",
+        "ru": "чай"
+      }
+    },
+    {
+      "native": "кофе",
+      "ipa": "ˈkofʲɪ",
+      "latin": "kofe",
+      "cyrillic": "кофе",
+      "meaning": {
+        "en": "coffee",
+        "ru": "кофе"
+      }
+    },
+    {
+      "native": "книга",
+      "ipa": "ˈknʲiɡə",
+      "latin": "kniga",
+      "cyrillic": "книга",
+      "meaning": {
+        "en": "book",
+        "ru": "книга"
+      }
+    },
+    {
+      "native": "город",
+      "ipa": "ˈɡorət",
+      "latin": "gorod",
+      "cyrillic": "город",
+      "meaning": {
+        "en": "city",
+        "ru": "город"
+      }
+    },
+    {
+      "native": "улица",
+      "ipa": "ˈulʲɪtsə",
+      "latin": "ulitsa",
+      "cyrillic": "улица",
+      "meaning": {
+        "en": "street",
+        "ru": "улица"
+      }
+    },
+    {
+      "native": "машина",
+      "ipa": "mɐˈʂɨnə",
+      "latin": "mashina",
+      "cyrillic": "машина",
+      "meaning": {
+        "en": "car",
+        "ru": "машина"
+      }
+    },
+    {
+      "native": "поезд",
+      "ipa": "ˈpojɪst",
+      "latin": "poyezd",
+      "cyrillic": "поезд",
+      "meaning": {
+        "en": "train",
+        "ru": "поезд"
+      }
+    },
+    {
+      "native": "работа",
+      "ipa": "rɐˈbotə",
+      "latin": "rabota",
+      "cyrillic": "работа",
+      "meaning": {
+        "en": "work",
+        "ru": "работа"
+      }
+    },
+    {
+      "native": "школа",
+      "ipa": "ˈʂkolə",
+      "latin": "shkola",
+      "cyrillic": "школа",
+      "meaning": {
+        "en": "school",
+        "ru": "школа"
+      }
+    },
+    {
+      "native": "солнце",
+      "ipa": "ˈsontsə",
+      "latin": "solntse",
+      "cyrillic": "солнце",
+      "meaning": {
+        "en": "sun",
+        "ru": "солнце"
+      }
+    },
+    {
+      "native": "небо",
+      "ipa": "ˈnʲebə",
+      "latin": "nebo",
+      "cyrillic": "небо",
+      "meaning": {
+        "en": "sky",
+        "ru": "небо"
+      }
+    },
+    {
+      "native": "зима",
+      "ipa": "zʲɪˈma",
+      "latin": "zima",
+      "cyrillic": "зима",
+      "meaning": {
+        "en": "winter",
+        "ru": "зима"
+      }
+    },
+    {
+      "native": "лето",
+      "ipa": "ˈlʲetə",
+      "latin": "leto",
+      "cyrillic": "лето",
+      "meaning": {
+        "en": "summer",
+        "ru": "лето"
+      }
+    },
+    {
+      "native": "весна",
+      "ipa": "vʲɪsˈna",
+      "latin": "vesna",
+      "cyrillic": "весна",
+      "meaning": {
+        "en": "spring",
+        "ru": "весна"
+      }
+    },
+    {
+      "native": "осень",
+      "ipa": "ˈosʲɪnʲ",
+      "latin": "osen",
+      "cyrillic": "осень",
+      "meaning": {
+        "en": "autumn",
+        "ru": "осень"
+      }
+    },
+    {
+      "native": "друг",
+      "ipa": "druk",
+      "latin": "drug",
+      "cyrillic": "друг",
+      "meaning": {
+        "en": "friend",
+        "ru": "друг"
+      }
+    },
+    {
+      "native": "любовь",
+      "ipa": "lʲʊˈbofʲ",
+      "latin": "lyubov",
+      "cyrillic": "любовь",
+      "meaning": {
+        "en": "love",
+        "ru": "любовь"
+      }
+    },
+    {
+      "native": "счастье",
+      "ipa": "ˈɕːasʲtʲjɪ",
+      "latin": "schastye",
+      "cyrillic": "счастье",
+      "meaning": {
+        "en": "happiness",
+        "ru": "счастье"
+      }
+    },
+    {
+      "native": "музыка",
+      "ipa": "ˈmuzɨkə",
+      "latin": "muzyka",
+      "cyrillic": "музыка",
+      "meaning": {
+        "en": "music",
+        "ru": "музыка"
+      }
+    },
+    {
+      "native": "родина",
+      "ipa": "ˈrodʲɪnə",
+      "latin": "rodina",
+      "cyrillic": "родина",
+      "meaning": {
+        "en": "homeland",
+        "ru": "родина"
+      }
+    },
+    {
+      "native": "собака",
+      "ipa": "sɐˈbakə",
+      "latin": "sobaka",
+      "cyrillic": "собака",
+      "meaning": {
+        "en": "dog",
+        "ru": "собака"
+      }
+    },
+    {
+      "native": "кошка",
+      "ipa": "ˈkoʂkə",
+      "latin": "koshka",
+      "cyrillic": "кошка",
+      "meaning": {
+        "en": "cat",
+        "ru": "кошка"
+      }
+    },
+    {
+      "native": "яблоко",
+      "ipa": "ˈjabləkə",
+      "latin": "yabloko",
+      "cyrillic": "яблоко",
+      "meaning": {
+        "en": "apple",
+        "ru": "яблоко"
+      }
+    }
+  ]
+}

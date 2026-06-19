@@ -1,0 +1,309 @@
+{
+  "version": 1,
+  "words": [
+    {
+      "native": "ありがとう",
+      "ipa": "aɾiɡatoː",
+      "latin": "arigatō",
+      "cyrillic": "аригато:",
+      "meaning": {
+        "en": "thank you",
+        "ru": "спасибо"
+      }
+    },
+    {
+      "native": "こんにちは",
+      "ipa": "konnitɕiwa",
+      "latin": "konnichiwa",
+      "cyrillic": "коннитива",
+      "meaning": {
+        "en": "hello",
+        "ru": "привет"
+      },
+      "note": {
+        "en": "The final は (ha) is read 'wa' as a topic-marker particle here.",
+        "ru": "Конечное は (ha) здесь читается как «wa», поскольку это частица-показатель темы."
+      }
+    },
+    {
+      "native": "さようなら",
+      "ipa": "sajoːnaɾa",
+      "latin": "sayōnara",
+      "cyrillic": "саё:нара",
+      "meaning": {
+        "en": "goodbye",
+        "ru": "до свидания"
+      }
+    },
+    {
+      "native": "すみません",
+      "ipa": "sɯmimaseɴ",
+      "latin": "sumimasen",
+      "cyrillic": "сумимасэн",
+      "meaning": {
+        "en": "excuse me / sorry",
+        "ru": "извините"
+      }
+    },
+    {
+      "native": "おはよう",
+      "ipa": "ohajoː",
+      "latin": "ohayō",
+      "cyrillic": "охаё:",
+      "meaning": {
+        "en": "good morning",
+        "ru": "доброе утро"
+      }
+    },
+    {
+      "native": "こんばんは",
+      "ipa": "kombaɴwa",
+      "latin": "konbanwa",
+      "cyrillic": "конбанва",
+      "meaning": {
+        "en": "good evening",
+        "ru": "добрый вечер"
+      }
+    },
+    {
+      "native": "おやすみ",
+      "ipa": "ojasɯmi",
+      "latin": "oyasumi",
+      "cyrillic": "оясуми",
+      "meaning": {
+        "en": "good night",
+        "ru": "спокойной ночи"
+      }
+    },
+    {
+      "native": "がっこう",
+      "ipa": "ɡakkoː",
+      "latin": "gakkō",
+      "cyrillic": "гакко:",
+      "meaning": {
+        "en": "school",
+        "ru": "школа"
+      }
+    },
+    {
+      "native": "せんせい",
+      "ipa": "sensei",
+      "latin": "sensei",
+      "cyrillic": "сэнсэи",
+      "meaning": {
+        "en": "teacher",
+        "ru": "учитель"
+      }
+    },
+    {
+      "native": "がくせい",
+      "ipa": "ɡakɯsei",
+      "latin": "gakusei",
+      "cyrillic": "гакусэи",
+      "meaning": {
+        "en": "student",
+        "ru": "студент"
+      }
+    },
+    {
+      "native": "ともだち",
+      "ipa": "tomodatɕi",
+      "latin": "tomodachi",
+      "cyrillic": "томодати",
+      "meaning": {
+        "en": "friend",
+        "ru": "друг"
+      }
+    },
+    {
+      "native": "いぬ",
+      "ipa": "inɯ",
+      "latin": "inu",
+      "cyrillic": "ину",
+      "meaning": {
+        "en": "dog",
+        "ru": "собака"
+      }
+    },
+    {
+      "native": "ねこ",
+      "ipa": "neko",
+      "latin": "neko",
+      "cyrillic": "нэко",
+      "meaning": {
+        "en": "cat",
+        "ru": "кошка"
+      }
+    },
+    {
+      "native": "さくら",
+      "ipa": "sakɯɾa",
+      "latin": "sakura",
+      "cyrillic": "сакура",
+      "meaning": {
+        "en": "cherry blossom",
+        "ru": "сакура"
+      }
+    },
+    {
+      "native": "やま",
+      "ipa": "jama",
+      "latin": "yama",
+      "cyrillic": "яма",
+      "meaning": {
+        "en": "mountain",
+        "ru": "гора"
+      }
+    },
+    {
+      "native": "うみ",
+      "ipa": "ɯmi",
+      "latin": "umi",
+      "cyrillic": "уми",
+      "meaning": {
+        "en": "sea",
+        "ru": "море"
+      }
+    },
+    {
+      "native": "そら",
+      "ipa": "soɾa",
+      "latin": "sora",
+      "cyrillic": "сора",
+      "meaning": {
+        "en": "sky",
+        "ru": "небо"
+      }
+    },
+    {
+      "native": "ほし",
+      "ipa": "hoɕi",
+      "latin": "hoshi",
+      "cyrillic": "хоси",
+      "meaning": {
+        "en": "star",
+        "ru": "звезда"
+      }
+    },
+    {
+      "native": "つき",
+      "ipa": "tsɯki",
+      "latin": "tsuki",
+      "cyrillic": "цуки",
+      "meaning": {
+        "en": "moon",
+        "ru": "луна"
+      }
+    },
+    {
+      "native": "たいよう",
+      "ipa": "taijoː",
+      "latin": "taiyō",
+      "cyrillic": "таиё:",
+      "meaning": {
+        "en": "sun",
+        "ru": "солнце"
+      }
+    },
+    {
+      "native": "みず",
+      "ipa": "mizɯ",
+      "latin": "mizu",
+      "cyrillic": "мидзу",
+      "meaning": {
+        "en": "water",
+        "ru": "вода"
+      }
+    },
+    {
+      "native": "たべもの",
+      "ipa": "tabemono",
+      "latin": "tabemono",
+      "cyrillic": "табэмоно",
+      "meaning": {
+        "en": "food",
+        "ru": "еда"
+      }
+    },
+    {
+      "native": "ほん",
+      "ipa": "hoɴ",
+      "latin": "hon",
+      "cyrillic": "хон",
+      "meaning": {
+        "en": "book",
+        "ru": "книга"
+      }
+    },
+    {
+      "native": "でんしゃ",
+      "ipa": "deɴɕa",
+      "latin": "densha",
+      "cyrillic": "дэнся",
+      "meaning": {
+        "en": "train",
+        "ru": "поезд"
+      }
+    },
+    {
+      "native": "くるま",
+      "ipa": "kɯɾɯma",
+      "latin": "kuruma",
+      "cyrillic": "курума",
+      "meaning": {
+        "en": "car",
+        "ru": "машина"
+      }
+    },
+    {
+      "native": "いえ",
+      "ipa": "ie",
+      "latin": "ie",
+      "cyrillic": "иэ",
+      "meaning": {
+        "en": "house",
+        "ru": "дом"
+      }
+    },
+    {
+      "native": "まち",
+      "ipa": "matɕi",
+      "latin": "machi",
+      "cyrillic": "мати",
+      "meaning": {
+        "en": "town",
+        "ru": "город"
+      }
+    },
+    {
+      "native": "えき",
+      "ipa": "eki",
+      "latin": "eki",
+      "cyrillic": "эки",
+      "meaning": {
+        "en": "station",
+        "ru": "станция"
+      }
+    },
+    {
+      "native": "ちず",
+      "ipa": "tɕizɯ",
+      "latin": "chizu",
+      "cyrillic": "тидзу",
+      "meaning": {
+        "en": "map",
+        "ru": "карта"
+      }
+    },
+    {
+      "native": "がいこく",
+      "ipa": "ɡaikokɯ",
+      "latin": "gaikoku",
+      "cyrillic": "гаикоку",
+      "meaning": {
+        "en": "foreign country",
+        "ru": "заграница"
+      }
+    }
+  ]
+}

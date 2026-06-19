@@ -1,0 +1,276 @@
+{
+  "version": 3,
+  "language": "Japanese",
+  "phrases": [
+    {
+      "native": "こんにちは。ありがとうございます。",
+      "latin": "Konnichiwa. Arigatō gozaimasu.",
+      "cyrillic": "коннитива. аригато годзаймас",
+      "translations": {
+        "en": "Hello. Thank you.",
+        "ru": "Здравствуйте. Спасибо."
+      }
+    },
+    {
+      "native": "おねがいします。すみません。",
+      "latin": "Onegai shimasu. Sumimasen.",
+      "cyrillic": "онэгай симас. сумимасэн",
+      "translations": {
+        "en": "Please. Excuse me.",
+        "ru": "Пожалуйста. Извините."
+      }
+    },
+    {
+      "native": "はい。いいえ。",
+      "latin": "Hai. Iie.",
+      "cyrillic": "хай. иие",
+      "translations": {
+        "en": "Yes. No.",
+        "ru": "Да. Нет."
+      }
+    },
+    {
+      "native": "えいごをはなせますか。",
+      "latin": "Eigo o hanasemasu ka?",
+      "cyrillic": "эйго о ханасэмас ка",
+      "translations": {
+        "en": "Do you speak English?",
+        "ru": "Вы говорите по-английски?"
+      }
+    },
+    {
+      "native": "わかりません。ゆっくりはなしてください。",
+      "latin": "Wakarimasen. Yukkuri hanashite kudasai.",
+      "cyrillic": "вакаримасэн. юккури ханаситэ кудасай",
+      "translations": {
+        "en": "I don't understand. Please speak slowly.",
+        "ru": "Я не понимаю. Говорите медленнее, пожалуйста."
+      }
+    },
+    {
+      "native": "ちずでみせてください。",
+      "latin": "Chizu de misete kudasai.",
+      "cyrillic": "тидзу дэ мисэтэ кудасай",
+      "translations": {
+        "en": "Can you show me on the map?",
+        "ru": "Покажите мне на карте."
+      }
+    },
+    {
+      "native": "おてあらいはどこですか。",
+      "latin": "Otearai wa doko desu ka?",
+      "cyrillic": "отэарай ва доко дэс ка",
+      "translations": {
+        "en": "Where is the toilet?",
+        "ru": "Где туалет?"
+      }
+    },
+    {
+      "native": "これはいくらですか。",
+      "latin": "Kore wa ikura desu ka?",
+      "cyrillic": "корэ ва икура дэс ка",
+      "translations": {
+        "en": "How much is this?",
+        "ru": "Сколько это стоит?"
+      }
+    },
+    {
+      "native": "これをください。",
+      "latin": "Kore o kudasai.",
+      "cyrillic": "корэ о кудасай",
+      "translations": {
+        "en": "I would like this.",
+        "ru": "Дайте это, пожалуйста."
+      }
+    },
+    {
+      "native": "みずをください。おかいけいをおねがいします。",
+      "latin": "Mizu o kudasai. Okaikei o onegai shimasu.",
+      "cyrillic": "мидзу о кудасай. окайкэй о онэгай симас",
+      "translations": {
+        "en": "Water, please. The bill, please.",
+        "ru": "Воды, пожалуйста. Счёт, пожалуйста."
+      }
+    },
+    {
+      "native": "カードでしはらえますか。",
+      "latin": "Kādo de shiharaemasu ka?",
+      "cyrillic": "кадо дэ сихараэмас ка",
+      "translations": {
+        "en": "Can I pay by card?",
+        "ru": "Можно оплатить картой?"
+      }
+    },
+    {
+      "native": "えきはどこですか。",
+      "latin": "Eki wa doko desu ka?",
+      "cyrillic": "эки ва доко дэс ка",
+      "translations": {
+        "en": "Where is the train station?",
+        "ru": "Где станция?"
+      }
+    },
+    {
+      "native": "きっぷをいちまいください。",
+      "latin": "Kippu o ichimai kudasai.",
+      "cyrillic": "киппу о итимай кудасай",
+      "translations": {
+        "en": "One ticket, please.",
+        "ru": "Один билет, пожалуйста."
+      }
+    },
+    {
+      "native": "たくしーがひつようです。",
+      "latin": "Takushī ga hitsuyō desu.",
+      "cyrillic": "такуси га хицуйо дэс",
+      "translations": {
+        "en": "I need a taxi.",
+        "ru": "Мне нужно такси."
+      }
+    },
+    {
+      "native": "このじゅうしょまでおねがいします。",
+      "latin": "Kono jūsho made onegai shimasu.",
+      "cyrillic": "коно дзюсё мадэ онэгай симас",
+      "translations": {
+        "en": "Please take me to this address.",
+        "ru": "Отвезите меня по этому адресу, пожалуйста."
+      }
+    },
+    {
+      "native": "ひだり。みぎ。まっすぐ。",
+      "latin": "Hidari. Migi. Massugu.",
+      "cyrillic": "хидари. миги. массгу",
+      "translations": {
+        "en": "Left. Right. Straight ahead.",
+        "ru": "Налево. Направо. Прямо."
+      }
+    },
+    {
+      "native": "まいごです。",
+      "latin": "Maigo desu.",
+      "cyrillic": "майго дэс",
+      "translations": {
+        "en": "I am lost.",
+        "ru": "Я потерялся/потерялась."
+      }
+    },
+    {
+      "native": "たすけて！けいさつをよんでください。",
+      "latin": "Tasukete! Keisatsu o yonde kudasai.",
+      "cyrillic": "тасукэтэ! кэйсацу о ёндэ кудасай",
+      "translations": {
+        "en": "Help! Call the police.",
+        "ru": "Помогите! Вызовите полицию."
+      }
+    },
+    {
+      "native": "いしゃがひつようです。",
+      "latin": "Isha ga hitsuyō desu.",
+      "cyrillic": "ися га хицуйо дэс",
+      "translations": {
+        "en": "I need a doctor.",
+        "ru": "Мне нужен врач."
+      }
+    },
+    {
+      "native": "あれるぎーがあります。",
+      "latin": "Arerugī ga arimasu.",
+      "cyrillic": "арэруги га аримас",
+      "translations": {
+        "en": "I have an allergy.",
+        "ru": "У меня аллергия."
+      }
+    },
+    {
+      "native": "きょう。あした。いま。あとで。",
+      "latin": "Kyō. Ashita. Ima. Ato de.",
+      "cyrillic": "кё. асита. има. ато дэ",
+      "translations": {
+        "en": "Today. Tomorrow. Now. Later.",
+        "ru": "Сегодня. Завтра. Сейчас. Позже."
+      }
+    },
+    {
+      "native": "あいています。しまっています。",
+      "latin": "Aite imasu. Shimatte imasu.",
+      "cyrillic": "айтэ имас. симаттэ имас",
+      "translations": {
+        "en": "Open. Closed.",
+        "ru": "Открыто. Закрыто."
+      }
+    },
+    {
+      "native": "ここ。そこ。ちかい。とおい。",
+      "latin": "Koko. Soko. Chikai. Tōi.",
+      "cyrillic": "коко. соко. тикай. тоой",
+      "translations": {
+        "en": "Here. There. Near. Far.",
+        "ru": "Здесь. Там. Близко. Далеко."
+      }
+    },
+    {
+      "native": "いりぐち。でぐち。",
+      "latin": "Iriguchi. Deguchi.",
+      "cyrillic": "иригути. дэгути",
+      "translations": {
+        "en": "Entrance. Exit.",
+        "ru": "Вход. Выход."
+      }
+    },
+    {
+      "native": "あつい。つめたい。",
+      "latin": "Atsui. Tsumetai.",
+      "cyrillic": "ацуй. цумэтай",
+      "translations": {
+        "en": "Hot. Cold.",
+        "ru": "Горячее. Холодное."
+      }
+    },
+    {
+      "native": "ちいさい。おおきい。",
+      "latin": "Chiisai. Ōkii.",
+      "cyrillic": "тиисай. оокий",
+      "translations": {
+        "en": "Small. Large.",
+        "ru": "Маленькое. Большое."
+      }
+    },
+    {
+      "native": "こーひー。おちゃ。",
+      "latin": "Kōhī. Ocha.",
+      "cyrillic": "коохи. оча",
+      "translations": {
+        "en": "Coffee. Tea.",
+        "ru": "Кофе. Чай."
+      }
+    },
+    {
+      "native": "にくなし。べじたりあんです。",
+      "latin": "Niku nashi. Bejitarian desu.",
+      "cyrillic": "нику наси. бэдзитариан дэс",
+      "translations": {
+        "en": "Without meat. Vegetarian.",
+        "ru": "Без мяса. Вегетарианское."
+      }
+    },
+    {
+      "native": "からくない。なっつなし。",
+      "latin": "Karakunai. Nattsu nashi.",
+      "cyrillic": "каракунай. наццу наси",
+      "translations": {
+        "en": "Not spicy. No nuts.",
+        "ru": "Не острое. Без орехов."
+      }
+    },
+    {
+      "native": "よやくしています。わいふぁいのぱすわーどはなんですか。",
+      "latin": "Yoyaku shite imasu. Waifai no pasuwādo wa nan desu ka?",
+      "cyrillic": "ёяку ситэ имас. вайфай но пасувадо ва нан дэс ка",
+      "translations": {
+        "en": "I have a reservation. What is the Wi-Fi password?",
+        "ru": "У меня бронь. Какой пароль от Wi-Fi?"
+      }
+    }
+  ]
+}

@@ -1,0 +1,276 @@
+{
+  "version": 3,
+  "language": "Russian",
+  "phrases": [
+    {
+      "native": "Здравствуйте. Спасибо.",
+      "latin": "Zdravstvuyte. Spasibo.",
+      "cyrillic": "Здравствуйте. Спасибо.",
+      "translations": {
+        "en": "Hello. Thank you.",
+        "ru": "Здравствуйте. Спасибо."
+      }
+    },
+    {
+      "native": "Пожалуйста. Извините.",
+      "latin": "Pozhaluysta. Izvinite.",
+      "cyrillic": "Пожалуйста. Извините.",
+      "translations": {
+        "en": "Please. Excuse me.",
+        "ru": "Пожалуйста. Извините."
+      }
+    },
+    {
+      "native": "Да. Нет.",
+      "latin": "Da. Net.",
+      "cyrillic": "Да. Нет.",
+      "translations": {
+        "en": "Yes. No.",
+        "ru": "Да. Нет."
+      }
+    },
+    {
+      "native": "Вы говорите по-английски?",
+      "latin": "Vy govorite po-angliyski?",
+      "cyrillic": "Вы говорите по-английски?",
+      "translations": {
+        "en": "Do you speak English?",
+        "ru": "Вы говорите по-английски?"
+      }
+    },
+    {
+      "native": "Я не понимаю. Говорите медленнее, пожалуйста.",
+      "latin": "Ya ne ponimayu. Govorite medlenneye, pozhaluysta.",
+      "cyrillic": "Я не понимаю. Говорите медленнее, пожалуйста.",
+      "translations": {
+        "en": "I don't understand. Please speak slowly.",
+        "ru": "Я не понимаю. Говорите медленнее, пожалуйста."
+      }
+    },
+    {
+      "native": "Покажите на карте, пожалуйста.",
+      "latin": "Pokazhite na karte, pozhaluysta.",
+      "cyrillic": "Покажите на карте, пожалуйста.",
+      "translations": {
+        "en": "Can you show me on the map?",
+        "ru": "Покажите мне на карте?"
+      }
+    },
+    {
+      "native": "Где туалет?",
+      "latin": "Gde tualet?",
+      "cyrillic": "Где туалет?",
+      "translations": {
+        "en": "Where is the toilet?",
+        "ru": "Где туалет?"
+      }
+    },
+    {
+      "native": "Сколько это стоит?",
+      "latin": "Skolko eto stoit?",
+      "cyrillic": "Сколько это стоит?",
+      "translations": {
+        "en": "How much is this?",
+        "ru": "Сколько это стоит?"
+      }
+    },
+    {
+      "native": "Я хочу это.",
+      "latin": "Ya khochu eto.",
+      "cyrillic": "Я хочу это.",
+      "translations": {
+        "en": "I would like this.",
+        "ru": "Я хочу это."
+      }
+    },
+    {
+      "native": "Воду, пожалуйста. Счёт, пожалуйста.",
+      "latin": "Vodu, pozhaluysta. Schyot, pozhaluysta.",
+      "cyrillic": "Воду, пожалуйста. Счёт, пожалуйста.",
+      "translations": {
+        "en": "Water, please. The bill, please.",
+        "ru": "Воды, пожалуйста. Счёт, пожалуйста."
+      }
+    },
+    {
+      "native": "Можно оплатить картой?",
+      "latin": "Mozhno oplatit kartoy?",
+      "cyrillic": "Можно оплатить картой?",
+      "translations": {
+        "en": "Can I pay by card?",
+        "ru": "Можно оплатить картой?"
+      }
+    },
+    {
+      "native": "Где станция метро?",
+      "latin": "Gde stantsiya metro?",
+      "cyrillic": "Где станция метро?",
+      "translations": {
+        "en": "Where is the metro station?",
+        "ru": "Где станция метро?"
+      }
+    },
+    {
+      "native": "Один билет, пожалуйста.",
+      "latin": "Odin bilet, pozhaluysta.",
+      "cyrillic": "Один билет, пожалуйста.",
+      "translations": {
+        "en": "One ticket, please.",
+        "ru": "Один билет, пожалуйста."
+      }
+    },
+    {
+      "native": "Мне нужно такси.",
+      "latin": "Mne nuzhno taksi.",
+      "cyrillic": "Мне нужно такси.",
+      "translations": {
+        "en": "I need a taxi.",
+        "ru": "Мне нужно такси."
+      }
+    },
+    {
+      "native": "Отвезите меня по этому адресу, пожалуйста.",
+      "latin": "Otvezite menya po etomu adresu, pozhaluysta.",
+      "cyrillic": "Отвезите меня по этому адресу, пожалуйста.",
+      "translations": {
+        "en": "Please take me to this address.",
+        "ru": "Отвезите меня по этому адресу, пожалуйста."
+      }
+    },
+    {
+      "native": "Налево. Направо. Прямо.",
+      "latin": "Nalevo. Napravo. Pryamo.",
+      "cyrillic": "Налево. Направо. Прямо.",
+      "translations": {
+        "en": "Left. Right. Straight ahead.",
+        "ru": "Налево. Направо. Прямо."
+      }
+    },
+    {
+      "native": "Я заблудился/заблудилась.",
+      "latin": "Ya zabludilsya/zabludilas.",
+      "cyrillic": "Я заблудился/заблудилась.",
+      "translations": {
+        "en": "I am lost.",
+        "ru": "Я заблудился/заблудилась."
+      }
+    },
+    {
+      "native": "Помогите! Вызовите полицию.",
+      "latin": "Pomogite! Vyzovite politsiyu.",
+      "cyrillic": "Помогите! Вызовите полицию.",
+      "translations": {
+        "en": "Help! Call the police.",
+        "ru": "Помогите! Вызовите полицию."
+      }
+    },
+    {
+      "native": "Мне нужен врач.",
+      "latin": "Mne nuzhen vrach.",
+      "cyrillic": "Мне нужен врач.",
+      "translations": {
+        "en": "I need a doctor.",
+        "ru": "Мне нужен врач."
+      }
+    },
+    {
+      "native": "У меня аллергия.",
+      "latin": "U menya allergiya.",
+      "cyrillic": "У меня аллергия.",
+      "translations": {
+        "en": "I have an allergy.",
+        "ru": "У меня аллергия."
+      }
+    },
+    {
+      "native": "Сегодня. Завтра. Сейчас. Позже.",
+      "latin": "Segodnya. Zavtra. Seychas. Pozzhe.",
+      "cyrillic": "Сегодня. Завтра. Сейчас. Позже.",
+      "translations": {
+        "en": "Today. Tomorrow. Now. Later.",
+        "ru": "Сегодня. Завтра. Сейчас. Позже."
+      }
+    },
+    {
+      "native": "Открыто. Закрыто.",
+      "latin": "Otkryto. Zakryto.",
+      "cyrillic": "Открыто. Закрыто.",
+      "translations": {
+        "en": "Open. Closed.",
+        "ru": "Открыто. Закрыто."
+      }
+    },
+    {
+      "native": "Здесь. Там. Близко. Далеко.",
+      "latin": "Zdes. Tam. Blizko. Daleko.",
+      "cyrillic": "Здесь. Там. Близко. Далеко.",
+      "translations": {
+        "en": "Here. There. Near. Far.",
+        "ru": "Здесь. Там. Близко. Далеко."
+      }
+    },
+    {
+      "native": "Вход. Выход.",
+      "latin": "Vkhod. Vykhod.",
+      "cyrillic": "Вход. Выход.",
+      "translations": {
+        "en": "Entrance. Exit.",
+        "ru": "Вход. Выход."
+      }
+    },
+    {
+      "native": "Горячее. Холодное.",
+      "latin": "Goryacheye. Kholodnoye.",
+      "cyrillic": "Горячее. Холодное.",
+      "translations": {
+        "en": "Hot. Cold.",
+        "ru": "Горячее. Холодное."
+      }
+    },
+    {
+      "native": "Маленькое. Большое.",
+      "latin": "Malenkoye. Bolshoye.",
+      "cyrillic": "Маленькое. Большое.",
+      "translations": {
+        "en": "Small. Large.",
+        "ru": "Маленькое. Большое."
+      }
+    },
+    {
+      "native": "Кофе. Чай.",
+      "latin": "Kofe. Chay.",
+      "cyrillic": "Кофе. Чай.",
+      "translations": {
+        "en": "Coffee. Tea.",
+        "ru": "Кофе. Чай."
+      }
+    },
+    {
+      "native": "Без мяса. Вегетарианское.",
+      "latin": "Bez myasa. Vegetarianskoye.",
+      "cyrillic": "Без мяса. Вегетарианское.",
+      "translations": {
+        "en": "Without meat. Vegetarian.",
+        "ru": "Без мяса. Вегетарианское."
+      }
+    },
+    {
+      "native": "Не острое. Без орехов.",
+      "latin": "Ne ostroye. Bez orekhov.",
+      "cyrillic": "Не острое. Без орехов.",
+      "translations": {
+        "en": "Not spicy. No nuts.",
+        "ru": "Не острое. Без орехов."
+      }
+    },
+    {
+      "native": "У меня бронь. Какой пароль от Wi-Fi?",
+      "latin": "U menya bron. Kakoy parol ot Wi-Fi?",
+      "cyrillic": "У меня бронь. Какой пароль от Wi-Fi?",
+      "translations": {
+        "en": "I have a reservation. What is the Wi-Fi password?",
+        "ru": "У меня бронь. Какой пароль от Wi-Fi?"
+      }
+    }
+  ]
+}

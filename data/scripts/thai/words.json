@@ -1,0 +1,305 @@
+{
+  "version": 1,
+  "words": [
+    {
+      "native": "สวัสดี",
+      "ipa": "saˈwat.diː",
+      "latin": "sawatdi",
+      "cyrillic": "саватди",
+      "meaning": {
+        "en": "hello",
+        "ru": "привет"
+      }
+    },
+    {
+      "native": "ขอบคุณ",
+      "ipa": "kʰɔ̀ːp.kʰun",
+      "latin": "khopkhun",
+      "cyrillic": "кхопкхун",
+      "meaning": {
+        "en": "thank you",
+        "ru": "спасибо"
+      }
+    },
+    {
+      "native": "ใช่",
+      "ipa": "tɕʰâj",
+      "latin": "chai",
+      "cyrillic": "чхай",
+      "meaning": {
+        "en": "yes",
+        "ru": "да"
+      }
+    },
+    {
+      "native": "ไม่",
+      "ipa": "mâj",
+      "latin": "mai",
+      "cyrillic": "май",
+      "meaning": {
+        "en": "no / not",
+        "ru": "нет / не"
+      }
+    },
+    {
+      "native": "กาแฟ",
+      "ipa": "kaː.fɛː",
+      "latin": "kafae",
+      "cyrillic": "кафэ",
+      "meaning": {
+        "en": "coffee",
+        "ru": "кофе"
+      }
+    },
+    {
+      "native": "ชา",
+      "ipa": "tɕʰaː",
+      "latin": "cha",
+      "cyrillic": "ча",
+      "meaning": {
+        "en": "tea",
+        "ru": "чай"
+      }
+    },
+    {
+      "native": "น้ำ",
+      "ipa": "náːm",
+      "latin": "nam",
+      "cyrillic": "нам",
+      "meaning": {
+        "en": "water",
+        "ru": "вода"
+      }
+    },
+    {
+      "native": "ข้าว",
+      "ipa": "kʰâːw",
+      "latin": "khao",
+      "cyrillic": "кхао",
+      "meaning": {
+        "en": "rice",
+        "ru": "рис"
+      }
+    },
+    {
+      "native": "แท็กซี่",
+      "ipa": "tʰɛ́k.sîː",
+      "latin": "thaeksi",
+      "cyrillic": "тхэкси",
+      "meaning": {
+        "en": "taxi",
+        "ru": "такси"
+      }
+    },
+    {
+      "native": "รถบัส",
+      "ipa": "rót.bát",
+      "latin": "rotbat",
+      "cyrillic": "ротбат",
+      "meaning": {
+        "en": "bus",
+        "ru": "автобус"
+      }
+    },
+    {
+      "native": "รถไฟ",
+      "ipa": "rót.faj",
+      "latin": "rotfai",
+      "cyrillic": "ротфай",
+      "meaning": {
+        "en": "train",
+        "ru": "поезд"
+      }
+    },
+    {
+      "native": "โรงแรม",
+      "ipa": "roːŋ.rɛːm",
+      "latin": "rongraem",
+      "cyrillic": "ронграэм",
+      "meaning": {
+        "en": "hotel",
+        "ru": "отель"
+      }
+    },
+    {
+      "native": "โรงพยาบาล",
+      "ipa": "roːŋ.pʰa.jaː.baːn",
+      "latin": "rongphayaban",
+      "cyrillic": "ронгпхаябан",
+      "meaning": {
+        "en": "hospital",
+        "ru": "больница"
+      }
+    },
+    {
+      "native": "ธนาคาร",
+      "ipa": "tʰa.naː.kʰaːn",
+      "latin": "thanakhan",
+      "cyrillic": "тханакхан",
+      "meaning": {
+        "en": "bank",
+        "ru": "банк"
+      }
+    },
+    {
+      "native": "ตลาด",
+      "ipa": "ta.làːt",
+      "latin": "talat",
+      "cyrillic": "талат",
+      "meaning": {
+        "en": "market",
+        "ru": "рынок"
+      }
+    },
+    {
+      "native": "ดนตรี",
+      "ipa": "don.triː",
+      "latin": "dontri",
+      "cyrillic": "донтри",
+      "meaning": {
+        "en": "music",
+        "ru": "музыка"
+      }
+    },
+    {
+      "native": "โทรศัพท์",
+      "ipa": "tʰoː.ra.sàp",
+      "latin": "thorasap",
+      "cyrillic": "тхорасап",
+      "meaning": {
+        "en": "telephone",
+        "ru": "телефон"
+      }
+    },
+    {
+      "native": "คอมพิวเตอร์",
+      "ipa": "kʰɔm.pʰíw.tɤː",
+      "latin": "khomphiwtoe",
+      "cyrillic": "кхомпхиутхо",
+      "meaning": {
+        "en": "computer",
+        "ru": "компьютер"
+      }
+    },
+    {
+      "native": "อินเทอร์เน็ต",
+      "ipa": "ʔin.tʰɤː.nét",
+      "latin": "intoenet",
+      "cyrillic": "интхонэт",
+      "meaning": {
+        "en": "internet",
+        "ru": "интернет"
+      }
+    },
+    {
+      "native": "เมือง",
+      "ipa": "mɯːaŋ",
+      "latin": "mueang",
+      "cyrillic": "мыанг",
+      "meaning": {
+        "en": "city / town",
+        "ru": "город"
+      }
+    },
+    {
+      "native": "มหาวิทยาลัย",
+      "ipa": "ma.hǎː.wít.tʰa.jaː.laj",
+      "latin": "mahawitthayalai",
+      "cyrillic": "махавитхаялай",
+      "meaning": {
+        "en": "university",
+        "ru": "университет"
+      }
+    },
+    {
+      "native": "พ่อ",
+      "ipa": "pʰɔ̂ː",
+      "latin": "pho",
+      "cyrillic": "пхо",
+      "meaning": {
+        "en": "father",
+        "ru": "отец"
+      }
+    },
+    {
+      "native": "แม่",
+      "ipa": "mɛ̂ː",
+      "latin": "mae",
+      "cyrillic": "мэ",
+      "meaning": {
+        "en": "mother",
+        "ru": "мать"
+      }
+    },
+    {
+      "native": "หมา",
+      "ipa": "mǎː",
+      "latin": "ma",
+      "cyrillic": "ма",
+      "meaning": {
+        "en": "dog",
+        "ru": "собака"
+      }
+    },
+    {
+      "native": "แมว",
+      "ipa": "mɛːw",
+      "latin": "maeo",
+      "cyrillic": "мэо",
+      "meaning": {
+        "en": "cat",
+        "ru": "кошка"
+      }
+    },
+    {
+      "native": "เพื่อน",
+      "ipa": "pʰɯ̂ːan",
+      "latin": "phuean",
+      "cyrillic": "пхыан",
+      "meaning": {
+        "en": "friend",
+        "ru": "друг"
+      }
+    },
+    {
+      "native": "ครอบครัว",
+      "ipa": "kʰrɔ̂ːp.kʰrua",
+      "latin": "khropkhrua",
+      "cyrillic": "кхропкхруа",
+      "meaning": {
+        "en": "family",
+        "ru": "семья"
+      }
+    },
+    {
+      "native": "พิซซ่า",
+      "ipa": "pʰít.sâː",
+      "latin": "phitsa",
+      "cyrillic": "пхитса",
+      "meaning": {
+        "en": "pizza",
+        "ru": "пицца"
+      }
+    },
+    {
+      "native": "ช็อกโกแลต",
+      "ipa": "tɕʰɔ́k.koː.lɛ̀ːt",
+      "latin": "chokkolaet",
+      "cyrillic": "чхоккоэт",
+      "meaning": {
+        "en": "chocolate",
+        "ru": "шоколад"
+      }
+    },
+    {
+      "native": "หนังสือ",
+      "ipa": "nǎŋ.sɯ̌ː",
+      "latin": "nangsue",
+      "cyrillic": "нангсы",
+      "meaning": {
+        "en": "book",
+        "ru": "книга"
+      }
+    }
+  ]
+}

@@ -6,6 +6,8 @@
 import { getScript, getWordPool } from '../data.js';
 import { getSettings, updateSettings, recordWord, getWordProgress } from '../storage.js';
 import { el, escapeHtml, shuffle, formatMinutes, fieldFor, nextTranscription } from '../ui/dom.js';
+import { bindFlashcardKeys, flashcardShortcutHelpHtml } from '../ui/flashcard-keys.js';
+import { countdownBadgeHtml, hideCountdownBadges, updateCountdownBadges } from '../ui/countdown.js';
 import { t, localized, transcriptionLabel } from '../i18n.js';
 
 function ratings() {
@@ -61,18 +63,28 @@ export async function renderFlashcardsWords(_, mount) {
       <div class="timer-bar" id="timer-bar" hidden><div class="timer-fill" id="timer-fill"></div></div>
 
       <div class="card-stack">
-        <button class="flashcard word-card" id="card" dir="${script.meta.direction}">
+        <button class="flashcard word-card" id="card" dir="${script.meta.direction}" aria-keyshortcuts="Escape Space Enter ArrowLeft ArrowRight">
           <div class="face front"></div>
           <div class="face back"></div>
         </button>
       </div>
+      <div class="shortcut-toast" id="shortcut-toast" aria-live="polite" aria-atomic="true"></div>
 
       <div class="card-actions rate-row" id="rate-row"></div>
+      ${flashcardShortcutHelpHtml({
+        title: t('flashcards.shortcuts'),
+        homeLabel: t('flashcards.shortcut.home'),
+        flipLabel: t('flashcards.shortcut.flip'),
+        skipLabel: t('flashcards.shortcut.skip'),
+        previousLabel: t('flashcards.shortcut.previous'),
+        nextLabel: t('flashcards.shortcut.next'),
+        ratings: RATINGS
+      })}
 
       <div class="card-nav">
-        <button class="btn-link" id="prev">${escapeHtml(t('flashcards.previous'))}</button>
+        <button class="btn-link" id="prev" title="${escapeHtml(`ArrowLeft: ${t('flashcards.shortcut.previous')}`)}" aria-keyshortcuts="ArrowLeft">${escapeHtml(t('flashcards.previous'))}</button>
         <span class="muted small" id="counter"></span>
-        <button class="btn-link" id="next">${escapeHtml(t('flashcards.next'))}</button>
+        <button class="btn-link" id="next" title="${escapeHtml(`ArrowRight: ${t('flashcards.shortcut.next')}`)}" aria-keyshortcuts="ArrowRight">${escapeHtml(t('flashcards.next'))}</button>
       </div>
 
       <div class="card-shuffle">
@@ -90,14 +102,25 @@ export async function renderFlashcardsWords(_, mount) {
   const rateRow = root.querySelector('#rate-row');
   const timerBar = root.querySelector('#timer-bar');
   const timerFill = root.querySelector('#timer-fill');
+  const homeLink = root.querySelector('.back');
+  const prevBtn = root.querySelector('#prev');
+  const nextBtn = root.querySelector('#next');
+  const shortcutToast = root.querySelector('#shortcut-toast');
+  const rateButtons = {};
+  let actions = null;
 
-  for (const r of RATINGS) {
+  RATINGS.forEach((r, i) => {
     const min = settings.wordsSrsIntervals[r.key] ?? 0;
     const tip = t('flashcards.next_review', { interval: formatMinutes(min) });
-    const btn = el(`<button class="${r.cls}" data-rate="${r.key}" title="${escapeHtml(tip)}">${escapeHtml(r.label)}<span class="rate-int muted small">${escapeHtml(formatMinutes(min))}</span></button>`);
-    btn.addEventListener('click', e => { e.stopPropagation(); rateCurrent(r.key); });
+    const btn = el(`<button class="${r.cls}" data-rate="${r.key}" title="${escapeHtml(`${i + 1}: ${r.label} - ${tip}`)}"><span class="rate-key" aria-hidden="true">${i + 1}</span>${escapeHtml(r.label)}<span class="rate-int muted small">${escapeHtml(formatMinutes(min))}</span></button>`);
+    btn.setAttribute('aria-keyshortcuts', String(i + 1));
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      actions?.rate(r.key);
+    });
+    rateButtons[r.key] = btn;
     rateRow.appendChild(btn);
-  }
+  });
 
   const transToggle = root.querySelector('#trans-toggle');
   if (transToggle) {
@@ -123,16 +146,15 @@ export async function renderFlashcardsWords(_, mount) {
     const meaning = localized(word.meaning);
     const tField = fieldFor(transcription);
     const trans = word[tField] || word.latin || word.ipa || '';
-    const transLine = trans ? `<div class="word-transcription muted small">${escapeHtml(trans)}</div>` : '';
+    const transLine = trans ? `<div class="word-transcription">${escapeHtml(trans)}</div>` : '';
     frontEl.innerHTML = `
+      ${countdownBadgeHtml()}
       <div class="word-native" dir="${script.meta.direction}">${escapeHtml(word.native)}</div>
-      ${transLine}
-      <div class="word-hint muted small">${escapeHtml(t('flashcards_words.tap_to_reveal'))}</div>
     `;
     backEl.innerHTML = `
-      <div class="word-meaning">${escapeHtml(meaning)}</div>
-      <div class="word-native back-native" dir="${script.meta.direction}">${escapeHtml(word.native)}</div>
+      ${countdownBadgeHtml()}
       ${transLine}
+      <div class="word-meaning muted">${escapeHtml(meaning)}</div>
       ${word.note ? `<div class="note muted small">${escapeHtml(localized(word.note))}</div>` : ''}
       <div class="word-hint muted small">${escapeHtml(t('flashcards_words.tap_to_flip_back'))}</div>
     `;
@@ -141,19 +163,27 @@ export async function renderFlashcardsWords(_, mount) {
     deckInfoEl.textContent = dueNow > 0
       ? t('flashcards_words.due_now', { n: dueNow })
       : t('flashcards_words.no_due');
+    startTimerIfEnabled();
   }
 
   function startTimerIfEnabled() {
     const secs = settings.wordsTimerSec;
-    if (!secs || secs <= 0) { timerBar.hidden = true; return; }
+    const countdownBadges = root.querySelectorAll('.timer-countdown');
+    if (!secs || secs <= 0) {
+      timerBar.hidden = true;
+      hideCountdownBadges(countdownBadges);
+      return;
+    }
     timerBar.hidden = false;
     timerFill.style.width = '100%';
     timerStart = performance.now();
     const total = secs * 1000;
+    updateCountdownBadges(countdownBadges, total);
     const tick = () => {
       const elapsed = performance.now() - timerStart;
       const remaining = Math.max(0, total - elapsed);
       timerFill.style.width = `${(remaining / total) * 100}%`;
+      updateCountdownBadges(countdownBadges, remaining);
       if (remaining > 0) timerRaf = requestAnimationFrame(tick);
     };
     timerRaf = requestAnimationFrame(tick);
@@ -172,6 +202,7 @@ export async function renderFlashcardsWords(_, mount) {
     if (timerHandle) { clearTimeout(timerHandle); timerHandle = null; }
     if (timerRaf) { cancelAnimationFrame(timerRaf); timerRaf = null; }
     timerFill.style.width = '0%';
+    hideCountdownBadges(root.querySelectorAll('.timer-countdown'));
   }
 
   function rateCurrent(ratingKey) {
@@ -184,29 +215,68 @@ export async function renderFlashcardsWords(_, mount) {
   }
 
   cardEl.addEventListener('click', () => {
+    flipCard();
+  });
+
+  function flipCard() {
     flipped = !flipped;
     if (flipped && deck.length) recordWord(script.meta.id, keyOf(deck[idx]), {});
     render();
-    if (flipped) startTimerIfEnabled();
-  });
+  }
 
-  root.querySelector('#prev').addEventListener('click', e => {
+  prevBtn.addEventListener('click', e => {
     e.stopPropagation();
-    if (!deck.length) return;
-    idx = (idx - 1 + deck.length) % deck.length;
-    flipped = false;
-    render();
-    startTimerIfEnabled();
+    actions?.previous();
   });
-  root.querySelector('#next').addEventListener('click', e => { e.stopPropagation(); advance(); });
+  nextBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    actions?.next();
+  });
   root.querySelector('#shuffle').addEventListener('click', e => {
     e.stopPropagation();
     deck = buildDeck(script, allWords);
     idx = 0;
     flipped = false;
     render();
-    startTimerIfEnabled();
   });
+
+  actions = bindFlashcardKeys({
+    root,
+    home: goHome,
+    previous,
+    next: advance,
+    skip: advance,
+    flip: flipCard,
+    rate: rateCurrent,
+    ratingKeys: RATINGS.map(r => r.key),
+    labels: {
+      home: t('flashcards.shortcut.home'),
+      flip: t('flashcards.shortcut.flip'),
+      next: t('flashcards.shortcut.next'),
+      skip: t('flashcards.shortcut.skip'),
+      previous: t('flashcards.shortcut.previous'),
+      ratings: RATINGS.map(r => r.label)
+    },
+    controls: {
+      home: homeLink,
+      previous: prevBtn,
+      card: cardEl,
+      next: nextBtn,
+      ratings: rateButtons,
+      status: shortcutToast
+    }
+  });
+
+  function goHome() {
+    location.hash = '#/home';
+  }
+
+  function previous() {
+    if (!deck.length) return;
+    idx = (idx - 1 + deck.length) % deck.length;
+    flipped = false;
+    render();
+  }
 
   function advance() {
     if (!deck.length) return;
@@ -214,14 +284,15 @@ export async function renderFlashcardsWords(_, mount) {
     flipped = false;
     if (idx === 0) deck = buildDeck(script, allWords);
     render();
-    startTimerIfEnabled();
   }
 
   render();
-  startTimerIfEnabled();
   mount.appendChild(root);
 
-  const stop = () => stopTimer();
+  const stop = () => {
+    stopTimer();
+    actions?.dispose();
+  };
   window.addEventListener('hashchange', stop, { once: true });
 }
 

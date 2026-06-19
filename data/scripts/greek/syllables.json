@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "native": "κα",
+      "ipa": "ka",
+      "latin": "ka",
+      "cyrillic": "ка",
+      "category": "common"
+    },
+    {
+      "native": "πα",
+      "ipa": "pa",
+      "latin": "pa",
+      "cyrillic": "па",
+      "category": "common"
+    },
+    {
+      "native": "πο",
+      "ipa": "po",
+      "latin": "po",
+      "cyrillic": "по",
+      "category": "common"
+    },
+    {
+      "native": "μα",
+      "ipa": "ma",
+      "latin": "ma",
+      "cyrillic": "ма",
+      "category": "common"
+    },
+    {
+      "native": "με",
+      "ipa": "me",
+      "latin": "me",
+      "cyrillic": "мэ",
+      "category": "common"
+    },
+    {
+      "native": "νε",
+      "ipa": "ne",
+      "latin": "ne",
+      "cyrillic": "нэ",
+      "category": "common"
+    },
+    {
+      "native": "το",
+      "ipa": "to",
+      "latin": "to",
+      "cyrillic": "то",
+      "category": "common"
+    },
+    {
+      "native": "στ",
+      "ipa": "st",
+      "latin": "st",
+      "cyrillic": "ст",
+      "category": "common"
+    },
+    {
+      "native": "στο",
+      "ipa": "sto",
+      "latin": "sto",
+      "cyrillic": "сто",
+      "category": "common"
+    },
+    {
+      "native": "ου",
+      "ipa": "u",
+      "latin": "ou",
+      "cyrillic": "у",
+      "category": "common",
+      "note": {
+        "en": "Digraph read /u/.",
+        "ru": "Диграф, читается /u/."
+      }
+    },
+    {
+      "native": "ος",
+      "ipa": "os",
+      "latin": "os",
+      "cyrillic": "ос",
+      "category": "common"
+    },
+    {
+      "native": "ρα",
+      "ipa": "ra",
+      "latin": "ra",
+      "cyrillic": "ра",
+      "category": "common"
+    },
+    {
+      "native": "τα",
+      "ipa": "ta",
+      "latin": "ta",
+      "cyrillic": "та",
+      "category": "common"
+    },
+    {
+      "native": "αλ",
+      "ipa": "al",
+      "latin": "al",
+      "cyrillic": "ал",
+      "category": "common"
+    },
+    {
+      "native": "ορ",
+      "ipa": "or",
+      "latin": "or",
+      "cyrillic": "ор",
+      "category": "common"
+    },
+    {
+      "native": "άν",
+      "ipa": "an",
+      "latin": "an",
+      "cyrillic": "ан",
+      "category": "common"
+    },
+    {
+      "native": "σι",
+      "ipa": "si",
+      "latin": "si",
+      "cyrillic": "си",
+      "category": "common"
+    },
+    {
+      "native": "σο",
+      "ipa": "so",
+      "latin": "so",
+      "cyrillic": "со",
+      "category": "common"
+    },
+    {
+      "native": "ασ",
+      "ipa": "as",
+      "latin": "as",
+      "cyrillic": "ас",
+      "category": "common"
+    },
+    {
+      "native": "δο",
+      "ipa": "do",
+      "latin": "do",
+      "cyrillic": "до",
+      "category": "common"
+    }
+  ]
+}

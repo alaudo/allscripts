@@ -2,33 +2,40 @@ import { startRouter, registerRoute, setFallback, redispatch } from './router.js
 import { initTheme, applyTheme } from './theme.js';
 import { applyChromeStrings, t, setLang, currentLang, LANGUAGES } from './i18n.js';
 import { getSettings, updateSettings } from './storage.js';
+import { registerServiceWorker } from './pwa.js';
 import { renderHome } from './ui/home.js';
 import { renderSettings } from './ui/settings.js';
 import { renderFlashcards } from './modes/flashcards.js';
+import { renderFlashcardsSyllables } from './modes/flashcards-syllables.js';
 import { renderFlashcardsWords } from './modes/flashcards-words.js';
 import { renderRead } from './modes/read.js';
 import { renderSpell } from './modes/spell.js';
 import { renderPhrases } from './modes/phrases.js';
 import { renderPreviewLetters } from './modes/preview-letters.js';
+import { renderPreviewSyllables } from './modes/preview-syllables.js';
 import { renderPreviewWords } from './modes/preview-words.js';
 import { renderPreviewPhrases } from './modes/preview-phrases.js';
-import { renderChooseLetters, renderChooseWords, renderChoosePhrases } from './modes/choose.js';
+import { renderChooseLetters, renderChooseSyllables, renderChooseWords, renderChoosePhrases } from './modes/choose.js';
 
 applyChromeStrings();
 initTheme();
 initLangToggle();
+registerServiceWorker();
 
 registerRoute('home', renderHome);
 registerRoute('settings', renderSettings);
 registerRoute('flashcards', renderFlashcards);
+registerRoute('flashcards-syllables', renderFlashcardsSyllables);
 registerRoute('flashcards-words', renderFlashcardsWords);
 registerRoute('read', renderRead);
 registerRoute('spell', renderSpell);
 registerRoute('phrases', renderPhrases);
 registerRoute('preview-letters', renderPreviewLetters);
+registerRoute('preview-syllables', renderPreviewSyllables);
 registerRoute('preview-words', renderPreviewWords);
 registerRoute('preview-phrases', renderPreviewPhrases);
 registerRoute('choose-letters', renderChooseLetters);
+registerRoute('choose-syllables', renderChooseSyllables);
 registerRoute('choose-words', renderChooseWords);
 registerRoute('choose-phrases', renderChoosePhrases);
 
