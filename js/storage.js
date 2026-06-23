@@ -2,6 +2,13 @@
 // JSON.stringify round-trip keeps the saved state self-consistent.
 
 const KEY = 'scriptgame:v1';
+const LEARNED_THRESHOLD_OPTIONS = [1, 2, 3, 4, 5, 7, 10];
+const LEARNED_THRESHOLD_KEYS = [
+  'letterLearnedThreshold',
+  'syllableLearnedThreshold',
+  'wordLearnedThreshold',
+  'phraseLearnedThreshold'
+];
 
 const DEFAULTS = {
   version: 1,
@@ -13,6 +20,12 @@ const DEFAULTS = {
     theme: 'auto',            // 'auto' | 'light' | 'dark'
     uiLanguage: 'en',         // 'en' | 'ru'
     fuzzy: false,             // allow small typos in mode 2 / mode 3 transliteration matching
+    suppressKeyboardOnMobile: false, // keep the phone keyboard closed when an in-app keyboard is available
+    scriptKeyboardLayout: 'alphabetic', // 'alphabetic' | 'classic'
+    letterLearnedThreshold: 3, // correct Choose-letter answers required before marking a letter learned
+    syllableLearnedThreshold: 3,
+    wordLearnedThreshold: 3,
+    phraseLearnedThreshold: 3,
     flashcardTimerSec: 0,     // 0 = off; seconds per LETTER card before auto-advance
     syllablesTimerSec: 0,     // same idea, applied to SYLLABLE flashcards
     phrasesTimerSec: 0,       // same idea, applied to PHRASE flashcards
@@ -53,17 +66,22 @@ function load() {
     const raw = localStorage.getItem(KEY);
     if (!raw) return structuredClone(DEFAULTS);
     const parsed = JSON.parse(raw);
+    const settings = {
+      ...DEFAULTS.settings,
+      ...(parsed.settings || {}),
+      srsIntervals: { ...DEFAULTS.settings.srsIntervals, ...((parsed.settings || {}).srsIntervals || {}) },
+      syllablesSrsIntervals: { ...DEFAULTS.settings.syllablesSrsIntervals, ...((parsed.settings || {}).syllablesSrsIntervals || {}) },
+      phrasesSrsIntervals: { ...DEFAULTS.settings.phrasesSrsIntervals, ...((parsed.settings || {}).phrasesSrsIntervals || {}) },
+      wordsSrsIntervals: { ...DEFAULTS.settings.wordsSrsIntervals, ...((parsed.settings || {}).wordsSrsIntervals || {}) }
+    };
+    for (const key of LEARNED_THRESHOLD_KEYS) {
+      const value = Number(settings[key]);
+      settings[key] = LEARNED_THRESHOLD_OPTIONS.includes(value) ? value : DEFAULTS.settings[key];
+    }
     return {
       ...DEFAULTS,
       ...parsed,
-      settings: {
-        ...DEFAULTS.settings,
-        ...(parsed.settings || {}),
-        srsIntervals: { ...DEFAULTS.settings.srsIntervals, ...((parsed.settings || {}).srsIntervals || {}) },
-        syllablesSrsIntervals: { ...DEFAULTS.settings.syllablesSrsIntervals, ...((parsed.settings || {}).syllablesSrsIntervals || {}) },
-        phrasesSrsIntervals: { ...DEFAULTS.settings.phrasesSrsIntervals, ...((parsed.settings || {}).phrasesSrsIntervals || {}) },
-        wordsSrsIntervals: { ...DEFAULTS.settings.wordsSrsIntervals, ...((parsed.settings || {}).wordsSrsIntervals || {}) }
-      },
+      settings,
       progress: { ...(parsed.progress || {}) }
     };
   } catch {
@@ -86,7 +104,12 @@ export function getSettings() {
 }
 
 export function updateSettings(patch) {
-  state.settings = { ...state.settings, ...patch };
+  const next = { ...state.settings, ...patch };
+  for (const key of LEARNED_THRESHOLD_KEYS) {
+    const value = Number(next[key]);
+    next[key] = LEARNED_THRESHOLD_OPTIONS.includes(value) ? value : DEFAULTS.settings[key];
+  }
+  state.settings = next;
   persist();
   return { ...state.settings };
 }
@@ -113,10 +136,40 @@ function ensureScript(scriptId) {
   return bucket;
 }
 
-export function recordLetter(scriptId, glyph, { known, dueAt, intervalMin } = {}) {
+function learnedThreshold(settingKey) {
+  return Math.max(1, Number(state.settings[settingKey]) || 1);
+}
+
+function defaultPracticeEntry() {
+  return {
+    correct: 0,
+    wrong: 0,
+    seen: 0,
+    known: false,
+    due: 0,
+    intervalMin: 0,
+    ratings: 0,
+    correctStreak: 0
+  };
+}
+
+function applyCorrectOutcome(entry, correct, thresholdSettingKey) {
+  if (correct === true) {
+    entry.correct = (entry.correct || 0) + 1;
+    entry.correctStreak = (entry.correctStreak || 0) + 1;
+    entry.known = entry.correctStreak >= learnedThreshold(thresholdSettingKey);
+  } else if (correct === false) {
+    entry.wrong = (entry.wrong || 0) + 1;
+    entry.correctStreak = 0;
+    entry.known = false;
+  }
+}
+
+export function recordLetter(scriptId, glyph, { correct, known, dueAt, intervalMin } = {}) {
   const bucket = ensureScript(scriptId).letters;
-  const entry = bucket[glyph] || { seen: 0, known: false, due: 0, intervalMin: 0, ratings: 0 };
+  const entry = bucket[glyph] || defaultPracticeEntry();
   entry.seen += 1;
+  applyCorrectOutcome(entry, correct, 'letterLearnedThreshold');
   if (typeof known === 'boolean') entry.known = known;
   if (typeof dueAt === 'number') entry.due = dueAt;
   if (typeof intervalMin === 'number') entry.intervalMin = intervalMin;
@@ -127,16 +180,17 @@ export function recordLetter(scriptId, glyph, { known, dueAt, intervalMin } = {}
 
 export function getLetterProgress(scriptId, glyph) {
   const p = state.progress[scriptId];
-  if (!p || !p.letters || !p.letters[glyph]) return { seen: 0, known: false, due: 0, intervalMin: 0, ratings: 0 };
+  if (!p || !p.letters || !p.letters[glyph]) {
+    return defaultPracticeEntry();
+  }
   return { ...p.letters[glyph] };
 }
 
 export function recordSyllable(scriptId, key, { correct, known, dueAt, intervalMin } = {}) {
   const bucket = ensureScript(scriptId).syllables;
-  const entry = bucket[key] || { correct: 0, wrong: 0, seen: 0, known: false, due: 0, intervalMin: 0, ratings: 0 };
+  const entry = bucket[key] || defaultPracticeEntry();
   entry.seen = (entry.seen || 0) + 1;
-  if (correct === true) entry.correct = (entry.correct || 0) + 1;
-  else if (correct === false) entry.wrong = (entry.wrong || 0) + 1;
+  applyCorrectOutcome(entry, correct, 'syllableLearnedThreshold');
   if (typeof known === 'boolean') entry.known = known;
   if (typeof dueAt === 'number') entry.due = dueAt;
   if (typeof intervalMin === 'number') entry.intervalMin = intervalMin;
@@ -148,7 +202,7 @@ export function recordSyllable(scriptId, key, { correct, known, dueAt, intervalM
 export function getSyllableProgress(scriptId, key) {
   const p = state.progress[scriptId];
   if (!p || !p.syllables || !p.syllables[key]) {
-    return { correct: 0, wrong: 0, seen: 0, known: false, due: 0, intervalMin: 0, ratings: 0 };
+    return defaultPracticeEntry();
   }
   return { ...p.syllables[key] };
 }
@@ -159,12 +213,11 @@ export function getSyllableProgress(scriptId, key) {
 // entry so the "X / Y learned" summary keeps working.
 export function recordWord(scriptId, key, { correct, known, dueAt, intervalMin } = {}) {
   const bucket = ensureScript(scriptId).words;
-  const entry = bucket[key] || { correct: 0, wrong: 0, seen: 0, known: false, due: 0, intervalMin: 0, ratings: 0 };
-  if (correct === true) entry.correct = (entry.correct || 0) + 1;
-  else if (correct === false) entry.wrong = (entry.wrong || 0) + 1;
+  const entry = bucket[key] || defaultPracticeEntry();
+  entry.seen = (entry.seen || 0) + 1;
+  applyCorrectOutcome(entry, correct, 'wordLearnedThreshold');
   if (typeof known === 'boolean') {
     entry.known = known;
-    entry.seen = (entry.seen || 0) + 1;
   }
   if (typeof dueAt === 'number') entry.due = dueAt;
   if (typeof intervalMin === 'number') entry.intervalMin = intervalMin;
@@ -176,15 +229,16 @@ export function recordWord(scriptId, key, { correct, known, dueAt, intervalMin }
 export function getWordProgress(scriptId, key) {
   const p = state.progress[scriptId];
   if (!p || !p.words || !p.words[key]) {
-    return { correct: 0, wrong: 0, seen: 0, known: false, due: 0, intervalMin: 0, ratings: 0 };
+    return defaultPracticeEntry();
   }
   return { ...p.words[key] };
 }
 
-export function recordPhrase(scriptId, key, { known, dueAt, intervalMin } = {}) {
+export function recordPhrase(scriptId, key, { correct, known, dueAt, intervalMin } = {}) {
   const bucket = ensureScript(scriptId).phrases;
-  const entry = bucket[key] || { seen: 0, known: false, due: 0, intervalMin: 0, ratings: 0 };
+  const entry = bucket[key] || defaultPracticeEntry();
   entry.seen += 1;
+  applyCorrectOutcome(entry, correct, 'phraseLearnedThreshold');
   if (typeof known === 'boolean') entry.known = known;
   if (typeof dueAt === 'number') entry.due = dueAt;
   if (typeof intervalMin === 'number') entry.intervalMin = intervalMin;
@@ -195,7 +249,7 @@ export function recordPhrase(scriptId, key, { known, dueAt, intervalMin } = {}) 
 
 export function getPhraseProgress(scriptId, key) {
   const p = state.progress[scriptId];
-  if (!p || !p.phrases || !p.phrases[key]) return { seen: 0, known: false, due: 0, intervalMin: 0, ratings: 0 };
+  if (!p || !p.phrases || !p.phrases[key]) return defaultPracticeEntry();
   return { ...p.phrases[key] };
 }
 
@@ -221,7 +275,7 @@ export function summary(scriptId) {
   const wordsWrong = Object.values(p.words).reduce((n, w) => n + (w.wrong || 0), 0);
   // A word is considered "learned" once the learner has answered it correctly
   // at least once and has more correct answers than wrong ones.
-  const wordsLearned = Object.values(p.words).filter(w => (w.correct || 0) > 0 && (w.correct || 0) >= (w.wrong || 0)).length;
+  const wordsLearned = Object.values(p.words).filter(w => w.known || ((w.correctStreak || 0) >= learnedThreshold('wordLearnedThreshold'))).length;
   const phrasesKnown = Object.values(p.phrases).filter(ph => ph.known).length;
   const phrasesSeen = Object.keys(p.phrases).length;
   return { lettersKnown, lettersSeen, syllablesKnown, syllablesSeen, syllablesCorrect, syllablesWrong, wordsCorrect, wordsWrong, wordsLearned, phrasesKnown, phrasesSeen };

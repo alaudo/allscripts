@@ -1,6 +1,6 @@
 import { getScript, getWordPool } from '../data.js';
 import { getSettings, updateSettings, recordWord } from '../storage.js';
-import { el, escapeHtml, pickRandom, looseEqual, fuzzyEqual, inputFieldFor, nextInputSystem } from '../ui/dom.js';
+import { el, escapeHtml, pickRandom, looseEqual, fuzzyEqual, inputFieldFor, nextInputSystem, shouldSuppressMobileKeyboard, focusIfKeyboardAllowed } from '../ui/dom.js';
 import { renderKeyboard } from '../ui/keyboard.js';
 import { IPA_ROWS } from '../ui/ipa-keyboard.js';
 import { t, inputSystemLabel, localized } from '../i18n.js';
@@ -11,6 +11,7 @@ export async function renderRead(_, mount) {
   const pool = await getWordPool(script.meta.id);
   const field = inputFieldFor(settings.inputSystem);
   const useIpaKeyboard = settings.inputSystem === 'ipa';
+  let suppressNativeKeyboard = shouldSuppressMobileKeyboard(settings, useIpaKeyboard);
 
   let current = pickRandom(pool);
   let revealed = false;
@@ -34,6 +35,15 @@ export async function renderRead(_, mount) {
           <button type="submit" class="btn">${escapeHtml(t('read.check'))}</button>
         </form>
         <div class="result" id="result" aria-live="polite"></div>
+        ${useIpaKeyboard ? `
+        <label class="switch-field task-switch">
+          <input type="checkbox" id="suppress-mobile-keyboard" ${settings.suppressKeyboardOnMobile ? 'checked' : ''} />
+          <span class="switch-track" aria-hidden="true"></span>
+          <span class="switch-copy">
+            <span class="field-label">${escapeHtml(t('task.suppress_mobile_keyboard'))}</span>
+            <small class="muted" id="mobile-keyboard-hint">${escapeHtml(t('task.suppress_mobile_keyboard.hint'))}</small>
+          </span>
+        </label>` : ''}
       </div>
 
       ${useIpaKeyboard ? `
@@ -55,6 +65,7 @@ export async function renderRead(_, mount) {
   const form = root.querySelector('#form');
   const skipBtn = root.querySelector('#skip');
   const inputSystemToggle = root.querySelector('#input-system-toggle');
+  const suppressKeyboardToggle = root.querySelector('#suppress-mobile-keyboard');
 
   inputSystemToggle.addEventListener('click', e => {
     e.stopPropagation();
@@ -72,13 +83,34 @@ export async function renderRead(_, mount) {
     });
   }
 
+  if (suppressKeyboardToggle) {
+    suppressKeyboardToggle.addEventListener('change', e => {
+      updateSettings({ suppressKeyboardOnMobile: e.target.checked });
+      suppressNativeKeyboard = shouldSuppressMobileKeyboard(getSettings(), useIpaKeyboard);
+      applyMobileKeyboardMode();
+    });
+  }
+
+  function applyMobileKeyboardMode() {
+    inputEl.readOnly = suppressNativeKeyboard;
+    if (suppressNativeKeyboard) {
+      inputEl.setAttribute('inputmode', 'none');
+      inputEl.setAttribute('aria-describedby', 'mobile-keyboard-hint');
+    } else {
+      inputEl.removeAttribute('inputmode');
+      inputEl.removeAttribute('aria-describedby');
+    }
+    root.classList.toggle('mobile-keyboard-suppressed', suppressNativeKeyboard);
+  }
+
   function showWord() {
     revealed = false;
     promptEl.textContent = settings.vocalised && current.nativeVoweled ? current.nativeVoweled : current.native;
     inputEl.value = '';
     inputEl.disabled = false;
+    inputEl.readOnly = suppressNativeKeyboard;
     resultEl.innerHTML = '';
-    inputEl.focus({ preventScroll: true });
+    focusIfKeyboardAllowed(inputEl, suppressNativeKeyboard);
   }
 
   function reveal(correct) {
@@ -138,6 +170,7 @@ export async function renderRead(_, mount) {
     showWord();
   }
 
+  applyMobileKeyboardMode();
   showWord();
   mount.appendChild(root);
 }
@@ -148,7 +181,7 @@ function insertAtCursor(inputEl, ch) {
   inputEl.value = inputEl.value.slice(0, start) + ch + inputEl.value.slice(end);
   const pos = start + ch.length;
   inputEl.setSelectionRange(pos, pos);
-  inputEl.focus({ preventScroll: true });
+  focusIfKeyboardAllowed(inputEl, shouldSuppressMobileKeyboard(getSettings(), true));
 }
 
 function backspaceAtCursor(inputEl) {
@@ -161,7 +194,7 @@ function backspaceAtCursor(inputEl) {
     inputEl.value = inputEl.value.slice(0, start) + inputEl.value.slice(end);
     inputEl.setSelectionRange(start, start);
   }
-  inputEl.focus({ preventScroll: true });
+  focusIfKeyboardAllowed(inputEl, shouldSuppressMobileKeyboard(getSettings(), true));
 }
 
 function stripIpaMarks(s) {

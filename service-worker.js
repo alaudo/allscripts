@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'allscripts-v5';
+const CACHE_VERSION = 'allscripts-v14';
 const CORE_ASSETS = [
   './',
   './index.html',
@@ -28,11 +28,13 @@ const CORE_ASSETS = [
   './js/modes/read.js',
   './js/modes/spell.js',
   './js/ui/countdown.js',
+  './js/ui/decks.js',
   './js/ui/dom.js',
   './js/ui/flashcard-keys.js',
   './js/ui/home.js',
   './js/ui/ipa-keyboard.js',
   './js/ui/keyboard.js',
+  './js/ui/script-keyboards.js',
   './js/ui/settings.js'
 ];
 

@@ -4,6 +4,7 @@
 const routes = new Map();
 let mount = null;
 let fallback = null;
+let globalKeysBound = false;
 
 export function registerRoute(name, render) {
   routes.set(name, render);
@@ -43,6 +44,13 @@ function updateNavHighlight(name) {
   });
 }
 
+function onGlobalKeyDown(event) {
+  if (event.key !== 'Escape' || parseHash().name === 'home') return;
+  event.preventDefault();
+  event.stopPropagation();
+  location.hash = '#/home';
+}
+
 function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, c =>
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -51,6 +59,11 @@ function escapeHtml(s) {
 export function startRouter(mountEl) {
   mount = mountEl;
   window.addEventListener('hashchange', dispatch);
+  if (!globalKeysBound) {
+    document.addEventListener('keydown', onGlobalKeyDown, { capture: true });
+    window.addEventListener('keydown', onGlobalKeyDown, { capture: true });
+    globalKeysBound = true;
+  }
   return dispatch();
 }
 

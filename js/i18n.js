@@ -23,8 +23,10 @@ const DICTS = {
     'app.go_home': 'Go home',
 
     'nav.home': 'Home',
+    'nav.decks': 'Decks',
     'nav.settings': 'Settings',
     'nav.back_home': '← Home',
+    'nav.esc_home': 'Esc returns home',
 
     'theme.auto.icon': '🌓',
     'theme.light.icon': '☀️',
@@ -50,6 +52,11 @@ const DICTS = {
     'home.config.vocalised': 'vocalised',
     'home.config.fuzzy': 'fuzzy match',
     'home.config.change': 'change',
+    'home.quick_links': 'App links',
+    'home.quick.decks': 'Decks',
+    'home.quick.decks.hint': 'Download Anki cards',
+    'home.quick.settings': 'Settings',
+    'home.quick.settings.hint': 'Language, theme, input',
 
     'mode.flashcards.title': 'Letter flashcards',
     'mode.flashcards.blurb': 'Letter on the front, transcription and an example word on the back.',
@@ -86,9 +93,13 @@ const DICTS = {
     'choose.words.header': 'Choose the word — {name}',
     'choose.phrases.header': 'Choose the phrase — {name}',
     'choose.letters.empty': 'This script has no letters to practise yet.',
+    'choose.letters.learn_threshold': 'A letter is marked learned after {n} correct answers in a row.',
     'choose.syllables.empty': 'This script has no syllables or forms to practise yet.',
+    'choose.syllables.learn_threshold': 'A syllable is marked learned after {n} correct answers in a row.',
     'choose.words.empty': 'This script has no words to practise yet.',
+    'choose.words.learn_threshold': 'A word is marked learned after {n} correct answers in a row.',
     'choose.phrases.empty': 'This script has no phrases to practise yet.',
+    'choose.phrases.learn_threshold': 'A phrase is marked learned after {n} correct answers in a row.',
     'choose.options_aria': 'Answer options',
     'choose.direction.recognize.label': 'Native → meaning',
     'choose.direction.recall.label': 'Meaning → native',
@@ -114,8 +125,22 @@ const DICTS = {
     'choose.shortcut.option_picked': 'Option {n}',
 
     'home.section.practise': 'Practise',
-    'home.section.review': 'Review',
-    'home.section.review.hint': 'Browse the material — no answers expected, no progress tracked.',
+    'home.section.review': 'Learn',
+    'home.section.review.hint': 'Study letters, syllables, words, and phrases first — no answers expected, no progress tracked.',
+
+    'decks.title': 'Anki decks',
+    'decks.intro': 'Download import-ready Anki text decks generated from the current app data.',
+    'decks.format_hint': 'On-the-fly .txt exports include Anki headers for tab separation, HTML fields, Basic note type, target deck, and a tags column.',
+    'decks.all.title': 'All scripts combined',
+    'decks.all.hint': '{count} cards across every script and category.',
+    'decks.download': 'Download',
+    'decks.card_count': '{count} cards',
+    'decks.example': 'Example:',
+    'decks.type.letters': 'Letters',
+    'decks.type.syllables': 'Syllables',
+    'decks.type.words': 'Words',
+    'decks.type.phrases': 'Phrases',
+    'decks.type.combined': 'Combined',
 
     'preview.letters.header': 'Alphabet — {name}',
     'preview.syllables.header': 'Syllables & forms — {name}',
@@ -160,6 +185,10 @@ const DICTS = {
     'input.cycle_tooltip': 'Click to change input system (Latin → Cyrillic → IPA)',
     'input.prompt_cycle_tooltip': 'Click to change prompt system (Latin → Cyrillic → IPA)',
 
+    'keyboard.layout.alphabetic': 'Alphabetic',
+    'keyboard.layout.classic': 'Classic',
+    'keyboard.layout.tooltip': 'Switch keyboard layout (alphabetic ↔ classic)',
+
     'flashcards.header': '{name} flashcards',
     'flashcards.again': 'Again',
     'flashcards.hard': 'Hard',
@@ -199,6 +228,9 @@ const DICTS = {
     'spell.kbd_hint': 'Click letters to insert them, or just type if you have a {name} keyboard installed.',
     'spell.meaning': 'meaning: {meaning}',
 
+    'task.suppress_mobile_keyboard': 'No mobile keyboard',
+    'task.suppress_mobile_keyboard.hint': 'Use the app keyboard below; the phone keyboard stays closed on mobile.',
+
     'phrases.header': 'Phrases — {name}',
     'phrases.tap_to_reveal': 'Tap to reveal',
     'phrases.tap_to_flip_back': 'Tap to flip back',
@@ -229,6 +261,7 @@ const DICTS = {
     'flashcards_words.no_due': 'no words due — practicing full deck',
 
     'settings.appearance': 'Appearance',
+    'settings.title': 'Settings',
     'settings.theme': 'Theme',
     'settings.theme.auto': 'Match system',
     'settings.theme.light': 'Light',
@@ -245,13 +278,23 @@ const DICTS = {
     'settings.vocalised.hint': 'For scripts with optional diacritics (Arabic harakat, Hebrew niqqud), display the fully-pointed form in word exercises.',
     'settings.fuzzy': 'Forgiving (fuzzy) matching',
     'settings.fuzzy.hint': 'Accept answers with small spelling slips — e.g. "t" instead of "th", one missing letter — in read & spell modes.',
+    'settings.suppress_mobile_keyboard': 'Suppress keyboard on mobile',
+    'settings.suppress_mobile_keyboard.hint': 'In typing drills with an on-screen app keyboard, keep the phone keyboard closed and use the app keys instead.',
     'settings.flashcards': 'Flashcards — letters',
+    'settings.letters.learn_threshold': 'Correct answers to learn a letter',
+    'settings.letters.learn_threshold.hint': 'In Choose the Letter, a letter moves to learned after this many correct answers in a row. A wrong answer resets that streak.',
     'settings.flashcards.syllables': 'Flashcards — syllables',
     'settings.flashcards.syllables.hint': 'Syllables use their own timer and spaced-repetition intervals, independent of the letter, word, and phrase decks.',
+    'settings.syllables.learn_threshold': 'Correct answers to learn a syllable',
+    'settings.syllables.learn_threshold.hint': 'In Choose the Syllable, a syllable moves to learned after this many correct answers in a row. A wrong answer resets that streak.',
     'settings.flashcards.words': 'Flashcards — words',
     'settings.flashcards.words.hint': 'Word flashcards use their own timer and spaced-repetition intervals, independent of the letter and phrase decks.',
+    'settings.words.learn_threshold': 'Correct answers to learn a word',
+    'settings.words.learn_threshold.hint': 'In Choose the Word and typing drills, a word moves to learned after this many correct answers in a row. A wrong answer resets that streak.',
     'settings.flashcards.phrases': 'Flashcards — phrases',
     'settings.flashcards.phrases.hint': 'Phrases use their own timer and spaced-repetition intervals, independent of the letter and word decks.',
+    'settings.phrases.learn_threshold': 'Correct answers to learn a phrase',
+    'settings.phrases.learn_threshold.hint': 'In Choose the Phrase, a phrase moves to learned after this many correct answers in a row. A wrong answer resets that streak.',
     'settings.timer': 'Auto-advance timer',
     'settings.timer.hint': "Auto-flips the card, then advances if you don't rate it in time. Off by default.",
     'settings.timer.off': 'Off',
@@ -292,8 +335,10 @@ const DICTS = {
     'app.go_home': 'На главную',
 
     'nav.home': 'Главная',
+    'nav.decks': 'Колоды',
     'nav.settings': 'Настройки',
     'nav.back_home': '← Главная',
+    'nav.esc_home': 'Esc возвращает домой',
 
     'theme.auto.icon': '🌓',
     'theme.light.icon': '☀️',
@@ -319,6 +364,11 @@ const DICTS = {
     'home.config.vocalised': 'с огласовками',
     'home.config.fuzzy': 'мягкая проверка',
     'home.config.change': 'изменить',
+    'home.quick_links': 'Ссылки приложения',
+    'home.quick.decks': 'Колоды',
+    'home.quick.decks.hint': 'Скачать карточки Anki',
+    'home.quick.settings': 'Настройки',
+    'home.quick.settings.hint': 'Язык, тема, ввод',
 
     'mode.flashcards.title': 'Карточки: буквы',
     'mode.flashcards.blurb': 'Буква на лицевой стороне, транскрипция и пример слова — на обратной.',
@@ -355,9 +405,13 @@ const DICTS = {
     'choose.words.header': 'Выбери слово — {name}',
     'choose.phrases.header': 'Выбери фразу — {name}',
     'choose.letters.empty': 'В этом письме пока нет букв для практики.',
+    'choose.letters.learn_threshold': 'Буква считается выученной после {n} правильных ответов подряд.',
     'choose.syllables.empty': 'В этом письме пока нет слогов или форм для практики.',
+    'choose.syllables.learn_threshold': 'Слог считается выученным после {n} правильных ответов подряд.',
     'choose.words.empty': 'В этом письме пока нет слов для практики.',
+    'choose.words.learn_threshold': 'Слово считается выученным после {n} правильных ответов подряд.',
     'choose.phrases.empty': 'В этом письме пока нет фраз для практики.',
+    'choose.phrases.learn_threshold': 'Фраза считается выученной после {n} правильных ответов подряд.',
     'choose.options_aria': 'Варианты ответа',
     'choose.direction.recognize.label': 'Письмо → значение',
     'choose.direction.recall.label': 'Значение → письмо',
@@ -383,8 +437,22 @@ const DICTS = {
     'choose.shortcut.option_picked': 'Вариант {n}',
 
     'home.section.practise': 'Тренировка',
-    'home.section.review': 'Обзор',
-    'home.section.review.hint': 'Просмотр материала — ответов не требуется, прогресс не отслеживается.',
+    'home.section.review': 'Учить',
+    'home.section.review.hint': 'Сначала изучите буквы, слоги, слова и фразы — ответов не требуется, прогресс не отслеживается.',
+
+    'decks.title': 'Колоды Anki',
+    'decks.intro': 'Скачайте готовые к импорту колоды Anki, созданные из текущих данных приложения.',
+    'decks.format_hint': '.txt-файлы создаются на лету и содержат заголовки Anki для таб-разделителя, HTML-полей, типа Basic, целевой колоды и колонки тегов.',
+    'decks.all.title': 'Все письменности вместе',
+    'decks.all.hint': '{count} карточек по всем письменностям и категориям.',
+    'decks.download': 'Скачать',
+    'decks.card_count': '{count} карточек',
+    'decks.example': 'Пример:',
+    'decks.type.letters': 'Буквы',
+    'decks.type.syllables': 'Слоги',
+    'decks.type.words': 'Слова',
+    'decks.type.phrases': 'Фразы',
+    'decks.type.combined': 'Всё вместе',
 
     'preview.letters.header': 'Алфавит — {name}',
     'preview.syllables.header': 'Слоги и формы — {name}',
@@ -429,6 +497,10 @@ const DICTS = {
     'input.cycle_tooltip': 'Нажмите, чтобы сменить систему ввода (Латиница → Кириллица → IPA)',
     'input.prompt_cycle_tooltip': 'Нажмите, чтобы сменить систему подсказки (Латиница → Кириллица → IPA)',
 
+    'keyboard.layout.alphabetic': 'По алфавиту',
+    'keyboard.layout.classic': 'Клавиатура',
+    'keyboard.layout.tooltip': 'Сменить раскладку клавиатуры (алфавитная ↔ классическая)',
+
     'flashcards.header': 'Карточки — {name}',
     'flashcards.again': 'Заново',
     'flashcards.hard': 'Сложно',
@@ -468,6 +540,9 @@ const DICTS = {
     'spell.kbd_hint': 'Нажимайте буквы, чтобы их вставить, или печатайте с физической клавиатуры, если у вас есть раскладка {name}.',
     'spell.meaning': 'значение: {meaning}',
 
+    'task.suppress_mobile_keyboard': 'Без клавиатуры телефона',
+    'task.suppress_mobile_keyboard.hint': 'Используйте клавиатуру приложения ниже; на телефоне системная клавиатура не откроется.',
+
     'phrases.header': 'Фразы — {name}',
     'phrases.tap_to_reveal': 'Нажмите, чтобы увидеть перевод',
     'phrases.tap_to_flip_back': 'Нажмите, чтобы перевернуть',
@@ -498,6 +573,7 @@ const DICTS = {
     'flashcards_words.no_due': 'к повторению пока нет — тренируем всю колоду',
 
     'settings.appearance': 'Внешний вид',
+    'settings.title': 'Настройки',
     'settings.theme': 'Тема',
     'settings.theme.auto': 'Как в системе',
     'settings.theme.light': 'Светлая',
@@ -514,13 +590,23 @@ const DICTS = {
     'settings.vocalised.hint': 'Для письменностей с необязательной диакритикой (арабские харакат, ивритский никкуд) показывать полностью огласованную форму в упражнениях.',
     'settings.fuzzy': 'Мягкая (нестрогая) проверка',
     'settings.fuzzy.hint': 'Принимать ответы с мелкими опечатками — например «t» вместо «th», одна пропущенная буква — в режимах чтения и письма.',
+    'settings.suppress_mobile_keyboard': 'Не открывать клавиатуру на телефоне',
+    'settings.suppress_mobile_keyboard.hint': 'В упражнениях с экранной клавиатурой приложения телефонная клавиатура останется закрытой.',
     'settings.flashcards': 'Карточки — буквы',
+    'settings.letters.learn_threshold': 'Верных ответов, чтобы выучить букву',
+    'settings.letters.learn_threshold.hint': 'В режиме «Выбери букву» буква становится выученной после этого числа правильных ответов подряд. Ошибка сбрасывает серию.',
     'settings.flashcards.syllables': 'Карточки — слоги',
     'settings.flashcards.syllables.hint': 'У слогов — собственный таймер и интервалы повторения, независимые от колод букв, слов и фраз.',
+    'settings.syllables.learn_threshold': 'Верных ответов, чтобы выучить слог',
+    'settings.syllables.learn_threshold.hint': 'В режиме «Выбери слог» слог становится выученным после этого числа правильных ответов подряд. Ошибка сбрасывает серию.',
     'settings.flashcards.words': 'Карточки — слова',
     'settings.flashcards.words.hint': 'У слов — собственный таймер и интервалы повторения, независимые от колод букв и фраз.',
+    'settings.words.learn_threshold': 'Верных ответов, чтобы выучить слово',
+    'settings.words.learn_threshold.hint': 'В режиме «Выбери слово» и упражнениях ввода слово становится выученным после этого числа правильных ответов подряд. Ошибка сбрасывает серию.',
     'settings.flashcards.phrases': 'Карточки — фразы',
     'settings.flashcards.phrases.hint': 'У фраз — собственный таймер и интервалы повторения, независимые от колод букв и слов.',
+    'settings.phrases.learn_threshold': 'Верных ответов, чтобы выучить фразу',
+    'settings.phrases.learn_threshold.hint': 'В режиме «Выбери фразу» фраза становится выученной после этого числа правильных ответов подряд. Ошибка сбрасывает серию.',
     'settings.timer': 'Таймер автосмены',
     'settings.timer.hint': 'Сначала переворачивает карту, затем переходит к следующей, если вы не оцениваете её вовремя. По умолчанию выключен.',
     'settings.timer.off': 'Выкл.',
@@ -602,6 +688,11 @@ export function inputSystemLabel(inputSystem) {
   if (inputSystem === 'cyrillic') return t('input.cyrillic');
   if (inputSystem === 'ipa') return t('input.ipa');
   return t('input.latin');
+}
+
+export function keyboardLayoutLabel(layout) {
+  if (layout === 'classic') return t('keyboard.layout.classic');
+  return t('keyboard.layout.alphabetic');
 }
 
 // Update DOM chrome (topbar text, footer, etc.) — called after language change.

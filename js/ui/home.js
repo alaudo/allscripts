@@ -67,6 +67,34 @@ export async function renderHome(_, mount) {
   }
   root.appendChild(picker);
 
+  const quickLinks = el(`
+    <div class="home-link-grid" aria-label="${escapeHtml(t('home.quick_links'))}">
+      <a class="home-link-card" href="#/decks">
+        <span class="home-link-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <rect x="5" y="4" width="12" height="15" rx="2"></rect>
+            <path d="M9 8h4M9 12h4M9 16h2M8 3h9a2 2 0 0 1 2 2v12"></path>
+          </svg>
+        </span>
+        <span>
+          <strong>${escapeHtml(t('home.quick.decks'))}</strong>
+          <small class="muted">${escapeHtml(t('home.quick.decks.hint'))}</small>
+        </span>
+      </a>
+      <a class="home-link-card" href="#/settings">
+        <span class="home-link-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"></path>
+            <path d="M19.4 15a1.8 1.8 0 0 0 .36 1.98l.04.04a2.1 2.1 0 0 1-2.97 2.97l-.04-.04A1.8 1.8 0 0 0 14.8 19.6a1.8 1.8 0 0 0-1.08 1.65V21.3a2.1 2.1 0 0 1-4.2 0v-.05A1.8 1.8 0 0 0 8.45 19.6a1.8 1.8 0 0 0-1.98.36l-.04.04a2.1 2.1 0 0 1-2.97-2.97l.04-.04A1.8 1.8 0 0 0 3.86 15a1.8 1.8 0 0 0-1.65-1.08H2.16a2.1 2.1 0 0 1 0-4.2h.05a1.8 1.8 0 0 0 1.65-1.08 1.8 1.8 0 0 0-.36-1.98l-.04-.04a2.1 2.1 0 0 1 2.97-2.97l.04.04a1.8 1.8 0 0 0 1.98.36 1.8 1.8 0 0 0 1.08-1.65V2.35a2.1 2.1 0 0 1 4.2 0v.05a1.8 1.8 0 0 0 1.08 1.65 1.8 1.8 0 0 0 1.98-.36l.04-.04a2.1 2.1 0 0 1 2.97 2.97l-.04.04a1.8 1.8 0 0 0-.36 1.98 1.8 1.8 0 0 0 1.65 1.08h.05a2.1 2.1 0 0 1 0 4.2h-.05A1.8 1.8 0 0 0 19.4 15Z"></path>
+          </svg>
+        </span>
+        <span>
+          <strong>${escapeHtml(t('home.quick.settings'))}</strong>
+          <small class="muted">${escapeHtml(t('home.quick.settings.hint'))}</small>
+        </span>
+      </a>
+    </div>
+  `);
   // Active script info card (history + flags), rendered after the tools below.
   const current = manifest.scripts.find(s => s.id === settings.activeScript) || manifest.scripts[0];
   const infoText = localized(current.info);
@@ -98,6 +126,29 @@ export async function renderHome(_, mount) {
     );
   }
 
+  // Learn first: reference previews before exercises.
+  const reviewCard = el(
+    `<div class="card review-card">
+       <h2>${escapeHtml(t('home.section.review'))} <span class="muted">${escapeHtml(localized(current.name))}</span></h2>
+       <p class="muted small">${escapeHtml(t('home.section.review.hint'))}</p>
+       <div class="mode-grid review-grid"></div>
+     </div>`
+  );
+  const reviewGrid = reviewCard.querySelector('.mode-grid');
+  for (const m of REVIEW_MODES) {
+    const a = el(
+      `<a class="mode-card mode-card--review" href="#/${m.id}">
+         <span class="mode-card-icon" aria-hidden="true">${m.icon}</span>
+         <div class="mode-card-text">
+           <h3>${escapeHtml(t(m.titleKey))}</h3>
+           <p>${escapeHtml(t(m.blurbKey))}</p>
+         </div>
+       </a>`
+    );
+    reviewGrid.appendChild(a);
+  }
+  root.appendChild(reviewCard);
+
   // Mode picker (practise)
   const config = [
     `${escapeHtml(t('home.config.transcription'))}: ${escapeHtml(transcriptionLabel(settings.transcription))}`,
@@ -128,30 +179,8 @@ export async function renderHome(_, mount) {
     modeGrid.appendChild(a);
   }
   root.appendChild(modeCard);
-
-  // Review (no exercises)
-  const reviewCard = el(
-    `<div class="card review-card">
-       <h2>${escapeHtml(t('home.section.review'))} <span class="muted">${escapeHtml(localized(current.name))}</span></h2>
-       <p class="muted small">${escapeHtml(t('home.section.review.hint'))}</p>
-       <div class="mode-grid review-grid"></div>
-     </div>`
-  );
-  const reviewGrid = reviewCard.querySelector('.mode-grid');
-  for (const m of REVIEW_MODES) {
-    const a = el(
-      `<a class="mode-card mode-card--review" href="#/${m.id}">
-         <span class="mode-card-icon" aria-hidden="true">${m.icon}</span>
-         <div class="mode-card-text">
-           <h3>${escapeHtml(t(m.titleKey))}</h3>
-           <p>${escapeHtml(t(m.blurbKey))}</p>
-         </div>
-       </a>`
-    );
-    reviewGrid.appendChild(a);
-  }
-  root.appendChild(reviewCard);
   if (aboutCard) root.appendChild(aboutCard);
+  root.appendChild(quickLinks);
 
   mount.appendChild(root);
 }

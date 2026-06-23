@@ -2,7 +2,9 @@ import { getSettings, updateSettings, resetScript, resetAll, summary } from '../
 import { getManifest } from '../data.js';
 import { applyTheme } from '../theme.js';
 import { setLang, applyChromeStrings, t, transcriptionLabel, LANGUAGES, localized } from '../i18n.js';
-import { el, escapeHtml } from './dom.js';
+import { bindEscToHome, el, escapeHtml } from './dom.js';
+
+let stopEscToHome = null;
 
 function transcriptionOptions() {
   return [
@@ -47,13 +49,40 @@ const SRS_FIELDS = [
   { key: 'easy',  labelKey: 'flashcards.easy',  hintKey: 'settings.srs.easy.hint' }
 ];
 
+const LEARN_THRESHOLD_OPTIONS = [1, 2, 3, 4, 5, 7, 10];
+
+function learnThresholdField({ legendKey, hintKey, name, settingKey, value }) {
+  return `
+    <fieldset class="field learn-threshold-field">
+      <legend class="field-label">${escapeHtml(t(legendKey))}</legend>
+      <small class="muted">${escapeHtml(t(hintKey))}</small>
+      <div class="segmented-options">
+        ${LEARN_THRESHOLD_OPTIONS.map(option => `
+          <label class="segmented-option">
+            <input type="radio" name="${escapeHtml(name)}" value="${option}" data-learn-threshold="${escapeHtml(settingKey)}" ${option === value ? 'checked' : ''} />
+            <span>${option}</span>
+          </label>
+        `).join('')}
+      </div>
+    </fieldset>
+  `;
+}
+
 export async function renderSettings(_, mount) {
+  stopEscToHome?.();
+  stopEscToHome = bindEscToHome();
   const settings = getSettings();
   const manifest = await getManifest();
 
   mount.innerHTML = '';
   const root = el(`
     <section class="settings">
+      <header class="mode-header">
+        <a href="#/home" class="back">${escapeHtml(t('nav.back_home'))}</a>
+        <h2>${escapeHtml(t('settings.title'))}</h2>
+        <span class="muted small">${escapeHtml(t('nav.esc_home'))}</span>
+      </header>
+
       <div class="card">
         <h2>${escapeHtml(t('settings.appearance'))}</h2>
 
@@ -96,6 +125,15 @@ export async function renderSettings(_, mount) {
           <span class="field-label">${escapeHtml(t('settings.fuzzy'))}</span>
           <small class="muted">${escapeHtml(t('settings.fuzzy.hint'))}</small>
         </label>
+
+        <label class="switch-field">
+          <input type="checkbox" id="suppressKeyboardOnMobile" ${settings.suppressKeyboardOnMobile ? 'checked' : ''} />
+          <span class="switch-track" aria-hidden="true"></span>
+          <span class="switch-copy">
+            <span class="field-label">${escapeHtml(t('settings.suppress_mobile_keyboard'))}</span>
+            <small class="muted">${escapeHtml(t('settings.suppress_mobile_keyboard.hint'))}</small>
+          </span>
+        </label>
       </div>
 
       <div class="card">
@@ -106,6 +144,14 @@ export async function renderSettings(_, mount) {
           <select id="flashcardTimer"></select>
           <small class="muted">${escapeHtml(t('settings.timer.hint'))}</small>
         </label>
+
+        ${learnThresholdField({
+          legendKey: 'settings.letters.learn_threshold',
+          hintKey: 'settings.letters.learn_threshold.hint',
+          name: 'letterLearnedThreshold',
+          settingKey: 'letterLearnedThreshold',
+          value: settings.letterLearnedThreshold
+        })}
 
         <fieldset class="field srs-field">
           <legend class="field-label">${escapeHtml(t('settings.srs.title'))}</legend>
@@ -132,6 +178,14 @@ export async function renderSettings(_, mount) {
           <small class="muted">${escapeHtml(t('settings.timer.hint'))}</small>
         </label>
 
+        ${learnThresholdField({
+          legendKey: 'settings.syllables.learn_threshold',
+          hintKey: 'settings.syllables.learn_threshold.hint',
+          name: 'syllableLearnedThreshold',
+          settingKey: 'syllableLearnedThreshold',
+          value: settings.syllableLearnedThreshold
+        })}
+
         <fieldset class="field srs-field">
           <legend class="field-label">${escapeHtml(t('settings.srs.title'))}</legend>
           <small class="muted">${escapeHtml(t('settings.srs.hint'))}</small>
@@ -157,6 +211,14 @@ export async function renderSettings(_, mount) {
           <small class="muted">${escapeHtml(t('settings.timer.hint'))}</small>
         </label>
 
+        ${learnThresholdField({
+          legendKey: 'settings.words.learn_threshold',
+          hintKey: 'settings.words.learn_threshold.hint',
+          name: 'wordLearnedThreshold',
+          settingKey: 'wordLearnedThreshold',
+          value: settings.wordLearnedThreshold
+        })}
+
         <fieldset class="field srs-field">
           <legend class="field-label">${escapeHtml(t('settings.srs.title'))}</legend>
           <small class="muted">${escapeHtml(t('settings.srs.hint'))}</small>
@@ -181,6 +243,14 @@ export async function renderSettings(_, mount) {
           <select id="phrasesTimer"></select>
           <small class="muted">${escapeHtml(t('settings.timer.hint'))}</small>
         </label>
+
+        ${learnThresholdField({
+          legendKey: 'settings.phrases.learn_threshold',
+          hintKey: 'settings.phrases.learn_threshold.hint',
+          name: 'phraseLearnedThreshold',
+          settingKey: 'phraseLearnedThreshold',
+          value: settings.phraseLearnedThreshold
+        })}
 
         <fieldset class="field srs-field">
           <legend class="field-label">${escapeHtml(t('settings.srs.title'))}</legend>
@@ -272,6 +342,7 @@ export async function renderSettings(_, mount) {
   // Vocalised / fuzzy
   root.querySelector('#vocalised').addEventListener('change', e => updateSettings({ vocalised: e.target.checked }));
   root.querySelector('#fuzzy').addEventListener('change', e => updateSettings({ fuzzy: e.target.checked }));
+  root.querySelector('#suppressKeyboardOnMobile').addEventListener('change', e => updateSettings({ suppressKeyboardOnMobile: e.target.checked }));
 
   // Flashcard timer (letters)
   const timerSel = root.querySelector('#flashcardTimer');
@@ -284,6 +355,14 @@ export async function renderSettings(_, mount) {
   timerSel.addEventListener('change', () => {
     updateSettings({ flashcardTimerSec: Number(timerSel.value) });
   });
+
+  for (const input of root.querySelectorAll('input[data-learn-threshold]')) {
+    input.addEventListener('change', () => {
+      if (!input.checked) return;
+      const settingKey = input.getAttribute('data-learn-threshold');
+      updateSettings({ [settingKey]: Number(input.value) });
+    });
+  }
 
   // Syllables timer
   const syllablesTimerSel = root.querySelector('#syllablesTimer');

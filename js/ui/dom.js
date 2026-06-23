@@ -104,6 +104,34 @@ export function inputSystemLabel(inputSystem) {
        : 'Latin';
 }
 
+export function isMobileDevice() {
+  if (typeof window === 'undefined') return false;
+  const coarsePointer = window.matchMedia?.('(hover: none) and (pointer: coarse)')?.matches;
+  const touchViewport = typeof navigator !== 'undefined'
+    && (navigator.maxTouchPoints || 0) > 0
+    && window.innerWidth <= 900;
+  return Boolean(coarsePointer || touchViewport);
+}
+
+export function shouldSuppressMobileKeyboard(settings, hasOnScreenKeyboard = true) {
+  return Boolean(settings?.suppressKeyboardOnMobile && hasOnScreenKeyboard && isMobileDevice());
+}
+
+export function focusIfKeyboardAllowed(inputEl, suppressKeyboard) {
+  if (!suppressKeyboard) inputEl.focus({ preventScroll: true });
+}
+
+export function bindEscToHome() {
+  const controller = new AbortController();
+  window.addEventListener('keydown', e => {
+    if (e.key !== 'Escape') return;
+    e.preventDefault();
+    location.hash = '#/home';
+  }, { signal: controller.signal });
+  window.addEventListener('hashchange', () => controller.abort(), { once: true, signal: controller.signal });
+  return () => controller.abort();
+}
+
 // Cycle through transcription systems in a stable order.
 export const TRANSCRIPTIONS = ['ipa', 'english', 'russian'];
 export function nextTranscription(current) {
