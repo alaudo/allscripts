@@ -5,6 +5,7 @@ import { getSettings, updateSettings } from './storage.js';
 import { registerServiceWorker } from './pwa.js';
 import { renderHome } from './ui/home.js';
 import { renderSettings } from './ui/settings.js';
+import { renderDecks } from './ui/decks.js';
 import { renderFlashcards } from './modes/flashcards.js';
 import { renderFlashcardsSyllables } from './modes/flashcards-syllables.js';
 import { renderFlashcardsWords } from './modes/flashcards-words.js';
@@ -23,6 +24,7 @@ initLangToggle();
 registerServiceWorker();
 
 registerRoute('home', renderHome);
+registerRoute('decks', renderDecks);
 registerRoute('settings', renderSettings);
 registerRoute('flashcards', renderFlashcards);
 registerRoute('flashcards-syllables', renderFlashcardsSyllables);

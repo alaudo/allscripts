@@ -1,8 +1,9 @@
 import { getScript, getWordPool } from '../data.js';
 import { getSettings, updateSettings, recordWord } from '../storage.js';
-import { el, escapeHtml, pickRandom, looseEqual, fuzzyEqual, inputFieldFor, nextInputSystem } from '../ui/dom.js';
+import { el, escapeHtml, pickRandom, looseEqual, fuzzyEqual, inputFieldFor, nextInputSystem, shouldSuppressMobileKeyboard, focusIfKeyboardAllowed } from '../ui/dom.js';
 import { renderKeyboard } from '../ui/keyboard.js';
-import { t, inputSystemLabel, localized } from '../i18n.js';
+import { hasClassicKeyboard, keyboardRowsFor, nextKeyboardLayout } from '../ui/script-keyboards.js';
+import { t, inputSystemLabel, keyboardLayoutLabel, localized } from '../i18n.js';
 
 export async function renderSpell(_, mount) {
   const settings = getSettings();
@@ -10,6 +11,8 @@ export async function renderSpell(_, mount) {
   const pool = await getWordPool(script.meta.id);
   const promptField = inputFieldFor(settings.inputSystem);
   const scriptName = localized(script.meta.name);
+  let suppressNativeKeyboard = shouldSuppressMobileKeyboard(settings);
+  let keyboardLayout = settings.scriptKeyboardLayout || 'alphabetic';
 
   let current = pickRandom(pool);
   let revealed = false;
@@ -34,10 +37,21 @@ export async function renderSpell(_, mount) {
           <button type="submit" class="btn">${escapeHtml(t('read.check'))}</button>
         </form>
         <div class="result" id="result" aria-live="polite"></div>
+        <label class="switch-field task-switch">
+          <input type="checkbox" id="suppress-mobile-keyboard" ${settings.suppressKeyboardOnMobile ? 'checked' : ''} />
+          <span class="switch-track" aria-hidden="true"></span>
+          <span class="switch-copy">
+            <span class="field-label">${escapeHtml(t('task.suppress_mobile_keyboard'))}</span>
+            <small class="muted" id="mobile-keyboard-hint">${escapeHtml(t('task.suppress_mobile_keyboard.hint'))}</small>
+          </span>
+        </label>
       </div>
 
       <div class="card">
-        <h3 class="kb-title">${escapeHtml(t('spell.keyboard', { name: scriptName }))}</h3>
+        <div class="keyboard-card-header">
+          <h3 class="kb-title">${escapeHtml(t('spell.keyboard', { name: scriptName }))}</h3>
+          <button type="button" class="keyboard-layout-toggle clickable" id="keyboard-layout-toggle" title="${escapeHtml(t('keyboard.layout.tooltip'))}">${escapeHtml(keyboardLayoutLabel(keyboardLayout))}</button>
+        </div>
         <div id="keyboard"></div>
         <p class="muted small">${escapeHtml(t('spell.kbd_hint', { name: scriptName }))}</p>
       </div>
@@ -56,6 +70,8 @@ export async function renderSpell(_, mount) {
   const skipBtn = root.querySelector('#skip');
   const kbEl = root.querySelector('#keyboard');
   const inputSystemToggle = root.querySelector('#input-system-toggle');
+  const suppressKeyboardToggle = root.querySelector('#suppress-mobile-keyboard');
+  const keyboardLayoutToggle = root.querySelector('#keyboard-layout-toggle');
 
   inputSystemToggle.addEventListener('click', e => {
     e.stopPropagation();
@@ -64,33 +80,59 @@ export async function renderSpell(_, mount) {
     renderSpell(_, mount);
   });
 
-  const rows = script.keyboardRows && script.keyboardRows.length
-    ? script.keyboardRows
-    : [script.letters.map(l => (l.glyph || '').split(' ')[0])];
+  if (!hasClassicKeyboard(script.meta.id)) keyboardLayoutToggle.hidden = true;
 
-  renderKeyboard(kbEl, rows, {
-    onInput: ch => {
-      const start = inputEl.selectionStart ?? inputEl.value.length;
-      const end = inputEl.selectionEnd ?? inputEl.value.length;
-      inputEl.value = inputEl.value.slice(0, start) + ch + inputEl.value.slice(end);
-      const pos = start + ch.length;
-      inputEl.setSelectionRange(pos, pos);
-      inputEl.focus({ preventScroll: true });
-    },
-    onBackspace: () => {
-      const start = inputEl.selectionStart ?? inputEl.value.length;
-      const end = inputEl.selectionEnd ?? inputEl.value.length;
-      if (start === end && start > 0) {
-        inputEl.value = inputEl.value.slice(0, start - 1) + inputEl.value.slice(end);
-        inputEl.setSelectionRange(start - 1, start - 1);
-      } else {
-        inputEl.value = inputEl.value.slice(0, start) + inputEl.value.slice(end);
-        inputEl.setSelectionRange(start, start);
-      }
-      inputEl.focus({ preventScroll: true });
-    },
-    onSubmit: () => form.requestSubmit()
-  }, { direction: script.meta.direction });
+  keyboardLayoutToggle.addEventListener('click', e => {
+    e.stopPropagation();
+    keyboardLayout = nextKeyboardLayout(keyboardLayout);
+    updateSettings({ scriptKeyboardLayout: keyboardLayout });
+    keyboardLayoutToggle.textContent = keyboardLayoutLabel(keyboardLayout);
+    renderCurrentKeyboard();
+  });
+
+  function renderCurrentKeyboard() {
+    renderKeyboard(kbEl, keyboardRowsFor(script, keyboardLayout), {
+      onInput: ch => {
+        const start = inputEl.selectionStart ?? inputEl.value.length;
+        const end = inputEl.selectionEnd ?? inputEl.value.length;
+        inputEl.value = inputEl.value.slice(0, start) + ch + inputEl.value.slice(end);
+        const pos = start + ch.length;
+        inputEl.setSelectionRange(pos, pos);
+        focusIfKeyboardAllowed(inputEl, suppressNativeKeyboard);
+      },
+      onBackspace: () => {
+        const start = inputEl.selectionStart ?? inputEl.value.length;
+        const end = inputEl.selectionEnd ?? inputEl.value.length;
+        if (start === end && start > 0) {
+          inputEl.value = inputEl.value.slice(0, start - 1) + inputEl.value.slice(end);
+          inputEl.setSelectionRange(start - 1, start - 1);
+        } else {
+          inputEl.value = inputEl.value.slice(0, start) + inputEl.value.slice(end);
+          inputEl.setSelectionRange(start, start);
+        }
+        focusIfKeyboardAllowed(inputEl, suppressNativeKeyboard);
+      },
+      onSubmit: () => form.requestSubmit()
+    }, { direction: script.meta.direction });
+  }
+
+  suppressKeyboardToggle.addEventListener('change', e => {
+    updateSettings({ suppressKeyboardOnMobile: e.target.checked });
+    suppressNativeKeyboard = shouldSuppressMobileKeyboard(getSettings());
+    applyMobileKeyboardMode();
+  });
+
+  function applyMobileKeyboardMode() {
+    inputEl.readOnly = suppressNativeKeyboard;
+    if (suppressNativeKeyboard) {
+      inputEl.setAttribute('inputmode', 'none');
+      inputEl.setAttribute('aria-describedby', 'mobile-keyboard-hint');
+    } else {
+      inputEl.removeAttribute('inputmode');
+      inputEl.removeAttribute('aria-describedby');
+    }
+    root.classList.toggle('mobile-keyboard-suppressed', suppressNativeKeyboard);
+  }
 
   function showWord() {
     revealed = false;
@@ -100,8 +142,9 @@ export async function renderSpell(_, mount) {
     meaningEl.textContent = meaningText ? t('spell.meaning', { meaning: meaningText }) : '';
     inputEl.value = '';
     inputEl.disabled = false;
+    inputEl.readOnly = suppressNativeKeyboard;
     resultEl.innerHTML = '';
-    inputEl.focus({ preventScroll: true });
+    focusIfKeyboardAllowed(inputEl, suppressNativeKeyboard);
   }
 
   function reveal(correct) {
@@ -162,6 +205,8 @@ export async function renderSpell(_, mount) {
   const hint = el(`<p class="muted small prompt-hint">${escapeHtml(inputSystemLabel(settings.inputSystem))}</p>`);
   promptEl.after(hint);
 
+  renderCurrentKeyboard();
+  applyMobileKeyboardMode();
   showWord();
   mount.appendChild(root);
 }

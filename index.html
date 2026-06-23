@@ -17,7 +17,20 @@
   <header class="topbar">
     <a href="#/home" class="brand" data-nav="home" data-i18n="app.brand">allScripts</a>
     <nav class="topbar-nav">
-      <a href="#/settings" data-nav="settings" data-i18n="nav.settings">Settings</a>
+      <a href="#/decks" class="nav-icon-link" data-nav="decks" aria-label="Decks" title="Decks">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="5" y="4" width="12" height="15" rx="2"></rect>
+          <path d="M9 8h4M9 12h4M9 16h2M8 3h9a2 2 0 0 1 2 2v12"></path>
+        </svg>
+        <span class="sr-only" data-i18n="nav.decks">Decks</span>
+      </a>
+      <a href="#/settings" class="nav-icon-link" data-nav="settings" aria-label="Settings" title="Settings">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"></path>
+          <path d="M19.4 15a1.8 1.8 0 0 0 .36 1.98l.04.04a2.1 2.1 0 0 1-2.97 2.97l-.04-.04A1.8 1.8 0 0 0 14.8 19.6a1.8 1.8 0 0 0-1.08 1.65V21.3a2.1 2.1 0 0 1-4.2 0v-.05A1.8 1.8 0 0 0 8.45 19.6a1.8 1.8 0 0 0-1.98.36l-.04.04a2.1 2.1 0 0 1-2.97-2.97l.04-.04A1.8 1.8 0 0 0 3.86 15a1.8 1.8 0 0 0-1.65-1.08H2.16a2.1 2.1 0 0 1 0-4.2h.05a1.8 1.8 0 0 0 1.65-1.08 1.8 1.8 0 0 0-.36-1.98l-.04-.04a2.1 2.1 0 0 1 2.97-2.97l.04.04a1.8 1.8 0 0 0 1.98.36 1.8 1.8 0 0 0 1.08-1.65V2.35a2.1 2.1 0 0 1 4.2 0v.05a1.8 1.8 0 0 0 1.08 1.65 1.8 1.8 0 0 0 1.98-.36l.04-.04a2.1 2.1 0 0 1 2.97 2.97l-.04.04a1.8 1.8 0 0 0-.36 1.98 1.8 1.8 0 0 0 1.65 1.08h.05a2.1 2.1 0 0 1 0 4.2h-.05A1.8 1.8 0 0 0 19.4 15Z"></path>
+        </svg>
+        <span class="sr-only" data-i18n="nav.settings">Settings</span>
+      </a>
       <button id="lang-toggle" class="lang-toggle clickable" aria-label="Language"></button>
       <button id="theme-toggle" class="theme-toggle clickable" aria-label="Toggle theme" title="Theme"></button>
     </nav>

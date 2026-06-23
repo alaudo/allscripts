@@ -22,7 +22,7 @@ import {
   recordWord,
   recordPhrase
 } from '../storage.js';
-import { el, escapeHtml, shuffle, pickRandom, fieldFor } from '../ui/dom.js';
+import { el, escapeHtml, shuffle, fieldFor } from '../ui/dom.js';
 import { countdownBadgeHtml, hideCountdownBadges, updateCountdownBadges } from '../ui/countdown.js';
 import { t, currentLang, localized } from '../i18n.js';
 
@@ -63,13 +63,15 @@ const lettersDrill = {
   headerKey: 'choose.letters.header',
   emptyKey: 'choose.letters.empty',
   blurbKey: 'mode.choose-letters.title',
+  learnThresholdKey: 'letterLearnedThreshold',
+  learnThresholdMessageKey: 'choose.letters.learn_threshold',
   async load(scriptId) {
     const script = await getScript(scriptId);
     return { script, items: script.letters };
   },
   keyOf(letter) { return letter.glyph; },
   record(scriptId, letter, ok) {
-    recordLetter(scriptId, letter.glyph, { known: ok });
+    recordLetter(scriptId, letter.glyph, { correct: ok });
   },
   // The "answer" is the active transcription of the letter.
   prompt(letter, { script, transcription, direction }) {
@@ -109,6 +111,8 @@ const wordsDrill = {
   headerKey: 'choose.words.header',
   emptyKey: 'choose.words.empty',
   blurbKey: 'mode.choose-words.title',
+  learnThresholdKey: 'wordLearnedThreshold',
+  learnThresholdMessageKey: 'choose.words.learn_threshold',
   async load(scriptId) {
     const script = await getScript(scriptId);
     const items = await getWordPool(scriptId);
@@ -176,8 +180,10 @@ const syllablesDrill = {
   },
   keyOf(item) { return item.native; },
   record(scriptId, item, ok) {
-    recordSyllable(scriptId, item.native, { correct: ok, known: ok });
+    recordSyllable(scriptId, item.native, { correct: ok });
   },
+  learnThresholdKey: 'syllableLearnedThreshold',
+  learnThresholdMessageKey: 'choose.syllables.learn_threshold',
   prompt(item, { script, transcription, direction }) {
     if (direction === 'recognize') {
       return { text: item.native, dir: script.meta.direction, big: true };
@@ -219,8 +225,10 @@ const phrasesDrill = {
   },
   keyOf(phrase) { return phrase.native; },
   record(scriptId, phrase, ok) {
-    recordPhrase(scriptId, phrase.native, { known: ok });
+    recordPhrase(scriptId, phrase.native, { correct: ok });
   },
+  learnThresholdKey: 'phraseLearnedThreshold',
+  learnThresholdMessageKey: 'choose.phrases.learn_threshold',
   prompt(phrase, { script, direction }) {
     if (direction === 'recognize') {
       return { text: phrase.native, dir: script.meta.direction };
@@ -277,7 +285,8 @@ async function renderChoose(mount, drill) {
     ? settings.chooseOptionCount
     : 4;
 
-  let current = pickRandom(items);
+  let reviewQueue = shuffle(items);
+  let current = drawNextItem();
   let revealed = false;
   let pendingAction = null;
   let pendingTimer = null;
@@ -300,6 +309,9 @@ async function renderChoose(mount, drill) {
         <div class="prompt" id="prompt"></div>
         <div class="choose-options" id="options" role="group" aria-label="${escapeHtml(t('choose.options_aria'))}"></div>
         <div class="result" id="result" aria-live="polite"></div>
+        ${drill.learnThresholdKey
+          ? `<p class="muted small choose-learn-threshold">${escapeHtml(t(drill.learnThresholdMessageKey, { n: settings[drill.learnThresholdKey] }))}</p>`
+          : ''}
       </div>
       <div class="shortcut-toast choose-toast" id="shortcut-toast" aria-live="polite" aria-atomic="true"></div>
       <div class="shortcut-help" aria-label="${escapeHtml(t('choose.shortcuts'))}">
@@ -448,14 +460,23 @@ async function renderChoose(mount, drill) {
     resultEl.innerHTML = '';
     skipBtn.hidden = false;
     nextBtn.hidden = true;
-    if (items.length > 1) {
-      let pick;
-      do { pick = pickRandom(items); } while (drill.keyOf(pick) === drill.keyOf(current));
-      current = pick;
-    }
+    current = drawNextItem(current);
     renderPrompt();
     renderOptions();
     startTimerIfEnabled();
+  }
+
+  function drawNextItem(previous = null) {
+    if (items.length <= 1) return items[0];
+    if (!reviewQueue.length) reviewQueue = shuffle(items);
+    const previousKey = previous ? drill.keyOf(previous) : null;
+    let index = reviewQueue.findIndex(item => drill.keyOf(item) !== previousKey);
+    if (index < 0) {
+      reviewQueue = shuffle(items.filter(item => drill.keyOf(item) !== previousKey));
+      index = 0;
+    }
+    const [nextItem] = reviewQueue.splice(index, 1);
+    return nextItem || items[0];
   }
 
   function goHome() {

@@ -51,13 +51,14 @@ Each script currently provides:
 #### Home, navigation, and script information
 
 - **Home grid** of script tiles with live progress.
-- **Practice and review sections** grouped by activity type.
+- **Learn and practice sections** grouped by activity type, with learning previews shown before drills.
+- **Decks page** for downloading Anki-importable decks by category or as combined exports.
 - **Language switcher** in the header for English and Russian UI.
 - **Theme switcher** for system, light, and dark themes.
 - **Script information panel** at the bottom of the home page for the selected script.
 - Localized script notes covering history, how the script works, capitals/case, digraphs or combinations, contextual forms, punctuation, and numbers.
 
-#### Review previews
+#### Learn previews
 
 - **Preview alphabet**: browse letters with IPA / Latin / Cyrillic transcription. Filter by consonants, vowels, and marks. Click a letter to see words that contain it.
 - **Preview syllables & forms**: browse common syllables, forms, blocks, conjuncts, and positional variants. Click an item to see matching words and phrases.
@@ -77,9 +78,12 @@ Each script currently provides:
 
 - **Choose drills: letters, syllables, words, phrases**
   - Multiple-choice practice with 4, 6, or 8 options.
+  - Prompts use a shuffled review bag so every item appears before the same item repeats.
   - Number badges on options match keyboard shortcuts.
   - `Esc` returns home, `Space` skips or continues, number keys pick answers.
   - If the matching auto-advance timer is enabled, a countdown appears in the pick card and reveal/advance happens automatically.
+  - Choose drills mark letters, syllables, words, and phrases learned after the configurable number of correct answers in a row.
+  - The learned threshold is selected in Settings from preset button options: 1, 2, 3, 4, 5, 7, or 10.
   - Word modes: **Native -> meaning**, **Native -> pronunciation**, **Meaning -> native**, **Pronunciation -> native**.
   - Letter, syllable, and phrase drills support recognition/recall directions.
 
@@ -87,6 +91,8 @@ Each script currently provides:
   - **Read & transcribe**: see a word in the target script and type the transliteration.
   - **Spell in script**: see a transliteration and spell it using the on-screen script keyboard.
   - Input systems: Latin, Cyrillic, and IPA, including an IPA keyboard.
+  - Spell keyboards can switch between the alphabetic layout and a classic keyboard layout for the active script.
+  - Optional mobile keyboard suppression keeps the phone keyboard closed when an in-app keyboard is available.
   - Optional fuzzy matching accepts small transliteration mistakes.
 
 #### Transcription systems
@@ -116,6 +122,10 @@ The app includes:
 - offline cache for the app shell and script data after first load
 
 Browsers can offer **Install app / Add to Home Screen** when the app is served over HTTPS or localhost.
+
+#### Anki deck exports
+
+The **Decks** page generates Anki import files on demand from the same JSON data used by the app. This is preferable to checking in prebuilt deck files because exports stay current whenever letters, syllables, words, or phrases change. Downloads are UTF-8 `.txt` files with Anki 2.1.54+ headers for tab separation, HTML fields, **Basic** note type, target deck, **Front / Back / Tags** columns, and tag-column mapping.
 
 ### Running locally
 
@@ -221,13 +231,14 @@ allScripts — одностраничное приложение на HTML / CSS
 #### Главная, навигация и информация о письменности
 
 - **Сетка письменностей** с живым прогрессом.
-- **Секции тренировки и просмотра**, сгруппированные по типу действия.
+- **Секции учёбы и тренировки**, сгруппированные по типу действия: справочные просмотры идут перед упражнениями.
+- **Страница колод** для скачивания Anki-совместимых колод по категориям или одним объединённым экспортом.
 - **Переключатель языка** в шапке: английский и русский.
 - **Тема оформления**: системная, светлая, тёмная.
 - **Информационная панель** о выбранной письменности внизу главной страницы.
 - Локализованные объяснения истории, устройства письма, регистра, сочетаний букв, позиционных форм, пунктуации и чисел.
 
-#### Справочные просмотры
+#### Учебные просмотры
 
 - **Просмотр алфавита**: буквы с IPA / латиницей / кириллицей. Фильтры по согласным, гласным и знакам. Клик по букве показывает слова, где она встречается.
 - **Просмотр слогов и форм**: частые слоги, формы, блоки, конъюнкты и позиционные варианты. Клик показывает подходящие слова и фразы.
@@ -247,9 +258,12 @@ allScripts — одностраничное приложение на HTML / CSS
 
 - **Выбор ответа: буквы, слоги, слова, фразы**
   - Тесты с 4, 6 или 8 вариантами.
+  - Задания берутся из перемешанной очереди, поэтому каждый элемент появляется до повторения того же элемента.
   - Цифровые бейджи на вариантах соответствуют клавишам.
   - `Esc` домой, `Space` пропустить или продолжить, цифры выбирают ответ.
   - Если включён соответствующий таймер автоперехода, отсчёт показывается на карточке выбора; по истечении времени ответ раскрывается и затем происходит переход дальше.
+  - Режимы выбора помечают буквы, слоги, слова и фразы выученными после настраиваемого числа правильных ответов подряд.
+  - Порог выучивания выбирается в Settings готовыми кнопками: 1, 2, 3, 4, 5, 7 или 10.
   - Режимы слов: **исходное -> значение**, **исходное -> произношение**, **значение -> исходное**, **произношение -> исходное**.
   - Буквы, слоги и фразы поддерживают направления распознавания и вспоминания.
 
@@ -257,6 +271,8 @@ allScripts — одностраничное приложение на HTML / CSS
   - **Прочитай и запиши**: слово в целевой письменности -> введите транслитерацию.
   - **Запиши в письме**: увидьте транслитерацию и наберите слово экранной клавиатурой письменности.
   - Системы ввода: латиница, кириллица и IPA, включая экранную IPA-клавиатуру.
+  - Клавиатуры режима письма переключаются между алфавитной раскладкой и классической раскладкой активной письменности.
+  - На телефоне можно не открывать системную клавиатуру, если доступна экранная клавиатура приложения.
   - Нечёткое совпадение может принимать небольшие ошибки в транслитерации.
 
 #### Системы транскрипции
@@ -286,6 +302,10 @@ allScripts — одностраничное приложение на HTML / CSS
 - офлайн-кэш оболочки приложения и данных после первой загрузки
 
 Браузеры могут предлагать **установить приложение / добавить на главный экран**, если сайт открыт по HTTPS или localhost.
+
+#### Экспорт колод Anki
+
+Страница **Колоды** создаёт файлы для импорта в Anki на лету из тех же JSON-данных, которые использует приложение. Это лучше, чем хранить заранее собранные файлы колод: экспорт всегда соответствует текущим буквам, слогам, словам и фразам. Скачиваются UTF-8 `.txt` файлы с заголовками Anki 2.1.54+: таб-разделитель, HTML-поля, тип заметок **Basic**, целевая колода, колонки **Front / Back / Tags** и назначение колонки тегов.
 
 ### Запуск локально
 
