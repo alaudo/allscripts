@@ -114,13 +114,13 @@ practical notes on toilets, lockers, and getting back to the station.
 
 | Walk | Rough distance |
 |---|---|
-| [Fukuoka walk](walks/fukuoka-walk.md) | Hakata and Tenjin to Ohori Park |
-| [Hiroshima walk](walks/hiroshima-walk.md) | Peace Memorial Park to the castle and Shukkei-en |
-| [Himeji walk](walks/himeji-walk.md) | Station to castle, Koko-en, and back down Otemae-dori |
+| [Fukuoka walk](walks/fukuoka-walk.md) | Hakata Station through Ohori Park to Tenjin and Nakasu |
+| [Hiroshima walk](walks/hiroshima-walk.md) | Station via Shukkei-en and the castle to Peace Memorial Park |
+| [Himeji walk](walks/himeji-walk.md) | Station to castle and Koko-en, back down Otemae-dori |
 | [Kinosaki Onsen walk](walks/kinosaki-onsen-walk.md) | The seven-bath loop along the Otani River |
-| [Osaka walk](walks/osaka-walk.md) | Central Osaka from the castle to Dotonbori |
-| [Hakone walk](walks/hakone-walk.md) | The Old Tokaido cedar avenue and Lake Ashi |
-| [Tokyo walk](walks/tokyo-walk.md) | A central Tokyo route, plus other walks worth doing |
+| [Osaka walk](walks/osaka-walk.md) | Minami: Kuromon Ichiba, Dotonbori, and Shinsekai |
+| [Hakone walk](walks/hakone-walk.md) | Hakone-machi to Moto-Hakone: checkpoint, cedar avenue, lakeside |
+| [Tokyo walk](walks/tokyo-walk.md) | Imperial Palace East Gardens to Marunouchi and Ginza, plus other walks |
 
 ---
 
